@@ -17,7 +17,9 @@ angular.module('clientApp')
                         'callback': 'JSON_CALLBACK'
                     }
                 };
-                return $http.jsonp(url, config);
+                var res = $http.jsonp(url, config);
+                console.log(res);
+                return res;
             }
         };
     }

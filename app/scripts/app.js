@@ -8,9 +8,9 @@ angular.module('clientApp', [
 ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+      .when('/boy', {
+        templateUrl: 'views/pet.html',
+        controller: 'PetsCtrl'
       })
       .otherwise({
         redirectTo: '/'
