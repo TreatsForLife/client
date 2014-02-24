@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/welcome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome.html" afterPath="$PROJECT_DIR$/app/views/welcome.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="client.iws" />
@@ -16,14 +17,17 @@
     <file path="/main.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393191359122" ignored="false" />
     <file path="/pets.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393193362877" ignored="false" />
     <file path="/pet.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393192051676" ignored="false" />
-    <file path="/index.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393228761163" ignored="false" />
+    <file path="/index.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393229411289" ignored="false" />
     <file path="/a.dummy" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393197331343" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393195653955" ignored="false" />
     <file path="/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393195649030" ignored="false" />
     <file path="/root.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393227005297" ignored="false" />
-    <file path="/welcome.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393196964587" ignored="false" />
-    <file path="/*.regexp" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393227748641" ignored="false" />
+    <file path="/welcome.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393229659743" ignored="false" />
+    <file path="/*.regexp" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393230378446" ignored="false" />
     <file path="/instajam.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393228297345" ignored="false" />
+    <file path="/welcome.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393232011573" ignored="false" />
+    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/third-party/bootstrap.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393231299099" ignored="false" />
+    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/events-app/eventsapp-general.css.scss.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393231365990" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,25 +47,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="46" selection-start="2602" selection-end="2602" vertical-scroll-proportion="0.6431853">
+            <state line="69" column="26" selection-start="3180" selection-end="3180" vertical-scroll-proportion="-25.958334">
               <folding>
-                <element signature="e#1401#1635#0" expanded="true" />
-                <element signature="e#1452#1497#0" expanded="true" />
+                <element signature="e#1459#1693#0" expanded="true" />
+                <element signature="e#1510#1555#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/welcome.js">
+      <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="47" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/welcome.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="38" selection-start="1669" selection-end="1669" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="26" selection-start="3015" selection-end="3015" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#90#191#0" expanded="true" />
+                <element signature="e#8589#8861#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".bowerrc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.bowerrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="22" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,28 +133,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="welcome.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/welcome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="12" selection-start="45" selection-end="45" vertical-scroll-proportion="-0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="32" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pet.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pet.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="34" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.25">
+            <state line="2" column="34" selection-start="80" selection-end="80" vertical-scroll-proportion="0.045941807">
               <folding />
             </state>
           </provider>
@@ -163,10 +176,12 @@
         <option value="$PROJECT_DIR$/app/scripts/services/instagram.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/views/welcome.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/root.js" />
         <option value="$PROJECT_DIR$/app/bower_components/instajam/src/instajam.js" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/styles/welcome.scss" />
+        <option value="$PROJECT_DIR$/app/views/welcome.html" />
       </list>
     </option>
   </component>
@@ -320,6 +335,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -386,102 +419,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instajam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instajam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="instajam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-scenario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -492,6 +429,62 @@
     <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -643,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="12" selection-start="45" selection-end="45" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/services/instagram.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="56" selection-start="172" selection-end="204" vertical-scroll-proportion="0.0">
@@ -696,13 +682,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="22" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="46" selection-start="2602" selection-end="2602" vertical-scroll-proportion="0.6431853">
+        <state line="69" column="26" selection-start="3180" selection-end="3180" vertical-scroll-proportion="-25.958334">
           <folding>
-            <element signature="e#1401#1635#0" expanded="true" />
-            <element signature="e#1452#1497#0" expanded="true" />
+            <element signature="e#1459#1693#0" expanded="true" />
+            <element signature="e#1510#1555#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="26" selection-start="3015" selection-end="3015" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#8589#8861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/welcome.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="38" selection-start="1669" selection-end="1669" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="34" selection-start="80" selection-end="80" vertical-scroll-proportion="0.045941807">
+          <folding />
         </state>
       </provider>
     </entry>
