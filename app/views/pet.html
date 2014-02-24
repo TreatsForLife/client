@@ -1,4 +1,10 @@
 <div id="profile-pic">
-    <img ng-src="{{photos[0].images.standard_resolution.url}}"/>
+    <div id='slider' class='swipe'>
+        <div class='swipe-wrap'>
+            <div ng-repeat="photo in photos">
+                <img ng-src="{{photo.images.standard_resolution.url}}"/>
+            </div>
+        </div>
+    </div>
 </div>
 
