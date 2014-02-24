@@ -22,6 +22,6 @@ angular.module('clientApp', [
     })
     .run(function ($location) {
         if (!localStorage.getItem('instagram_access_token')) {
-            $location.path('/welcome');
+//            $location.path('/welcome');
         }
     });
