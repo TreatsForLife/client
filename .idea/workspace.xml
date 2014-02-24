@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/_consts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/root.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/pets.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/root.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/root.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome.html" afterPath="$PROJECT_DIR$/app/views/welcome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/welcome.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/welcome.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/instagram.js" afterPath="$PROJECT_DIR$/app/scripts/services/instagram.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pet.html" afterPath="$PROJECT_DIR$/app/views/pet.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/pets.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/root.scss" afterPath="$PROJECT_DIR$/app/styles/root.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/welcome.scss" afterPath="$PROJECT_DIR$/app/styles/welcome.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -16,24 +17,26 @@
     <file path="/Dummy.txt" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393272833828" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/filters.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393146362006" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/templates/partials/widgets/show/all.jst.ejs.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393146362006" ignored="false" />
-    <file path="/instagram.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393192551903" ignored="false" />
+    <file path="/instagram.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277199719" ignored="false" />
     <file path="/main.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393191359122" ignored="false" />
-    <file path="/pets.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393193362877" ignored="false" />
-    <file path="/pet.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393192051676" ignored="false" />
-    <file path="/index.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393274726459" ignored="false" />
+    <file path="/pets.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277340553" ignored="false" />
+    <file path="/pet.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277635446" ignored="false" />
+    <file path="/index.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277496430" ignored="false" />
     <file path="/a.dummy" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393197331343" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393195653955" ignored="false" />
     <file path="/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393195649030" ignored="false" />
     <file path="/root.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393274222062" ignored="false" />
     <file path="/welcome.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393275171130" ignored="false" />
-    <file path="/*.regexp" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273665467" ignored="false" />
+    <file path="/*.regexp" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393279875536" ignored="false" />
     <file path="/instajam.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393228297345" ignored="false" />
-    <file path="/welcome.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393275449851" ignored="false" />
+    <file path="/welcome.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393276030364" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/third-party/bootstrap.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393231299099" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/events-app/eventsapp-general.css.scss.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393231365990" ignored="false" />
     <file path="/_consts.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273475578" ignored="false" />
     <file path="/welcome.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273735017" ignored="false" />
-    <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393274841403" ignored="false" />
+    <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277436693" ignored="false" />
+    <file path="/app.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393275770932" ignored="false" />
+    <file path="/pets.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277743036" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +59,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="79" selection-start="756" selection-end="756" vertical-scroll-proportion="-7.5">
+            <state line="20" column="46" selection-start="985" selection-end="985" vertical-scroll-proportion="-10.625">
               <folding />
             </state>
           </provider>
@@ -65,16 +68,7 @@
       <file leaf-file-name="root.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="25" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/lib/bootstrap.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="11" selection-start="0" selection-end="18" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,7 +77,46 @@
       <file leaf-file-name="welcome.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/styles/welcome.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="16" selection-start="229" selection-end="229" vertical-scroll-proportion="0.3364486">
+            <state line="4" column="33" selection-start="77" selection-end="77" vertical-scroll-proportion="0.11214953">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pets.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="33" selection-start="69" selection-end="74" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pet.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pet.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="8" selection-start="94" selection-end="94" vertical-scroll-proportion="-1.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pets.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/pets.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="34" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#219#352#0" expanded="true" />
+                <element signature="e#252#341#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="root.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/root.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="101" selection-end="337" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,8 +134,10 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="36" selection-start="257" selection-end="268" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="14" column="20" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1393275803422" expanded="true" signature="574:694" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,25 +145,7 @@
       <file leaf-file-name="welcome.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/welcome.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="28" selection-start="123" selection-end="132" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="instagram.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/services/instagram.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="56" selection-start="172" selection-end="204" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/welcome.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="-0.0">
+            <state line="4" column="30" selection-start="104" selection-end="144" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,18 +170,19 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-        <option value="$PROJECT_DIR$/app/views/pet.html" />
-        <option value="$PROJECT_DIR$/app/scripts/services/instagram.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
         <option value="$PROJECT_DIR$/app/bower_components/instajam/src/instajam.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/app/styles/_consts.scss" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/welcome.js" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/root.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/styles/root.scss" />
         <option value="$PROJECT_DIR$/app/views/welcome.html" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/scripts/services/instagram.js" />
+        <option value="$PROJECT_DIR$/app/styles/root.scss" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
+        <option value="$PROJECT_DIR$/app/views/pet.html" />
+        <option value="$PROJECT_DIR$/app/styles/pets.scss" />
         <option value="$PROJECT_DIR$/app/styles/welcome.scss" />
       </list>
     </option>
@@ -564,13 +582,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/bower_components/instajam/src/instajam.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="36" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/instajam/dist/instajam.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="37" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0">
@@ -597,33 +608,9 @@
         <state line="11" column="94" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/pets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="69" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="23" selection-end="23" vertical-scroll-proportion="-1.25" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/instagram.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="56" selection-start="172" selection-end="204" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/instajam/dist/instajam.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="37" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/instajam/src/instajam.js">
@@ -649,44 +636,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="142" column="10" selection-start="3272" selection-end="3277" vertical-scroll-proportion="-4.901961">
           <folding>
-            <element signature="e#8589#8861#0" expanded="true" />
+            <element signature="e#8589#8861#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/_consts.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/instajam/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="76" selection-start="288" selection-end="288" vertical-scroll-proportion="0.1984127">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="36" selection-start="257" selection-end="268" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/root.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="35" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#99#372#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/lib/bootstrap.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -705,27 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/welcome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="123" selection-end="132" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="79" selection-start="756" selection-end="756" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
@@ -733,9 +669,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/instajam/dist/instajam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="7" selection-start="1422" selection-end="1480" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/sass-bootstrap/lib/bootstrap.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/_consts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="17" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="20" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1393275803422" expanded="true" signature="574:694" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/root.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="101" selection-end="337" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/instagram.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="15" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="46" selection-start="985" selection-end="985" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/welcome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="30" selection-start="104" selection-end="144" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="11" selection-start="0" selection-end="18" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/pets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="34" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#219#352#0" expanded="true" />
+            <element signature="e#252#341#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="8" selection-start="94" selection-end="94" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="33" selection-start="69" selection-end="74" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/welcome.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="229" selection-end="229" vertical-scroll-proportion="0.3364486">
+        <state line="4" column="33" selection-start="77" selection-end="77" vertical-scroll-proportion="0.11214953">
           <folding />
         </state>
       </provider>

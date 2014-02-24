@@ -2,12 +2,15 @@
 
 div.container.welcome {
 
-  background-color: $scheme-orange;
+  background-color: $scheme-green;
 
   #inst-login {
-    width: 225px;
+    width: 224px;
     height: 36px;
-    margin: 30px auto;
+    position: absolute;
+    top:66%;
+    left:50%;
+    margin-left:-112px;
     cursor: pointer;
     background: rgb(244, 246, 245);
     background: linear-gradient(top, rgba(244, 246, 245, 1) 1%, rgba(237, 231, 220, 1) 100%);
@@ -22,8 +25,7 @@ div.container.welcome {
     border: 1px solid #fff;
     line-height: 16px;
     display: block;
-
-    margin-top:66%;
+    text-decoration: none;
 
     &:before {
       width: 30px;
