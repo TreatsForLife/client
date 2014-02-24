@@ -8,10 +8,14 @@ angular.module('clientApp', [
 ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/boy', {
-        templateUrl: 'views/pet.html',
-        controller: 'PetsCtrl'
-      })
+        .when('/', {
+            templateUrl: 'views/welcome.html',
+            controller: 'WelcomeCtrl'
+        })
+        .when('/boy', {
+            templateUrl: 'views/pet.html',
+            controller: 'PetsCtrl'
+        })
       .otherwise({
         redirectTo: '/'
       });
