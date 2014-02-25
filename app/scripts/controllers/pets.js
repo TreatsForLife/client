@@ -34,16 +34,15 @@ angular.module('clientApp')
             });
             $timeout(function(){
                 window.mySwipe = new Swipe(document.getElementById('slider'), {
-                    startSlide: 2,
-                    speed: 400,
-                    auto: 3000,
+                    startSlide: 0,
                     continuous: true,
-                    disableScroll: false,
+                    disableScroll: true,
                     stopPropagation: false,
                     callback: function(index, elem) {},
                     transitionEnd: function(index, elem) {}
                 });
             },1000);
         });
+
     });
 

@@ -4,7 +4,7 @@ div.container.pets {
 
   background-color: $scheme-green;
 
-  #profile-pic{
+  #pet-pic{
     width:100%;
     max-height: 100%;
     overflow: hidden;
@@ -12,6 +12,43 @@ div.container.pets {
     img{
       width:100%;
 
+    }
+  }
+
+  #pet-bowl{
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    margin: -90px;
+    background: white;
+    z-index: 10000000;
+    position: absolute;
+    left: 50%;
+    border: 20px solid $scheme-brown;
+    background: $scheme-darkbrown;
+    .pet-bowl-content{
+
+    }
+  }
+
+  .pet-treat{
+    width:20%;
+    margin-left:-10%;
+    position: absolute;
+    bottom: 0%;
+
+
+    &.pet-bone{
+      left: 10%;
+    }
+    &.pet-ball{
+      left: 42%;
+      margin-bottom: -4px;
+    }
+    &.pet-bed{
+      left: 74%;
+      width: 35%;
+      margin-bottom: -10px;
     }
   }
 }
