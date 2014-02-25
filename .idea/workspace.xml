@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/config.xml" afterPath="$PROJECT_DIR$/platforms/android/assets/www/config.xml" />
@@ -36,14 +35,14 @@
     <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277436693" ignored="false" />
     <file path="/app.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393275770932" ignored="false" />
     <file path="/pets.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277743036" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367583030" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367583030" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367583030" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367583031" ignored="false" />
-    <file path="$PROJECT_DIR$/www/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367583031" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/AndroidManifest.cordova.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367583031" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/res/values/strings.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367583031" ignored="false" />
-    <file path="$PROJECT_DIR$/www/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367583031" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978294" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/AndroidManifest.cordova.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/res/values/strings.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/platforms/android/res/xml/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="20" selection-start="3772" selection-end="3772" vertical-scroll-proportion="0.0">
+            <state line="47" column="43" selection-start="3167" selection-end="3167" vertical-scroll-proportion="0.60151803">
               <folding />
             </state>
           </provider>
@@ -138,16 +137,16 @@
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="27" selection-start="3618" selection-end="3618" vertical-scroll-proportion="0.0">
+            <state line="49" column="20" selection-start="3611" selection-end="3611" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="10" selection-start="67" selection-end="67" vertical-scroll-proportion="0.17077799">
+            <state line="6" column="10" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -188,10 +187,10 @@
         <option value="$PROJECT_DIR$/app/scripts/services/instagram.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
         <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
-        <option value="$PROJECT_DIR$/platforms/android/assets/www/config.xml" />
-        <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/www/config.xml" />
+        <option value="$PROJECT_DIR$/platforms/android/assets/www/config.xml" />
+        <option value="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
       </list>
     </option>
   </component>
@@ -688,9 +687,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/android/res/xml/config.xml">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="20" selection-start="3772" selection-end="3772" vertical-scroll-proportion="0.0">
+        <state line="6" column="10" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="20" selection-start="3611" selection-end="3611" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -702,16 +708,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/config.xml">
+    <entry file="file://$PROJECT_DIR$/platforms/android/res/xml/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="27" selection-start="3618" selection-end="3618" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="10" selection-start="67" selection-end="67" vertical-scroll-proportion="0.17077799">
+        <state line="47" column="43" selection-start="3167" selection-end="3167" vertical-scroll-proportion="0.60151803">
           <folding />
         </state>
       </provider>
