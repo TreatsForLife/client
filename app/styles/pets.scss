@@ -60,14 +60,14 @@ div.container.pets {
         height: inherit;
         text-align: center;
 
-        animation: front-flip-back 1s;
+        //animation: front-flip-back 1s;
+        //animation-timing-function:ease-in-out;
         transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
         transform-style: preserve-3d;
         backface-visibility: hidden;
 
         /* -- transition is the magic sauce for animation -- */
         transition: all 1s ease-in-out;
-        animation-timing-function:ease-in-out;
 
         background-color: $scheme-green;
 
@@ -127,29 +127,29 @@ div.container.pets {
         width: inherit;
         height: inherit;
 
-        animation: back-flip-back 1s;
+        //animation: back-flip-back 1s;
+        //animation-timing-function:ease-in-out;
         transform: scale(1) perspective(600px) rotateX(0deg) rotateY(-180deg);
         transform-style: preserve-3d;
         backface-visibility: hidden;
 
         /* -- transition is the magic sauce for animation -- */
         transition: all 1s ease-in-out;
-        animation-timing-function:ease-in-out;
         background-color: $scheme-green;
       }
       &.flip {
 
         .front {
           z-index: 900;
-          animation: front-flip 1s;
-          animation-timing-function:ease-in-out;
+          //animation: front-flip 1s;
+          //animation-timing-function:ease-in-out;
           transform: scale(1) perspective(600px) rotateX(0deg) rotateY(180deg);
         }             
 
         .back {
           z-index: 1000;
-          animation: back-flip 1s;
-          animation-timing-function:ease-in-out;
+          //animation: back-flip 1s;
+          //animation-timing-function:ease-in-out;
           transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
         }
       }
