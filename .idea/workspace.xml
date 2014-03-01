@@ -5,12 +5,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_.d" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/pets.scss" afterPath="$PROJECT_DIR$/app/styles/pets.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/root.scss" afterPath="$PROJECT_DIR$/app/styles/root.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -63,46 +59,46 @@
     <file path="$PROJECT_DIR$/www/bower_components/font-awesome/scss/_variables.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393687906391" ignored="false" />
     <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/assets/font-awesome/scss/_variables.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393687906391" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/assets/font-awesome/scss/_variables.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393687906392" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286801" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286801" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/3.2.1/assets/less/bootstrap-2.3.2/type.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286801" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/3.2.1/assets/css/site.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286801" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286801" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286801" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/font-awesome/Gemfile" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/_plugins/site.rb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/_plugins/icon_page_generator.rb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/3.2.1/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
     <file path="$PROJECT_DIR$/.tmp/styles/main.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/res/xml/config.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/res/values/strings.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/3.2.1/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/3.2.1/assets/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
-    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286802" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/3.2.1/assets/less/bootstrap-2.3.2/type.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/3.2.1/assets/css/site.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/Gemfile" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/config.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/sass-bootstrap/Rakefile" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/_plugins/site.rb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/_plugins/icon_page_generator.rb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/sass-bootstrap/Gemfile" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689286803" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690197197" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690197197" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/3.2.1/assets/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690197198" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/3.2.1/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690197198" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690197198" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690197198" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690197198" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/3.2.1/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690197198" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/config.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/res/xml/config.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/res/values/strings.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/src/3.2.1/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690253604" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +121,7 @@
       <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="31" selection-start="576" selection-end="576" vertical-scroll-proportion="-11.875">
+            <state line="21" column="31" selection-start="576" selection-end="576" vertical-scroll-proportion="-13.125">
               <folding />
             </state>
           </provider>
@@ -156,8 +152,8 @@
               <folding>
                 <element signature="e#1631#1965#0" expanded="true" />
                 <element signature="e#1708#1771#0" expanded="true" />
-                <marker date="1393689533227" expanded="true" signature="1232:1385" placeholder="..." />
-                <marker date="1393689533227" expanded="true" signature="1325:1353" placeholder="..." />
+                <marker date="1393690481443" expanded="true" signature="1232:1385" placeholder="..." />
+                <marker date="1393690481443" expanded="true" signature="1325:1353" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -181,40 +177,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pets.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pets.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="0" selection-start="2181" selection-end="2181" vertical-scroll-proportion="0.6631579">
+            <state line="68" column="0" selection-start="2181" selection-end="2181" vertical-scroll-proportion="-20.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="root.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="root.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="31" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.tmp/concat/styles/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12695" column="62" selection-start="286346" selection-end="286346" vertical-scroll-proportion="-4.1764708">
-              <folding>
-                <marker date="1393689035419" expanded="true" signature="270924:270985" placeholder="{...}" />
-                <marker date="1393689035419" expanded="true" signature="271048:271187" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="29403685.vendor.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/styles/29403685.vendor.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="34783" selection-start="34774" selection-end="34783" vertical-scroll-proportion="-0.0">
+            <state line="4" column="25" selection-start="155" selection-end="155" vertical-scroll-proportion="0.10968921">
               <folding />
             </state>
           </provider>
@@ -261,8 +236,8 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
         <option value="$PROJECT_DIR$/app/views/pet.html" />
         <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/app/styles/root.scss" />
         <option value="$PROJECT_DIR$/app/styles/pets.scss" />
+        <option value="$PROJECT_DIR$/app/styles/root.scss" />
       </list>
     </option>
   </component>
@@ -828,13 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/styles/pets.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.30120483">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/pets.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="9" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
@@ -867,13 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="31" selection-start="576" selection-end="576" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="11" selection-start="6" selection-end="11" vertical-scroll-proportion="0.0">
@@ -881,19 +842,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.tmp/concat/styles/main.css">
+    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12695" column="62" selection-start="286346" selection-end="286346" vertical-scroll-proportion="-4.1764708">
-          <folding>
-            <marker date="1393689035419" expanded="true" signature="270924:270985" placeholder="{...}" />
-            <marker date="1393689035419" expanded="true" signature="271048:271187" placeholder="{...}" />
-          </folding>
+        <state line="68" column="0" selection-start="2181" selection-end="2181" vertical-scroll-proportion="-20.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/styles/29403685.vendor.css">
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="34783" selection-start="34774" selection-end="34783" vertical-scroll-proportion="0.0">
+        <state line="21" column="31" selection-start="576" selection-end="576" vertical-scroll-proportion="-13.125">
           <folding />
         </state>
       </provider>
@@ -904,22 +862,15 @@
           <folding>
             <element signature="e#1631#1965#0" expanded="true" />
             <element signature="e#1708#1771#0" expanded="true" />
-            <marker date="1393689533227" expanded="true" signature="1232:1385" placeholder="..." />
-            <marker date="1393689533227" expanded="true" signature="1325:1353" placeholder="..." />
+            <marker date="1393690481443" expanded="true" signature="1232:1385" placeholder="..." />
+            <marker date="1393690481443" expanded="true" signature="1325:1353" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="31" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="2181" selection-end="2181" vertical-scroll-proportion="0.6631579">
+        <state line="4" column="25" selection-start="155" selection-end="155" vertical-scroll-proportion="0.10968921">
           <folding />
         </state>
       </provider>

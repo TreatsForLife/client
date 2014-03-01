@@ -1,7 +1,7 @@
 @import 'consts';
-//@import "sass-bootstrap/lib/bootstrap";
-//$fa-font-path: "/bower_components/font-awesome/fonts";
-//@import "font-awesome/scss/font-awesome";
+@import "sass-bootstrap/lib/bootstrap";
+$fa-font-path: "/bower_components/font-awesome/fonts";
+@import "font-awesome/scss/font-awesome";
 
 body, html, .container{
   width: 100%;
