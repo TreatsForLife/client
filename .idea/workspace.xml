@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pet.html" afterPath="$PROJECT_DIR$/app/views/pet.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/pets.scss" afterPath="$PROJECT_DIR$/app/styles/pets.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/root.scss" afterPath="$PROJECT_DIR$/app/styles/root.scss" />
     </list>
@@ -14,7 +13,7 @@
     <file path="/instagram.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277199719" ignored="false" />
     <file path="/main.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393191359122" ignored="false" />
     <file path="/pets.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680597023" ignored="false" />
-    <file path="/pet.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393685662996" ignored="false" />
+    <file path="/pet.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393685664148" ignored="false" />
     <file path="/index.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680049751" ignored="false" />
     <file path="/a.dummy" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393684137304" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658604" ignored="false" />
@@ -28,7 +27,7 @@
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/events-app/eventsapp-general.css.scss.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393231365990" ignored="false" />
     <file path="/_consts.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273475578" ignored="false" />
     <file path="/welcome.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273735017" ignored="false" />
-    <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393685147188" ignored="false" />
+    <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393686227413" ignored="false" />
     <file path="/app.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393275770932" ignored="false" />
     <file path="/pets.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393685349432" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978294" ignored="false" />
@@ -79,7 +78,7 @@
       <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="3" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
+            <state line="25" column="3" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -92,8 +91,8 @@
               <folding>
                 <element signature="e#1532#1866#0" expanded="true" />
                 <element signature="e#1609#1672#0" expanded="true" />
-                <marker date="1393680054583" expanded="true" signature="1133:1286" placeholder="..." />
-                <marker date="1393680054583" expanded="true" signature="1226:1254" placeholder="..." />
+                <marker date="1393685940515" expanded="true" signature="1133:1286" placeholder="..." />
+                <marker date="1393685940515" expanded="true" signature="1226:1254" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -108,19 +107,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pet.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pet.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pet.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="38" selection-start="898" selection-end="898" vertical-scroll-proportion="0.4520548">
+            <state line="22" column="38" selection-start="898" selection-end="898" vertical-scroll-proportion="-13.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pets.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pets.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="25" selection-start="3777" selection-end="3777" vertical-scroll-proportion="-8.784314">
+            <state line="151" column="0" selection-start="4121" selection-end="4121" vertical-scroll-proportion="0.76529163">
               <folding />
             </state>
           </provider>
@@ -142,7 +141,7 @@
       <file leaf-file-name="root.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+            <state line="20" column="25" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -205,9 +204,9 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/styles/ui.scss" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
-        <option value="$PROJECT_DIR$/app/styles/pets.scss" />
-        <option value="$PROJECT_DIR$/app/styles/root.scss" />
         <option value="$PROJECT_DIR$/app/views/pet.html" />
+        <option value="$PROJECT_DIR$/app/styles/root.scss" />
+        <option value="$PROJECT_DIR$/app/styles/pets.scss" />
       </list>
     </option>
   </component>
@@ -615,7 +614,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="3" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
+        <state line="25" column="3" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -658,8 +657,8 @@
           <folding>
             <element signature="e#1532#1866#0" expanded="true" />
             <element signature="e#1609#1672#0" expanded="true" />
-            <marker date="1393680054583" expanded="true" signature="1133:1286" placeholder="..." />
-            <marker date="1393680054583" expanded="true" signature="1226:1254" placeholder="..." />
+            <marker date="1393685940515" expanded="true" signature="1133:1286" placeholder="..." />
+            <marker date="1393685940515" expanded="true" signature="1226:1254" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -671,23 +670,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/pet.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="25" selection-start="3777" selection-end="3777" vertical-scroll-proportion="-8.784314">
+        <state line="22" column="38" selection-start="898" selection-end="898" vertical-scroll-proportion="-13.75">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+        <state line="20" column="25" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pet.html">
+    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="38" selection-start="898" selection-end="898" vertical-scroll-proportion="0.4520548">
+        <state line="151" column="0" selection-start="4121" selection-end="4121" vertical-scroll-proportion="0.76529163">
           <folding />
         </state>
       </provider>
