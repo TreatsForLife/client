@@ -8,9 +8,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_.d" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_.d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pet.html" afterPath="$PROJECT_DIR$/app/views/pet.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/pets.scss" afterPath="$PROJECT_DIR$/app/styles/pets.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/root.scss" afterPath="$PROJECT_DIR$/app/styles/root.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="client.iws" />
@@ -37,7 +35,7 @@
     <file path="/welcome.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273735017" ignored="false" />
     <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692399012" ignored="false" />
     <file path="/app.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393275770932" ignored="false" />
-    <file path="/pets.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393689382805" ignored="false" />
+    <file path="/pets.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692676281" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978294" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
     <file path="$PROJECT_DIR$/dist/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
@@ -82,10 +80,16 @@
     <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/less/path.less" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690197198" ignored="false" />
     <file path="$PROJECT_DIR$/dist/bower_components/font-awesome/src/3.2.1/assets/font-awesome/scss/_path.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393690197198" ignored="false" />
     <file path="/Gruntfile.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393691701792" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/res/xml/config.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692022030" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/res/values/strings.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692022030" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/assets/www/config.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692022031" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692180593" ignored="false" />
+    <file path="$PROJECT_DIR$/.tmp/concat/styles/vendor.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692642657" ignored="false" />
+    <file path="$PROJECT_DIR$/.tmp/concat/styles/main.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692642657" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/components-font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692642657" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/components-font-awesome/css/font-awesome.min.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692642657" ignored="false" />
+    <file path="$PROJECT_DIR$/www/bower_components/components-font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692642657" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692642657" ignored="false" />
+    <file path="$PROJECT_DIR$/dist/bower_components/components-font-awesome/css/font-awesome.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692642657" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/res/xml/config.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692642657" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/res/values/strings.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692642657" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/config.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393692642657" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pets.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pets.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="9" selection-start="4340" selection-end="4340" vertical-scroll-proportion="-4.901961">
+            <state line="148" column="30" selection-start="4089" selection-end="4089" vertical-scroll-proportion="0.84210527">
               <folding />
             </state>
           </provider>
@@ -143,10 +147,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="root.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="root.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="21" selection-start="396" selection-end="396" vertical-scroll-proportion="0.5703422">
+            <state line="20" column="21" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -174,15 +178,6 @@
         <entry file="file://$PROJECT_DIR$/node_modules/grunt-angular-phonegap/tasks/grunt-angular-phonegap.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="9" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="148ce3c7.main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/styles/148ce3c7.main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -238,9 +233,9 @@
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/styles/196ca3b2.vendor.css" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/app/styles/pets.scss" />
         <option value="$PROJECT_DIR$/app/views/pet.html" />
         <option value="$PROJECT_DIR$/app/styles/root.scss" />
+        <option value="$PROJECT_DIR$/app/styles/pets.scss" />
       </list>
     </option>
   </component>
@@ -639,8 +634,8 @@
           <folding>
             <element signature="e#1631#1965#0" expanded="true" />
             <element signature="e#1708#1771#0" expanded="true" />
-            <marker date="1393692132263" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1393692132263" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1393692543439" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1393692543439" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -660,13 +655,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/styles/148ce3c7.main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -696,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="9" selection-start="4340" selection-end="4340" vertical-scroll-proportion="-4.901961">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pet.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
@@ -712,7 +693,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="21" selection-start="396" selection-end="396" vertical-scroll-proportion="0.5703422">
+        <state line="20" column="21" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="30" selection-start="4089" selection-end="4089" vertical-scroll-proportion="0.84210527">
           <folding />
         </state>
       </provider>

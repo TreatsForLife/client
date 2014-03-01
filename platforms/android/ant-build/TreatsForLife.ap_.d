@@ -1369,7 +1369,7 @@
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/fonts/fontawesome-webfont.eot \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/fonts/FontAwesome.otf \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/fonts/fontawesome-webfont.svg \
-/home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/styles/148ce3c7.main.css \
+/home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/styles/6d1b8746.main.css \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/styles/196ca3b2.vendor.css \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/scripts/76b1738d.scripts.js \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/scripts/f649f411.vendor.js \
