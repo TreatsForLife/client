@@ -22,6 +22,7 @@
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/cordova.js \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/cordova_plugins.js \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/bower_components \
+/home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/fonts \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/404.html \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/index.html \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/styles \
@@ -1363,6 +1364,11 @@
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/bower_components/jquery/dist/jquery.min.map \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/bower_components/jquery/dist/jquery.js \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/bower_components/jquery/dist/jquery.min.js \
+/home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/fonts/fontawesome-webfont.woff \
+/home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/fonts/fontawesome-webfont.ttf \
+/home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/fonts/fontawesome-webfont.eot \
+/home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/fonts/FontAwesome.otf \
+/home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/fonts/fontawesome-webfont.svg \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/styles/148ce3c7.main.css \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/styles/196ca3b2.vendor.css \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/scripts/76b1738d.scripts.js \
