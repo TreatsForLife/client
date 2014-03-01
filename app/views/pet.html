@@ -1,18 +1,30 @@
-<div id="pet-pic" ng-clock>
-    <div id='slider' class='swipe'>
-        <div class='swipe-wrap'>
-            <div ng-repeat="photo in photos">
-                <img ng-src="{{photo.images.standard_resolution.url}}"/>
+<div class="flipper panel page">
+    <i class="pet-info fa fa-info" ng-click="flip()"></i>
+    <div class="front page">
+        <div id="pet-pic" ng-clock>
+            <div id='slider' class='swipe'>
+                <div class='swipe-wrap'>
+                    <div ng-repeat="photo in photos">
+                        <img ng-src="{{photo.images.standard_resolution.url}}"/>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div id="pet-bowl">
+            <div class="pet-bowl-content">
+            </div>
+        </div>
+
+        <img class="pet-treat pet-bone" src="images/bone.png" jqyoui-draggable />
+        <img class="pet-treat pet-ball" src="images/ball.png" jqyoui-draggable />
+        <img class="pet-treat pet-bed" src="images/bed.png" jqyoui-draggable />
+    </div>
+    <div class="back page">
+        <div class="pad">
+            <h2>check you on the flip side</h2>
         </div>
     </div>
 </div>
-<div id="pet-bowl">
-    <div class="pet-bowl-content">
-    </div>
-</div>
 
-<img class="pet-treat pet-bone" src="images/bone.png" jqyoui-draggable />
-<img class="pet-treat pet-ball" src="images/ball.png" jqyoui-draggable />
-<img class="pet-treat pet-bed" src="images/bed.png" jqyoui-draggable />
+
 

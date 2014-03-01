@@ -2,54 +2,185 @@
 
 div.container.pets {
 
-  background-color: $scheme-green;
+  .flipper {
+    &.panel {
 
-  #pet-pic{
-    width:100%;
-    max-height: 100%;
+      .pet-info{
+        position: absolute;
+        right:10px;
+        top:10px;
+        z-index: 9999;
+        font-size: 24px;
+        color: white;
+        text-shadow: 0 0 1px #111;
+      }
+
+      .front {
+        float: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 900;
+        width: inherit;
+        height: inherit;
+        text-align: center;
+
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+        -moz-transform: rotateX(0deg) rotateY(0deg);
+        transform: rotateX(0deg) rotateY(0deg);
+
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        /* -- transition is the magic sauce for animation -- */
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+
+        background-color: $scheme-green;
+
+        #pet-pic{
+          width:100%;
+          max-height: 100%;
+          overflow: hidden;
+
+          img{
+            width:100%;
+
+          }
+        }
+
+        #pet-bowl{
+          width: 180px;
+          height: 180px;
+          border-radius: 100px;
+          margin: -90px;
+          background: white;
+          z-index: 10000000;
+          position: absolute;
+          left: 50%;
+          border: 20px solid $scheme-brown;
+          background: $scheme-darkbrown;
+          .pet-bowl-content{
+
+          }
+        }
+
+        .pet-treat{
+          width:20%;
+          margin-left:-10%;
+          position: absolute;
+          bottom: 0%;
+
+
+          &.pet-bone{
+            left: 10%;
+          }
+          &.pet-ball{
+            left: 42%;
+            margin-bottom: -4px;
+          }
+          &.pet-bed{
+            left: 74%;
+            width: 35%;
+            margin-bottom: -10px;
+          }
+        }
+
+      }
+      .back {
+        float: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 800;
+        width: inherit;
+        height: inherit;
+
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-179deg); /* setting to 180 causes an unnatural-looking half-flip */
+        transform: rotateY(-179deg);
+
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        /* -- transition is the magic sauce for animation -- */
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+
+        background-color: $scheme-green;
+      }
+      &.flip {
+
+        .front {
+          z-index: 900;
+
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+        }
+
+        .back {
+
+          z-index: 1000;
+
+          -webkit-transform: rotateX(0deg) rotateY(0deg);
+          -moz-transform: rotateX(0deg) rotateY(0deg);
+          transform: rotateX(0deg) rotateY(0deg);
+
+        }
+      }
+    }
+
+    /* -- X axis rotation for click panel -- */
+    .click .front {
+      cursor: pointer;
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
+    .click.flip .front {
+      -webkit-transform: rotateX(180deg);
+      -moz-transform: rotateX(180deg);
+      transform: rotateX(180deg);
+    }
+    .click .back {
+      cursor: pointer;
+      -webkit-transform: rotateX(-180deg);
+      -moz-transform: rotateX(-180deg);
+      transform: rotateX(-180deg);
+    }
+    .click.flip .back {
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
+
+  }
+
+  .swipe {
     overflow: hidden;
-
-    img{
-      width:100%;
-
-    }
+    visibility: hidden;
+    position: relative;
+  }
+  .swipe-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  .swipe-wrap > div {
+    float:left;
+    width:100%;
+    position: relative;
   }
 
-  #pet-bowl{
-    width: 180px;
-    height: 180px;
-    border-radius: 100px;
-    margin: -90px;
-    background: white;
-    z-index: 10000000;
-    position: absolute;
-    left: 50%;
-    border: 20px solid $scheme-brown;
-    background: $scheme-darkbrown;
-    .pet-bowl-content{
-
-    }
-  }
-
-  .pet-treat{
-    width:20%;
-    margin-left:-10%;
-    position: absolute;
-    bottom: 0%;
-
-
-    &.pet-bone{
-      left: 10%;
-    }
-    &.pet-ball{
-      left: 42%;
-      margin-bottom: -4px;
-    }
-    &.pet-bed{
-      left: 74%;
-      width: 35%;
-      margin-bottom: -10px;
-    }
-  }
 }
 

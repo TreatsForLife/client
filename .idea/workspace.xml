@@ -2,21 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/ui.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_.d" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_.d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/client.iml" afterPath="$PROJECT_DIR$/.idea/client.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pet.html" afterPath="$PROJECT_DIR$/app/views/pet.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/pets.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/pets.scss" afterPath="$PROJECT_DIR$/app/styles/pets.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/root.scss" afterPath="$PROJECT_DIR$/app/styles/root.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="client.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393371137361" ignored="false" />
+    <file path="/Dummy.txt" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393678893917" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/filters.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393146362006" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/templates/partials/widgets/show/all.jst.ejs.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393146362006" ignored="false" />
     <file path="/instagram.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277199719" ignored="false" />
     <file path="/main.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393191359122" ignored="false" />
-    <file path="/pets.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393282509029" ignored="false" />
-    <file path="/pet.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393280070207" ignored="false" />
-    <file path="/index.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393280322964" ignored="false" />
+    <file path="/pets.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680597023" ignored="false" />
+    <file path="/pet.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680717285" ignored="false" />
+    <file path="/index.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680049751" ignored="false" />
     <file path="/a.dummy" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367730222" ignored="false" />
-    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393195653955" ignored="false" />
+    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658604" ignored="false" />
     <file path="/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393195649030" ignored="false" />
     <file path="/root.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393274222062" ignored="false" />
     <file path="/welcome.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393275171130" ignored="false" />
@@ -27,9 +40,9 @@
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/events-app/eventsapp-general.css.scss.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393231365990" ignored="false" />
     <file path="/_consts.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273475578" ignored="false" />
     <file path="/welcome.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273735017" ignored="false" />
-    <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277436693" ignored="false" />
+    <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393679956652" ignored="false" />
     <file path="/app.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393275770932" ignored="false" />
-    <file path="/pets.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277743036" ignored="false" />
+    <file path="/pets.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680793258" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978294" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
     <file path="$PROJECT_DIR$/dist/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
@@ -38,6 +51,15 @@
     <file path="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/AndroidManifest.cordova.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/res/values/strings.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
+    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/editor_ctrl.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658603" ignored="false" />
+    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/events-app/channel.css.scss.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658603" ignored="false" />
+    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/templates/partials/editor/content.jst.ejs.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658603" ignored="false" />
+    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/templates/partials/import.jst.ejs.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658603" ignored="false" />
+    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/templates/partials/push-menu.jst.ejs.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658604" ignored="false" />
+    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/events-app/moment_edit.css.scss.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658604" ignored="false" />
+    <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/templates/partials/editor/moderate.jst.ejs.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404694867" ignored="false" />
+    <file path="/flip.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393679415749" ignored="false" />
+    <file path="/pets.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393679928800" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,33 +79,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/android/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="16" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.cordova.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/android/ant-build/AndroidManifest.cordova.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="android.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/android.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platforms/android/res/xml/config.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,16 +91,79 @@
       <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="31" selection-start="599" selection-end="599" vertical-scroll-proportion="-14.375">
+            <state line="23" column="3" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="49" selection-start="2215" selection-end="2215" vertical-scroll-proportion="0.045454547">
+            <state line="26" column="64" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-16.25">
+              <folding>
+                <element signature="e#1532#1866#0" expanded="true" />
+                <element signature="e#1609#1672#0" expanded="true" />
+                <marker date="1393680054583" expanded="true" signature="1133:1286" placeholder="..." />
+                <marker date="1393680054583" expanded="true" signature="1226:1254" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="11" selection-start="6" selection-end="11" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pet.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pet.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="50" selection-start="83" selection-end="83" vertical-scroll-proportion="-0.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pets.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pets.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/pets.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="9" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1077#1607#0" expanded="true" />
+                <element signature="e#1201#1590#0" expanded="true" />
+                <element signature="e#1643#1715#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="root.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="17" selection-start="75" selection-end="75" vertical-scroll-proportion="0.06048387">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ui.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/ui.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,35 +173,6 @@
         <entry file="file://$PROJECT_DIR$/app/bower_components/jquery/dist/jquery.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/android/assets/www/config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="20" selection-start="3611" selection-end="3611" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="20" selection-start="3611" selection-end="3611" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="10" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,27 +204,30 @@
         <option value="$PROJECT_DIR$/app/scripts/controllers/root.js" />
         <option value="$PROJECT_DIR$/app/views/welcome.html" />
         <option value="$PROJECT_DIR$/app/styles/welcome.scss" />
-        <option value="$PROJECT_DIR$/app/views/pet.html" />
-        <option value="$PROJECT_DIR$/app/styles/root.scss" />
-        <option value="$PROJECT_DIR$/app/styles/pets.scss" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/bower_components/instajam/dist/instajam.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/instagram.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
         <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/www/config.xml" />
         <option value="$PROJECT_DIR$/platforms/android/assets/www/config.xml" />
         <option value="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
+        <option value="$PROJECT_DIR$/.tmp/styles/pets.css" />
+        <option value="$PROJECT_DIR$/app/styles/flip.scss" />
         <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/styles/ui.scss" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
+        <option value="$PROJECT_DIR$/app/views/pet.html" />
+        <option value="$PROJECT_DIR$/app/styles/pets.scss" />
+        <option value="$PROJECT_DIR$/app/styles/root.scss" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-4" />
-    <option name="width" value="1537" />
-    <option name="height" value="905" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1535" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -238,60 +270,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,7 +329,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,10 +366,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -455,15 +447,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1537" height="905" extended-state="6" />
+    <frame x="65" y="24" width="1535" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32992327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33076924" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21961048" sideWeight="0.6700767" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2256548" sideWeight="0.66923076" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -473,6 +464,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26598465" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -539,46 +531,14 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/styles/_consts.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/root.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="101" selection-end="337" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/welcome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="104" selection-end="144" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/welcome.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="112" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1862" column="22" selection-start="30918" selection-end="30918" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/instajam/dist/instajam.js">
@@ -588,9 +548,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/Swipe/swipe.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="51" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="44" column="51" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
@@ -608,25 +566,14 @@
         <state line="12" column="0" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/pets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="37" selection-start="1419" selection-end="1419" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/grunt-angular-phonegap/tasks/grunt-angular-phonegap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="9" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platforms/android/CordovaLib/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platforms/android/ant-build/AndroidManifest.cordova.xml">
@@ -680,7 +627,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="31" selection-start="599" selection-end="599" vertical-scroll-proportion="-14.375">
+        <state line="23" column="3" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -688,15 +635,71 @@
     <entry file="file://$PROJECT_DIR$/app/bower_components/jquery/dist/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/ui.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.tmp/styles/pets.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.30120483">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/pets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="9" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1077#1607#0" expanded="true" />
+            <element signature="e#1201#1590#0" expanded="true" />
+            <element signature="e#1643#1715#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="50" selection-start="83" selection-end="83" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="49" selection-start="2215" selection-end="2215" vertical-scroll-proportion="0.045454547">
+        <state line="26" column="64" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-16.25">
+          <folding>
+            <element signature="e#1532#1866#0" expanded="true" />
+            <element signature="e#1609#1672#0" expanded="true" />
+            <marker date="1393680054583" expanded="true" signature="1133:1286" placeholder="..." />
+            <marker date="1393680054583" expanded="true" signature="1226:1254" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="11" selection-start="6" selection-end="11" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="75" selection-end="75" vertical-scroll-proportion="0.06048387">
           <folding />
         </state>
       </provider>

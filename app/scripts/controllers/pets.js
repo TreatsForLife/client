@@ -44,5 +44,9 @@ angular.module('clientApp')
             },1000);
         });
 
+        $scope.flip = function(){
+            angular.element('.flipper').toggleClass('flip');
+        }
+
     });
 
