@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/pets.scss" afterPath="$PROJECT_DIR$/app/styles/pets.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/root.scss" afterPath="$PROJECT_DIR$/app/styles/root.scss" />
-    </list>
+    <list default="true" id="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" name="Default" comment="" />
     <ignored path="client.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393678893917" ignored="false" />
@@ -119,7 +116,7 @@
       <file leaf-file-name="pets.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="0" selection-start="4121" selection-end="4121" vertical-scroll-proportion="0.76529163">
+            <state line="143" column="0" selection-start="3856" selection-end="3856" vertical-scroll-proportion="0.7866287">
               <folding />
             </state>
           </provider>
@@ -686,7 +683,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="0" selection-start="4121" selection-end="4121" vertical-scroll-proportion="0.76529163">
+        <state line="143" column="0" selection-start="3856" selection-end="3856" vertical-scroll-proportion="0.7866287">
           <folding />
         </state>
       </provider>
