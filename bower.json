@@ -17,9 +17,6 @@
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",
-    "angular-scenario": "1.2.6",
-    "Swipe": "https://github.com/bradbirdsall/Swipe.git#~2.0.0",
-    "instajam": "~2.0.0",
-    "font-awesome": "~4.0.3"
+    "angular-scenario": "1.2.6"
   }
 }

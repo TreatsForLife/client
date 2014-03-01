@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" name="Default" comment="" />
+    <list default="true" id="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/root.scss" afterPath="$PROJECT_DIR$/app/styles/root.scss" />
+    </list>
     <ignored path="client.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393678893917" ignored="false" />
@@ -12,7 +20,7 @@
     <file path="/pets.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680597023" ignored="false" />
     <file path="/pet.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393685664148" ignored="false" />
     <file path="/index.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680049751" ignored="false" />
-    <file path="/a.dummy" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393684137304" ignored="false" />
+    <file path="/a.dummy" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393687640898" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658604" ignored="false" />
     <file path="/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393195649030" ignored="false" />
     <file path="/root.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393274222062" ignored="false" />
@@ -24,7 +32,7 @@
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/events-app/eventsapp-general.css.scss.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393231365990" ignored="false" />
     <file path="/_consts.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273475578" ignored="false" />
     <file path="/welcome.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273735017" ignored="false" />
-    <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393686227413" ignored="false" />
+    <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393687771538" ignored="false" />
     <file path="/app.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393275770932" ignored="false" />
     <file path="/pets.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393685349432" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978294" ignored="false" />
@@ -33,7 +41,6 @@
     <file path="$PROJECT_DIR$/dist/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/AndroidManifest.cordova.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
-    <file path="$PROJECT_DIR$/platforms/android/res/values/strings.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
     <file path="$PROJECT_DIR$/www/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/editor_ctrl.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658603" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/events-app/channel.css.scss.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658603" ignored="false" />
@@ -44,6 +51,9 @@
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/templates/partials/editor/moderate.jst.ejs.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404694867" ignored="false" />
     <file path="/flip.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393679415749" ignored="false" />
     <file path="/pets.css" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393679928800" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393687473316" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/res/values/strings.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393687473316" ignored="false" />
+    <file path="$PROJECT_DIR$/platforms/android/assets/www/config.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393687473317" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,19 +73,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platforms/android/res/xml/config.xml">
+      <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="28" selection-start="3039" selection-end="3039" vertical-scroll-proportion="0.0">
+            <state line="19" column="31" selection-start="531" selection-end="531" vertical-scroll-proportion="-11.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bower.json">
+      <file leaf-file-name="font-awesome.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bower_components/font-awesome/src/3.2.1/assets/font-awesome/css/font-awesome.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="3" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
+            <state line="15" column="0" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/bower_components/font-awesome/src/3.2.1/assets/css/site.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="208" column="99" selection-start="14046" selection-end="14046" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,8 +107,8 @@
               <folding>
                 <element signature="e#1532#1866#0" expanded="true" />
                 <element signature="e#1609#1672#0" expanded="true" />
-                <marker date="1393685940515" expanded="true" signature="1133:1286" placeholder="..." />
-                <marker date="1393685940515" expanded="true" signature="1226:1254" placeholder="..." />
+                <marker date="1393686948235" expanded="true" signature="1133:1286" placeholder="..." />
+                <marker date="1393686948235" expanded="true" signature="1226:1254" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -113,10 +132,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pets.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pets.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="0" selection-start="3856" selection-end="3856" vertical-scroll-proportion="0.7866287">
+            <state line="127" column="6" selection-start="3386" selection-end="3386" vertical-scroll-proportion="-6.1372547">
               <folding />
             </state>
           </provider>
@@ -135,10 +154,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="root.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="root.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="25" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+            <state line="25" column="33" selection-start="436" selection-end="436" vertical-scroll-proportion="0.6855576">
               <folding />
             </state>
           </provider>
@@ -146,15 +165,6 @@
       </file>
       <file leaf-file-name="ui.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/ui.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bower_components/jquery/dist/jquery.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -202,8 +212,9 @@
         <option value="$PROJECT_DIR$/app/styles/ui.scss" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
         <option value="$PROJECT_DIR$/app/views/pet.html" />
-        <option value="$PROJECT_DIR$/app/styles/root.scss" />
         <option value="$PROJECT_DIR$/app/styles/pets.scss" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/app/styles/root.scss" />
       </list>
     </option>
   </component>
@@ -436,7 +447,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33076924" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2653846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2653846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2256548" sideWeight="0.7346154" order="0" side_tool="false" content_ui="combo" />
@@ -515,16 +526,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/styles/welcome.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="112" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1862" column="22" selection-start="30918" selection-end="30918" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/instajam/dist/instajam.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="449" column="58" selection-start="10188" selection-end="10188" vertical-scroll-proportion="0.0" />
@@ -609,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="3" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bower_components/jquery/dist/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -654,8 +648,8 @@
           <folding>
             <element signature="e#1532#1866#0" expanded="true" />
             <element signature="e#1609#1672#0" expanded="true" />
-            <marker date="1393685940515" expanded="true" signature="1133:1286" placeholder="..." />
-            <marker date="1393685940515" expanded="true" signature="1226:1254" placeholder="..." />
+            <marker date="1393686948235" expanded="true" signature="1133:1286" placeholder="..." />
+            <marker date="1393686948235" expanded="true" signature="1226:1254" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -674,16 +668,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
+    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="25" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+        <state line="127" column="6" selection-start="3386" selection-end="3386" vertical-scroll-proportion="-6.1372547">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="0" selection-start="3856" selection-end="3856" vertical-scroll-proportion="0.7866287">
+        <state line="19" column="31" selection-start="531" selection-end="531" vertical-scroll-proportion="-11.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/font-awesome/src/3.2.1/assets/font-awesome/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/font-awesome/src/3.2.1/assets/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="208" column="99" selection-start="14046" selection-end="14046" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="33" selection-start="436" selection-end="436" vertical-scroll-proportion="0.6855576">
           <folding />
         </state>
       </provider>
