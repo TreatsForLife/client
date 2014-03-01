@@ -1,9 +1,44 @@
 @import 'consts';
 
+@keyframes front-flip
+{
+  0%    {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);}
+  10%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(0deg);}
+  90%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(180deg);}
+  100%  {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(180deg);}
+}
+
+@keyframes back-flip
+{
+  0%    {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(-180deg);}
+  10%   {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(-180deg);}
+  90%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(0deg);}
+  100%  {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);}
+}
+
+@keyframes front-flip-back
+{
+  0%  {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(180deg);}
+  10%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(180deg);}
+  90%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(0deg);}
+  100%    {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);}
+}
+
+@keyframes back-flip-back
+{
+  0%  {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);}
+  10%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(0deg);}
+  90%   {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(-180deg);}
+  1000%    {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(-180deg);}
+}
+
 div.container.pets {
 
   .flipper {
+
     &.panel {
+
+      transform: scale(1) perspective(600px) rotateX(0deg);
 
       .pet-info{
         position: absolute;
@@ -25,21 +60,14 @@ div.container.pets {
         height: inherit;
         text-align: center;
 
-        -webkit-transform: rotateX(0deg) rotateY(0deg);
-        -moz-transform: rotateX(0deg) rotateY(0deg);
-        transform: rotateX(0deg) rotateY(0deg);
-
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
+        animation: front-flip-back 1s;
+        transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
         transform-style: preserve-3d;
-
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
         backface-visibility: hidden;
 
         /* -- transition is the magic sauce for animation -- */
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
+        transition: all 1s ease-in-out;
+        animation-timing-function:ease-in-out;
 
         background-color: $scheme-green;
 
@@ -53,7 +81,6 @@ div.container.pets {
 
           }
         }
-
         #pet-bowl{
           width: 180px;
           height: 180px;
@@ -69,7 +96,6 @@ div.container.pets {
 
           }
         }
-
         .pet-treat{
           width:20%;
           margin-left:-10%;
@@ -101,68 +127,32 @@ div.container.pets {
         width: inherit;
         height: inherit;
 
-        -webkit-transform: rotateY(-180deg);
-        -moz-transform: rotateY(-179deg); /* setting to 180 causes an unnatural-looking half-flip */
-        transform: rotateY(-179deg);
-
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
+        animation: back-flip-back 1s;
+        transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(-180deg);
         transform-style: preserve-3d;
-
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
         backface-visibility: hidden;
 
         /* -- transition is the magic sauce for animation -- */
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
-
+        transition: all 1s ease-in-out;
+        animation-timing-function:ease-in-out;
         background-color: $scheme-green;
       }
       &.flip {
 
         .front {
           z-index: 900;
-
-          -webkit-transform: rotateY(180deg);
-          -moz-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-        }
+          animation: front-flip 1s;
+          animation-timing-function:ease-in-out;
+          transform: scale(1) perspective(600px) rotateX(0deg) rotateY(180deg);
+        }             
 
         .back {
-
           z-index: 1000;
-
-          -webkit-transform: rotateX(0deg) rotateY(0deg);
-          -moz-transform: rotateX(0deg) rotateY(0deg);
-          transform: rotateX(0deg) rotateY(0deg);
-
+          animation: back-flip 1s;
+          animation-timing-function:ease-in-out;
+          transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
         }
       }
-    }
-
-    /* -- X axis rotation for click panel -- */
-    .click .front {
-      cursor: pointer;
-      -webkit-transform: rotateX(0deg);
-      -moz-transform: rotateX(0deg);
-      transform: rotateX(0deg);
-    }
-    .click.flip .front {
-      -webkit-transform: rotateX(180deg);
-      -moz-transform: rotateX(180deg);
-      transform: rotateX(180deg);
-    }
-    .click .back {
-      cursor: pointer;
-      -webkit-transform: rotateX(-180deg);
-      -moz-transform: rotateX(-180deg);
-      transform: rotateX(-180deg);
-    }
-    .click.flip .back {
-      -webkit-transform: rotateX(0deg);
-      -moz-transform: rotateX(0deg);
-      transform: rotateX(0deg);
     }
 
   }

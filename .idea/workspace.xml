@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/ui.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_.d" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_.d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/client.iml" afterPath="$PROJECT_DIR$/.idea/client.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pet.html" afterPath="$PROJECT_DIR$/app/views/pet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/pets.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/pets.scss" afterPath="$PROJECT_DIR$/app/styles/pets.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/root.scss" afterPath="$PROJECT_DIR$/app/styles/root.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="client.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,9 +14,9 @@
     <file path="/instagram.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393277199719" ignored="false" />
     <file path="/main.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393191359122" ignored="false" />
     <file path="/pets.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680597023" ignored="false" />
-    <file path="/pet.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680717285" ignored="false" />
+    <file path="/pet.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393685662996" ignored="false" />
     <file path="/index.html" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680049751" ignored="false" />
-    <file path="/a.dummy" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367730222" ignored="false" />
+    <file path="/a.dummy" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393684137304" ignored="false" />
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/javascripts/eventsapp/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393404658604" ignored="false" />
     <file path="/controllers.js.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393195649030" ignored="false" />
     <file path="/root.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393274222062" ignored="false" />
@@ -40,9 +28,9 @@
     <file path="$USER_HOME$/Work/MomentMeEvents/app/assets/stylesheets/events-app/eventsapp-general.css.scss.erb" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393231365990" ignored="false" />
     <file path="/_consts.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273475578" ignored="false" />
     <file path="/welcome.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393273735017" ignored="false" />
-    <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393679956652" ignored="false" />
+    <file path="/root.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393685147188" ignored="false" />
     <file path="/app.js" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393275770932" ignored="false" />
-    <file path="/pets.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393680793258" ignored="false" />
+    <file path="/pets.scss" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393685349432" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978294" ignored="false" />
     <file path="$PROJECT_DIR$/platforms/android/assets/www/bower_components/jquery/test/data/with_fries.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
     <file path="$PROJECT_DIR$/dist/bower_components/jquery/test/data/dashboard.xml" changelist="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" time="1393367978296" ignored="false" />
@@ -120,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pet.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pet.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/pet.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="50" selection-start="83" selection-end="83" vertical-scroll-proportion="-0.625">
+            <state line="22" column="38" selection-start="898" selection-end="898" vertical-scroll-proportion="0.4520548">
               <folding />
             </state>
           </provider>
@@ -132,7 +120,7 @@
       <file leaf-file-name="pets.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+            <state line="137" column="25" selection-start="3777" selection-end="3777" vertical-scroll-proportion="-8.784314">
               <folding />
             </state>
           </provider>
@@ -151,10 +139,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="root.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="root.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="75" selection-end="75" vertical-scroll-proportion="0.06048387">
+            <state line="10" column="0" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -217,9 +205,9 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/styles/ui.scss" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/pets.js" />
-        <option value="$PROJECT_DIR$/app/views/pet.html" />
         <option value="$PROJECT_DIR$/app/styles/pets.scss" />
         <option value="$PROJECT_DIR$/app/styles/root.scss" />
+        <option value="$PROJECT_DIR$/app/views/pet.html" />
       </list>
     </option>
   </component>
@@ -450,11 +438,12 @@
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33076924" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33076924" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2653846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2256548" sideWeight="0.66923076" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2256548" sideWeight="0.7346154" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -463,7 +452,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26598465" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -664,20 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="50" selection-start="83" selection-end="83" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="64" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-16.25">
@@ -697,9 +671,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/pets.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="25" selection-start="3777" selection-end="3777" vertical-scroll-proportion="-8.784314">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/root.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="75" selection-end="75" vertical-scroll-proportion="0.06048387">
+        <state line="10" column="0" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="38" selection-start="898" selection-end="898" vertical-scroll-proportion="0.4520548">
           <folding />
         </state>
       </provider>
