@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8f9b628-3392-4eb4-b5dc-ba5b477008ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_.d" afterPath="$PROJECT_DIR$/platforms/android/ant-build/TreatsForLife.ap_.d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="client.iws" />
@@ -111,9 +108,9 @@
       <file leaf-file-name="Gruntfile.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="25" selection-start="4243" selection-end="4243" vertical-scroll-proportion="0.71157897">
+            <state line="287" column="17" selection-start="7127" selection-end="7131" vertical-scroll-proportion="0.9368421">
               <folding>
-                <element signature="e#8616#8888#0" expanded="true" />
+                <element signature="e#8605#8877#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,8 +123,8 @@
               <folding>
                 <element signature="e#1631#1965#0" expanded="true" />
                 <element signature="e#1708#1771#0" expanded="true" />
-                <marker date="1393690949851" expanded="true" signature="1232:1385" placeholder="..." />
-                <marker date="1393690949851" expanded="true" signature="1325:1353" placeholder="..." />
+                <marker date="1393691773791" expanded="true" signature="1232:1385" placeholder="..." />
+                <marker date="1393691773791" expanded="true" signature="1325:1353" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -163,7 +160,7 @@
       <file leaf-file-name="196ca3b2.vendor.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/styles/196ca3b2.vendor.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6189" column="13" selection-start="124630" selection-end="124639" vertical-scroll-proportion="-3.0196078">
+            <state line="3" column="13" selection-start="99984" selection-end="99984" vertical-scroll-proportion="-0.88235295">
               <folding />
             </state>
           </provider>
@@ -191,10 +188,7 @@
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding>
-                <marker date="1393691159687" expanded="true" signature="763:916" placeholder="..." />
-                <marker date="1393691159687" expanded="true" signature="856:884" placeholder="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -306,6 +300,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -335,24 +343,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -657,8 +647,8 @@
           <folding>
             <element signature="e#1631#1965#0" expanded="true" />
             <element signature="e#1708#1771#0" expanded="true" />
-            <marker date="1393690949851" expanded="true" signature="1232:1385" placeholder="..." />
-            <marker date="1393690949851" expanded="true" signature="1325:1353" placeholder="..." />
+            <marker date="1393691773791" expanded="true" signature="1232:1385" placeholder="..." />
+            <marker date="1393691773791" expanded="true" signature="1325:1353" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -687,10 +677,7 @@
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1393691159687" expanded="true" signature="763:916" placeholder="..." />
-            <marker date="1393691159687" expanded="true" signature="856:884" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,16 +697,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/styles/196ca3b2.vendor.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6189" column="13" selection-start="124630" selection-end="124639" vertical-scroll-proportion="-3.0196078">
+        <state line="3" column="13" selection-start="99984" selection-end="99984" vertical-scroll-proportion="-0.88235295">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="25" selection-start="4243" selection-end="4243" vertical-scroll-proportion="0.71157897">
+        <state line="287" column="17" selection-start="7127" selection-end="7131" vertical-scroll-proportion="0.9368421">
           <folding>
-            <element signature="e#8616#8888#0" expanded="true" />
+            <element signature="e#8605#8877#0" expanded="true" />
           </folding>
         </state>
       </provider>
