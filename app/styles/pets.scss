@@ -65,6 +65,7 @@ div.container.pets {
         transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
         transform-style: preserve-3d;
         backface-visibility: hidden;
+        opacity: 1;
 
         /* -- transition is the magic sauce for animation -- */
         transition: all 1s ease-in-out;
@@ -132,10 +133,16 @@ div.container.pets {
         transform: scale(1) perspective(600px) rotateX(0deg) rotateY(-180deg);
         transform-style: preserve-3d;
         backface-visibility: hidden;
+        opacity: 0;
 
         /* -- transition is the magic sauce for animation -- */
         transition: all 1s ease-in-out;
         background-color: $scheme-green;
+
+        .pet-info{
+          left:10px;
+        }
+
       }
       &.flip {
 
@@ -144,13 +151,15 @@ div.container.pets {
           //animation: front-flip 1s;
           //animation-timing-function:ease-in-out;
           transform: scale(1) perspective(600px) rotateX(0deg) rotateY(180deg);
-        }             
+          opacity: 0;
+        }
 
         .back {
           z-index: 1000;
           //animation: back-flip 1s;
           //animation-timing-function:ease-in-out;
           transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
+          opacity: 1;
         }
       }
     }

@@ -2359,7 +2359,7 @@
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/bower_components/jquery/dist/jquery.js \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/bower_components/jquery/dist/jquery.min.js \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/styles/29403685.vendor.css \
-/home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/styles/fccbcef3.main.css \
+/home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/styles/04148704.main.css \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/scripts/76b1738d.scripts.js \
 /home/guy/Projects/TreatsForLife/client/platforms/android/assets/www/scripts/f649f411.vendor.js \
 /home/guy/Projects/TreatsForLife/client/platforms/android/ant-build/AndroidManifest.xml \
