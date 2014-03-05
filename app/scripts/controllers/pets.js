@@ -27,13 +27,24 @@ angular.module('clientApp')
 //
 //    });
     .controller('PetsCtrl', function ($scope, Instagram, $rootScope, $timeout) {
+
         $rootScope.bodyClass='pets';
+        $scope.grassHeight = angular.element(window).height() - angular.element(window).width();
+
         Instagram.get(100).success(function (res) {
             $timeout(function(){
                 $scope.photos = res.data;
             });
             $timeout(function(){
-                window.mySwipe = new Swipe(document.getElementById('slider'), {
+                window.videosSwipe = new Swipe(document.getElementById('slider'), {
+                    startSlide: 0,
+                    continuous: true,
+                    disableScroll: true,
+                    stopPropagation: false,
+                    callback: function(index, elem) {},
+                    transitionEnd: function(index, elem) {}
+                });
+                window.treatsSwipe = new Swipe(document.getElementById('slider-treats'), {
                     startSlide: 0,
                     continuous: true,
                     disableScroll: true,

@@ -81,37 +81,10 @@ div.container.pets {
 
           }
         }
-        #pet-bowl{
-          width: 180px;
-          height: 180px;
-          border-radius: 100px;
-          margin: -90px;
-          background: white;
-          z-index: 10000000;
-          position: absolute;
-          left: 50%;
-          border: 20px solid $scheme-brown;
-          background: $scheme-darkbrown;
-          .pet-bowl-content{
-
-          }
-        }
         .pet-treat{
-          width:20%;
-          position: absolute;
-          bottom: 0%;
-
-
-          &.pet-bone{
-            left: 10%;
-          }
-          &.pet-ball{
-            left: 42%;
-          }
-          &.pet-bed{
-            left: 74%;
-            width: 35%;
-          }
+          width:100px;
+          //position: absolute;
+          //bottom: 0%;
         }
 
       }
@@ -170,6 +143,13 @@ div.container.pets {
     float:left;
     width:100%;
     position: relative;
+  }
+
+  .swipe-wrap.treat{
+    width: 100% !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
   }
 
 }
