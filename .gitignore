@@ -3,6 +3,7 @@ node_modules
 .sass-cache
 app/bower_components
 
+dist/**/
 platforms/**/
 www
 !www/config.xml
