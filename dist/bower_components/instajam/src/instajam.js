@@ -46,10 +46,8 @@
 
     // First, check if a localStorage key 
     // exists for the access_token...
-
-    var local_at = localStorage.getItem('instagram_access_token');
-
-    if (local_at && local_at!='false') {
+    
+    if (localStorage.getItem('instagram_access_token')) {
       
       // ...and if there is, set the
       // authenticated property to true. 
@@ -579,7 +577,7 @@
   function hashParam (param, remove) {
 
     // Create a RegExp object for parsing params
-    var regex = new RegExp("(?:&|#|#/)" + param + "=([a-z0-9._-]+)", "i");
+    var regex = new RegExp("(?:&|#)" + param + "=([a-z0-9._-]+)", "i");
 
     // Look for matches in the windows hash
     var matches = window.location.hash.match(regex);
@@ -589,7 +587,7 @@
 
       // ...then remove the parameter if specified
       if (remove) {
-        var removeRegex = new RegExp("(?:&|#|#/)" + param + "=" + matches[1], "i");
+        var removeRegex = new RegExp("(?:&|#)" + param + "=" + matches[1], "i");
         window.location.hash = window.location.hash.replace(removeRegex, '');
       }
 

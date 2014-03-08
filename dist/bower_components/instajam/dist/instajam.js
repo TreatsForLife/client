@@ -66,8 +66,7 @@
         
         // If we can parse the access_token from
         // the URL hash, set the localStorage param...
-        localStorage.setItem('instagram_access_token',
-            ('access_token', true));
+        localStorage.setItem('instagram_access_token', hashParam('access_token', true));
         
         // ...and set the authenticated property to true
         this.authenticated = true;
@@ -581,7 +580,7 @@
   function hashParam (param, remove) {
 
     // Create a RegExp object for parsing params
-    var regex = new RegExp("(?:&|#|#/)" + param + "=([a-z0-9._-]+)", "i");
+    var regex = new RegExp("(?:&|#)" + param + "=([a-z0-9._-]+)", "i");
 
     // Look for matches in the windows hash
     var matches = window.location.hash.match(regex);
@@ -591,7 +590,7 @@
 
       // ...then remove the parameter if specified
       if (remove) {
-        var removeRegex = new RegExp("(?:&|#|#/)" + param + "=" + matches[1], "i");
+        var removeRegex = new RegExp("(?:&|#)" + param + "=" + matches[1], "i");
         window.location.hash = window.location.hash.replace(removeRegex, '');
       }
 
