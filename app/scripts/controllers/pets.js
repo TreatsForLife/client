@@ -37,47 +37,35 @@ angular.module('clientApp')
                 $scope.photos = res.data;
             });
             $timeout(function(){
-                $scope.slides = [];
+                var gallerySlides = [];
                 for (var p in $scope.photos){
                     var photo = $scope.photos[p];
                     var slide = {
-                        img: photo.images.standard_resolution.url,
+                        src: photo.images.standard_resolution.url,
                         width: $scope.screenWidth,
                         height: $scope.screenWidth
                     }
-                    $scope.slides.push(slide);
+                    gallerySlides.push(slide);
                 }
-                var gallery = new SwipeView('#pet-pic', { numberOfPages: $scope.slides.length });
+                setupSwipe(gallerySlides, 'pet-pic');
+
+
+                var treatsSlides = [];
                 for (var i=0; i<3; i++) {
-                    var page = i==0 ? $scope.slides.length-1 : i-1;
-                    var el = document.createElement('img');
-                    el.className = 'loading';
-                    el.src = $scope.slides[page].img;
-                    el.width = $scope.slides[page].width;
-                    el.height = $scope.slides[page].width;
-                    el.onload = function () { this.className = ''; }
-                    gallery.masterPages[i].appendChild(el);
-                }
-                gallery.onFlip(function () {
-                    var el, upcoming;
-                    for (var i=0; i<3; i++) {
-                        upcoming = gallery.masterPages[i].dataset.upcomingPageIndex;
-                        if (upcoming != gallery.masterPages[i].dataset.pageIndex) {
-                            el = gallery.masterPages[i].querySelector('img');
-                            el.className = 'loading';
-                            el.src = $scope.slides[upcoming].img;
-                        }
+                    var treat = ['bone', 'ball', 'bed'][i];
+                    var slide = {
+                        src: 'images/' + treat + '.png',
+                        width: $scope.grassHeight-50,
                     }
-                });
-                gallery.onMoveOut(function () {
-                    gallery.masterPages[gallery.currentMasterPage].className = gallery.masterPages[gallery.currentMasterPage].className.replace(/(^|\s)swipeview-active(\s|$)/, '');
-                });
-                gallery.onMoveIn(function () {
-                    var className = gallery.masterPages[gallery.currentMasterPage].className;
-                    /(^|\s)swipeview-active(\s|$)/.test(className) || (gallery.masterPages[gallery.currentMasterPage].className = !className ? 'swipeview-active' : className + ' swipeview-active');
-                });
+                    treatsSlides.push(slide);
+                }
+                setupSwipe(treatsSlides, 'pet-treat');
 
-
+                $('#pet-treat img').on('click',function(){
+                    $(this).attr('src', $(this).attr('src').replace('png','gif'));
+                }).on('touch',function(){
+                    $(this).attr('src', $(this).attr('src').replace('png','gif'));
+                });
 
             },1000);
         });
@@ -86,5 +74,32 @@ angular.module('clientApp')
             angular.element('.flipper').toggleClass('flip');
         }
 
+
+        //------------| Util Functions |------------//
+        function setupSwipe(slides, parent_id){
+            var gallery = new SwipeView('#'+parent_id, { numberOfPages: slides.length });
+            for (var i=0; i<3; i++) {
+                var page = i==0 ? slides.length-1 : i-1;
+                var el = document.createElement('img');
+                el.className = 'loading';
+                for (var p in slides[page]){
+//                    el[p] = slides[page][p];
+                    $(el).attr(p,slides[page][p]);
+                }
+                el.onload = function () { this.className = ''; }
+                gallery.masterPages[i].appendChild(el);
+            }
+            gallery.onFlip(function () {
+                var el, upcoming;
+                for (var i=0; i<3; i++) {
+                    upcoming = gallery.masterPages[i].dataset.upcomingPageIndex;
+                    if (upcoming != gallery.masterPages[i].dataset.pageIndex) {
+                        el = gallery.masterPages[i].querySelector('img');
+                        el.className = 'loading';
+                        el.src = slides[upcoming].src;
+                    }
+                }
+            });
+        }
     });
 

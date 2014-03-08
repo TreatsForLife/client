@@ -71,20 +71,19 @@ div.container.pets {
 
         background-color: $scheme-green;
 
-        #pet-pic{
+        #pet-pic, #pet-treat{
           width:100%;
-//          max-height: 100%;
           overflow: hidden;
 
-          img{
-            width:100%;
-
-          }
         }
-        .pet-treat{
-          width:100px;
-          //position: absolute;
-          //bottom: 0%;
+
+          #swipeview-slider > div{
+            position:relative;
+            display:box;
+            box-orient:vertical;
+            box-pack:center;
+            box-align:center;
+            overflow:hidden;
         }
 
       }
