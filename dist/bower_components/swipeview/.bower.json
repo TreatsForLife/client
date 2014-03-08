@@ -1,0 +1,15 @@
+{
+  "name": "swipeview",
+  "_cacheHeaders": {
+    "ETag": "\"25ea326e5a4753112761b0fbfc80d65a\"",
+    "Content-Length": "15202",
+    "Content-Type": "text/plain; charset=utf-8",
+    "Content-Disposition": "inline"
+  },
+  "_release": "e-tag:25ea326e5",
+  "main": "index.js",
+  "_source": "https://raw.github.com/cubiq/SwipeView/master/src/swipeview.js",
+  "_target": "*",
+  "_originalSource": "https://raw.github.com/cubiq/SwipeView/master/src/swipeview.js",
+  "_direct": true
+}

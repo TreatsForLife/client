@@ -13,7 +13,8 @@
     "angular-route": "1.2.6",
     "instajam": "~2.0.0",
     "Swipe": "https://github.com/bradbirdsall/Swipe.git#~2.0.0",
-    "components-font-awesome": "~4.0.3"
+    "components-font-awesome": "~4.0.3",
+    "swipeview": "https://raw.github.com/cubiq/SwipeView/master/src/swipeview.js"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",
