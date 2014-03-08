@@ -2,14 +2,14 @@
     <div class="front page">
         <i class="pet-info fa fa-info-circle" ng-click="flip()"></i>
 
-        <div id="pet-pic" ng-clock>
-            <div id='slider' class='swipe'>
-                <div class='swipe-wrap'>
-                    <div ng-repeat="photo in photos">
-                        <img ng-src="{{photo.images.standard_resolution.url}}"/>
-                    </div>
-                </div>
-            </div>
+        <div id="pet-pic" ng-style="{width:screenWidth, height:screenWidth}" ng-clock>
+            <!--<div id='slider' class='swipe'>-->
+                <!--<div class='swipe-wrap'>-->
+                    <!--<div ng-repeat="photo in photos">-->
+                        <!--<img ng-repeat="photo in photos" ng-src="{{photo.images.standard_resolution.url}}"/>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
 
         <div id='slider-treats' class='swipe'>
@@ -20,10 +20,10 @@
                 </div>
             </div>
 
-            <div ng-hide="showBoneMovie" ng-click="showBoneMovie=true" class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/bone.png)'}"></div>
-            <div ng-show="showBoneMovie" class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/bone.gif)'}"></div>
-            <div class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/ball.png)'}"></div>
-            <div class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/bed.png)'}"></div>
+            <!--<div ng-hide="showBoneMovie" ng-click="showBoneMovie=true" class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/bone.png)'}"></div>-->
+            <!--<div ng-show="showBoneMovie" class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/bone.gif)'}"></div>-->
+            <!--<div class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/ball.png)'}"></div>-->
+            <!--<div class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/bed.png)'}"></div>-->
         </div>
 
     </div>
