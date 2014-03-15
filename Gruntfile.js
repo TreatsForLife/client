@@ -165,8 +165,8 @@ module.exports = function (grunt) {
                 httpImagesPath: '/images',
                 httpGeneratedImagesPath: '/images/generated',
                 httpFontsPath: '/fonts',
-                relativeAssets: true,
-                assetCacheBuster: true,
+                relativeAssets: false,
+                assetCacheBuster: false,
                 raw: 'Sass::Script::Number.precision = 10\n'
             },
             dist: {
@@ -188,7 +188,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+//                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                         '<%= yeoman.dist %>/s/*'
                     ]
                 }
