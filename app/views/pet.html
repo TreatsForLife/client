@@ -14,7 +14,7 @@
 
         <div id='slider-treats' class='swipe'>
             <div class='swipe-wrap treat'>
-                <div ng-repeat="photo in ['bone', 'ball', 'bed']">
+                <div ng-repeat="photo in ['bone', 'ball', 'bed']" ng-style="{height:grassHeight}" >
                     <div ng-hide="showBoneMovie" ng-click="showBoneMovie=true"  class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/bone.png)'}"></div>
                     <div ng-show="showBoneMovie" ng-click="showBoneMovie=false" class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/bone.gif)'}"></div>
                 </div>
