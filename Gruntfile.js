@@ -366,10 +366,10 @@ module.exports = function (grunt) {
         phonegap: {
             config: {
                 root: 'www',
-                config: 'www/config.xml',
+                config: 'config.xml',
                 cordova: '.cordova',
                 path: 'phonegap',
-                plugins: ['/local/path/to/plugin', 'http://example.com/path/to/plugin.git'],
+//                plugins: ['/local/path/to/plugin', 'http://example.com/path/to/plugin.git'],
                 platforms: ['android'],
                 maxBuffer: 200, // You may need to raise this for iOS.
                 verbose: false,
