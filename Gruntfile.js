@@ -15,6 +15,8 @@ module.exports = function (grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
+    grunt.loadNpmTasks('grunt-phonegap');
+
     // Define the configuration for all the tasks
     grunt.initConfig({
 
@@ -481,15 +483,15 @@ module.exports = function (grunt) {
                 // If you want to use the Phonegap Build service to build one or more
                 // of the platforms specified above, include these options.
                 // See https://build.phonegap.com/
-                remote: {
+                /*remote: {
                     username: 'your_username',
                     password: 'your_password',
                     platforms: ['android', 'blackberry', 'ios', 'symbian', 'webos', 'wp7']
-                },
+                },*/
 
                 // Set an explicit Android permissions list to override the automatic plugin defaults.
                 // In most cases, you should omit this setting. See 'Android Permissions' in README.md for details.
-                permissions: ['INTERNET', 'ACCESS_COURSE_LOCATION', '...']
+                permissions: ['INTERNET', 'ACCESS_COURSE_LOCATION']
             }
         }
     });
