@@ -52,6 +52,12 @@ angular.module('clientApp')
                     callback: function(index, elem) {},
                     transitionEnd: function(index, elem) {}
                 });
+
+                var sup1 = new SuperGif({ gif: document.getElementById('bone') } );
+                sup1.load(function(){
+                    sup1.pause();
+                });
+
             },1000);
         });
 
