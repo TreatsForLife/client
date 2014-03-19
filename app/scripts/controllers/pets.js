@@ -53,16 +53,33 @@ angular.module('clientApp')
                     transitionEnd: function(index, elem) {}
                 });
 
+/*
                 var sup1 = new SuperGif({ gif: document.getElementById('bone') } );
                 sup1.load(function(){
                     sup1.pause();
                 });
+*/
 
             },1000);
         });
 
         $scope.flip = function(){
             angular.element('.flipper').toggleClass('flip');
+        }
+
+        $scope.treats = ['bone'];
+        $scope.animationStatus = {};
+        for (var t in $scope.treats){
+            var treat = $scope.treats[t];
+            $scope.animationStatus[treat] = 'first';
+        }
+
+        $scope.startAnimation = function(treat){
+            $scope.animationStatus[treat] = 'animate';
+            $timeout(function(){
+                $scope.animationStatus[treat] = 'last';
+            }, 2000);
+
         }
 
     });
