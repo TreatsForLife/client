@@ -18,13 +18,36 @@
       width: 100%;
       padding: 10px;
       border-radius: 5px;
-      border: 1px solid #444;
+      border: 2px solid #111;
       background: #ffffff;
       font-family: Tahoma, Verdana, Aial, sans-serif;
       font-size: 16px;
       color: #333300;
       min-height: 100%;
       box-sizing: border-box;
+    }
+  }
+  .tip-dialog-point{
+    &::before, &::after{
+      content: '';
+      border-style: solid;
+      position: absolute;
+      bottom: -40px;
+      left: 94px;
+    }
+    &::before{
+      margin-left:0;
+      margin-bottom:1px;
+      border-width: 20px;
+      border-color: #111 transparent transparent;
+      z-index: 1;
+    }
+    &::after{
+      margin-left: 1px;
+      margin-bottom: 5px;
+      border-width: 19px;
+      border-color: #ffffff transparent transparent;
+      z-index: 2;
     }
   }
   .tip-dialog-dog{
@@ -37,6 +60,10 @@
     background-repeat: no-repeat;
     height: 196px;
     width: 100%;
+    &.ng-enter{
+      -webkit-animation-name: bounceInLeft;
+      animation-name: bounceInLeft;
+    }
 
   }
 }

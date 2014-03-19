@@ -7,6 +7,10 @@ angular.module('clientApp')
       restrict: 'E',
       link: function postLink(scope, element, attrs) {
         scope.text = ('this is the tipDialog directive');
+
+          scope.showTipDialog = function(){
+              scope.shown = true;
+          }
       }
     };
   });

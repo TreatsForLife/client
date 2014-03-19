@@ -1,8 +1,10 @@
-<div class="tip-dialog-container">
-    <div class="tip-dialog-wrapper">
-        <div class="tip-dialog">{{text}}
+<div class="tip-dialog-container" ng-show="shown">
+    <div class="tip-dialog-wrapper" ng-show="shown">
+        <div class="tip-dialog animated bounceInDown">{{text}}
         </div>
-        <div class="tip-dialog-dog">
+        <div class="tip-dialog-point animated bounceInDown">
+        </div>
+        <div class="tip-dialog-dog animated bounceInDown">
         </div>
     </div>
 </div>
