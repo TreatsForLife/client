@@ -15,11 +15,15 @@
         <div id='slider-treats' class='swipe'>
             <div class='swipe-wrap treat'>
                 <!--<div ng-repeat="photo in ['bone', 'ball', 'bed']" ng-style="{height:grassHeight}" >-->
-                <div ng-repeat="treat in treats" ng-style="{height:grassHeight}" >
+                <div ng-repeat="treat in treats" ng-style="{height:grassHeight}">
                     <!--<img class='treat' id="bone" src="images/bone.png" rel:animated_src="images/bone.gif" rel:auto_play="0" ></div>-->
-                    <div ng-show="animationStatus[treat]=='first'" ng-click="startAnimation(treat)" ng-touch="startAnimation(treat)"  class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}.png)'}"></div>
-                    <div ng-if="animationStatus[treat]=='animate'" class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}.gif)'}"></div>
-                    <div ng-show="animationStatus[treat]=='last'" class='swipe-wrap treat' ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}1.png)'}"></div>
+                    <div ng-show="animationStatus[treat]=='first'" ng-click="startAnimation(treat)"
+                         ng-touch="startAnimation(treat)" class='swipe-wrap treat'
+                         ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}.png)'}"></div>
+                    <div ng-if="animationStatus[treat]=='animate'" class='swipe-wrap treat'
+                         ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}.gif)'}"></div>
+                    <div ng-show="animationStatus[treat]=='last'" class='swipe-wrap treat'
+                         ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}1.png)'}"></div>
                 </div>
             </div>
         </div>
@@ -33,6 +37,7 @@
         </div>
     </div>
 </div>
+<tip-dialog></tip-dialog>
 
 
 
