@@ -1,10 +1,12 @@
 <div class="tip-dialog-container" ng-show="shown">
-    <div class="tip-dialog-wrapper" ng-show="shown">
-        <div class="tip-dialog animated bounceInDown">{{text}}
+    <div class="tip-dialog-wrapper">
+        <div class="tip-dialog animated bounce{{!leaving ? 'InDown' : 'OutUp'}}">{{text}}
         </div>
-        <div class="tip-dialog-point animated bounceInDown">
+        <div class="tip-dialog-point animated bounce{{!leaving ? 'InDown' : 'OutUp'}}">
         </div>
-        <div class="tip-dialog-dog animated bounceInDown">
+        <div class="tip-dialog-dog animated bounce{{!leaving ? 'In' : 'Out'}}">
+        </div>
+        <div class="tip-dialog-x animated fade{{!leaving ? 'In' : 'Out'}}" ng-click="closeTipDialog()"><i class="fa fa-times-circle-o"></i>
         </div>
     </div>
 </div>

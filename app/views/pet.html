@@ -22,7 +22,7 @@
                          ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}.png)'}"></div>
                     <div ng-if="animationStatus[treat]=='animate'" class='swipe-wrap treat'
                          ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}.gif)'}"></div>
-                    <div ng-show="animationStatus[treat]=='last'" class='swipe-wrap treat'
+                    <div ng-show="animationStatus[treat]=='last'" ng-click="animationStatus[treat]='first'" class='swipe-wrap treat'
                          ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}1.png)'}"></div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
         <i class="pet-info fa fa-times-circle" ng-click="flip()"></i>
 
         <div class="pad">
-            <h2>check you on the flip side</h2>
+            <h2>קצת פרטים על הכלב שלך</h2>
         </div>
     </div>
 </div>

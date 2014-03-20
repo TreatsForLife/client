@@ -25,6 +25,9 @@
       color: #333300;
       min-height: 100%;
       box-sizing: border-box;
+
+      text-align: right;
+      direction: rtl;
     }
   }
   .tip-dialog-point{
@@ -65,5 +68,15 @@
       animation-name: bounceInLeft;
     }
 
+  }
+  .tip-dialog-x{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    i{
+      color: #ffffff;
+      font-size: 40px;
+      cursor: pointer;
+    }
   }
 }
