@@ -173,11 +173,22 @@ div.container.pet {
 
     li.treats-menu-item{
       position: relative;
+      padding: 5px 0;
+      border-bottom: 1px solid #ddd;
+      &:first-of-type{
+        border-top: 1px solid #ddd;
+      }
       .treats-menu-name{
-
+        font-size: 18px;
+        line-height: 24px;
+        color: #333333;
+        font-weight: bold;
       }
       .treats-menu-price{
-
+        font-size: 12px;
+        line-height: 16px;
+        color: #999999;
+        font-weight: normal;
       }
       .treats-menu-checkbox{
         position: absolute;
@@ -186,20 +197,40 @@ div.container.pet {
         width: 30px;
         height: 30px;
         input{
-          width: 30px;
+          width: 0px;
           height: 30px;
-          opacity: 0;
           font-family: FontAwesome;
-          width: 30px;
-          font-size: 30px;
+          font-size: 40px;
+          margin-top: 1px;
           &::after{
-            content:  "\f057",
+            content: "\f055";
+            color: $button-red;
           }
-          &:checked{
-            opacity: 0;
+          &:checked, &.fixed{
+            &::after{
+              content:  "\f058";
+              color: $button-green;
+            }
           }
         }
       }
     }
+  }
+}
+.treats-checkout{
+  margin-top: 5px;
+  width: 100%;
+  .treats-checkout-total{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+  }
+  .treats-checkout-button{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
   }
 }

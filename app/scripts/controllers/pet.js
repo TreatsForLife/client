@@ -76,6 +76,7 @@ angular.module('clientApp')
         }
 
         $scope.menu = [
+            {name: 'אוכל לשבוע', price: 20, cart: true, fixed:true},
             {name: 'עצם לעיסה קטנה', price: 10},
             {name: 'עצם לעיסה גדולה', price: 20},
             {name: 'כדור צעצוע', price: 10},
@@ -83,6 +84,17 @@ angular.module('clientApp')
             {name: 'אמפולה נגד פשפשים', price: 50},
             {name: 'קולר נגד פשפשים', price: 100}
         ];
+
+        $scope.totalToPay = function(){
+            var total = 0;
+            for (var t in $scope.menu){
+                var treat = $scope.menu[t];
+                if (treat.cart || treat.fixed){
+                    total += treat.price;
+                }
+            }
+            return total;
+        }
 
     });
 

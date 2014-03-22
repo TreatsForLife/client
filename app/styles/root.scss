@@ -58,3 +58,69 @@ i{
   font-style: normal;
 
 }
+
+
+button, a.button, input[type="submit"] {
+  font-size: 14px;
+  background: none;
+  cursor: pointer;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+  outline: none;
+  position: relative;
+  border-radius: 5px;
+  user-select: none;
+  background: white;
+  background: linear-gradient(white, #f1f1f1); /* Standard syntax (must be last) */
+  border:1px solid #cccccc;
+
+  &:active, &.button-active, &.button-active:hover, &.button-active:active{
+    background: white;
+    background: linear-gradient(#f1f1f1, white); /* Standard syntax (must be last) */
+    box-shadow: none;
+    text-decoration: none;
+  }
+
+  &.button-blue{
+    background: $button-blue;
+    background: linear-gradient($button-blue-light, $button-blue); /* Standard syntax (must be last) */
+    border-color:transparent;
+    color:white;
+    &:active, &.button-active, &.button-active:hover, &.button-active:active{
+      background: $button-blue;
+      background: linear-gradient($button-blue, $button-blue-light); /* Standard syntax (must be last) */
+      box-shadow: none;
+      text-decoration: none;
+    }
+  }
+  &.button-green{
+    background: $button-green;
+    background: linear-gradient($button-green-light, $button-green); /* Standard syntax (must be last) */
+    border-color:transparent;
+    color:white;
+
+    &:active, &.button-active, &.button-active:hover, &.button-active:active{
+      background: $button-green;
+      background: linear-gradient($button-green, $button-green-light); /* Standard syntax (must be last) */
+      box-shadow: none;
+      text-decoration: none;
+    }
+  }
+  &.button-red{
+    background: $button-red;
+    background: linear-gradient($button-red-light, $button-red); /* Standard syntax (must be last) */
+    border-color:transparent;
+    color:white;
+
+    &:active, &.button-active, &.button-active:hover, &.button-active:active{
+      background: $button-red;
+      background: linear-gradient($button-red, $button-red-light); /* Standard syntax (must be last) */
+      box-shadow: none;
+      text-decoration: none;
+    }
+  }
+}
+
