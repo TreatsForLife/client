@@ -1,39 +1,24 @@
 'use strict';
 
 angular.module('clientApp')
-//  .controller('PetsCtrl', function ($scope, Instagram, $rootScope, $timeout) {
-//
-//        $rootScope.bodyClass='pets';
-//
-//        Instagram.tag.media('treatsforlife', function(res){
-//            $timeout(function(){
-//                $scope.photos = res.data;
-//                //todo - paging
-//            });
-//            $timeout(function(){
-//                window.mySwipe = new Swipe(document.getElementById('slider'), {
-//                    startSlide: 2,
-//                    speed: 400,
-//                    auto: 3000,
-//                    continuous: true,
-//                    disableScroll: false,
-//                    stopPropagation: false,
-//                    callback: function(index, elem) {},
-//                    transitionEnd: function(index, elem) {}
-//                });
-//            },1000);
-//
-//        });
-//
-//    });
-    .controller('PetsCtrl', function ($scope, Instagram, $rootScope, $timeout) {
+    .controller('PetCtrl', function ($scope, Instagram, $rootScope, $timeout) {
 
         $rootScope.bodyClass='pets';
         $scope.grassHeight = angular.element(window).height() - angular.element(window).width();
 
         Instagram.get(100).success(function (res) {
             $timeout(function(){
-                $scope.photos = res.data;
+                $scope.footage = [];
+                for (var i in res.data){
+                    var inst = res.data[i];
+                    var item = {};
+                    item['photo_url'] = inst.images.standard_resolution.url;
+                    item['video_url'] = inst.videos ? inst.videos.standard_resolution.url : false;
+                    item['inst_link'] = inst.link;
+                    $scope.footage.push(item);
+
+                }
+                console.log(res.data);
             });
             $timeout(function(){
                 window.videosSwipe = new Swipe(document.getElementById('slider'), {
@@ -79,7 +64,7 @@ angular.module('clientApp')
             $timeout(function(){
                 $scope.animationStatus[treat] = 'last';
                 $scope.showTipDialog();
-            }, 2000);
+            }, 1200);
 
         }
 

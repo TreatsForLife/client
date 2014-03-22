@@ -13,13 +13,12 @@ angular.module('clientApp')
                 '</div>' +
                 '</div>',
             restrict: 'E',
-            link: function postLink(scope, element, attrs) {
+            link: function (scope, element, attrs) {
 
                 var texts = {
                     buy_treat: "איזה כיף שהחלטת לקנות לי מתנה!\n" +
                         ""
                 }
-
 
                 scope.text = texts.buy_treat;
 
@@ -27,10 +26,10 @@ angular.module('clientApp')
                     scope.shown = true;
                 }
                 scope.closeTipDialog = function () {
-
                     scope.leaving = true;
                     $timeout(function () {
                         scope.shown = false;
+                        scope.leaving = false;
                     }, 1000);
                 }
             }

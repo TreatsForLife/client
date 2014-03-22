@@ -5,8 +5,10 @@
         <div id="pet-pic" ng-clock>
             <div id='slider' class='swipe'>
                 <div class='swipe-wrap'>
-                    <div ng-repeat="photo in photos">
-                        <img ng-src="{{photo.images.standard_resolution.url}}"/>
+                    <div ng-repeat="item in footage">
+                        <img ng-src="{{item.photo_url}}"/>
+                        <video ng-if="item.video_url" ng-show="item.video_url && showVideo" ng-src="{{item.video_url}}"/>
+                        <div ng-show="item.video_url" ng-click="showVideo=true" class="play_button"><i class="fa fa-play-circle-o"></i></div>
                     </div>
                 </div>
             </div>
