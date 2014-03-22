@@ -4,6 +4,44 @@ div.container.pets {
 
   background-color: $scheme-green;
 
+  .pets-pic {
+    display: block;
+    width: 100%;
+    max-height: 100%;
+    overflow: scroll;
+    .pets-pic-img {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 15px 15px 50px;
+      position: relative;
+      img, video {
+        width: 100%;
+        border-radius: 7px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+    }
+    .pets-zoom {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      margin-left: -30px;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 25px;
+      display: block;
+      text-decoration: none;
+      background-color: #f7f7f7;
+      background-image: linear-gradient(top, #f7f7f7, #e7e7e7);
+      color: #a7a7a7;
+      border-radius: 50%;
+      box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+      border: solid 1px transparent;
 
+    }
+  }
 
 }

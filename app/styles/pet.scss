@@ -37,7 +37,7 @@ div.container.pet {
   .flipper {
 
 
-      transform: scale(1) perspective(600px) rotateX(0deg);
+//      transform: scale(1) perspective(600px) rotateX(0deg);
 
       .pet-info{
         position: absolute;
@@ -105,13 +105,16 @@ div.container.pet {
         z-index: 800;
         width: inherit;
         height: inherit;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #efefef;
 
         //animation: back-flip-back 1s;
         //animation-timing-function:ease-in-out;
         transform: scale(0.8) perspective(600px) rotateX(0deg) rotateY(-180deg);
         transform-style: preserve-3d;
         backface-visibility: hidden;
-        opacity: 0;
+//        opacity: 0;
 
         /* -- transition is the magic sauce for animation -- */
         transition: all 0.6s ease-in-out;
@@ -125,7 +128,7 @@ div.container.pet {
           //animation: front-flip 1s;
           //animation-timing-function:ease-in-out;
           transform: scale(0.8) perspective(600px) rotateX(0deg) rotateY(180deg);
-          opacity: 0;
+//          opacity: 0;
         }
 
         .back {

@@ -11,11 +11,10 @@ angular.module('clientApp')
             return $sce.trustAsResourceUrl(src);
         }
 
-        Instagram.get(100).success(function (res) {
+        Instagram.get(10).success(function (res) {
             $timeout(function(){
                 $scope.footage = [];
                 for (var i in res.data){
-                    if ($scope.footage.length > 9) break;
                     var inst = res.data[i];
                     var item = {};
                     item['photo_url'] = inst.images.standard_resolution.url;

@@ -21,6 +21,11 @@ body, html, .container{
   border-radius: 5px;
 }
 
+.rtl{
+  text-align: right;
+  direction: rtl;
+}
+
 i{
   text-rendering: auto !important;
 }
