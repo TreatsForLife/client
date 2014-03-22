@@ -26,12 +26,11 @@ angular.module('clientApp', [
     })
     .run(function ($location) {
         console.log(localStorage);
-        $location.path('/pet');
-        /*if (!localStorage.getItem('fb')) {
+        if (!localStorage.getItem('fb')) {
             $location.path('/welcome');
         } else if (!localStorage.getItem('pet')) {
             $location.path('/pets');
         } else {
             $location.path('/pet');
-        }*/
+        }
     });
