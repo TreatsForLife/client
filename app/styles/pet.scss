@@ -36,8 +36,7 @@ div.container.pet {
 
   .flipper {
 
-
-//      transform: scale(1) perspective(600px) rotateX(0deg);
+      transform: scale(1) perspective(600px) rotateX(0deg);
 
       .pet-info{
         position: absolute;
@@ -166,3 +165,41 @@ div.container.pet {
 
 }
 
+.treats-menu{
+  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li.treats-menu-item{
+      position: relative;
+      .treats-menu-name{
+
+      }
+      .treats-menu-price{
+
+      }
+      .treats-menu-checkbox{
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        input{
+          width: 30px;
+          height: 30px;
+          opacity: 0;
+          font-family: FontAwesome;
+          width: 30px;
+          font-size: 30px;
+          &::after{
+            content:  "\f057",
+          }
+          &:checked{
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
