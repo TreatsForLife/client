@@ -17,6 +17,9 @@ angular.module('clientApp')
                     $scope.footage.push(item);
                 }
             });
+            $timeout(function () {
+                $scope.showTipDialog('adopt');
+            },1500);
         });
 
     });

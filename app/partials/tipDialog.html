@@ -1,7 +1,6 @@
-<div class="tip-dialog-container" ng-show="shown">
+<div class="tip-dialog-container" ng-show="shown"  ng-click="closeTipDialog()">
     <div class="tip-dialog-wrapper">
-        <div class="tip-dialog animated bounce{{!leaving ? 'InDown' : 'OutUp'}}">{{text}}
-        </div>
+        <div class="tip-dialog animated bounce{{!leaving ? 'InDown' : 'OutUp'}}" ng-include="{{content}}"></div>
         <div class="tip-dialog-point animated bounce{{!leaving ? 'InDown' : 'OutUp'}}">
         </div>
         <div class="tip-dialog-dog animated bounce{{!leaving ? 'In' : 'Out'}}"

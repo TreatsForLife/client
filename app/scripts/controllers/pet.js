@@ -67,7 +67,7 @@ angular.module('clientApp')
             $scope.animationStatus[treat] = 'animate';
             $timeout(function(){
                 $scope.animationStatus[treat] = 'last';
-                $scope.showTipDialog();
+                $scope.showTipDialog('treat');
             }, 1200);
 
         }

@@ -26,7 +26,7 @@ angular.module('clientApp', [
     })
     .run(function ($location) {
         console.log(localStorage);
-        $location.path('/welcome');
+        $location.path('/pet');
         /*if (!localStorage.getItem('fb')) {
             $location.path('/welcome');
         } else if (!localStorage.getItem('pet')) {
