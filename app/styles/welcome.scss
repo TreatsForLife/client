@@ -5,12 +5,28 @@ div.container.welcome {
   background-color: $scheme-green;
 
   .welcome-logo{
+    display: block;
     width: 196px;
     height: 196px;
+    margin: 20% auto;
+  }
+
+  .welcome-app-explained{
+    display: block;
+    font-size: 18px;
+    color: #efefef;
+    text-align: center;
+  }
+
+  .welcome-login-explained{
+    display: block;
     position: absolute;
-    left: 50%;
-    margin-left:-98px;
-    top: 20%;
+    bottom:5px;
+    font-size: 13px;
+    color: #efefef;
+    text-align: center;
+    width: 100%;
+
   }
 
   .fb-login{
@@ -19,7 +35,7 @@ div.container.welcome {
     line-height: 30px;
     box-sizing: border-box;
     position: absolute;
-    bottom:5%;
+    bottom:60px;
     left:5%;
     cursor: pointer;
     padding: 10px;

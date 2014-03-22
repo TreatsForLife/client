@@ -1,7 +1,4 @@
 @import 'consts';
-//@import "sass-bootstrap/lib/bootstrap";
-//$fa-font-path: "/bower_components/font-awesome/fonts";
-//@import "font-awesome/scss/font-awesome";
 
 body, html, .container{
   width: 100%;
@@ -9,6 +6,7 @@ body, html, .container{
   padding:0;
   margin:0;
   background: #000000;
+  font-family: verdana, arial, helvetica, sans-serif;
 }
 
 .page{
@@ -22,10 +20,38 @@ body, html, .container{
 }
 
 .rtl{
-  text-align: right;
+  direction: rtl;
+  font-family: comix_no2_clm;
+}
+
+.right{
   direction: rtl;
 }
 
 i{
   text-rendering: auto !important;
+}
+
+@font-face {
+  font-family: 'comix_no2_clm';
+  src: url('/fonts/comixno2clm_bold-webfont.eot');
+  src: url('/fonts/comixno2clm_bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/comixno2clm_bold-webfont.woff') format('woff'),
+  url('/fonts/comixno2clm_bold-webfont.ttf') format('truetype'),
+  url('/fonts/comixno2clm_bold-webfont.svg#comix_no2_clmbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'comix_no2_clm';
+  src: url('/fonts/comixno2clm_medium-webfont.eot');
+  src: url('/fonts/comixno2clm_medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/comixno2clm_medium-webfont.woff') format('woff'),
+  url('/fonts/comixno2clm_medium-webfont.ttf') format('truetype'),
+  url('/fonts/comixno2clm_medium-webfont.svg#comix_no2_clmmedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
 }
