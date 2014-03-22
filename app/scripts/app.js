@@ -12,7 +12,7 @@ angular.module('clientApp', [
                 templateUrl: 'views/welcome.html',
                 controller: 'WelcomeCtrl'
             })
-            .when('/', {
+            .when('/pet', {
                 templateUrl: 'views/pet.html',
                 controller: 'PetCtrl'
             })
@@ -25,7 +25,12 @@ angular.module('clientApp', [
             });
     })
     .run(function ($location) {
-        if (!localStorage.getItem('instagram_access_token')) {
-//            $location.path('/welcome');
+        console.log(localStorage);
+        if (!localStorage.getItem('fb')) {
+            $location.path('/welcome');
+        } else if (!localStorage.getItem('pet')) {
+            $location.path('/pets');
+        } else {
+            $location.path('/pet');
         }
     });

@@ -3,7 +3,7 @@
 angular.module('clientApp')
     .controller('PetCtrl', function ($scope, Instagram, $rootScope, $timeout, $sce) {
 
-        $rootScope.bodyClass='pets';
+        $rootScope.bodyClass='pet';
         $scope.grassHeight = angular.element(window).height() - angular.element(window).width();
         $scope.picHeight = angular.element(window).width();
 

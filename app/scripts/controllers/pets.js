@@ -1,10 +1,6 @@
 'use strict';
 
 angular.module('clientApp')
-  .controller('PetsCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('PetsCtrl', function ($scope, $rootScope) {
+        $rootScope.bodyClass='pets';
   });
