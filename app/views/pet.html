@@ -6,9 +6,9 @@
             <div id='slider' class='swipe'>
                 <div class='swipe-wrap'>
                     <div ng-repeat="item in footage">
-                        <img ng-src="{{item.photo_url}}"/>
-                        <video ng-if="item.video_url" ng-show="item.video_url && showVideo" ng-src="{{item.video_url}}"/>
-                        <div ng-show="item.video_url" ng-click="showVideo=true" class="play_button"><i class="fa fa-play-circle-o"></i></div>
+                        <img ng-hide="item.video_url" ng-src="{{item.photo_url}}"/>
+                        <video ng-if="item.video_url" ng-show="item.video_url && !showVideo" ng-src="{{trustSrc(item.video_url)}}" controls/>
+                        <!--<div ng-show="item.video_url && !showVideo" ng-click="showVideo=true" class="play-button" ng-style="{lineHeight: picHeight+'px'}"><i class="fa fa-play-circle-o"></i></div>-->
                     </div>
                 </div>
             </div>

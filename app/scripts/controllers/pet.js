@@ -1,24 +1,29 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('PetCtrl', function ($scope, Instagram, $rootScope, $timeout) {
+    .controller('PetCtrl', function ($scope, Instagram, $rootScope, $timeout, $sce) {
 
         $rootScope.bodyClass='pets';
         $scope.grassHeight = angular.element(window).height() - angular.element(window).width();
+        $scope.picHeight = angular.element(window).width();
+
+        $scope.trustSrc = function(src) {
+            return $sce.trustAsResourceUrl(src);
+        }
 
         Instagram.get(100).success(function (res) {
             $timeout(function(){
                 $scope.footage = [];
                 for (var i in res.data){
+                    if ($scope.footage.length > 9) break;
                     var inst = res.data[i];
                     var item = {};
                     item['photo_url'] = inst.images.standard_resolution.url;
                     item['video_url'] = inst.videos ? inst.videos.standard_resolution.url : false;
                     item['inst_link'] = inst.link;
                     $scope.footage.push(item);
-
                 }
-                console.log(res.data);
+                console.log($scope.footage);
             });
             $timeout(function(){
                 window.videosSwipe = new Swipe(document.getElementById('slider'), {

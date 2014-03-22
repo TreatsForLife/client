@@ -76,9 +76,18 @@ div.container.pets {
           max-height: 100%;
           overflow: hidden;
 
-          img{
+          img, video{
             width:100%;
-
+          }
+          .play-button{
+            position: absolute;
+            color: white;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 400px;
+            font-size: 75px;
           }
         }
         .pet-treat{
