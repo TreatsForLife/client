@@ -14,7 +14,7 @@
     height: 100%;
     box-sizing: border-box;
     overflow: auto;
-    padding-bottom: 196px;
+    padding-bottom: 98px;
     .tip-dialog{
       width: 100%;
       padding: 15px;
@@ -56,10 +56,10 @@
     bottom: 0px;
     left: 0px;
     background-image: url('/images/logo.png');
-    background-size: auto 196px;
+    background-size: auto 98px;
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    height: 196px;
+    height: 98px;
     width: 100%;
     &.ng-enter{
       -webkit-animation-name: bounceInLeft;

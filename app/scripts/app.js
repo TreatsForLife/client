@@ -6,7 +6,8 @@ angular.module('clientApp', [
         'ngSanitize',
         'ngRoute'
     ])
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, $compileProvider) {
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|http?|ftp|mailto|file|tel):/);
         $routeProvider
             .when('/welcome', {
                 templateUrl: 'views/welcome.html',
@@ -17,14 +18,19 @@ angular.module('clientApp', [
                 controller: 'PetCtrl'
             })
             .when('/pets', {
-              templateUrl: 'views/pets.html',
-              controller: 'PetsCtrl'
+                templateUrl: 'views/pets.html',
+                controller: 'PetsCtrl'
+            })
+            .when('/', {
+                templateUrl: 'views/pets.html',
+                controller: 'PetsCtrl'
             })
             .otherwise({
                 redirectTo: '/'
             });
     })
     .run(function ($location) {
+
         console.log(localStorage);
         if (!localStorage.getItem('fb')) {
             $location.path('/welcome');
