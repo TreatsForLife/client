@@ -34,6 +34,8 @@
 
 div.container.pet {
 
+  overflow: hidden;
+
   .flipper {
 
       transform: scale(1) perspective(600px) rotateX(0deg);
