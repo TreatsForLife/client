@@ -38,7 +38,7 @@ div.container.pet {
 
   .flipper {
 
-      transform: scale(1) perspective(600px) rotateX(0deg);
+      //transform: scale(1) perspective(600px) rotateX(0deg);
 
       .pet-info{
         position: absolute;
@@ -62,7 +62,7 @@ div.container.pet {
 
         //animation: front-flip-back 1s;
         //animation-timing-function:ease-in-out;
-        transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
+//        transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
         transform-style: preserve-3d;
         backface-visibility: hidden;
         opacity: 1;
@@ -79,6 +79,9 @@ div.container.pet {
 
           img, video{
             width:100%;
+            background: white;
+            border: 1px solid #999;
+            border-radius: 4px;
           }
           .play-button{
             position: absolute;
@@ -112,7 +115,7 @@ div.container.pet {
 
         //animation: back-flip-back 1s;
         //animation-timing-function:ease-in-out;
-        transform: scale(0.8) perspective(600px) rotateX(0deg) rotateY(-180deg);
+//        transform: scale(0.8) perspective(600px) rotateX(0deg) rotateY(-180deg);
         transform-style: preserve-3d;
         backface-visibility: hidden;
 //        opacity: 0;
@@ -128,7 +131,7 @@ div.container.pet {
           z-index: 900;
           //animation: front-flip 1s;
           //animation-timing-function:ease-in-out;
-          transform: scale(0.8) perspective(600px) rotateX(0deg) rotateY(180deg);
+//          transform: scale(0.8) perspective(600px) rotateX(0deg) rotateY(180deg);
 //          opacity: 0;
         }
 
@@ -136,7 +139,7 @@ div.container.pet {
           z-index: 1000;
           //animation: back-flip 1s;
           //animation-timing-function:ease-in-out;
-          transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
+//          transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
           opacity: 1;
         }
       }
@@ -156,6 +159,7 @@ div.container.pet {
     float:left;
     width:100%;
     position: relative;
+    padding: 10px;
   }
 
   .swipe-wrap.treat{
