@@ -6,9 +6,12 @@ body, html, .container{
   padding:0;
   background: transparent;
   font-family: verdana, arial, helvetica, sans-serif;
-  max-width: 800px;
   position: relative;
+  max-width: 400px;
   margin: 0 auto;
+}
+html{
+  background: darkkhaki;
 }
 
 .page{
