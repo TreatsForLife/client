@@ -29,12 +29,12 @@ angular.module('clientApp', [
                 redirectTo: '/'
             });
     })
-    .run(function ($location) {
+    .run(function ($location, $cookies) {
 
-        console.log(localStorage);
-        if (!localStorage.getItem('fb')) {
+        console.log('$cookies',$cookies.fb_user);
+        if (!$cookies.fb_id || $location.search()['s']=='w') {
             $location.path('/welcome');
-        } else if (!localStorage.getItem('pet')) {
+        } else if (!$cookies.pet) {
             $location.path('/pets');
         } else {
             $location.path('/pet');

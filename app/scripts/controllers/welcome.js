@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('WelcomeCtrl', function ($scope, $rootScope, $timeout) {
+    .controller('WelcomeCtrl', function ($scope, $rootScope, $cookieStore, $timeout, $location, Users) {
         $rootScope.bodyClass = 'welcome';
 
         $scope.placeLogo = function () {
@@ -19,10 +19,13 @@ angular.module('clientApp')
             FB.login(function (response) {
                 if (response.authResponse) {
 //                    console.log('Welcome!  Fetching your information.... ');
+                    debugger;
+                    $cookieStore.put('fb_at', response.authResponse.accessToken);
+                    $cookieStore.put('fb_id', response.authResponse.userID);
                     FB.api('/me', function (response) {
-                        localStorage.setItem('fb', response);
+                        debugger;
+                        Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/'+response.username+'/picture'});
                         $location.path('/');
-//                        console.log('Good to see you, ' + response.name + '.');
                     });
                 } else {
                     console.log('User cancelled login or did not fully authorize.');
