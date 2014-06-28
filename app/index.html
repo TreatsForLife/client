@@ -24,6 +24,7 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/ui.css">
     <link rel="stylesheet" href="styles/root.css">
+    <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/welcome.css">
     <link rel="stylesheet" href="styles/pet.css">
     <link rel="stylesheet" href="styles/pets.css">
@@ -59,6 +60,9 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
+
+
+<div class="navbar" ng-include="'views/partials/navbar.html'"></div>
 
 <!-- Add your site or application content here -->
 <div class="container {{bodyClass}}" ng-view="" ng-class=""></div>

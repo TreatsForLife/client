@@ -3,6 +3,7 @@
 angular.module('clientApp')
     .controller('PetsCtrl', function ($scope, $rootScope, Instagram, $timeout) {
         $rootScope.bodyClass = 'pets';
+        $rootScope.navbarTitle = 'כלבים בודדים';
 
         Instagram.get(10).success(function (res) {
             $timeout(function () {
@@ -17,9 +18,9 @@ angular.module('clientApp')
                     $scope.footage.push(item);
                 }
             });
-            $timeout(function () {
-                $scope.showTipDialog('adopt-dialog');
-            },1500);
+//            $timeout(function () {
+//                $scope.showTipDialog('adopt-dialog');
+//            },1500);
         });
 
     });
