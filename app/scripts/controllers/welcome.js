@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('WelcomeCtrl', function ($scope, $rootScope, $cookieStore, $timeout, $location, Users) {
+    .controller('WelcomeCtrl', ['$scope', '$rootScope', '$cookieStore', '$timeout', '$location', 'Users', function ($scope, $rootScope, $cookieStore, $timeout, $location, Users) {
         $rootScope.bodyClass = 'welcome';
 
         $scope.placeLogo = function () {
@@ -36,4 +36,4 @@ angular.module('clientApp')
         }
 
         window.debug = $scope;
-    });
+    }]);
