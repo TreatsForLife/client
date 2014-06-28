@@ -8,7 +8,7 @@ angular.module('clientApp')
         $scope.pets = Pets.all();
 
 
-        $scope.picHeight = $('.container').width() * 0.75;
+        $scope.picHeight = $('.container').width() * 0.6;
 /*
         Instagram.get(10).success(function (res) {
             $timeout(function () {

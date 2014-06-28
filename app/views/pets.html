@@ -1,6 +1,6 @@
 <div class="pets-pic" ng-clock>
     <div ng-repeat="pet in pets">
-        <a class="pet" ng-href="#/pet">
+        <a class="pet" ng-href="#/pet/{{pet._id}}">
             <div class="pet-inner">
                 <div class="pet-pic"
                      ng-style="{'background-image': 'url('+pet.media.image+')', height: picHeight}"></div>
