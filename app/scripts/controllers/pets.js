@@ -6,6 +6,9 @@ angular.module('clientApp')
         $rootScope.navbarTitle = 'כלבים בודדים';
 
         $scope.pets = Pets.all();
+
+
+        $scope.picHeight = $('.container').width() * 0.75;
 /*
         Instagram.get(10).success(function (res) {
             $timeout(function () {
