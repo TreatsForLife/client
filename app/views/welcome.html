@@ -1,11 +1,16 @@
-<img class="welcome-logo animated tada-infinite" src="images/logo.png" ng-clock/>
-
+<div style="height:1px;"></div>
+<div class="welcome-logo" ng-style="{margin: logoMargin}" ng-init="placeLogo()">
+    <img class="welcome-logo animated tada-infinite" src="images/logo.png" ng-clock/>
+</div>
 <p class="welcome-app-explained rtl">
     רוצים לעזור לכלבים למצוא בית? רוצים להפוך לכלב אחד את החיים לקצת יותר טובים? זה המקום.
 </p>
 
 
-<a class="fb-login" ng-click="fbLogin()"><p>Sign in with Facebook</p></a>
+<a class="fb-login" ng-click="fbLogin()">
+    <i class="fa fa-facebook-square"></i>
+    <p>Facebook Login</p>
+</a>
 <p class="welcome-login-explained rtl">
     אנחנו רק נשתמש בשם ובתמונת הפרופיל שלך.<br/>
     לעולם לא נפרסם שום דבר בשמך!

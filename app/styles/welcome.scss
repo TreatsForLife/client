@@ -3,27 +3,37 @@
 div.container.welcome {
 
   background-color: $scheme-green;
+  margin:0;
+  padding:0;
 
-  .welcome-logo{
+
+  div.welcome-logo{
     display: block;
     width: 196px;
     height: 196px;
     margin: 20% auto;
+    img.welcome-logo{
+      width: 196px;
+      height: 196px;
+    }
   }
 
   .welcome-app-explained{
+    position: absolute;
+    bottom:140px;
     display: block;
     font-size: 18px;
     color: #efefef;
     text-align: center;
-    width: 90%;
+    width: 100%;
+    padding: 0 15px;
     margin: auto;
   }
 
   .welcome-login-explained{
     display: block;
     position: absolute;
-    bottom:5px;
+    bottom:20px;
     font-size: 13px;
     color: #efefef;
     text-align: center;
@@ -32,12 +42,12 @@ div.container.welcome {
   }
 
   .fb-login{
+    position: absolute;
+    bottom:60px;
     width: 90%;
     height: 50px;
     line-height: 30px;
     box-sizing: border-box;
-    position: absolute;
-    bottom:60px;
     left:5%;
     cursor: pointer;
     padding: 10px;
@@ -46,12 +56,21 @@ div.container.welcome {
     font-size: 17px;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255,255,255,0.5);
     display: block;
     text-decoration: none;
     background-color: #2b4170; /* fallback color */
     background: linear-gradient(top, #3b5998, #2b4170);
+    i{
+      font-size:30px;
+      float:left;
+    }
+    p{
+      margin-left: 35px;
+      text-align: center;
+      border-left: 1px solid rgba(255,255,255,0.4);
+    }
 
 
   }
