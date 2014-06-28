@@ -1,7 +1,7 @@
 <div class="pets-pic" ng-clock>
-    <div ng-repeat="item in footage">
+    <div ng-repeat="pet in pets">
         <a class="pets-pic-img" ng-href="#/pet">
-            <img ng-hide="item.video_url" ng-src="{{item.photo_url}}"/>
+            <img ng-src="{{pet.media.image}}"/>
             <div class="pets-zoom"><i class="fa fa-search-plus"></i></div>
         </a>
     </div>

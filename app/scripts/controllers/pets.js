@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('PetsCtrl', function ($scope, $rootScope, Instagram, $timeout) {
+    .controller('PetsCtrl', function ($scope, $rootScope, $timeout, Pets, Instagram) {
         $rootScope.bodyClass = 'pets';
         $rootScope.navbarTitle = 'כלבים בודדים';
 
+        $scope.pets = Pets.all();
+/*
         Instagram.get(10).success(function (res) {
             $timeout(function () {
                 $scope.footage = [];
@@ -18,9 +20,11 @@ angular.module('clientApp')
                     $scope.footage.push(item);
                 }
             });
+*/
 //            $timeout(function () {
 //                $scope.showTipDialog('adopt-dialog');
 //            },1500);
-        });
+//        });
 
+        window.debug = $scope;
     });
