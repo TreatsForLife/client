@@ -1,19 +1,21 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('PetCtrl', function ($scope, Instagram, $rootScope, $timeout, $interval, $sce) {
+    .controller('PetCtrl', function ($scope, Pets, Donations, $rootScope, $routeParams, $timeout, $interval, $sce) {
 
         $rootScope.bodyClass = 'pet';
-        $scope.grassHeight = angular.element(window).height() - angular.element(window).width();
-        $scope.picHeight = angular.element(window).width();
+        $scope.grassHeight = angular.element('body').height() - angular.element(window).width();
+
+        var pet_id = $routeParams['id'];
 
         $scope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);
         }
 
+/*
         Instagram.get(10).success(function (res) {
             $timeout(function () {
-                $scope.footage = [];
+                $scope.donations = [];
                 for (var i in res.data) {
                     var inst = res.data[i];
                     var item = {};
@@ -24,18 +26,14 @@ angular.module('clientApp')
                 }
                 console.log($scope.footage);
             });
+*/
+
+        Donations.all({pet_id:pet_id}, function (res) {
+            $timeout(function () {
+                $scope.donations = res;
+            });
             $timeout(function () {
                 window.videosSwipe = new Swipe(document.getElementById('slider'), {
-                    startSlide: 0,
-                    continuous: true,
-                    disableScroll: true,
-                    stopPropagation: false,
-                    callback: function (index, elem) {
-                    },
-                    transitionEnd: function (index, elem) {
-                    }
-                });
-                window.treatsSwipe = new Swipe(document.getElementById('slider-treats'), {
                     startSlide: 0,
                     continuous: true,
                     disableScroll: true,
@@ -95,6 +93,8 @@ angular.module('clientApp')
             }
             return total;
         }
+
+        window.debug = $scope;
 
     });
 

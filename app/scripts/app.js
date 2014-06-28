@@ -35,12 +35,14 @@ angular.module('clientApp', [
     })
     .run(function ($location, $cookies) {
 
-        console.log('$cookies',$cookies.fb_user);
-        if (!$cookies.fb_id || $location.search()['s']=='w') {
-            $location.path('/welcome');
-        } else if (!$cookies.pet) {
-            $location.path('/pets');
-        } else {
-            $location.path('/pet');
+        if ($location.path() == '/') {
+            console.log('$cookies', $cookies.fb_user);
+            if (!$cookies.fb_id || $location.search()['s'] == 'w') {
+                $location.path('/welcome');
+            } else if (!$cookies.pet) {
+                $location.path('/pets');
+            } else {
+                $location.path('/pet');
+            }
         }
     });

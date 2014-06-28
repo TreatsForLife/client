@@ -51,14 +51,14 @@ div.container.pet {
       }
 
       .front {
-        float: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 900;
-        width: inherit;
-        height: inherit;
-        text-align: center;
+//        float: none;
+//        position: absolute;
+//        top: 0;
+//        left: 0;
+//        z-index: 900;
+//        width: inherit;
+//        height: inherit;
+//        text-align: center;
 
         //animation: front-flip-back 1s;
         //animation-timing-function:ease-in-out;
@@ -72,6 +72,7 @@ div.container.pet {
 
         background-color: $scheme-green;
 
+/*
         #pet-pic{
           width:100%;
           max-height: 100%;
@@ -94,6 +95,7 @@ div.container.pet {
             font-size: 75px;
           }
         }
+*/
         .pet-treat{
           width:100px;
           //position: absolute;
@@ -102,16 +104,16 @@ div.container.pet {
 
       }
       .back {
-        float: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 800;
-        width: inherit;
-        height: inherit;
-        padding: 20px;
-        box-sizing: border-box;
-        color: #efefef;
+//        float: none;
+//        position: absolute;
+//        top: 0;
+//        left: 0;
+//        z-index: 800;
+//        width: inherit;
+//        height: inherit;
+//        padding: 20px;
+//        box-sizing: border-box;
+//        color: #efefef;
 
         //animation: back-flip-back 1s;
         //animation-timing-function:ease-in-out;
