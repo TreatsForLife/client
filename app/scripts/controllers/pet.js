@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('PetCtrl', function ($scope, Pets, Donations, $rootScope, $routeParams, $timeout, $interval, $sce) {
+    .controller('PetCtrl', ['$scope', 'Pets', 'Donations', '$rootScope', '$routeParams', '$timeout', '$interval', '$sce', function ($scope, Pets, Donations, $rootScope, $routeParams, $timeout, $interval, $sce) {
 
         $rootScope.bodyClass = 'pet';
         $scope.grassHeight = 0;
@@ -110,5 +110,5 @@ angular.module('clientApp')
 
         window.debug = $scope;
 
-    });
+    }]);
 
