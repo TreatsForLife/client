@@ -7,6 +7,8 @@ angular.module('clientApp')
         $scope.placeLogo = function () {
             $timeout(function () {
                 $scope.logoSpace = $('.welcome-app-explained').offset().top;
+                $scope.logoHeight = (($scope.logoSpace - 196) / 2);
+                $scope.logoMargin = (($scope.logoSpace - 196) / 2) + 'px auto';
                 $scope.logoMargin = (($scope.logoSpace - 196) / 2) + 'px auto';
             });
         }

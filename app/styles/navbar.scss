@@ -4,6 +4,9 @@
     padding-top: 0;
   }
 }
+body.welcome .navbar{
+  display: none !important;
+}
 
 .navbar{
   position: fixed;
