@@ -12,8 +12,8 @@ angular.module('clientApp')
                     var inst = res.data[i];
                     var item = {};
                     item['photo_url'] = inst.images.standard_resolution.url;
-//                    item['video_url'] = inst.videos ? inst.videos.standard_resolution.url : false;
-//                    item['inst_link'] = inst.link;
+                    item['video_url'] = inst.videos ? inst.videos.standard_resolution.url : false;
+                    item['inst_link'] = inst.link;
                     $scope.footage.push(item);
                 }
             });
