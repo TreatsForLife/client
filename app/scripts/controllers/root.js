@@ -10,6 +10,10 @@ angular.module('clientApp')
         $scope.instajam.user.self.profile(function (res) {
             console.log(res);
         });
-        $rootScope.picHeight = $(window).width() * 0.6;
+        $rootScope.picHeight = $(window).width() * 0.7;
+
+        $rootScope.goBack = function () {
+            window.history.back();
+        }
 
     });

@@ -148,6 +148,11 @@ div.container.pet {
 
   }
 
+  .treat-wrapper{
+    text-align: center;
+    margin-top: -10px;
+  }
+
   .swipe {
     overflow: hidden;
     visibility: hidden;
@@ -161,7 +166,7 @@ div.container.pet {
     float:left;
     width:100%;
     position: relative;
-    padding: 10px;
+//    padding: 10px;
   }
 
   .swipe-wrap.treat{
@@ -172,6 +177,8 @@ div.container.pet {
   }
 
 }
+
+
 
 .treats-menu{
   ul{
