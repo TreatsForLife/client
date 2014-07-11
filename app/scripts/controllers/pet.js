@@ -108,8 +108,16 @@ angular.module('clientApp')
             return total;
         }
 
-        $scope.nextFriday = new Date(1405152513000);
+        //calc next friday at 12:00
+        $scope.nextFriday = moment().hour(0).minute(0).second(0).add('days', 1).weekday(5).add('hours', 12).format();
 
+        /*
+         $scope.nextFriday =
+            ((new Date.getTime()) / (24*60*60*1000))
+
+            new Date(1405152513000);
+
+*/
         window.debug = $scope;
 
     }]);
