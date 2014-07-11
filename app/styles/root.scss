@@ -70,9 +70,29 @@ body, html {
 
 .container {
   min-height: 100%;
+  width: 100%;
   max-width: 400px;
-  position: relative;
+  position: absolute;
+  //  position: relative;
   margin: 0 auto;
+  &.ng-enter {
+    animation: slideInRight 0.5s both ease-in;
+    z-index: 8888;
+  }
+  &.ng-leave {
+    animation: slideOutLeft 0.5s both ease-in;
+    z-index: 9999;
+  }
+  &.goingBack{
+    &.ng-enter {
+      animation: slideInLeft 0.5s both ease-in;
+      z-index: 8888;
+    }
+    &.ng-leave {
+      animation: slideOutRight 0.5s both ease-in;
+      z-index: 9999;
+    }
+  }
 }
 
 html {
@@ -183,6 +203,39 @@ button, a.button, input[type="submit"] {
       box-shadow: none;
       text-decoration: none;
     }
+  }
+}
+
+//animations
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
