@@ -4,7 +4,8 @@ angular.module('clientApp', [
         'ngCookies',
         'ngResource',
         'ngSanitize',
-        'ngRoute'
+        'ngRoute',
+        'timer'
     ])
     .config(function ($routeProvider, $compileProvider) {
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|http?|ftp|mailto|file|tel):/);

@@ -40,17 +40,33 @@ div.container.pet {
 
       //transform: scale(1) perspective(600px) rotateX(0deg);
 
-      .pet-info{
-        position: absolute;
-        right:10px;
-        top:10px;
-        z-index: 9999;
-        font-size: 24px;
-        color: white;
-        text-shadow: 0 0 1px #111;
-      }
+    .pet-info{
+      position: absolute;
+      right:10px;
+      bottom:10px;
+      z-index: 9999;
+      font-size: 32px;
+      color: #fefefe;
+    }
 
-      .front {
+    .pet-clock{
+      position: absolute;
+      left:10px;
+      bottom:10px;
+      z-index: 9999;
+      font-size: 32px;
+      color: #fefefe;
+    }
+
+    .pet-timer{
+      position: absolute;
+      left:45px;
+      bottom:18px;
+      z-index: 9999;
+      font-size: 16px;
+      color: #fefefe;
+    }
+    .front {
 //        float: none;
 //        position: absolute;
 //        top: 0;

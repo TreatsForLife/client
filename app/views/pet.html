@@ -1,6 +1,22 @@
 <div class="page flipper">
     <div class="front page">
         <i class="pet-info fa fa-info-circle" ng-click="flip()"></i>
+        <i class="pet-clock fa fa-clock-o" ng-click=""></i>
+        <span data-timer="timer" data-end-time="nextFriday" class="pet-timer"><div class="timer-title"></div><table>
+            <thead>
+            <tr>
+                <tbody>
+                <td>{{days}}</td>
+                <td>:</td>
+                <td>{{hhours}}</td>
+                <td>:</td>
+                <td>{{mminutes}}</td>
+                <td>:</td>
+                <td>{{sseconds}}</td>
+            </tr>
+            </tbody>
+        </table>
+        </span>
 
         <div id="pet-pic" ng-clock>
             <div id='slider' class='swipe'>
@@ -29,24 +45,26 @@
         </div>
 
         <!--<div id='slider-treats' class='swipe'>-->
-            <div class='treat-wrapper animated bounceIn' ng-style="{height: grassHeight, padding: buttonMargin}" ng-show="buttonAnimationReady" ng-click="animateButton();">
-                <img class='treat' id="treat_button" rel:animated_src="images/buy_button.gif" rel:auto_play="0" width="{{buttonHeight}}" height="{{buttonHeight}}" ></div>
-                <!--<div ng-repeat="photo in ['bone', 'ball', 'bed']" ng-style="{height:grassHeight}" >-->
-<!--
-                <div ng-repeat="treat in treats" ng-style="{height:grassHeight}">
-                    <div ng-show="animationStatus[treat]=='first'" ng-click="startAnimation(treat)"
-                         ng-touch="startAnimation(treat)" class='swipe-wrap treat'
-                         ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}.png)'}"></div>
-                    <div ng-if="animationStatus[treat]=='animate'" class='swipe-wrap treat'
-                         ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}.gif)'}"></div>
-                    <div ng-show="animationStatus[treat]=='last'" ng-click="animationStatus[treat]='first'" class='swipe-wrap treat'
-                         ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}1.png)'}"></div>
-                </div>
--->
-            </div>
-        <!--</div>-->
-
+        <div class='treat-wrapper animated bounceIn' ng-style="{height: grassHeight, padding: buttonMargin}"
+             ng-show="buttonAnimationReady" ng-click="animateButton();">
+            <img class='treat' id="treat_button" rel:animated_src="images/buy_button.gif" rel:auto_play="0"
+                 width="{{buttonHeight}}" height="{{buttonHeight}}"></div>
+        <!--<div ng-repeat="photo in ['bone', 'ball', 'bed']" ng-style="{height:grassHeight}" >-->
+        <!--
+                        <div ng-repeat="treat in treats" ng-style="{height:grassHeight}">
+                            <div ng-show="animationStatus[treat]=='first'" ng-click="startAnimation(treat)"
+                                 ng-touch="startAnimation(treat)" class='swipe-wrap treat'
+                                 ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}.png)'}"></div>
+                            <div ng-if="animationStatus[treat]=='animate'" class='swipe-wrap treat'
+                                 ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}.gif)'}"></div>
+                            <div ng-show="animationStatus[treat]=='last'" ng-click="animationStatus[treat]='first'" class='swipe-wrap treat'
+                                 ng-style="{height:grassHeight, backgroundImage: 'url(images/{{treat}}1.png)'}"></div>
+                        </div>
+        -->
     </div>
+    <!--</div>-->
+
+</div>
 <!--
     <div class="back page rtl">
         <i class="pet-info fa fa-times-circle" ng-click="flip()"></i>

@@ -21,11 +21,9 @@ angular.module('clientApp')
             FB.login(function (response) {
                 if (response.authResponse) {
 //                    console.log('Welcome!  Fetching your information.... ');
-                    debugger;
                     $cookieStore.put('fb_at', response.authResponse.accessToken);
                     $cookieStore.put('fb_id', response.authResponse.userID);
                     FB.api('/me', function (response) {
-                        debugger;
                         Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/'+response.username+'/picture'});
                         $location.path('/');
                     });

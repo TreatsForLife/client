@@ -108,6 +108,8 @@ angular.module('clientApp')
             return total;
         }
 
+        $scope.nextFriday = new Date(1405152513000);
+
         window.debug = $scope;
 
     }]);
