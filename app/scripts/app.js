@@ -31,6 +31,10 @@ angular.module('clientApp', [
                 templateUrl: 'views/pets.html',
                 controller: 'PetsCtrl'
             })
+            .when('/shop', {
+              templateUrl: 'views/shop.html',
+              controller: 'ShopCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
