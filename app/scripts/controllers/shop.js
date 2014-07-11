@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-  .controller('ShopCtrl', ['$scope', 'Treats', function ($scope, Treats) {
-      $scope.treats = Treats.all();
-  }]);
+    .controller('ShopCtrl', ['$scope', '$rootScope', 'Treats', function ($scope, $rootScope, Treats) {
+        $rootScope.bodyClass = 'shop';
+        $scope.treats = Treats.all();
+    }]);

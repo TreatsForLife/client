@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="styles/welcome.css">
     <link rel="stylesheet" href="styles/pet.css">
     <link rel="stylesheet" href="styles/pets.css">
+    <link rel="stylesheet" href="styles/shop.css">
     <link rel="stylesheet" href="styles/tipDialog.css">
     <!-- endbuild -->
 
@@ -42,7 +43,7 @@
 <div class="navbar" ng-include="'views/partials/navbar.html'"></div>
 
 <!-- Add your site or application content here -->
-<div class="container {{bodyClass}}" ng-class="{goingBack: goingBack}" ng-view="" ng-class=""></div>
+<div class="container {{bodyClass}}" ng-class="{goingBack: goingBack, canAnimate: canAnimate}" ng-view="" ng-class=""></div>
 
 
 <!--[if lt IE 9]>

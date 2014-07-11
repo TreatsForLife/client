@@ -75,22 +75,24 @@ body, html {
   position: absolute;
   //  position: relative;
   margin: 0 auto;
-  &.ng-enter {
-    animation: slideInRight 0.5s both ease-in;
-    z-index: 8888;
-  }
-  &.ng-leave {
-    animation: slideOutLeft 0.5s both ease-in;
-    z-index: 9999;
-  }
-  &.goingBack{
+  &.canAnimate {
     &.ng-enter {
-      animation: slideInLeft 0.5s both ease-in;
+      animation: slideInRight 0.5s both ease-in;
       z-index: 8888;
     }
     &.ng-leave {
-      animation: slideOutRight 0.5s both ease-in;
+      animation: slideOutLeft 0.5s both ease-in;
       z-index: 9999;
+    }
+    &.goingBack {
+      &.ng-enter {
+        animation: slideInLeft 0.5s both ease-in;
+        z-index: 8888;
+      }
+      &.ng-leave {
+        animation: slideOutRight 0.5s both ease-in;
+        z-index: 9999;
+      }
     }
   }
 }
@@ -118,6 +120,10 @@ html {
 
 .right {
   direction: rtl;
+}
+
+.clear {
+  clear: both;
 }
 
 i {
