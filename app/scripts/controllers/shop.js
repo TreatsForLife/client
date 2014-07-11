@@ -1,10 +1,6 @@
 'use strict';
 
 angular.module('clientApp')
-  .controller('ShopCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('ShopCtrl', ['$scope', 'Treats', function ($scope, Treats) {
+      $scope.treats = Treats.all();
+  }]);

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('PetCtrl', ['$scope', 'Pets', 'Donations', '$rootScope', '$routeParams', '$timeout', '$interval', '$sce', function ($scope, Pets, Donations, $rootScope, $routeParams, $timeout, $interval, $sce) {
+    .controller('PetCtrl', ['$scope', 'Pets', 'Donations', '$rootScope', '$routeParams', '$timeout', '$interval', '$sce', '$location', function ($scope, Pets, Donations, $rootScope, $routeParams, $timeout, $interval, $sce, $location) {
 
         $rootScope.bodyClass = 'pet';
         $scope.grassHeight = 0;
@@ -23,7 +23,7 @@ angular.module('clientApp')
 
             Donations.all({pet_id: pet_id}, function (res) {
                 $timeout(function () {
-                    for (var i= 0, donation; donation = res[i]; i++){
+                    for (var i = 0, donation; donation = res[i]; i++) {
                         $scope.donations.push(donation);
                     }
                 });
@@ -63,6 +63,7 @@ angular.module('clientApp')
             var gifInterval = $interval(function () {
                 if (gif.get_current_frame() >= animationLength - 1) {
                     gif.pause();
+                    $location.path('/shop/' + pet_id);
                     $interval.cancel(gifInterval);
                 }
             }, 20);
@@ -113,11 +114,11 @@ angular.module('clientApp')
 
         /*
          $scope.nextFriday =
-            ((new Date.getTime()) / (24*60*60*1000))
+         ((new Date.getTime()) / (24*60*60*1000))
 
-            new Date(1405152513000);
+         new Date(1405152513000);
 
-*/
+         */
         window.debug = $scope;
 
     }]);

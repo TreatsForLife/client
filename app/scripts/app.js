@@ -23,6 +23,10 @@ angular.module('clientApp', [
                 templateUrl: 'views/pet.html',
                 controller: 'PetCtrl'
             })
+            .when('/shop/:id', {
+                templateUrl: 'views/shop.html',
+                controller: 'ShopCtrl'
+            })
             .when('/pets', {
                 templateUrl: 'views/pets.html',
                 controller: 'PetsCtrl'
@@ -30,10 +34,6 @@ angular.module('clientApp', [
             .when('/', {
                 templateUrl: 'views/pets.html',
                 controller: 'PetsCtrl'
-            })
-            .when('/shop', {
-              templateUrl: 'views/shop.html',
-              controller: 'ShopCtrl'
             })
             .otherwise({
                 redirectTo: '/'
