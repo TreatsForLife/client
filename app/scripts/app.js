@@ -5,6 +5,7 @@ angular.module('clientApp', [
         'ngResource',
         'ngSanitize',
         'ngRoute',
+        'ngAnimate',
         'timer'
     ])
     .config(function ($routeProvider, $compileProvider) {
