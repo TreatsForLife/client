@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         watch: {
             js: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-                tasks: ['newer:jshint:all'],
+                tasks: [],
                 options: {
                     livereload: true
                 }
@@ -543,7 +543,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('default', [
-        'newer:jshint',
+//        'newer:jshint',
         'test',
         'build'
     ]);

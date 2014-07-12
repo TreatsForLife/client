@@ -94,6 +94,16 @@ body, html {
         z-index: 9999;
       }
     }
+    &.zoom {
+      &.ng-enter {
+        animation: zoomIn 0.5s both ease-in;
+        z-index: 9999;
+      }
+      &.ng-leave {
+        animation: fadeOut 0.5s both ease-in;
+        z-index: 8888;
+      }
+    }
   }
 }
 
@@ -242,6 +252,33 @@ button, a.button, input[type="submit"] {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
   }
 }
 
