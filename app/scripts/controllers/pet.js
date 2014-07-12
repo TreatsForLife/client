@@ -7,7 +7,7 @@ angular.module('clientApp')
         $scope.grassHeight = 0;
         $scope.buttonAnimationReady = false;
 
-        var pet_id = $routeParams['id'];
+        var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
         var gif = null;
         var animationLength = 0;
 

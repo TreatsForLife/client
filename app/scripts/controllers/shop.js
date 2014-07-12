@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('ShopCtrl', ['$scope', '$rootScope', '$routeParams', '$timeout', 'Treats', 'Pets', function ($scope, $rootScope, $routeParams, $timeout, Treats, Pets) {
+    .controller('ShopCtrl', ['$scope', '$rootScope', '$routeParams', '$timeout', 'Treats', 'Pets', 'Donations', function ($scope, $rootScope, $routeParams, $timeout, Treats, Pets, Donations) {
 
-        var pet_id = $routeParams['id'];
+        var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
 
         $rootScope.bodyClass = 'shop';
         $rootScope.navbarTitle = 'החנות';
@@ -12,6 +12,8 @@ angular.module('clientApp')
         $scope.notifyUrl = Consts.api_root + 'donation';
 
         $scope.treats = Treats.all();
+
+        var chosenTreats = [];
 
 
         if (!$scope.pet) {
@@ -32,9 +34,11 @@ angular.module('clientApp')
 
         $scope.calcTotalToPay = function () {
             var total = 0;
+            chosenTreats = [];
             for (var treat, t = 0; treat = $scope.treats[t]; t++) {
                 if (treat.cart || treat.fixed) {
                     total += treat.price;
+                    chosenTreats.push(treat);
                 }
             }
             return total;
@@ -67,10 +71,26 @@ angular.module('clientApp')
         }
 
         $scope.pay = function () {
+
             $scope.cartChanged();
             if (!$scope.paymentActive) return;
             $scope.paymentActive = false;
-            angular.element('#payment-form').submit();
+
+
+            var created = 0;
+            for (var t=0, treat; treat = chosenTreats[t]; t++) {
+                Donations.create({
+                    paypalItem: $scope.ItemNumber,
+                    treat: treat._id,
+                    user: $rootScope.user_id.replace(/\"/g,''),
+                    pet: $scope.pet._id
+                }, function(res){
+                    created++;
+                    debugger;
+                    if ( created >= (chosenTreats.length) ) angular.element('#payment-form').submit();
+                });
+            }
+
         }
 
     }]);

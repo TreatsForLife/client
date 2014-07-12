@@ -21,10 +21,13 @@ angular.module('clientApp')
             FB.login(function (response) {
                 if (response.authResponse) {
 //                    console.log('Welcome!  Fetching your information.... ');
-                    $cookieStore.put('fb_at', response.authResponse.accessToken);
-                    $cookieStore.put('fb_id', response.authResponse.userID);
+                    $cookieStore.put('fb_at', response.authResponse.accessToken.replace(/\"/g,''));
+                    $cookieStore.put('fb_id', response.authResponse.userID.replace(/\"/g,''));
                     FB.api('/me', function (response) {
-                        Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/'+response.username+'/picture'});
+                        Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/'+response.username+'/picture'}, function(user){
+                            $cookieStore.put('user_id', user._id.replace(/\"/g,''));
+                            if (user.pet) $cookieStore.put('user_pet_id', user.pet.replace(/\"/g,''));
+                        });
                         $location.path('/');
                     });
                 } else {
