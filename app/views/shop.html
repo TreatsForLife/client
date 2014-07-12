@@ -1,6 +1,12 @@
 <ul class="shop-wrapper">
     <li class="shop-item-wrapper" ng-repeat="treat in treats">
         <div class="shop-item-image" style="background-image: url({{treat.image.length > 5 ? treat.image : '/images/placeholder.png'}})" ></div>
+        <div class="shop-item-price">₪{{treat.price}}</div>
+        <div class="shop-item-name" ng-bind="treat.name"></div>
+        <div class="shop-item-desc" ng-bind="treat.name">אחלה חטיף תענוג גדול!</div>
+        <div class="shop-item-checkbox">
+            <input type="checkbox" ng-model="treat.cart" ng-class="{fixed: treat.fixed}" />
+        </div>
         <div class="clear"></div>
     </li>
 </ul>

@@ -1,35 +1,56 @@
 @import 'consts';
 
 div.container.shop {
+  background-color: $scheme-green;
   ul.shop-wrapper{
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
 
     li.shop-item-wrapper{
       position: relative;
-      padding: 5px 0;
-      border-bottom: 1px solid #ddd;
-      &:first-of-type{
-        border-top: 1px solid #ddd;
-      }
+      padding: 0;
+      border: 1px solid #333;
+      border-radius: 4px;
+      background: white;
+      margin-bottom: 10px;
+      overflow: hidden;
+      font-family: 'Alef', Verdana, Arial, Helvetica;
       .shop-item-image{
-        float:left;
+        float:right;
         width:100px;
         height:100px;
         background-size: cover;
         background-position: center center;
       }
       .shop-item-name{
+        margin-right:120px;
+        margin-left:20px;
+        margin-top:-5px;
+        text-align: right;
         font-size: 18px;
         line-height: 24px;
-        color: #333333;
-        font-weight: bold;
+        color: #111111;
+        font-weight: normal;
+        border-bottom: 1px solid #999;
+      }
+      .shop-item-desc{
+        margin-right:120px;
+        margin-left:20px;
+        margin-top:-5px;
+        text-align: right;
+        font-size: 12px;
+        line-height: 24px;
+        color: #999;
+        font-weight: normal;
       }
       .shop-item-price{
-        font-size: 12px;
-        line-height: 16px;
-        color: #999999;
+        margin-right: 120px;
+        margin-left: 60px;
+        text-align: right;
+        font-size: 23px;
+        line-height: 48px;
+        color: #555;
         font-weight: normal;
       }
       .shop-item-checkbox{
@@ -38,6 +59,7 @@ div.container.shop {
         top: 5px;
         width: 30px;
         height: 30px;
+        line-height: 50px;
         input{
           width: 0px;
           height: 30px;
@@ -46,6 +68,7 @@ div.container.shop {
           margin-top: 1px;
           &::after{
             content: "\f055";
+            content: "\f10c";
             color: $button-red;
           }
           &:checked, &.fixed{
