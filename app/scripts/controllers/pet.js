@@ -62,6 +62,10 @@ angular.module('clientApp')
             });
         });
 
+        $scope.playVideo = function (src) {
+            $scope.show_player = true;
+            $scope.player_src = $sce.trustAsResourceUrl(src);
+        }
         $scope.animateButton = function () {
             gif.play();
             var gifInterval = $interval(function () {
