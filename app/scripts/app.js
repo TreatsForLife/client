@@ -4,6 +4,7 @@ angular.module('clientApp', [
         'ngCookies',
         'ngResource',
         'ngSanitize',
+        'ngTouch',
         'ngRoute',
         'ngAnimate',
         'timer'

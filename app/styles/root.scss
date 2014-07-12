@@ -184,6 +184,14 @@ button, a.button, input[type="submit"] {
     text-decoration: none;
   }
 
+  &.button-disabled, &.button-disabled:hover, &.button-disabled:active {
+    background: rgba(255,255,255,0.5);
+    box-shadow: none;
+    text-decoration: none;
+    border-color: transparent;
+    color: rgba(255,255,255,0.7);
+  }
+
   &.button-blue {
     background: $button-blue;
     background: linear-gradient($button-blue-light, $button-blue); /* Standard syntax (must be last) */

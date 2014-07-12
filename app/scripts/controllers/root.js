@@ -3,7 +3,7 @@
 angular.module('clientApp')
     .controller('RootCtrl', ['$scope', '$rootScope', '$timeout', function ($scope, $rootScope, $timeout) {
 
-        $rootScope.picHeight = $(window).width() * 0.7;
+        $rootScope.picHeight = $(window).width() * 0.6;
 
         $rootScope.goBack = function () {
             $scope.goingBack = true;
