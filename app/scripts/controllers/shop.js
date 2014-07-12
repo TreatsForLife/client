@@ -7,21 +7,28 @@ angular.module('clientApp')
 
         $rootScope.bodyClass = 'shop';
         $rootScope.navbarTitle = 'החנות';
+
+        $scope.returnUrl = Consts.client_root + '#/shop/' + pet_id;
+        $scope.notifyUrl = Consts.api_root + 'donation';
+
         $scope.treats = Treats.all();
+
 
         if (!$scope.pet) {
             $scope.pet = Pets.query({id: pet_id});
         }
 
-        $timeout(function () {
-            //animate the checkout - do not remove there are problems with fixed position otherwise
-            angular.element('.shop-checkout')
-                .addClass('animated fadeInUp')
-                .css('position', 'fixed');
+        $scope.initCheckout = function () {
+            $timeout(function () {
+                //animate the checkout - do not remove there are problems with fixed position otherwise
+                angular.element('.shop-checkout')
+                    .addClass('animated fadeInUp')
+                    .css('position', 'fixed');
 
-            //calc the cart (to include defaults)
-            $scope.cartChanged();
-        }, 500);
+                //calc the cart (to include defaults)
+                $scope.cartChanged();
+            }, 500);
+        }
 
         $scope.calcTotalToPay = function () {
             var total = 0;

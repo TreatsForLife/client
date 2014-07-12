@@ -15,6 +15,7 @@ var Utils = {
 
 var Consts = {
     api_root: Utils.isBchmn ? 'http://tfl.bchmn.com/' : (Utils.isHeroku ? 'http://treatsforlife-api.herokuapp.com/' : 'http://localhost:3000/'),
+    client_root: Utils.isBchmn ? 'http://tfl-client.bchmn.com/' : (Utils.isHeroku ? 'http://treatsforlife.herokuapp.com/' : 'http://localhost:9000/'),
     fb_app_id: Utils.isLocal ? '262700727225341' : '601219569953172'
 }
 
