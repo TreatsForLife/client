@@ -25,7 +25,9 @@
                         <div class="pet">
                             <div class="pet-inner">
                                 <div class="pet-pic" ng-click="playVideo(item.media.video)"
-                                     ng-style="{'background-image': 'url('+item.media.image+')', height: picHeight}"></div>
+                                     ng-style="{'background-image': 'url('+item.media.image+')', height: picHeight}">
+                                    <i class="pet-pic-play fa fa-fw fa-play-circle-o" ng-style="{lineHeight: (picHeight +'px')}"></i>
+                                </div>
                                 <!--<div class="pets-zoom"><i class="fa fa-search-plus"></i></div>-->
                                 <div class="pet-bar">
                                     <img class="owner-pic" ng-src="{{item.user.image || 'images/default_owner.png'}}"/>

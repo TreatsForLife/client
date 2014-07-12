@@ -188,7 +188,6 @@ angular.module('clientApp')
                         scope.isVideoLoaded = true;
                         scope.currentTime = "0:00";
                         scope.currentPosition = 0;
-                        scope.$root.anyDialogShown = false;
                     });
 
                     scope.$emit('mo.video-dialog-closed');
