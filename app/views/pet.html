@@ -45,8 +45,8 @@
         </div>
 
         <!--<div id='slider-treats' class='swipe'>-->
-        <div class='treat-wrapper animated bounceIn' ng-style="{height: grassHeight, padding: buttonMargin}"
-             ng-show="buttonAnimationReady" ng-click="animateButton();">
+        <div class='treat-wrapper animated bounceIn' style="display:none;" ng-style="{height: grassHeight, padding: buttonMargin}"
+             ng-if="buttonAnimationReady" ng-click="animateButton();">
             <img class='treat' id="treat_button" rel:animated_src="images/buy_button.gif" rel:auto_play="0"
                  width="{{buttonHeight}}" height="{{buttonHeight}}"></div>
         <!--<div ng-repeat="photo in ['bone', 'ball', 'bed']" ng-style="{height:grassHeight}" >-->

@@ -73,6 +73,7 @@ body, html {
   width: 100%;
   max-width: 400px;
   position: absolute;
+  font-family: $font-alef;
   //  position: relative;
   margin: 0 auto;
   &.canAnimate {
@@ -174,6 +175,7 @@ button, a.button, input[type="submit"] {
   background: white;
   background: linear-gradient(white, #f1f1f1); /* Standard syntax (must be last) */
   border: 1px solid #cccccc;
+  font-family: $font-alef;
 
   &:active, &.button-active, &.button-active:hover, &.button-active:active {
     background: white;

@@ -45,13 +45,17 @@ angular.module('clientApp')
                 }, 50);
                 $timeout(function () {
 
-                    gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonHeight, auto_play: false });
-                    gif.load(function () {
-                        gif.pause();
-                        animationLength = gif.get_length();
-                        $timeout(function () {
-                            $scope.buttonAnimationReady = true;
-                        })
+                    $scope.buttonAnimationReady = true;
+                    $timeout(function () {
+                        gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonHeight, auto_play: false });
+                        gif.load(function () {
+                            gif.pause();
+                            animationLength = gif.get_length();
+                            $timeout(function () {
+                                $scope.buttonAnimationReady = true;
+                                angular.element('.treat-wrapper').show();
+                            })
+                        });
                     });
 
                 }, 100);
@@ -71,42 +75,6 @@ angular.module('clientApp')
 
         $scope.flip = function () {
             angular.element('.flipper').toggleClass('flip');
-        }
-
-        $scope.treats = ['bone'];
-        $scope.animationStatus = {};
-        for (var t in $scope.treats) {
-            var treat = $scope.treats[t];
-            $scope.animationStatus[treat] = 'first';
-        }
-
-        $scope.startAnimation = function (treat) {
-            $scope.animationStatus[treat] = 'animate';
-            $timeout(function () {
-                $scope.animationStatus[treat] = 'last';
-                $scope.showTipDialog('treat-dialog');
-            }, 1200);
-        }
-
-        $scope.menu = [
-            {name: 'אוכל לשבוע', price: 20, cart: true, fixed: true},
-            {name: 'עצם לעיסה קטנה', price: 10},
-            {name: 'עצם לעיסה גדולה', price: 20},
-            {name: 'כדור צעצוע', price: 10},
-            {name: 'חבל משיכה', price: 20},
-            {name: 'אמפולה נגד פשפשים', price: 50},
-            {name: 'קולר נגד פשפשים', price: 100}
-        ];
-
-        $scope.totalToPay = function () {
-            var total = 0;
-            for (var t in $scope.menu) {
-                var treat = $scope.menu[t];
-                if (treat.cart || treat.fixed) {
-                    total += treat.price;
-                }
-            }
-            return total;
         }
 
         //calc next friday at 12:00

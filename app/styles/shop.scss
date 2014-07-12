@@ -83,70 +83,24 @@ div.container.shop {
   }
 }
 
-
-.treats-menu{
-  ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-
-    li.treats-menu-item{
-      position: relative;
-      padding: 5px 0;
-      border-bottom: 1px solid #ddd;
-      &:first-of-type{
-        border-top: 1px solid #ddd;
-      }
-      .treats-menu-name{
-        font-size: 18px;
-        line-height: 24px;
-        color: #333333;
-        font-weight: bold;
-      }
-      .treats-menu-price{
-        font-size: 12px;
-        line-height: 16px;
-        color: #999999;
-        font-weight: normal;
-      }
-      .treats-menu-checkbox{
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        width: 30px;
-        height: 30px;
-        input{
-          width: 0px;
-          height: 30px;
-          font-family: FontAwesome;
-          font-size: 40px;
-          margin-top: 1px;
-          &::after{
-            content: "\f055";
-            color: $button-red;
-          }
-          &:checked, &.fixed{
-            &::after{
-              content:  "\f058";
-              color: $button-green;
-            }
-          }
-        }
-      }
-    }
-  }
+.shop-checkout-placeholder{
+  height: 100px;
 }
-.treats-checkout{
-  margin-top: 5px;
+.shop-checkout{
+  padding: 2px 10px 12px;
+  position: fixed;
+  bottom: 0;
+  background-color: $scheme-green;
   width: 100%;
-  .treats-checkout-total{
+  border-top:1px solid #111;
+  .shop-checkout-total{
     display: inline-block;
     width: 100%;
     padding: 10px;
     margin: auto;
     text-align: center;
   }
-  .treats-checkout-button{
+  .shop-checkout-button{
     width: 100%;
     text-align: center;
     padding: 10px;
