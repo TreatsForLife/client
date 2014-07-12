@@ -87,7 +87,8 @@ div.container.shop {
 }
 .shop-checkout{
   padding: 2px 10px 12px;
-  position: fixed;
+  position: absolute;
+  opacity: 0;
   bottom: 0;
   background-color: $scheme-green;
   width: 100%;

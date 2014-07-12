@@ -1,5 +1,5 @@
 <ul class="shop-wrapper">
-    <li class="shop-item-wrapper" ng-repeat="treat in treats">
+    <li class="shop-item-wrapper" ng-repeat="treat in treats | orderBy:'order'">
         <div class="shop-item-image" style="background-image: url({{treat.image.length > 5 ? treat.image : '/images/placeholder.png'}})" ></div>
         <div class="shop-item-price">₪{{treat.price}}</div>
         <div class="shop-item-name" ng-bind="treat.name"></div>
@@ -13,10 +13,10 @@
 <div class="shop-checkout-placeholder"></div>
 <div class="shop-checkout">
     <div class="shop-checkout-total">סה"כ תרומה: {{totalToPay}} שקלים</div>
-    <button class="shop-checkout-button button-{{paymentActive ? 'blue' : 'disabled'}}" ng-click="pay()">לתשלום</button>
+    <button class="shop-checkout-button button-{{paymentActive ? 'blue' : 'disabled'}}" ng-click="pay()"><i class="shop-checkout-icon" class="fa fa-shopping-cart"></i> לתשלום</button>
 </div>
 
-<form id="payment-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<form id="payment-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="display: none;">
     <input type="hidden" name="cmd" value="_xclick">
     <input type="hidden" name="business" value="treatsforlife.org@gmail.com">
     <input type="hidden" name="lc" value="IL">

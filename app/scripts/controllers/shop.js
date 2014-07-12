@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('ShopCtrl', ['$scope', '$rootScope', '$routeParams', 'Treats', 'Pets', function ($scope, $rootScope, $routeParams, Treats, Pets) {
+    .controller('ShopCtrl', ['$scope', '$rootScope', '$routeParams', '$timeout', 'Treats', 'Pets', function ($scope, $rootScope, $routeParams, $timeout, Treats, Pets) {
 
         var pet_id = $routeParams['id'];
 
@@ -9,9 +9,19 @@ angular.module('clientApp')
         $rootScope.navbarTitle = 'החנות';
         $scope.treats = Treats.all();
 
-        if (!$scope.pet){
+        if (!$scope.pet) {
             $scope.pet = Pets.query({id: pet_id});
         }
+
+        $timeout(function () {
+            //animate the checkout - do not remove there are problems with fixed position otherwise
+            angular.element('.shop-checkout')
+                .addClass('animated fadeInUp')
+                .css('position', 'fixed');
+
+            //calc the cart (to include defaults)
+            $scope.cartChanged();
+        }, 500);
 
         $scope.calcTotalToPay = function () {
             var total = 0;
@@ -31,11 +41,11 @@ angular.module('clientApp')
                     names.push(treat.name);
                 }
             }
-            if (names.length > 1){
+            if (names.length > 1) {
                 var last = names[0];
                 var rest = names.slice(1);
                 name = rest.join(', ') + ' ו' + last + name;
-            }else{
+            } else {
                 name = names[0] + name;
             }
             return name;
@@ -46,12 +56,13 @@ angular.module('clientApp')
             $scope.totalToPay = $scope.calcTotalToPay();
             $scope.formattedItemName = $scope.formatItemName();
             $scope.ItemNumber = (new Date()).getTime();
-            $scope.paymentActive = ($scope.totalToPay>0);
+            $scope.paymentActive = ($scope.totalToPay > 0);
         }
 
-        $scope.pay = function(){
-            if (!$scope.paymentActive) return;
+        $scope.pay = function () {
             $scope.cartChanged();
+            if (!$scope.paymentActive) return;
+            $scope.paymentActive = false;
             angular.element('#payment-form').submit();
         }
 
