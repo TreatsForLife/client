@@ -1,0 +1,195 @@
+@import "consts";
+
+/* General styles for all menus */
+.cbp-spmenu {
+  background: #111;
+  position: fixed;
+}
+
+.cbp-spmenu a {
+  display: block;
+  color: #fff;
+}
+
+.cbp-spmenu a:hover {
+  /*background: #258ecd;*/
+}
+
+.cbp-spmenu a:active {
+  /*background: #afdefa;*/
+  /*color: #47a3da;*/
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+  width: 250px;
+  height: 100%;
+  top: 0;
+  z-index: 9999999;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-left:1px solid #333;
+  box-sizing: border-box;
+  background: #222222;// url(<%# asset_data_uri 'texture-black.jpg' %>);
+  position: fixed;
+  background-size: 80px;
+  padding:15px;
+}
+
+.push-bottom-logo{
+  display: none;
+}
+
+.push-event{
+  height: 207px;
+  width: 224px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  img{
+    height:100%;
+    padding:0px;
+    width:100%;
+    -webkit-object-fit: cover;
+    -moz-object-fit: cover;
+    object-fit: cover;
+    z-index: -1;
+  }
+  span{
+    box-sizing:  border-box;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fefefe;
+    display: block;
+    padding: 0 15px;
+  }
+}
+
+.white-links {
+
+  .large{
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .small{
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.2px;
+  }
+  i,a {
+    text-decoration: none !important;
+    padding: 6px;
+    color: #eee !important;
+    text-align: right;
+    cursor: pointer;
+    font-family: $font-alef;
+    &:hover {
+      color: #fefefe !important;
+    }
+  }
+}
+
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-right {
+  right: -250px;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+  right: 0px;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  box-shadow: -3px 0 7px -3px #333;
+}
+
+/* Push classes applied to the body */
+body.pushed {
+  /*margin-left: -350px;*/
+  /*overflow: hidden;*/
+}
+
+body.pushed .body-cover{
+  display:block;
+}
+
+
+.body-cover{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height:100%;
+  background: rgba(0,0,0,0.1);
+  cursor: pointer;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+}
+
+//Oded: created cause all over the place
+/*.main-wrapper {*/
+//@include transition(0.4s);
+/*-webkit-transform-origin: 0% 50%;*/
+/*-webkit-transform-style: preserve-3d;*/
+/*-moz-transform-origin: 0% 50%;*/
+/*-moz-transform-style: preserve-3d;*/
+/*transform-origin: 0% 50%;*/
+/*transform-style: preserve-3d;*/
+/*-webkit-transition-delay: 0.1s;*/
+/*-moz-transition-delay: 0.1s;*/
+/*transition-delay: 0.1s;*/
+/*&.pushed {*/
+/*-webkit-transform: rotateY(7deg);*/
+/*-moz-transform: rotateY(7deg);*/
+/*transform: rotateY(7deg);*/
+/*overflow: hidden;*/
+/*-webkit-transition-delay: 0s;*/
+/*-moz-transition-delay: 0s;*/
+/*transition-delay: 0s;*/
+/*}*/
+/*}*/
+
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push,
+body,
+.navbar{
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 380px){
+  body.pushed {
+    margin-left: -280px;
+    overflow: hidden;
+    .fixed{
+      left: -280px;
+    }
+  }
+  .cbp-spmenu-right {
+    right: -280px;
+  }
+  .cbp-spmenu-vertical {
+    width: 280px;
+  }
+}
+
+@media screen and (min-height: 800px){
+  .push-bottom-logo{
+    display: block;
+    position: absolute;
+    bottom: 13px;
+    left: 20px;
+    width: 204px;
+  }
+}

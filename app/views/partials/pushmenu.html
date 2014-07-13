@@ -1,0 +1,15 @@
+<div class="body-cover" ng-click="closePushMenu()"></div>
+<nav class="fix cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right white-links" id="menuRight" ng-swipe-right="closePushMenu()" >
+    <!--<i class="fa fa-times f-right" ng-click="closePushMenu()"></i>-->
+    <!--<clear/>-->
+    <div class="push-event">
+        <img ng-src="{{pet.image}}" ng-if="user_pet_id"/>
+        <img src="images/logo.png" ng-if="!user_pet_id"/>
+    </div>
+    <ul class="large">
+        <li><a ng-click="closePushMenu();" ng-href="{{'#/pets/'}}">כל הכלבים</a></li>
+        <li><a ng-click="closePushMenu();" ng-href="{{'#/pet/' + user_pet_id}}" ng-if="user_pet_id">הכלב שלי</a></li>
+    </ul>
+</nav>
+
+

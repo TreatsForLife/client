@@ -12,6 +12,7 @@ angular.module('clientApp')
         var q = $location.search();
         if (q['item_number']){
             Donations.approve({item_number: q['item_number']});
+            $location.search({});
         }
 
         $rootScope.goBack = function () {
@@ -21,6 +22,15 @@ angular.module('clientApp')
             }, 1000);
             window.history.back();
         }
+
+        $rootScope.openPushMenu = function () {
+            angular.element('body').addClass('pushed');
+            angular.element('#menuRight').addClass('cbp-spmenu-open');
+        };
+        $rootScope.closePushMenu = function () {
+            angular.element('body').removeClass('pushed');
+            angular.element('#menuRight').removeClass('cbp-spmenu-open');
+        };
 
         $timeout(function () {
             $scope.canAnimate = true;
