@@ -49,7 +49,7 @@ angular.module('clientApp')
 
                     $scope.buttonAnimationReady = true;
                     $timeout(function () {
-                        gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonHeight, auto_play: false });
+                        gif = new SuperGif({ gif: document.getElementById('treat_button'), auto_play: false });
                         gif.load(function () {
                             gif.pause();
                             animationLength = gif.get_length();

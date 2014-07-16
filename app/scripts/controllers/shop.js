@@ -15,17 +15,19 @@ angular.module('clientApp')
 
         var chosenTreats = [];
 
-
         if (!$scope.pet) {
             $scope.pet = Pets.query({id: pet_id});
         }
+
+        $timeout(function(){
+            $scope.showCheckout = true;
+        },500);
 
         $scope.initCheckout = function () {
             $timeout(function () {
                 //animate the checkout - do not remove there are problems with fixed position otherwise
                 angular.element('.shop-checkout')
                     .addClass('animated fadeInUp')
-                    .css('position', 'fixed');
 
                 //calc the cart (to include defaults)
                 $scope.cartChanged();

@@ -2,12 +2,12 @@
 
 div.container.shop {
   background-color: $scheme-green;
-  ul.shop-wrapper{
+  ul.shop-wrapper {
     list-style-type: none;
     padding: 10px;
     margin: 0;
 
-    li.shop-item-wrapper{
+    li.shop-item-wrapper {
       position: relative;
       padding: 0;
       border: 1px solid #333;
@@ -16,17 +16,17 @@ div.container.shop {
       margin-bottom: 10px;
       overflow: hidden;
       font-family: 'Alef', Verdana, Arial, Helvetica;
-      .shop-item-image{
-        float:right;
-        width:100px;
-        height:100px;
+      .shop-item-image {
+        float: right;
+        width: 100px;
+        height: 100px;
         background-size: cover;
         background-position: center center;
       }
-      .shop-item-name{
-        margin-right:120px;
-        margin-left:20px;
-        margin-top:-5px;
+      .shop-item-name {
+        margin-right: 120px;
+        margin-left: 20px;
+        margin-top: -5px;
         text-align: right;
         font-size: 18px;
         line-height: 24px;
@@ -34,16 +34,16 @@ div.container.shop {
         font-weight: normal;
         border-bottom: 1px solid #999;
       }
-      .shop-item-desc{
-        margin-right:120px;
-        margin-left:20px;
-        margin-top:3px;
+      .shop-item-desc {
+        margin-right: 120px;
+        margin-left: 20px;
+        margin-top: 3px;
         text-align: right;
         font-size: 12px;
         color: #999;
         font-weight: normal;
       }
-      .shop-item-price{
+      .shop-item-price {
         margin-right: 120px;
         margin-left: 60px;
         text-align: right;
@@ -52,28 +52,26 @@ div.container.shop {
         color: #555;
         font-weight: normal;
       }
-      .shop-item-checkbox{
+      .shop-item-checkbox {
         position: absolute;
         left: 5px;
         top: 5px;
         width: 30px;
         height: 30px;
         line-height: 50px;
-        input{
+        input {
           width: 0px;
           height: 30px;
           font-family: FontAwesome;
           font-size: 40px;
           margin-top: 1px;
-          &::after{
-            content: "\f055";
-            color: $button-red;
+          &::after {
             content: "\f10c";
             color: $button-green;
           }
-          &:checked, &.fixed{
-            &::after{
-              content:  "\f058";
+          &:checked, &.fixed {
+            &::after {
+              content: "\f058";
               color: $button-green;
             }
           }
@@ -83,28 +81,36 @@ div.container.shop {
   }
 }
 
-.shop-checkout-placeholder{
+.shop-checkout-placeholder {
   height: 100px;
 }
-.shop-checkout{
-  padding: 2px 10px 12px;
-  position: absolute;
-  opacity: 0;
+
+.shop-checkout {
+  position: fixed;
   bottom: 0;
-  background-color: $scheme-green;
+  left: 0;
   width: 100%;
-  border-top:1px solid #111;
-  .shop-checkout-total{
-    display: inline-block;
+  opacity: 0;
+  .shop-checkout-inner {
+    position: relative;
+    padding: 2px 10px 12px;
+    background-color: $scheme-green;
+    border-top: 1px solid #111;
     width: 100%;
-    padding: 10px;
-    margin: auto;
-    text-align: center;
-  }
-  .shop-checkout-button{
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    .shop-checkout-total {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      margin: auto;
+      text-align: center;
+    }
+    .shop-checkout-button {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      font-size: 20px;
+    }
   }
 }
