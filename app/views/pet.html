@@ -2,20 +2,20 @@
     <div class="front page">
         <i class="pet-info fa fa-info-circle" ng-click="flip()"></i>
         <i class="pet-clock fa fa-clock-o" ng-click=""></i>
-        <span data-timer="timer" data-end-time="nextFriday" class="pet-timer"><div class="timer-title"></div><table>
-            <thead>
-            <tr>
-                <tbody>
-                <td>{{days}}</td>
-                <td>:</td>
-                <td>{{hhours}}</td>
-                <td>:</td>
-                <td>{{mminutes}}</td>
-                <td>:</td>
-                <td>{{sseconds}}</td>
-            </tr>
-            </tbody>
-        </table>
+        <span data-timer="timer" data-end-time="nextFriday" class="pet-timer">
+            <div class="timer-title">
+            </div>
+            <table>
+                <tr>
+                    <td>{{days}}</td>
+                    <td>:</td>
+                    <td>{{hhours}}</td>
+                    <td>:</td>
+                    <td>{{mminutes}}</td>
+                    <td>:</td>
+                    <td>{{sseconds}}</td>
+                </tr>
+            </table>
         </span>
 
         <div id="pet-pic" ng-clock>
@@ -91,7 +91,7 @@
     </div>
 -->
 </div>
-<tip-dialog></tip-dialog>
+<tip-dialog dialog="'pet'"></tip-dialog>
 <div player="player" show="show_player" video-src="player_src" is-edit-mode="false"/>
 
 

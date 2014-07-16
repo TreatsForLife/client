@@ -15,6 +15,12 @@ angular.module('clientApp')
 
         var chosenTreats = [];
 
+        $timeout(function () {
+            if (!window.localStorage['shop-dialog-shown']) {
+                $scope.showTipDialog('shop');
+            }
+        });
+
         if (!$scope.pet) {
             $scope.pet = Pets.query({id: pet_id});
         }

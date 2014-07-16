@@ -8,7 +8,7 @@ angular.module('clientApp')
                 '<div class="tip-dialog animated bounce{{!leaving ? \'InDown\' : \'OutUp\'}}"><div class="rtl" ng-include="contentUrl"></div></div>' +
                 '<div class="tip-dialog-point animated bounce{{!leaving ? \'InDown\' : \'OutUp\'}}"></div>' +
                 '<div class="tip-dialog-dog animated bounce{{!leaving ? \'InUp\' : \'OutDown\'}}" ng-style="{backgroundImage: \'url(images/logo.png)\'}"></div>' +
-                '<div class="tip-dialog-x animated fade{{!leaving ? \'In\' : \'Out\'}}" ng-click="closeTipDialog()"><i class="fa fa-times-circle-o"></i>' +
+                '<div class="tip-dialog-x animated fade{{!leaving ? \'In\' : \'Out\'}}" ng-click="closeTipDialog()"> סגור <i class="fa fa-times"></i>' +
                 '</div>' +
                 '</div>' +
                 '</div>',
@@ -17,7 +17,7 @@ angular.module('clientApp')
 
                 scope.showTipDialog = function (filename) {
                     $timeout(function () {
-                        scope.contentUrl = 'views/partials/' + filename + '.html';
+                        scope.contentUrl = 'views/partials/' + filename + '-dialog.html';
                         scope.shown = true;
                     });
                 }
