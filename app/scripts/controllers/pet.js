@@ -6,6 +6,8 @@ angular.module('clientApp')
         $rootScope.bodyClass = 'pet';
         $scope.grassHeight = 0;
         $scope.buttonAnimationReady = false;
+        $scope.buttonClicked = false;
+        $scope.picHeight = $('.container').width() * 0.6;
 
         var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
         var gif = null;
@@ -39,28 +41,26 @@ angular.module('clientApp')
                         }
                     });
 
-                    debugger;
-                    $scope.grassHeight = $(window).height() - $('#pet-pic').height() - $('#pet-pic').offset().top;
-                    $scope.buttonHeight = Math.min($scope.grassHeight * 0.7, 150);
-                    $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
 
                 }, 50);
                 $timeout(function () {
 
-                    $scope.buttonAnimationReady = true;
-                    $timeout(function () {
-                        gif = new SuperGif({ gif: document.getElementById('treat_button'), auto_play: false });
-                        gif.load(function () {
-                            gif.pause();
-                            animationLength = gif.get_length();
-                            $timeout(function () {
+                    $scope.grassHeight = $scope.windowHeight - ($scope.picHeight+62) - 40 - 50;
+                    $scope.buttonHeight = $scope.buttonWidth = Math.min($scope.grassHeight * 0.9, 150);
+                    $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
+
+                    $scope.gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonWidth, auto_play: false });
+                    $scope.gif.load(function () {
+                        $scope.gif.pause();
+                        animationLength = $scope.gif.get_length();
+                        $timeout(function () {
+                            if (!$scope.buttonClicked) //do not show animation if the button was already clicked
                                 $scope.buttonAnimationReady = true;
-                                angular.element('.treat-wrapper').show();
-                            })
-                        });
+                        })
                     });
 
                 }, 100);
+
             });
         });
 
@@ -68,15 +68,24 @@ angular.module('clientApp')
             $scope.show_player = true;
             $scope.player_src = $sce.trustAsResourceUrl(src);
         }
-        $scope.animateButton = function () {
-            gif.play();
-            var gifInterval = $interval(function () {
-                if (gif.get_current_frame() >= animationLength - 1) {
-                    gif.pause();
+        $scope.animateButton = function (ready) {
+            if (ready) {
+                $scope.gif.play();
+                var gifInterval = $interval(function () {
+                    if ($scope.gif.get_current_frame() >= animationLength - 1) {
+                        $scope.gif.pause();
+                        $location.path('/shop/' + pet_id);
+                        $interval.cancel(gifInterval);
+                    }
+                }, 20);
+            } else {
+                $timeout(function () {
+                    $scope.buttonClicked = true;
+                });
+                $timeout(function () {
                     $location.path('/shop/' + pet_id);
-                    $interval.cancel(gifInterval);
-                }
-            }, 20);
+                }, 500);
+            }
         }
 
         $scope.flip = function () {

@@ -32,6 +32,8 @@ angular.module('clientApp')
 
         $timeout(function () {
             $scope.canAnimate = true;
+            $rootScope.windowHeight = $(window).height();
+            $rootScope.containerWidth = $('.container').width();
             $rootScope.picHeight = $('.container').width() * 0.6;
         },5)
     }]);

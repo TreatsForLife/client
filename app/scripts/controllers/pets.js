@@ -5,6 +5,7 @@ angular.module('clientApp')
         $rootScope.bodyClass = 'pets';
         $rootScope.navbarTitle = 'כלבים בודדים';
 
+        $scope.picHeight = $('.container').width() * 0.6;
         $scope.pets = Pets.all();
 
         window.debug = $scope;

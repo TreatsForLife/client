@@ -77,20 +77,18 @@ body, html {
   margin: 0 auto;
   &.canAnimate {
     &.ng-enter {
-      animation: slideInRight 0.5s both ease-in;
       z-index: 8888;
     }
     &.ng-leave {
-      animation: slideOutLeft 0.5s both ease-in;
+      animation: fadeOut 0.5s both ease-in;
       z-index: 9999;
     }
     &.goingBack {
       &.ng-enter {
-        animation: slideInLeft 0.5s both ease-in;
         z-index: 8888;
       }
       &.ng-leave {
-        animation: slideOutRight 0.5s both ease-in;
+        animation: fadeOut 0.5s both ease-in;
         z-index: 9999;
       }
     }
@@ -287,7 +285,7 @@ button, a.button, input[type="submit"] {
     opacity: 1;
   }
   to {
-    opacity: 0.5;
+    opacity: 0;
   }
 }
 
