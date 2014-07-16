@@ -38,6 +38,8 @@ angular.module('clientApp')
                         transitionEnd: function (index, elem) {
                         }
                     });
+
+                    debugger;
                     $scope.grassHeight = $(window).height() - $('#pet-pic').height() - $('#pet-pic').offset().top;
                     $scope.buttonHeight = Math.min($scope.grassHeight * 0.7, 150);
                     $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;

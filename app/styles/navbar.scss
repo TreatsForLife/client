@@ -1,3 +1,5 @@
+@import 'consts';
+
 .container{
   padding-top: 40px;
   &.welcome{
@@ -13,15 +15,19 @@ body.welcome .navbar{
   top:0;
   width:100%;
   height:40px;
-  background: #111;
+  background: transparent;
   z-index: 99999;
   .navbar-inner{
+    background: #111;
     position: relative;
     line-height: 40px;
     height:40px;
     width:100%;
     color:#eee;
     padding:0 10px;
+    max-width: 600px;
+    font-family: $font-alef;
+    margin: 0 auto;
     .navbar-back{
       float:left;
       i{
