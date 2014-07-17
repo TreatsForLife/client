@@ -16,6 +16,8 @@
     overflow: hidden;
     padding-bottom: 98px;
     padding-top: 40px;
+    max-width: 580px;
+    margin: auto;
     .tip-dialog{
       width: 100%;
       padding: 15px;
@@ -69,7 +71,7 @@
 
   }
   .tip-dialog-x{
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     color: #ffffff;
