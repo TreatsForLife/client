@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('WelcomeCtrl', ['$scope', '$rootScope', '$cookieStore', '$timeout', '$location', 'Users', function ($scope, $rootScope, $cookieStore, $timeout, $location, Users) {
+    .controller('WelcomeCtrl', ['$scope', '$rootScope', '$cookies', '$timeout', '$location', 'Users', function ($scope, $rootScope, $cookies, $timeout, $location, Users) {
         $rootScope.bodyClass = 'welcome';
 
         $scope.placeLogo = function () {
@@ -14,19 +14,23 @@ angular.module('clientApp')
         }
 
         $scope.fbLogin = function () {
-            if (!FB) return;
+            if (typeof(FB) =='undefined' ||     !FB) return;
 //            localStorage.setItem('fb', true);
 //            console.log(localStorage);
 //            $location.path('/');
             FB.login(function (response) {
                 if (response.authResponse) {
 //                    console.log('Welcome!  Fetching your information.... ');
-                    $cookieStore.put('fb_at', response.authResponse.accessToken.replace(/\"/g,''));
-                    $cookieStore.put('fb_id', response.authResponse.userID.replace(/\"/g,''));
+                    debugger;
+                    $cookies['fb_at'] = response.authResponse.accessToken;
+                    $cookies['fb_id'] = response.authResponse.userID;
                     FB.api('/me', function (response) {
                         Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/'+response.username+'/picture'}, function(user){
-                            $cookieStore.put('user_id', user._id.replace(/\"/g,''));
-                            if (user.pet) $cookieStore.put('user_pet_id', user.pet.replace(/\"/g,''));
+                            debugger;
+                            $cookies['user_id'] = user._id;
+                            $rootScope.user = user;
+                            if (user.pet) 
+                                $cookies['user_pet_id'] = user.pet;
                         });
                         $location.path('/');
                     });

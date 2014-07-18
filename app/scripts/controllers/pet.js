@@ -10,6 +10,9 @@ angular.module('clientApp')
         $scope.picHeight = $('.container').width() * 0.6;
 
         var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
+        if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id)
+            pet_id = $rootScope.user.pet._id;
+
         var animationLength = 0;
 
         $timeout(function () {

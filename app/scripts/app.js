@@ -32,6 +32,10 @@ angular.module('clientApp', [
                 templateUrl: 'views/pets.html',
                 controller: 'PetsCtrl'
             })
+            .when('/pets/:filter', {
+                templateUrl: 'views/pets.html',
+                controller: 'PetsCtrl'
+            })
             .when('/', {
                 templateUrl: 'views/pets.html',
                 controller: 'PetsCtrl'
@@ -44,10 +48,11 @@ angular.module('clientApp', [
 
         if ($location.path() == '/') {
             console.log('$cookies', $cookies.fb_user);
+            debugger;
             if (!$cookies.fb_id || $location.search()['s'] == 'w') {
                 $location.path('/welcome');
             } else if (!$cookies.user_pet_id) {
-                $location.path('/pets');
+                $location.path('/pets/lonely');
             } else {
                 $location.path('/pet');
             }

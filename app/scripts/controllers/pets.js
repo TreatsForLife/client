@@ -1,12 +1,19 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('PetsCtrl', ['$scope', '$rootScope', '$timeout', 'Pets', function ($scope, $rootScope, $timeout, Pets) {
+    .controller('PetsCtrl', ['$scope', '$rootScope', '$timeout', '$routeParams', 'Pets', function ($scope, $rootScope, $timeout, $routeParams, Pets) {
         $rootScope.bodyClass = 'pets';
-        $rootScope.navbarTitle = 'כלבים בודדים';
-
         $scope.picHeight = $('.container').width() * 0.6;
-        $scope.pets = Pets.owned();
+
+        var filter = $routeParams['filter'];
+
+        if (filter == 'owned') {
+            $rootScope.navbarTitle = 'כלבים מאומצים';
+            $scope.pets = Pets.owned();
+        } else {
+            $rootScope.navbarTitle = 'כלבים בודדים';
+            $scope.pets = Pets.lonely();
+        }
 
         $timeout(function () {
             if (!window.localStorage['pets-dialog-shown']) {
