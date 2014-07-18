@@ -48,7 +48,6 @@ angular.module('clientApp', [
 
         if ($location.path() == '/') {
             console.log('$cookies', $cookies.fb_user);
-            debugger;
             if (!$cookies.fb_id || $location.search()['s'] == 'w') {
                 $location.path('/welcome');
             } else if (!$cookies.user_pet_id) {
