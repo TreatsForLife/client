@@ -66,7 +66,7 @@ div.container.shop {
           font-size: 40px;
           margin-top: 1px;
           &::after {
-            content: "\f10c";
+            content: "\f1db";
             color: $button-green;
           }
           &:checked, &.fixed {

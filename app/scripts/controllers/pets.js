@@ -6,7 +6,7 @@ angular.module('clientApp')
         $rootScope.navbarTitle = 'כלבים בודדים';
 
         $scope.picHeight = $('.container').width() * 0.6;
-        $scope.pets = Pets.all();
+        $scope.pets = Pets.owned();
 
         $timeout(function () {
             if (!window.localStorage['pets-dialog-shown']) {
