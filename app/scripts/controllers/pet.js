@@ -1,13 +1,14 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('PetCtrl', ['$scope', 'Pets', 'Donations', '$rootScope', '$routeParams', '$timeout', '$interval', '$sce', '$location', function ($scope, Pets, Donations, $rootScope, $routeParams, $timeout, $interval, $sce, $location) {
+    .controller('PetCtrl', ['$scope', 'Pets', 'Donations', 'Treats', '$rootScope', '$routeParams', '$timeout', '$interval', '$sce', '$location', function ($scope, Pets, Donations, Treats, $rootScope, $routeParams, $timeout, $interval, $sce, $location) {
 
         $rootScope.bodyClass = 'pet';
         $scope.grassHeight = 0;
         $scope.buttonAnimationReady = false;
         $scope.buttonClicked = false;
         $scope.picHeight = $('.container').width() * 0.6;
+        $scope.cartIsUp = false;
 
         var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
         if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id)
@@ -25,6 +26,7 @@ angular.module('clientApp')
             return $sce.trustAsResourceUrl(src);
         }
 
+        $scope.treats = Treats.all();
         Pets.query({id: pet_id}, function (pet) {
             $scope.pet = pet;
             $rootScope.navbarTitle = pet.name;
@@ -53,8 +55,8 @@ angular.module('clientApp')
                 }, 50);
                 $timeout(function () {
 
-                    $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 40 - 50;
-                    $scope.buttonHeight = $scope.buttonWidth = Math.min($scope.grassHeight * 0.9, 150);
+                    $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - 50;
+                    $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
                     $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
 
                     $scope.gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonWidth, auto_play: false });

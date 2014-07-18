@@ -2,84 +2,93 @@
 
 div.container.shop {
   background-color: $scheme-green;
-  ul.shop-wrapper {
-    list-style-type: none;
-    padding: 10px;
-    margin: 0;
+}
 
-    li.shop-item-wrapper {
-      position: relative;
-      padding: 0;
-      border: 1px solid #333;
-      border-radius: 4px;
-      background: white;
-      margin-bottom: 10px;
-      overflow: hidden;
-      font-family: 'Alef', Verdana, Arial, Helvetica;
-      .shop-item-image {
-        float: right;
-        width: 100px;
-        height: 100px;
-        background-size: cover;
-        background-position: center center;
+ul.shop-wrapper {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+
+  li.shop-item-wrapper {
+    position: relative;
+    padding: 0;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: white;
+    margin-bottom: 10px;
+    overflow: hidden;
+    font-family: 'Alef', Verdana, Arial, Helvetica;
+    .shop-item-image {
+      float: right;
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      background-position: center center;
+    }
+    .shop-item-name {
+      margin-right: 120px;
+      margin-left: 20px;
+      margin-top: -5px;
+      text-align: right;
+      font-size: 18px;
+      line-height: 24px;
+      color: #111111;
+      font-weight: normal;
+      border-bottom: 1px solid #999;
+    }
+    .shop-item-desc {
+      margin-right: 120px;
+      margin-left: 20px;
+      margin-top: 3px;
+      text-align: right;
+      font-size: 12px;
+      color: #999;
+      font-weight: normal;
+    }
+    .shop-item-price {
+      margin-right: 120px;
+      margin-left: 60px;
+      text-align: right;
+      font-size: 23px;
+      line-height: 48px;
+      color: #555;
+      font-weight: normal;
+    }
+    .shop-item-checkbox {
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: 30px;
+      height: 30px;
+      line-height: 50px;
+      &.cart{
+        left: 13px;
+        top: 10px;
+        line-height: 25px;
+        font-size: 26px;
+        font-family: $font-alef;
       }
-      .shop-item-name {
-        margin-right: 120px;
-        margin-left: 20px;
-        margin-top: -5px;
-        text-align: right;
-        font-size: 18px;
-        line-height: 24px;
-        color: #111111;
-        font-weight: normal;
-        border-bottom: 1px solid #999;
-      }
-      .shop-item-desc {
-        margin-right: 120px;
-        margin-left: 20px;
-        margin-top: 3px;
-        text-align: right;
-        font-size: 12px;
-        color: #999;
-        font-weight: normal;
-      }
-      .shop-item-price {
-        margin-right: 120px;
-        margin-left: 60px;
-        text-align: right;
-        font-size: 23px;
-        line-height: 48px;
-        color: #555;
-        font-weight: normal;
-      }
-      .shop-item-checkbox {
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        width: 30px;
+      input {
+        width: 0px;
         height: 30px;
-        line-height: 50px;
-        input {
-          width: 0px;
-          height: 30px;
-          font-family: FontAwesome;
-          font-size: 40px;
-          margin-top: 1px;
+        font-family: FontAwesome;
+        font-size: 40px;
+        margin-top: 1px;
+        &::after {
+          content: "\f1db";
+          color: $button-green;
+        }
+        &:checked, &.fixed {
           &::after {
-            content: "\f1db";
+            content: "\f058";
             color: $button-green;
-          }
-          &:checked, &.fixed {
-            &::after {
-              content: "\f058";
-              color: $button-green;
-            }
           }
         }
       }
     }
   }
 }
+
 
 .shop-checkout-placeholder {
   height: 100px;

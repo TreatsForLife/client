@@ -1,273 +1,106 @@
 @import 'consts';
 
-@keyframes front-flip
-{
-  0%    {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);}
-  10%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(0deg);}
-  90%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(180deg);}
-  100%  {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(180deg);}
-}
-
-@keyframes back-flip
-{
-  0%    {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(-180deg);}
-  10%   {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(-180deg);}
-  90%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(0deg);}
-  100%  {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);}
-}
-
-@keyframes front-flip-back
-{
-  0%  {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(180deg);}
-  10%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(180deg);}
-  90%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(0deg);}
-  100%    {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);}
-}
-
-@keyframes back-flip-back
-{
-  0%  {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);}
-  10%  {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(0deg);}
-  90%   {transform: scale(0.9) perspective(600px) rotateX(0deg) rotateY(-180deg);}
-  100%    {transform: scale(1) perspective(600px) rotateX(0deg) rotateY(-180deg);}
-}
-
 div.container.pet {
 
   overflow: hidden;
   transform: none;
+  background-color: $scheme-blue;
 
-  .flipper {
-
-      //transform: scale(1) perspective(600px) rotateX(0deg);
-
-    .pet-info{
-      position: absolute;
-      right:10px;
-      bottom:10px;
-      z-index: 9999;
-      font-size: 32px;
-      color: #fefefe;
-    }
-
-    .pet-clock{
-      position: absolute;
-      left:10px;
-      bottom:10px;
-      z-index: 9999;
-      font-size: 32px;
-      color: #fefefe;
-    }
-
-    .pet-timer{
-      position: absolute;
-      left:46px;
-      bottom:17px;
-      z-index: 9999;
-      font-size: 20px;
-      color: #fefefe;
-    }
-    .front {
-//        float: none;
-//        position: absolute;
-//        top: 0;
-//        left: 0;
-//        z-index: 900;
-//        width: inherit;
-//        height: inherit;
-//        text-align: center;
-
-        //animation: front-flip-back 1s;
-        //animation-timing-function:ease-in-out;
-//        transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
-//        transform-style: preserve-3d;
-//        backface-visibility: hidden;
-//        opacity: 1;
-
-        /* -- transition is the magic sauce for animation -- */
-//        transition: all 0.6s ease-in-out;
-
-        background-color: $scheme-green;
-
-/*
-        #pet-pic{
-          width:100%;
-          max-height: 100%;
-          overflow: hidden;
-
-          img, video{
-            width:100%;
-            background: white;
-            border: 1px solid #999;
-            border-radius: 4px;
-          }
-          .play-button{
-            position: absolute;
-            color: white;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            line-height: 400px;
-            font-size: 75px;
-          }
-        }
-*/
-        .pet-treat{
-          width:100px;
-          //position: absolute;
-          //bottom: 0%;
-        }
-
-      }
-      .back {
-//        float: none;
-//        position: absolute;
-//        top: 0;
-//        left: 0;
-//        z-index: 800;
-//        width: inherit;
-//        height: inherit;
-//        padding: 20px;
-//        box-sizing: border-box;
-//        color: #efefef;
-
-        //animation: back-flip-back 1s;
-        //animation-timing-function:ease-in-out;
-//        transform: scale(0.8) perspective(600px) rotateX(0deg) rotateY(-180deg);
-//        transform-style: preserve-3d;
-//        backface-visibility: hidden;
-//        opacity: 0;
-
-//        /* -- transition is the magic sauce for animation -- */
-//        transition: all 0.6s ease-in-out;
-//        background-color: $scheme-green;
-
-      }
-      &.flip {
-
-        .front {
-          z-index: 900;
-          //animation: front-flip 1s;
-          //animation-timing-function:ease-in-out;
-//          transform: scale(0.8) perspective(600px) rotateX(0deg) rotateY(180deg);
-//          opacity: 0;
-        }
-
-        .back {
-          z-index: 1000;
-          //animation: back-flip 1s;
-          //animation-timing-function:ease-in-out;
-//          transform: scale(1) perspective(600px) rotateX(0deg) rotateY(0deg);
-          opacity: 1;
-        }
-      }
-
+  #pet-pic{
+    margin-bottom: -10px;
   }
 
-  .treat-wrapper{
-    text-align: center;
-    margin-top: 0px;
-  }
-
-  .swipe {
-    overflow: hidden;
-    visibility: hidden;
-    position: relative;
-  }
-  .swipe-wrap {
-    overflow: hidden;
-    position: relative;
-  }
-  .swipe-wrap > div {
-    float:left;
-    width:100%;
-    position: relative;
-//    padding: 10px;
-  }
-
-  .swipe-wrap.treat{
+  .cart-wrapper {
+    background-color: #df2b46;
+    border-top: 1px solid #111;
+    transition: all 0.5s ease;
+    height: 100%;
+    position: fixed;
+    top: 100%;
+    margin-top: -50px;
     width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto 85%;
-  }
+    z-index: 99;
+    &.up {
+      margin-top: 40px;
+      top: 0;
+      overflow: auto;
+    }
 
-}
-
-
-
-.treats-menu{
-  ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-
-    li.treats-menu-item{
-      position: relative;
-      padding: 5px 0;
-      border-bottom: 1px solid #ddd;
-      &:first-of-type{
-        border-top: 1px solid #ddd;
+    .cart-items {
+      float: right;
+      line-height: 50px;
+      .cart-items-title {
+        font-size: 20px;
+        color: #fefefe;
+        float: right;
+        line-height: 50px;
+        text-align: right;
+        direction: rtl;
       }
-      .treats-menu-name{
-        font-size: 18px;
-        line-height: 24px;
-        color: #333333;
-        font-weight: bold;
+      .pet-info {
+        font-size: 32px;
+        color: #fefefe;
+        float: right;
+        margin: 0 12px;
+        line-height: 50px;
       }
-      .treats-menu-price{
-        font-size: 12px;
-        line-height: 16px;
-        color: #999999;
-        font-weight: normal;
+    }
+
+    .cart-timer {
+      float: left;
+      line-height: 50px;
+      .pet-clock {
+        font-size: 32px;
+        color: #fefefe;
+        float: left;
+        line-height: 50px;
+        margin: 0 12px;
       }
-      .treats-menu-checkbox{
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        width: 30px;
-        height: 30px;
-        input{
-          width: 0px;
-          height: 30px;
-          font-family: FontAwesome;
-          font-size: 40px;
-          margin-top: 1px;
-          &::after{
-            content: "\f055";
-            color: $button-red;
-          }
-          &:checked, &.fixed{
-            &::after{
-              content:  "\f058";
-              color: $button-green;
-            }
-          }
-        }
+
+      .pet-timer {
+        font-size: 20px;
+        color: #fefefe;
+        float: left;
+        height: 50px;
       }
     }
   }
+
+  .pet-treat {
+    width: 100px;
+  }
+
 }
-.treats-checkout{
-  margin-top: 5px;
+
+.treat-wrapper {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-wrap > div {
+  float: left;
   width: 100%;
-  .treats-checkout-total{
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-    margin: auto;
-    text-align: center;
-  }
-  .treats-checkout-button{
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-  }
+  position: relative;
+  //    padding: 10px;
 }
 
-
+.swipe-wrap.treat {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 85%;
+}
 
 .dialog-video {
   position: fixed;
