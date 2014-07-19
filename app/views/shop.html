@@ -44,6 +44,7 @@
             <input type="submit" class="shop-checkout-button button-{{paymentActive ? 'blue' : 'disabled'}}"
                    ng-click="pay()" value="לתשלום"/>
         </form>
+        <a class="button shop-checkout-button button-{{paymentActive ? 'green' : 'disabled'}}" ng-href="{{returnUrl}}?item_number={{ItemNumber}}">כאילו תשלום</a>
     </div>
 </div>
 

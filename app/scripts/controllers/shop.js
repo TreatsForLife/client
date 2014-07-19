@@ -8,7 +8,7 @@ angular.module('clientApp')
         $rootScope.bodyClass = 'shop';
         $rootScope.navbarTitle = 'החנות';
 
-        $scope.returnUrl = Consts.client_root + '#/shop/' + pet_id;
+        $scope.returnUrl = Consts.client_root + '#/pet/' + pet_id;
         $scope.notifyUrl = Consts.api_root + 'donation';
 
         $scope.treats = Treats.all();

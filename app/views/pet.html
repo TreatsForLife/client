@@ -45,8 +45,10 @@
     <div class="cart-wrapper" ng-class="{up: cartIsUp}" ng-click="cartIsUp=!cartIsUp" ng-if="showCart">
         <div class="cart-items">
             <i class="pet-info fa fa-times" ng-show="cartIsUp" ng-click="showCart()"></i>
-            <div ng-hide="cartIsUp" >
+
+            <div ng-hide="cartIsUp">
                 <i class="pet-info fa fa-shopping-cart fa-flip-horizontal" ng-click="showCart()"></i>
+
                 <div class="cart-items-title" ng-bind="cartTitle"></div>
             </div>
         </div>
@@ -70,6 +72,10 @@
         </div>
 
         <div class="clear"></div>
+
+        <div class="cart-shop-title" ng-if="cartIsUp">הפריטים הבאים יתרמו בסוף השבוע הקרוב. על כל תרומה יישלח לכם
+            סרטון
+        </div>
 
         <ul class="shop-wrapper" ng-if="cartIsUp">
             <li class="shop-item-wrapper" ng-repeat="donation in pending">

@@ -11,13 +11,13 @@ angular.module('clientApp')
         if (!$rootScope.user && $rootScope.user_id) {
             $rootScope.user = Users.get({id: $rootScope.user_id}, function (user) {
             });
-        }else if (!$rootScope.user_id){
+        } else if (!$rootScope.user_id) {
             $location.path('/welcome');
         }
 
         var q = $location.search();
         if (q['item_number']) {
-            Donations.approve({item_number: q['item_number']});
+            Donations.create({item_number: q['item_number'], payed: true});
             $location.search({});
         }
 
