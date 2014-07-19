@@ -5,6 +5,8 @@ angular.module('clientApp')
         return $resource(Consts.api_root + 'donation/:id', {}, {
             all: { method: 'GET', withCredentials: true, params: {}, isArray: true },
             query: { method: 'GET', withCredentials: true, params: {}, isArray: false },
+            given: { method: 'GET', withCredentials: true, params: {id: 'given'}, isArray: true },
+            pending: { method: 'GET', withCredentials: true, params: {id: 'pending'}, isArray: true },
             create: { method: 'POST' },
             approve: { method: 'POST', params: {id: 'approve'} },
             update: { method: 'PUT', withCredentials: true, params: {id: '@_id'} },

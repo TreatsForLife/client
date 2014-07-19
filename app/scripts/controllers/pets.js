@@ -17,7 +17,7 @@ angular.module('clientApp')
 
         $timeout(function () {
             if (!window.localStorage['pets-dialog-shown']) {
-                $scope.showTipDialog('pets');
+//                $scope.showTipDialog('pets');
             }
         });
 

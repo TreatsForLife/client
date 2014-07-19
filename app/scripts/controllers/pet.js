@@ -18,7 +18,7 @@ angular.module('clientApp')
 
         $timeout(function () {
             if (!window.localStorage['pet-dialog-shown']) {
-                $scope.showTipDialog('pet');
+//                $scope.showTipDialog('pet');
             }
         });
 
@@ -26,14 +26,13 @@ angular.module('clientApp')
             return $sce.trustAsResourceUrl(src);
         }
 
-        $scope.treats = Treats.all();
         Pets.query({id: pet_id}, function (pet) {
             $scope.pet = pet;
             $rootScope.navbarTitle = pet.name;
             $scope.donations = [];
             $scope.donations[0] = pet;
 
-            Donations.all({pet_id: pet_id}, function (res) {
+            Donations.given({pet_id: pet_id}, function (res) {
                 $timeout(function () {
                     for (var i = 0, donation; donation = res[i]; i++) {
                         $scope.donations.push(donation);
@@ -55,7 +54,7 @@ angular.module('clientApp')
                 }, 50);
                 $timeout(function () {
 
-                    $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - 50;
+                    $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
                     $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
                     $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
 
@@ -72,6 +71,11 @@ angular.module('clientApp')
                 }, 100);
 
             });
+        });
+
+        $scope.pending = Donations.pending({pet_id: pet_id}, function(res){
+            $scope.showCart = (res.length>0);
+            $scope.cartTitle = res.length + ' ' + ((res.length>0) ? 'פריטים' : 'פריט');
         });
 
         $scope.playVideo = function (src) {

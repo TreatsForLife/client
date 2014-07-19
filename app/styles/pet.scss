@@ -4,14 +4,14 @@ div.container.pet {
 
   overflow: hidden;
   transform: none;
-  background-color: $scheme-blue;
+  background-color: $scheme-green;
 
   #pet-pic{
     margin-bottom: -10px;
   }
 
   .cart-wrapper {
-    background-color: #df2b46;
+    background-color: $scheme-blue;
     border-top: 1px solid #111;
     transition: all 0.5s ease;
     height: 100%;
