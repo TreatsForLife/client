@@ -7,9 +7,9 @@ angular.module('clientApp')
 
         var filter = $routeParams['filter'];
 
-        if (filter == 'owned') {
+        if (filter == 'adopted') {
             $rootScope.navbarTitle = 'כלבים מאומצים';
-            $scope.pets = Pets.owned();
+            $scope.pets = Pets.adopted();
         } else {
             $rootScope.navbarTitle = 'כלבים בודדים';
             $scope.pets = Pets.lonely();
