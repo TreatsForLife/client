@@ -15,7 +15,8 @@
     "animate.css": "~3.2.0",
     "angular-timer": "~1.1.6",
     "momentjs": "~2.7.0",
-    "angular-touch": "~1.2.20"
+    "angular-touch": "~1.2.20",
+    "angular-seo": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",
