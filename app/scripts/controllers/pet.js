@@ -73,6 +73,8 @@ angular.module('clientApp')
                                 $scope.showCart = (res.length > 0);
                                 $scope.cartTitle = res.length + ' ' + ((res.length > 0) ? 'פריטים' : 'פריט');
 
+                                $scope.htmlReady(); //flags phantom js that the page is ready
+
                                 calcDims();
 
                                 if ($scope.showBuyButton) {

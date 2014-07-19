@@ -7,7 +7,8 @@ angular.module('clientApp', [
         'ngTouch',
         'ngRoute',
         'ngAnimate',
-        'timer'
+        'timer',
+        'seo'
     ])
     .config(function ($routeProvider, $compileProvider) {
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|http?|ftp|mailto|file|tel):/);
