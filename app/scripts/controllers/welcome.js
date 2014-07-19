@@ -14,7 +14,7 @@ angular.module('clientApp')
         }
 
         $scope.fbLogin = function () {
-            if (typeof(FB) =='undefined' ||     !FB) return;
+            if (typeof(FB) == 'undefined' || !FB) return;
 //            localStorage.setItem('fb', true);
 //            console.log(localStorage);
 //            $location.path('/');
@@ -22,11 +22,10 @@ angular.module('clientApp')
                 if (response.authResponse) {
 //                    console.log('Welcome!  Fetching your information.... ');
                     debugger;
-                    $cookies['fb_at'] = response.authResponse.accessToken;
+//                    $cookies['fb_at'] = response.authResponse.accessToken;
                     $cookies['fb_id'] = response.authResponse.userID;
                     FB.api('/me', function (response) {
                         Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/'+response.username+'/picture'}, function(user){
-                            debugger;
                             $cookies['user_id'] = user._id;
                             $rootScope.user = user;
                             if (user.pet) 
@@ -40,5 +39,31 @@ angular.module('clientApp')
             });
         }
 
+        $timeout(function(){
+            if (typeof(FB) =='undefined' ||     !FB) return;
+            FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                    // the user is logged in and has authenticated your
+                    // app, and response.authResponse supplies
+                    // the user's ID, a valid access token, a signed
+                    // request, and the time the access token
+                    // and signed request each expire
+                    $cookies['fb_id'] = response.authResponse.userID;
+                    Users.get({}, function(user){
+                        $cookies['user_id'] = user._id;
+                        $rootScope.user = user;
+                        if (user.pet)
+                            $cookies['user_pet_id'] = user.pet;
+                    });
+                    $location.path('/');
+                } else if (response.status === 'not_authorized') {
+                    // the user is logged in to Facebook,
+                    // but has not authenticated your app
+                } else {
+                    // the user isn't logged in to Facebook.
+                }
+            });
+
+        })
         window.debug = $scope;
     }]);
