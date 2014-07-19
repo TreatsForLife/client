@@ -422,6 +422,81 @@ Copyright (c) 2013 Daniel Eden
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
+@-webkit-keyframes tada-infinite {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    1%, 2% {
+        -webkit-transform: scale(0.9) rotate(-3deg);
+        transform: scale(0.9) rotate(-3deg);
+    }
+
+    3%, 5%, 7%, 9% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    4%, 6%, 8% {
+        -webkit-transform: scale(1.1) rotate(-3deg);
+        transform: scale(1.1) rotate(-3deg);
+    }
+
+    10% {
+        -webkit-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0);
+    }
+    100% {
+        -webkit-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes tada-infinite {
+    0% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    1%, 2% {
+        -webkit-transform: scale(0.9) rotate(-3deg);
+        -ms-transform: scale(0.9) rotate(-3deg);
+        transform: scale(0.9) rotate(-3deg);
+    }
+
+    3%, 5%, 7%, 9% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+        -ms-transform: scale(1.1) rotate(3deg);
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    4%, 6%, 8% {
+        -webkit-transform: scale(1.1) rotate(-3deg);
+        -ms-transform: scale(1.1) rotate(-3deg);
+        transform: scale(1.1) rotate(-3deg);
+    }
+
+    10% {
+        -webkit-transform: scale(1) rotate(0);
+        -ms-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0);
+    }
+    100% {
+        -webkit-transform: scale(1) rotate(0);
+        -ms-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0);
+    }
+}
+
+.tada-infinite {
+    animation: tada-infinite 10s infinite;
+    -webkit-animation: tada-infinite 10s infinite;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+}
+
 @-webkit-keyframes wobble {
   0% {
     -webkit-transform: none;
