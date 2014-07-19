@@ -22,6 +22,20 @@ angular.module('clientApp')
             }
         });
 
+        function calcDims() {
+            var min_button_height = 100;
+            $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
+            $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
+            $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
+            if ($scope.buttonHeight < min_button_height) {
+                debugger;
+                $scope.buttonHeight = $scope.buttonWidth = min_button_height;
+                $scope.buttonMargin = 20;
+                $scope.grassHeight = min_button_height + ($scope.buttonMargin*2);
+                $scope.picHeight = $scope.windowHeight - ($scope.grassHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
+            }
+        }
+
         Pets.query({id: pet_id}, function (pet) {
             $scope.pet = pet;
             $rootScope.navbarTitle = pet.name;
@@ -57,9 +71,7 @@ angular.module('clientApp')
                                 $scope.showCart = (res.length > 0);
                                 $scope.cartTitle = res.length + ' ' + ((res.length > 0) ? 'פריטים' : 'פריט');
 
-                                $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
-                                $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
-                                $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
+                                calcDims();
 
                                 $scope.gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonWidth, auto_play: false });
                                 $scope.gif.load(function () {
@@ -93,6 +105,7 @@ angular.module('clientApp')
             $scope.show_player = true;
             $scope.player_src = $sce.trustAsResourceUrl(src);
         }
+
         $scope.animateButton = function (ready) {
             if (ready) {
                 $scope.gif.play();
