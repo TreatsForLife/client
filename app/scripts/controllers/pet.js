@@ -28,10 +28,9 @@ angular.module('clientApp')
             $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
             $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
             if ($scope.buttonHeight < min_button_height) {
-                debugger;
                 $scope.buttonHeight = $scope.buttonWidth = min_button_height;
                 $scope.buttonMargin = 20;
-                $scope.grassHeight = min_button_height + ($scope.buttonMargin*2);
+                $scope.grassHeight = min_button_height + ($scope.buttonMargin * 2);
                 $scope.picHeight = $scope.windowHeight - ($scope.grassHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
             }
         }
@@ -41,6 +40,9 @@ angular.module('clientApp')
             $rootScope.navbarTitle = pet.name;
             $scope.donations = [];
             $scope.donations[0] = pet;
+
+            $scope.showBuyButton = (!pet.user || pet.user._id == $scope.user_id);
+            $scope.showShareButton = !$scope.showBuyButton;
 
             Donations.given({pet_id: pet_id}, function (res) {
                 $timeout(function () {
@@ -73,15 +75,17 @@ angular.module('clientApp')
 
                                 calcDims();
 
-                                $scope.gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonWidth, auto_play: false });
-                                $scope.gif.load(function () {
-                                    $scope.gif.pause();
-                                    animationLength = $scope.gif.get_length();
-                                    $timeout(function () {
-                                        if (!$scope.buttonClicked) //do not show animation if the button was already clicked
-                                            $scope.buttonAnimationReady = true;
+                                if ($scope.showBuyButton) {
+                                    $scope.gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonWidth, auto_play: false });
+                                    $scope.gif.load(function () {
+                                        $scope.gif.pause();
+                                        animationLength = $scope.gif.get_length();
+                                        $timeout(function () {
+                                            if (!$scope.buttonClicked) //do not show animation if the button was already clicked
+                                                $scope.buttonAnimationReady = true;
+                                        });
                                     });
-                                });
+                                }
                             });
                         });
                     }
@@ -107,6 +111,7 @@ angular.module('clientApp')
         }
 
         $scope.animateButton = function (ready) {
+            if (!$scope.showBuyButton) return;
             if (ready) {
                 $scope.gif.play();
                 var gifInterval = $interval(function () {

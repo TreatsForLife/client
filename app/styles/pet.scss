@@ -84,6 +84,14 @@ div.container.pet {
 .treat-wrapper {
   text-align: center;
   margin-top: 0px;
+  .treat-share-wrapper{
+    i{
+      color: $scheme-red;
+      &.fa-inverse{
+        color: white;
+      }
+    }
+  }
 }
 
 .swipe {

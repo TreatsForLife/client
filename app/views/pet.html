@@ -13,7 +13,8 @@
                             </div>
                             <div class="pet-bar">
                                 <img class="owner-pic" ng-src="{{item.user.image || 'images/default_owner.png'}}"/>
-                                <img class="pet-gender" ng-src="{{item.gender=='f' ? 'images/pet_female.png' : 'images/pet_male.png'}}"/>
+                                <img class="pet-gender"
+                                     ng-src="{{item.gender=='f' ? 'images/pet_female.png' : 'images/pet_male.png'}}"/>
 
                                 <div class="pet-name" ng-bind="item.treat.name || pet.name"></div>
                             </div>
@@ -26,18 +27,29 @@
 
     <!--<div id='slider-treats' class='swipe'>-->
     <div class='treat-wrapper' ng-style="{height: grassHeight, padding: buttonMargin}">
-        <div ng-show="!buttonAnimationReady" ng-click="animateButton(false);">
-            <img ng-show="!buttonClicked"
-                 class='treat animated rubberBand delayed-animation' id="treat_button_first" src="images/buy_first.jpg"
-                 width="{{buttonHeight}}" height="{{buttonHeight}}"/>
-            <img ng-show="buttonClicked"
-                 class='treat' id="treat_button_last" src="images/buy_last.jpg"
-                 width="{{buttonHeight}}" height="{{buttonHeight}}"/>
+        <div ng-if="showBuyButton">
+            <div ng-show="!buttonAnimationReady" ng-click="animateButton(false);">
+                <img ng-show="!buttonClicked"
+                     class='treat animated rubberBand delayed-animation' id="treat_button_first"
+                     src="images/buy_first.jpg"
+                     width="{{buttonHeight}}" height="{{buttonHeight}}"/>
+                <img ng-show="buttonClicked"
+                     class='treat' id="treat_button_last" src="images/buy_last.jpg"
+                     width="{{buttonHeight}}" height="{{buttonHeight}}"/>
 
+            </div>
+            <div ng-show="buttonAnimationReady" ng-click="animateButton(true);">
+                <img class='treat' id="treat_button" class="animated rubberBand"
+                     rel:animated_src="images/buy_button.gif"
+                     rel:auto_play="0"
+                     width="{{buttonWidth}}" height="{{buttonHeight}}"/>
+            </div>
         </div>
-        <div ng-show="buttonAnimationReady" ng-click="animateButton(true);">
-            <img class='treat' id="treat_button" class="animated rubberBand" rel:animated_src="images/buy_button.gif" rel:auto_play="0"
-                 width="{{buttonWidth}}" height="{{buttonHeight}}"/>
+        <div ng-if="showShareButton" class="treat-share-wrapper">
+            <span class="fa-stack fa-lg" ng-style="{fontSize: (buttonHeight/2)}">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-share fa-stack-1x fa-inverse"></i>
+            </span>
         </div>
     </div>
 
