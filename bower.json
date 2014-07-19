@@ -12,7 +12,7 @@
     "Swipe": "https://github.com/bradbirdsall/Swipe.git#~2.0.0",
     "components-font-awesome": "~4.1",
     "libgif": "https://raw.github.com/buzzfeed/libgif-js/master/libgif.js",
-    "animate.css": "~3.1.0",
+    "animate.css": "~3.2.0",
     "angular-timer": "~1.1.6",
     "momentjs": "~2.7.0",
     "angular-touch": "~1.2.20"

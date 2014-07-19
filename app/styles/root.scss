@@ -230,6 +230,11 @@ button, a.button, input[type="submit"] {
 }
 
 //animations
+
+.delayed-animation{
+  animation-delay: 0.5s;
+}
+
 /* slide in from the bottom */
 @keyframes slideOutLeft {
   to {

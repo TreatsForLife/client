@@ -65,7 +65,7 @@ angular.module('clientApp')
                         $timeout(function () {
                             if (!$scope.buttonClicked) //do not show animation if the button was already clicked
                                 $scope.buttonAnimationReady = true;
-                        })
+                        });
                     });
 
                 }, 100);

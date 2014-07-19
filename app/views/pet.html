@@ -26,17 +26,17 @@
 
     <!--<div id='slider-treats' class='swipe'>-->
     <div class='treat-wrapper' ng-style="{height: grassHeight, padding: buttonMargin}">
-        <div ng-if="!buttonAnimationReady" ng-click="animateButton(false);">
-            <img ng-if="!buttonClicked"
-                 class='treat' id="treat_button_first" src="images/buy_first.jpg"
+        <div ng-show="!buttonAnimationReady" ng-click="animateButton(false);">
+            <img ng-show="!buttonClicked"
+                 class='treat animated rubberBand delayed-animation' id="treat_button_first" src="images/buy_first.jpg"
                  width="{{buttonHeight}}" height="{{buttonHeight}}"/>
-            <img ng-if="buttonClicked"
+            <img ng-show="buttonClicked"
                  class='treat' id="treat_button_last" src="images/buy_last.jpg"
                  width="{{buttonHeight}}" height="{{buttonHeight}}"/>
 
         </div>
         <div ng-show="buttonAnimationReady" ng-click="animateButton(true);">
-            <img class='treat' id="treat_button" rel:animated_src="images/buy_button.gif" rel:auto_play="0"
+            <img class='treat' id="treat_button" class="animated rubberBand" rel:animated_src="images/buy_button.gif" rel:auto_play="0"
                  width="{{buttonWidth}}" height="{{buttonHeight}}"/>
         </div>
     </div>
