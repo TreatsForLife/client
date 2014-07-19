@@ -42,10 +42,12 @@
             <input type="hidden" name="cpp_cart_border_color" value="9aca13">
             <input type="hidden" name="cbt" value="Thank You! Back to Your Pet!">
             <input type="submit" class="shop-checkout-button button-{{paymentActive ? 'blue' : 'disabled'}}"
-                   ng-click="pay()" value="לתשלום"/>
+                   ng-click="pay(false)" value="לתשלום"/>
         </form>
-        <a class="button shop-checkout-button button-{{paymentActive ? 'green' : 'disabled'}}" ng-href="{{returnUrl}}?item_number={{ItemNumber}}">כאילו תשלום</a>
+        <a class="button shop-checkout-button button-{{paymentActive ? 'green' : 'disabled'}}" ng-click="pay(true)">כאילו תשלום</a>
     </div>
 </div>
 
+
+<tip-dialog dialog="'shop'"></tip-dialog>
 

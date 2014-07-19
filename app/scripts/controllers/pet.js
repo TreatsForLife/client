@@ -22,10 +22,6 @@ angular.module('clientApp')
             }
         });
 
-        $scope.trustSrc = function (src) {
-            return $sce.trustAsResourceUrl(src);
-        }
-
         Pets.query({id: pet_id}, function (pet) {
             $scope.pet = pet;
             $rootScope.navbarTitle = pet.name;
@@ -53,29 +49,44 @@ angular.module('clientApp')
 
                 }, 50);
                 $timeout(function () {
+                    //approve payments
+                    $scope.getPendingItems = function () {
+                        Donations.pending({pet_id: pet_id}, function (res) {
+                            $timeout(function () {
+                                $scope.pending = res;
+                                $scope.showCart = (res.length > 0);
+                                $scope.cartTitle = res.length + ' ' + ((res.length > 0) ? 'פריטים' : 'פריט');
 
-                    $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
-                    $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
-                    $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
+                                $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
+                                $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
+                                $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
 
-                    $scope.gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonWidth, auto_play: false });
-                    $scope.gif.load(function () {
-                        $scope.gif.pause();
-                        animationLength = $scope.gif.get_length();
-                        $timeout(function () {
-                            if (!$scope.buttonClicked) //do not show animation if the button was already clicked
-                                $scope.buttonAnimationReady = true;
+                                $scope.gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonWidth, auto_play: false });
+                                $scope.gif.load(function () {
+                                    $scope.gif.pause();
+                                    animationLength = $scope.gif.get_length();
+                                    $timeout(function () {
+                                        if (!$scope.buttonClicked) //do not show animation if the button was already clicked
+                                            $scope.buttonAnimationReady = true;
+                                    });
+                                });
+                            });
                         });
-                    });
+                    }
 
-                }, 100);
+                    var q = $location.search();
+                    if (q['item_number']) {
+                        Donations.approve({item_number: q['item_number']}, function (res) {
+                            $scope.getPendingItems();
+                            $location.search({});
+                        });
+                    } else {
+                        $scope.getPendingItems();
+                    }
+                }, 80);
+
 
             });
-        });
-
-        $scope.pending = Donations.pending({pet_id: pet_id}, function(res){
-            $scope.showCart = (res.length>0);
-            $scope.cartTitle = res.length + ' ' + ((res.length>0) ? 'פריטים' : 'פריט');
         });
 
         $scope.playVideo = function (src) {

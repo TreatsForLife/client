@@ -21,7 +21,8 @@ div.container.pet {
     width: 100%;
     z-index: 99;
     &.up {
-      margin-top: 40px;
+      margin-top: 0;
+      padding-top: 40px;
       top: 0;
       overflow: auto;
     }
@@ -86,7 +87,7 @@ div.container.pet {
 
 .swipe {
   overflow: hidden;
-  visibility: hidden;
+//  visibility: hidden;
   position: relative;
 }
 

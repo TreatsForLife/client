@@ -13,7 +13,7 @@
                             </div>
                             <div class="pet-bar">
                                 <img class="owner-pic" ng-src="{{item.user.image || 'images/default_owner.png'}}"/>
-                                <img class="pet-gender" ng-src="images/pet_male.png"/>
+                                <img class="pet-gender" ng-src="{{item.gender=='f' ? 'images/pet_female.png' : 'images/pet_male.png'}}"/>
 
                                 <div class="pet-name" ng-bind="item.treat.name || pet.name"></div>
                             </div>
@@ -44,10 +44,10 @@
 
     <div class="cart-wrapper" ng-class="{up: cartIsUp}" ng-click="cartIsUp=!cartIsUp" ng-if="showCart">
         <div class="cart-items">
-            <i class="pet-info fa fa-times" ng-show="cartIsUp" ng-click="showCart()"></i>
+            <i class="pet-info fa fa-times" ng-show="cartIsUp"></i>
 
             <div ng-hide="cartIsUp">
-                <i class="pet-info fa fa-shopping-cart fa-flip-horizontal" ng-click="showCart()"></i>
+                <i class="pet-info fa fa-shopping-cart fa-flip-horizontal"></i>
 
                 <div class="cart-items-title" ng-bind="cartTitle"></div>
             </div>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('ShopCtrl', ['$scope', '$rootScope', '$routeParams', '$timeout', 'Treats', 'Pets', 'Donations', function ($scope, $rootScope, $routeParams, $timeout, Treats, Pets, Donations) {
+    .controller('ShopCtrl', ['$scope', '$rootScope', '$routeParams', '$timeout', '$location', 'Treats', 'Pets', 'Donations', function ($scope, $rootScope, $routeParams, $timeout, $location, Treats, Pets, Donations) {
 
         var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
 
@@ -17,7 +17,7 @@ angular.module('clientApp')
 
         $timeout(function () {
             if (!window.localStorage['shop-dialog-shown']) {
-                $scope.showTipDialog('shop');
+//                $scope.showTipDialog('shop');
             }
         });
 
@@ -78,7 +78,7 @@ angular.module('clientApp')
             $scope.paymentActive = ($scope.totalToPay > 0);
         }
 
-        $scope.pay = function () {
+        $scope.pay = function (fakeIt) {
 
             $scope.cartChanged();
             if (!$scope.paymentActive) return;
@@ -90,12 +90,19 @@ angular.module('clientApp')
                 Donations.create({
                     paypalItem: $scope.ItemNumber,
                     treat: treat._id,
-                    user: $rootScope.user_id.replace(/\"/g,''),
-                    pet: $scope.pet._id
+                    user: $rootScope.user_id,
+                    pet: $scope.pet._id,
+                    payed: false
                 }, function(res){
                     created++;
-                    debugger;
-                    if ( created >= (chosenTreats.length) ) angular.element('#payment-form').submit();
+                    if ( created >= (chosenTreats.length) ) {
+                        debugger;
+                        if (fakeIt){
+                            document.location.href = ($scope.returnUrl + '?fake=1&item_number=' + $scope.ItemNumber);
+                        }else{
+                            angular.element('#payment-form').submit();
+                        }
+                    }
                 });
             }
 
