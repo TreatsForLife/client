@@ -35,7 +35,18 @@ angular.module('clientApp')
             }
         }
 
-        Pets.query({id: pet_id}, function (pet) {
+        $scope.share = function(){
+            FB.ui({
+                method: 'feed',
+                app_id: Consts.fb_app_id,
+                display: 'touch',
+                redirect_uri: Consts.client_root + '/#/pet/' + pet_id,
+                link: Consts.client_root,
+                caption: 'An example caption'
+            }, function(response){});
+        }
+
+        Pets.one({id: pet_id}, function (pet) {
             $scope.pet = pet;
             $rootScope.navbarTitle = pet.name;
             $scope.donations = [];

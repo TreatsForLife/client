@@ -6,7 +6,8 @@ angular.module('clientApp')
             all: { method: 'GET', withCredentials: true, params: {}, isArray: true },
             lonely: { method: 'GET', withCredentials: true, params: {id: 'lonely'}, isArray: true },
             adopted: { method: 'GET', withCredentials: true, params: {id: 'adopted'}, isArray: true },
-            query: { method: 'GET', withCredentials: true, params: {}, isArray: false },
+            one: { method: 'GET', withCredentials: true, params: {}, isArray: false }, //must add id
+            query: { method: 'GET', withCredentials: true, params: {}, isArray: true },
             create: { method: 'POST' },
             update: { method: 'PUT', withCredentials: true, params: {id: '@_id'} },
             remove: { method: 'DELETE', params: {id: '@_id'} }

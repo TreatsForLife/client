@@ -22,7 +22,7 @@ angular.module('clientApp')
         });
 
         if (!$scope.pet) {
-            $scope.pet = Pets.query({id: pet_id});
+            $scope.pet = Pets.one({id: pet_id});
         }
 
         $timeout(function(){

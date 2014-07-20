@@ -45,7 +45,7 @@
                      width="{{buttonWidth}}" height="{{buttonHeight}}"/>
             </div>
         </div>
-        <div ng-if="showShareButton" class="treat-share-wrapper">
+        <div ng-if="showShareButton" class="treat-share-wrapper" ng-click="share()">
             <span class="fa-stack fa-lg" ng-style="{fontSize: (buttonHeight/2)}">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-share fa-stack-1x fa-inverse"></i>

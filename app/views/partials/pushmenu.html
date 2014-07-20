@@ -3,11 +3,11 @@
     <!--<i class="fa fa-times f-right" ng-click="closePushMenu()"></i>-->
     <!--<clear/>-->
     <div class="push-event">
-        <img ng-src="{{user.pet.image}}" ng-if="user_pet_id"/>
-        <img src="images/logo.png" ng-if="!user_pet_id"/>
+        <img ng-src="{{user.pet.image}}" ng-if="user.pet"/>
+        <img src="images/logo.png" ng-if="!user.pet"/>
     </div>
     <ul class="large">
-        <li><a ng-click="closePushMenu();" ng-href="{{'#/pet/' + user_pet_id}}" ng-if="user_pet_id">הכלב שלי</a></li>
+        <li><a ng-click="closePushMenu();" ng-href="{{'#/pet/' + user.pet._id}}" ng-if="user.pet">הכלב שלי</a></li>
         <li><a ng-click="closePushMenu();" ng-href="{{'#/pets/lonely'}}">כלבים בודדים</a></li>
         <li><a ng-click="closePushMenu();" ng-href="{{'#/pets/adopted'}}">כלבים מאומצים</a></li>
     </ul>

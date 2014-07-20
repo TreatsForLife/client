@@ -25,13 +25,12 @@ angular.module('clientApp')
 //                    $cookies['fb_at'] = response.authResponse.accessToken;
                     $cookies['fb_id'] = response.authResponse.userID;
                     FB.api('/me', function (response) {
-                        Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/'+response.username+'/picture'}, function(user){
+                        Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (user) {
                             $cookies['user_id'] = user._id;
                             $rootScope.user = user;
-                            if (user.pet) 
-                                $cookies['user_pet_id'] = user.pet;
+                            if (user.pet) $cookies['user_pet_id'] = user.pet;
+                            $location.path('/');
                         });
-                        $location.path('/');
                     });
                 } else {
                     console.log('User cancelled login or did not fully authorize.');
@@ -39,9 +38,9 @@ angular.module('clientApp')
             });
         }
 
-        $timeout(function(){
-            if (typeof(FB) =='undefined' ||     !FB) return;
-            FB.getLoginStatus(function(response) {
+        $timeout(function () {
+            if (typeof(FB) == 'undefined' || !FB) return;
+            FB.getLoginStatus(function (response) {
                 if (response.status === 'connected') {
                     // the user is logged in and has authenticated your
                     // app, and response.authResponse supplies
@@ -49,13 +48,15 @@ angular.module('clientApp')
                     // request, and the time the access token
                     // and signed request each expire
                     $cookies['fb_id'] = response.authResponse.userID;
-                    Users.get({}, function(user){
+                    Users.all({fb_id: response.authResponse.userID}, function (users) {
+                        debugger;
+                        var user = users[0];
+                        if (typeof user == 'undefined' || !user) return;
                         $cookies['user_id'] = user._id;
                         $rootScope.user = user;
-                        if (user.pet)
-                            $cookies['user_pet_id'] = user.pet;
+                        if (user.pet) $cookies['user_pet_id'] = user.pet;
+                        $location.path('/');
                     });
-                    $location.path('/');
                 } else if (response.status === 'not_authorized') {
                     // the user is logged in to Facebook,
                     // but has not authenticated your app
@@ -64,6 +65,7 @@ angular.module('clientApp')
                 }
             });
 
-        })
+        }, 500);
+
         window.debug = $scope;
     }]);
