@@ -48,12 +48,14 @@
   margin-bottom: 10px;
   img{
     height:100%;
-    padding:30px;
     width:100%;
     -webkit-object-fit: cover;
     -moz-object-fit: cover;
     object-fit: cover;
     z-index: -1;
+    &.logo{
+      padding:30px;
+    }
   }
   span{
     box-sizing:  border-box;

@@ -21,7 +21,6 @@ angular.module('clientApp')
             FB.login(function (response) {
                 if (response.authResponse) {
 //                    console.log('Welcome!  Fetching your information.... ');
-                    debugger;
 //                    $cookies['fb_at'] = response.authResponse.accessToken;
                     $cookies['fb_id'] = response.authResponse.userID;
                     FB.api('/me', function (response) {

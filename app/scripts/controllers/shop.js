@@ -96,7 +96,6 @@ angular.module('clientApp')
                 }, function(res){
                     created++;
                     if ( created >= (chosenTreats.length) ) {
-                        debugger;
                         if (fakeIt){
                             document.location.href = ($scope.returnUrl + '?fake=1&item_number=' + $scope.ItemNumber);
                         }else{

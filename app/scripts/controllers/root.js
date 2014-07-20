@@ -11,8 +11,11 @@ angular.module('clientApp')
 
         //make sure that the user is fetched
         if (!$rootScope.user && $rootScope.user_id) {
-            $rootScope.user = Users.get({id: $rootScope.user_id}, function (user) {
-            });
+            $timeout(function(){
+                Users.get({id: $rootScope.user_id}, function (user) {
+                    $rootScope.user = user;
+                });
+            })
         }else if (!$rootScope.user_id){
             localStorage.setItem("returnUrl", $location.path())
             $location.path('/welcome');

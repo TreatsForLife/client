@@ -4,7 +4,7 @@
     <!--<clear/>-->
     <div class="push-event">
         <img ng-src="{{user.pet.image}}" ng-if="user.pet"/>
-        <img src="images/logo.png" ng-if="!user.pet"/>
+        <img src="images/logo.png" ng-if="!user.pet" class="logo"/>
     </div>
     <ul class="large">
         <li><a ng-click="closePushMenu();" ng-href="{{'#/pet/' + user.pet._id}}" ng-if="user.pet">הכלב שלי</a></li>
