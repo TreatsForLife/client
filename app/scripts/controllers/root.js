@@ -3,6 +3,8 @@
 angular.module('clientApp')
     .controller('RootCtrl', ['$scope', '$rootScope', '$timeout', '$cookies', '$location', 'Donations', 'Users', function ($scope, $rootScope, $timeout, $cookies, $location, Donations, Users) {
 
+        $scope.isWeb = angular.element(window).width() > 700;
+
         $rootScope.fb_id = $cookies.fb_id;
         $rootScope.user_id = $cookies.user_id;
         $rootScope.user_pet_id = $cookies.user_pet_id;
@@ -12,6 +14,7 @@ angular.module('clientApp')
             $rootScope.user = Users.get({id: $rootScope.user_id}, function (user) {
             });
         }else if (!$rootScope.user_id){
+            localStorage.setItem("returnUrl", $location.path())
             $location.path('/welcome');
         }
 

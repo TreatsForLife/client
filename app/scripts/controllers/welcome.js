@@ -29,7 +29,13 @@ angular.module('clientApp')
                             $cookies['user_id'] = user._id;
                             $rootScope.user = user;
                             if (user.pet) $cookies['user_pet_id'] = user.pet;
-                            $location.path('/');
+                            var returnUrl = localStorage.getItem("returnUrl");
+                            if (returnUrl){
+                                $location.path(returnUrl);
+                                localStorage.setItem("returnUrl", false)
+                            }else{
+                                $location.path('/');
+                            }
                         });
                     });
                 } else {
@@ -49,13 +55,18 @@ angular.module('clientApp')
                     // and signed request each expire
                     $cookies['fb_id'] = response.authResponse.userID;
                     Users.all({fb_id: response.authResponse.userID}, function (users) {
-                        debugger;
                         var user = users[0];
                         if (typeof user == 'undefined' || !user) return;
                         $cookies['user_id'] = user._id;
                         $rootScope.user = user;
                         if (user.pet) $cookies['user_pet_id'] = user.pet;
-                        $location.path('/');
+                        var returnUrl = localStorage.getItem("returnUrl");
+                        if (returnUrl){
+                            $location.path(returnUrl);
+                            localStorage.setItem("returnUrl", false)
+                        }else{
+                            $location.path('/');
+                        }
                     });
                 } else if (response.status === 'not_authorized') {
                     // the user is logged in to Facebook,

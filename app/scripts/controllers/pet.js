@@ -35,15 +35,26 @@ angular.module('clientApp')
             }
         }
 
-        $scope.share = function(){
+        $scope.share = function () {
+            var pet_link = Consts.client_root + '/#/pet/' + pet_id;
             FB.ui({
                 method: 'feed',
                 app_id: Consts.fb_app_id,
-                display: 'touch',
-                redirect_uri: Consts.client_root + '/#/pet/' + pet_id,
-                link: Consts.client_root,
-                caption: 'An example caption'
-            }, function(response){});
+                display: ($scope.isWeb ? 'popup' : 'touch'),
+                link: pet_link,//$scope.pet.media.link,
+                picture: $scope.pet.media.image,
+                name: 'תכירו את ' + $scope.pet.name,
+                caption: 'תמיד רצית לאמץ כלב ולא יכולת? זאת ההזדמנות שלך להציל חיים, או לפחות לעשות אותם קצת יותר טובים. קנו ל' + $scope.pet.name + ' חטיף, צעצוע ושאר מתנות ועשו לו קצת כיף. מבטיחים לשלוח סרטון של הרגע הגדול :)',
+                description: ' ',
+                /* properties: [
+                    {text: 'בואו לראות אותי', href: pet_link},
+                    {text: 'בואו לראות כלבים אחרים', href: Consts.client_root + '/#/pets/lonely'}
+                ], */
+                actions: [
+                    {name: 'תנו לי חטיף', link: pet_link}
+                ],
+            }, function (response) {
+            });
         }
 
         Pets.one({id: pet_id}, function (pet) {
