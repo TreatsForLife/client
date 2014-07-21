@@ -25,16 +25,7 @@ angular.module('clientApp')
                     $cookies['fb_id'] = response.authResponse.userID;
                     FB.api('/me', function (response) {
                         Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (user) {
-                            $cookies['user_id'] = user._id;
-                            $rootScope.user = user;
-                            if (user.pet) $cookies['user_pet_id'] = user.pet;
-                            var returnUrl = localStorage.getItem("returnUrl");
-                            if (returnUrl){
-                                $location.path(returnUrl);
-                                localStorage.setItem("returnUrl", false)
-                            }else{
-                                $location.path('/');
-                            }
+                            storeUserAndRedirect(user);
                         });
                     });
                 } else {
@@ -53,20 +44,15 @@ angular.module('clientApp')
                     // request, and the time the access token
                     // and signed request each expire
                     $cookies['fb_id'] = response.authResponse.userID;
-                    Users.all({fb_id: response.authResponse.userID}, function (users) {
-                        var user = users[0];
-                        if (typeof user == 'undefined' || !user) return;
-                        $cookies['user_id'] = user._id;
-                        $rootScope.user = user;
-                        if (user.pet) $cookies['user_pet_id'] = user.pet;
-                        var returnUrl = localStorage.getItem("returnUrl");
-                        if (returnUrl){
-                            $location.path(returnUrl);
-                            localStorage.setItem("returnUrl", false)
-                        }else{
-                            $location.path('/');
-                        }
-                    });
+                    var user = $rootScope.user;
+                    if (user) {
+                        storeUserAndRedirect(user)
+                    } else {
+                        Users.all({fb_id: response.authResponse.userID}, function (users) {
+                            user = users[0];
+                            storeUserAndRedirect(user);
+                        });
+                    }
                 } else if (response.status === 'not_authorized') {
                     // the user is logged in to Facebook,
                     // but has not authenticated your app
@@ -76,6 +62,20 @@ angular.module('clientApp')
             });
 
         }, 500);
+
+        function storeUserAndRedirect(user) {
+            if (typeof user == 'undefined' || !user) return;
+            $cookies['user_id'] = user._id;
+            $rootScope.user = user;
+            if (user.pet) $cookies['user_pet_id'] = user.pet;
+            var returnUrl = localStorage.getItem("returnUrl");
+            if (returnUrl) {
+                $location.path(returnUrl);
+                localStorage.setItem("returnUrl", '');
+            } else {
+                $location.path('/');
+            }
+        }
 
         window.debug = $scope;
     }]);
