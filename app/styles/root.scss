@@ -156,6 +156,21 @@ i {
 
 }
 
+
+//general classes
+
+.color-white{
+  color: $scheme-white;
+}
+.color-blue{
+  color: $scheme-blue;
+}
+.color-green{
+  color: $scheme-green;
+}
+.color-red{
+  color: $scheme-red;
+}
 button, a.button, input[type="submit"] {
   font-size: 14px;
   background: none;
@@ -228,6 +243,8 @@ button, a.button, input[type="submit"] {
     }
   }
 }
+
+
 
 //animations
 

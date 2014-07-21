@@ -51,6 +51,12 @@
               <i class="fa fa-share fa-stack-1x fa-inverse"></i>
             </span>
         </div>
+        <div ng-if="showLoveButton" class="treat-share-wrapper" ng-click="loved = !loved">
+            <span class="" ng-style="{fontSize: (buttonHeight)}">
+              <i class="fa fa-heart-o color-white" ng-show="!loved"></i>
+              <i class="fa fa-heart color-red" ng-show="loved"></i>
+            </span>
+        </div>
     </div>
 
 

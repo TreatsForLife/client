@@ -63,8 +63,12 @@ angular.module('clientApp')
             $scope.donations = [];
             $scope.donations[0] = pet;
 
-            $scope.showBuyButton = (!pet.user || pet.user._id == $scope.user_id);
-            $scope.showShareButton = !$scope.showBuyButton;
+            // BUY : if its my pet OR if I have no pet and the this pet has no owner
+            $scope.showBuyButton = !!(pet.user && (pet.user._id == $scope.user_id)) || (!pet.user && !$scope.user.pet);
+            // SHARE : if I have a pet and the pet has no owner
+            $scope.showShareButton = !!(!pet.user && $scope.user.pet);
+            // LOVE : if the pet has owner and its not me
+            $scope.showLoveButton = !!(pet.user && pet.user._id != $scope.user_id);
 
             Donations.given({pet_id: pet_id}, function (res) {
                 $timeout(function () {
