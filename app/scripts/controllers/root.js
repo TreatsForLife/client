@@ -3,6 +3,8 @@
 angular.module('clientApp')
     .controller('RootCtrl', ['$scope', '$rootScope', '$timeout', '$cookies', '$location', 'Donations', 'Users', function ($scope, $rootScope, $timeout, $cookies, $location, Donations, Users) {
 
+        console.log('APP VERSION: 1.0');
+
         $scope.isWeb = angular.element(window).width() > 700;
 
         $rootScope.fb_id = $cookies.fb_id;
