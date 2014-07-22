@@ -64,33 +64,19 @@ angular.module('clientApp')
         }, 500);
 
         function storeUserAndRedirect(user) {
-            debugger;
             if (typeof user == 'undefined' || !user) return;
-            debugger;
-            $cookies['user_id'] = user._id;
-            debugger;
+            $cookies['user_id'] = user.id;
             $rootScope.user = user;
-            debugger;
-            if (user.pet) $cookies['user_pet_id'] = user.pet;
-            debugger;
+            if (user.pet) $cookies['user_pet_id'] = user.pet ? user.pet.id : '';
             var returnUrl = localStorage.getItem("returnUrl");
-            debugger;
             $timeout(function () {
-                debugger;
                 if (returnUrl) {
-                    debugger;
                     $location.path(returnUrl);
-                    debugger;
                     localStorage.setItem("returnUrl", '');
-                    debugger;
                 } else {
-                    debugger;
                     $location.path('/');
-                    debugger;
                 }
-                debugger;
             }, 500);
-            debugger;
         }
 
         window.debug = $scope;
