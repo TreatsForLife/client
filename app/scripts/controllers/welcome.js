@@ -65,9 +65,9 @@ angular.module('clientApp')
 
         function storeUserAndRedirect(user) {
             if (typeof user == 'undefined' || !user) return;
-            $cookies['user_id'] = user.id;
+            $cookies['user_id'] = user._id;
             $rootScope.user = user;
-            if (user.pet) $cookies['user_pet_id'] = user.pet ? user.pet.id : '';
+            if (user.pet) $cookies['user_pet_id'] = user.pet ? user.pet._id : '';
             var returnUrl = localStorage.getItem("returnUrl");
             $timeout(function () {
                 if (returnUrl) {

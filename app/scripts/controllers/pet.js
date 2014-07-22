@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('PetCtrl', ['$scope', 'Pets', 'Donations', 'Treats', '$rootScope', '$routeParams', '$timeout', '$interval', '$sce', '$location', function ($scope, Pets, Donations, Treats, $rootScope, $routeParams, $timeout, $interval, $sce, $location) {
+    .controller('PetCtrl', ['$scope', 'Pets', 'Donations', 'Treats', 'Users', '$rootScope', '$routeParams', '$timeout', '$interval', '$sce', '$location', function ($scope, Pets, Donations, Treats, Users, $rootScope, $routeParams, $timeout, $interval, $sce, $location) {
 
         $rootScope.bodyClass = 'pet';
         $scope.grassHeight = 0;
@@ -118,9 +118,14 @@ angular.module('clientApp')
                         });
                     }
 
+                    //aprove paypal payments & get pending items from db
                     var q = $location.search();
                     if (q['item_number']) {
                         Donations.approve({item_number: q['item_number']}, function (res) {
+                            if (res.approved){
+                                Pets.addOwner({user: $scope.user.id});
+                                Users.addPet({pet: $scope.pet.id});
+                            }
                             $scope.getPendingItems();
                             $location.search({});
                         });
