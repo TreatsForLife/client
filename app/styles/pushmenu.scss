@@ -69,27 +69,29 @@
 
 .white-links {
 
-  .large{
+  &.large{
     font-size: 21px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-  .small{
+  &.small{
     font-size: 13px;
     font-weight: 400;
     text-transform: capitalize;
     letter-spacing: 0.2px;
   }
+  a{
+    font-family: $font-alef;
+    padding: 6px;
+  }
   i,a {
     text-decoration: none !important;
-    padding: 6px;
-    color: #ccc !important;
+    color: #ccc;
     text-align: right;
     cursor: pointer;
-    font-family: $font-alef;
     &:hover {
-      color: #fff !important;
+      color: #fff;
     }
   }
 }

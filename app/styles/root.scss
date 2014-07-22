@@ -186,7 +186,7 @@ button, a.button, input[type="submit"] {
   user-select: none;
   background: white;
   background: linear-gradient(white, #f1f1f1); /* Standard syntax (must be last) */
-  border: 1px solid #cccccc;
+  border:none;
   font-family: $font-alef;
 
   &:active, &.button-active, &.button-active:hover, &.button-active:active {
@@ -204,6 +204,18 @@ button, a.button, input[type="submit"] {
     color: rgba(255,255,255,0.7);
   }
 
+  &.button-facebook {
+    background: $button-facebook;
+    background: linear-gradient($button-facebook-light, $button-facebook); /* Standard syntax (must be last) */
+    border-color: transparent;
+    color: white;
+    &:active, &.button-active, &.button-active:hover, &.button-active:active {
+      background: $button-facebook;
+      background: linear-gradient($button-facebook, $button-facebook-light); /* Standard syntax (must be last) */
+      box-shadow: none;
+      text-decoration: none;
+    }
+  }
   &.button-blue {
     background: $button-blue;
     background: linear-gradient($button-blue-light, $button-blue); /* Standard syntax (must be last) */
