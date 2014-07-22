@@ -69,12 +69,14 @@ angular.module('clientApp')
             $rootScope.user = user;
             if (user.pet) $cookies['user_pet_id'] = user.pet;
             var returnUrl = localStorage.getItem("returnUrl");
-            if (returnUrl) {
-                $location.path(returnUrl);
-                localStorage.setItem("returnUrl", '');
-            } else {
-                $location.path('/');
-            }
+            $timeout(function () {
+                if (returnUrl) {
+                    $location.path(returnUrl);
+                    localStorage.setItem("returnUrl", '');
+                } else {
+                    $location.path('/');
+                }
+            }, 500);
         }
 
         window.debug = $scope;
