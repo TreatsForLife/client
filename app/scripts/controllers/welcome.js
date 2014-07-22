@@ -4,12 +4,18 @@ angular.module('clientApp')
     .controller('WelcomeCtrl', ['$scope', '$rootScope', '$cookies', '$timeout', '$location', 'Users', function ($scope, $rootScope, $cookies, $timeout, $location, Users) {
         $rootScope.bodyClass = 'welcome';
 
-        $scope.placeLogo = function () {
+        $scope.placeLogo = function (iterations) {
+            if (typeof iterations == 'undefined') iterations = 5;
             $timeout(function () {
                 $scope.logoSpace = $('.welcome-app-explained').offset().top;
                 $scope.logoHeight = (($scope.logoSpace - 196) / 2);
                 $scope.logoMargin = (($scope.logoSpace - 196) / 2) + 'px auto';
                 $scope.logoMargin = (($scope.logoSpace - 196) / 2) + 'px auto';
+                if (iterations > 0) {
+                    $timeout(function () {
+                        $scope.placeLogo(iterations - 1);
+                    }, 1000);
+                }
             });
         }
 

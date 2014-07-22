@@ -22,17 +22,28 @@ angular.module('clientApp')
             }
         });
 
-        function calcDims() {
-            var min_button_height = 100;
-            $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
-            $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
-            $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
-            if ($scope.buttonHeight < min_button_height) {
-                $scope.buttonHeight = $scope.buttonWidth = min_button_height;
-                $scope.buttonMargin = 20;
-                $scope.grassHeight = min_button_height + ($scope.buttonMargin * 2);
-                $scope.picHeight = $scope.windowHeight - ($scope.grassHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
-            }
+        function calcDims(iterations) {
+            if (typeof iterations == 'undefined') iterations = 5;
+
+            $timeout(function () {
+                var min_button_height = 100;
+                $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
+                $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
+                $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
+                if ($scope.buttonHeight < min_button_height) {
+                    $scope.buttonHeight = $scope.buttonWidth = min_button_height;
+                    $scope.buttonMargin = 20;
+                    $scope.grassHeight = min_button_height + ($scope.buttonMargin * 2);
+                    $scope.picHeight = $scope.windowHeight - ($scope.grassHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
+                }
+
+                if (iterations > 0) {
+                    $timeout(function () {
+                        calcDims(iterations - 1);
+                    }, 1000);
+                }
+            });
+
         }
 
         $scope.share = function () {
@@ -47,9 +58,9 @@ angular.module('clientApp')
                 caption: 'תמיד רצית לאמץ כלב ולא יכולת? זאת ההזדמנות שלך להציל חיים, או לפחות לעשות אותם קצת יותר טובים. קנו ל' + $scope.pet.name + ' חטיף, צעצוע ושאר מתנות ועשו לו קצת כיף. מבטיחים לשלוח סרטון של הרגע הגדול :)',
                 description: ' ',
                 /* properties: [
-                    {text: 'בואו לראות אותי', href: pet_link},
-                    {text: 'בואו לראות כלבים אחרים', href: Consts.client_root + '/#/pets/lonely'}
-                ], */
+                 {text: 'בואו לראות אותי', href: pet_link},
+                 {text: 'בואו לראות כלבים אחרים', href: Consts.client_root + '/#/pets/lonely'}
+                 ], */
                 actions: [
                     {name: 'תנו לי חטיף', link: pet_link}
                 ],
@@ -99,21 +110,21 @@ angular.module('clientApp')
                                 $scope.showCart = (res.length > 0);
                                 $scope.cartTitle = res.length + ' ' + ((res.length > 0) ? 'פריטים' : 'פריט');
 
-                                $scope.htmlReady(); //flags phantom js that the page is ready
+//                                $scope.htmlReady(); //flags phantom js that the page is ready
 
                                 calcDims();
+                            });
+                        });
+                    }
 
-                                if ($scope.showBuyButton) {
-                                    $scope.gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonWidth, auto_play: false });
-                                    $scope.gif.load(function () {
-                                        $scope.gif.pause();
-                                        animationLength = $scope.gif.get_length();
-                                        $timeout(function () {
-                                            if (!$scope.buttonClicked) //do not show animation if the button was already clicked
-                                                $scope.buttonAnimationReady = true;
-                                        });
-                                    });
-                                }
+                    if ($scope.showBuyButton) {
+                        $scope.gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonWidth, auto_play: false });
+                        $scope.gif.load(function () {
+                            $scope.gif.pause();
+                            animationLength = $scope.gif.get_length();
+                            $timeout(function () {
+                                if (!$scope.buttonClicked) //do not show animation if the button was already clicked
+                                    $scope.buttonAnimationReady = true;
                             });
                         });
                     }
@@ -122,7 +133,7 @@ angular.module('clientApp')
                     var q = $location.search();
                     if (q['item_number']) {
                         Donations.approve({item_number: q['item_number']}, function (res) {
-                            if (res.approved){
+                            if (res.approved) {
                                 Pets.addOwner({user: $scope.user.id});
                                 Users.addPet({pet: $scope.pet.id});
                             }
