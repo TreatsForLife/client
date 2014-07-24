@@ -100,6 +100,15 @@ div.container.pet {
       }
     }
   }
+  .treat-love-wrapper{
+    i.fa-circle{
+      color: $scheme-yellow;
+    }
+    i.fa-heart, i.fa-heart-o{
+      margin-top: 4px;
+      color: $scheme-red;
+    }
+  }
 }
 
 .swipe {

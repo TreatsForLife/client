@@ -75,21 +75,31 @@ body, html {
   position: relative;
   font-family: $font-alef;
   margin: 0 auto;
-  &.canAnimate {
+  &.animated {
     &.ng-enter {
-      z-index: 8888;
+      position: absolute;
+      top: 0;
+      z-index: 888;
     }
     &.ng-leave {
-      animation: fadeOut 0.5s both ease-in;
-      z-index: 9999;
+      animation: bounceOutLeft;
+      animation-duration: 1s;
+      z-index: 999;
     }
     &.goingBack {
-      &.ng-enter {
-        z-index: 8888;
+      &.ng-enter-active {
+        position: absolute;
+        top: 0;
+        animation: bounceInLeft;
+        animation-duration:1s;
+        z-index: 999;
       }
-      &.ng-leave {
-        animation: fadeOut 0.5s both ease-in;
-        z-index: 9999;
+      &.ng-leave-active {
+        position: absolute;
+        top: 0;
+        animation: none;
+        animation-duration:1s;
+        z-index: 888;
       }
     }
     &.zoom {

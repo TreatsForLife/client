@@ -16,6 +16,11 @@ angular.module('clientApp')
             $timeout(function(){
                 Users.query({id: $rootScope.user_id}, function (user) {
                     $rootScope.user = user;
+
+                    //make sure that user_pet_id cookie is saved
+                    if (!$cookies.user_pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id)
+                        $cookies.user_pet_id = $rootScope.user.pet._id;
+
                 });
             })
         }else if (!$rootScope.user_id){
@@ -28,7 +33,9 @@ angular.module('clientApp')
         }
 
         $rootScope.goBack = function () {
-            $scope.goingBack = true;
+            $timeout(function () {
+                $scope.goingBack = true;
+            }, 0);
             $timeout(function () {
                 $scope.goingBack = false;
             }, 1000);

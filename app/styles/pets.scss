@@ -36,7 +36,12 @@ div.container.pets, div.container.pet {
           line-height: inherit;
           width: 100%;
           color: white;
-          font-size: 80px;        }
+          font-size: 50px;
+          .pet-pic-play-circle{
+            color: rgba(0,0,0,0.6);
+            margin-left: -4px;
+          }
+        }
       }
       .pet-bar {
         height: 40px;
