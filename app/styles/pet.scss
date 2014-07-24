@@ -84,6 +84,14 @@ div.container.pet {
 .treat-wrapper {
   text-align: center;
   margin-top: 0px;
+
+  .pet-buy-button{
+    background-image: url('/images/buy_button_row.png');
+    margin: auto;
+    background-position: 0 0;
+    background-size: auto 100%;
+  }
+
   .treat-share-wrapper{
     i{
       color: $scheme-red;

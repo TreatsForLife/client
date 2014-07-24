@@ -28,21 +28,8 @@
     <!--<div id='slider-treats' class='swipe'>-->
     <div class='treat-wrapper' ng-style="{height: grassHeight, padding: buttonMargin}">
         <div ng-if="showBuyButton">
-            <div ng-show="!buttonAnimationReady" ng-click="animateButton(false);">
-                <img ng-show="!buttonClicked"
-                     class='treat animated rubberBand delayed-animation' id="treat_button_first"
-                     src="images/buy_first.jpg"
-                     width="{{buttonHeight}}" height="{{buttonHeight}}"/>
-                <img ng-show="buttonClicked"
-                     class='treat' id="treat_button_last" src="images/buy_last.jpg"
-                     width="{{buttonHeight}}" height="{{buttonHeight}}"/>
-
-            </div>
-            <div ng-show="buttonAnimationReady" ng-click="animateButton(true);">
-                <img class='treat' id="treat_button" class="animated rubberBand"
-                     rel:animated_src="images/buy_button.gif"
-                     rel:auto_play="0"
-                     width="{{buttonWidth}}" height="{{buttonHeight}}"/>
+            <div class="pet-buy-button" ng-show="!buttonAnimationReady" ng-click="animateButton(false);"
+                    ng-style="{width:buttonHeight, height:buttonHeight}">
             </div>
         </div>
         <div ng-if="showShareButton" class="treat-share-wrapper" ng-click="share()">
@@ -101,7 +88,7 @@
                      style="background-image: url({{donation.treat.image.length > 5 ? donation.treat.image : '/images/placeholder.png'}})"></div>
                 <div class="shop-item-price">₪{{donation.treat.price}}</div>
                 <div class="shop-item-name" ng-bind="donation.treat.name"></div>
-                <div class="shop-item-desc" ng-bind="donation.treat.desc">אחלה חטיף תענוג גדול!</div>
+                <div class="shop-item-desc" ng-bind="donation.treat.desc"></div>
                 <div class="shop-item-checkbox cart">
                     1x
                 </div>

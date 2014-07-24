@@ -7,7 +7,6 @@ angular.module('clientApp')
 
         $scope.isWeb = angular.element(window).width() > 700;
 
-        debugger;
         $rootScope.fb_id = $cookies.fb_id;
         $rootScope.user_id = $cookies['user_id'];
         $rootScope.user_pet_id = $cookies.user_pet_id;
@@ -15,7 +14,7 @@ angular.module('clientApp')
         //make sure that the user is fetched
         if (!$rootScope.user && $rootScope.user_id) {
             $timeout(function(){
-                Users.get({id: $rootScope.user_id}, function (user) {
+                Users.query({id: $rootScope.user_id}, function (user) {
                     $rootScope.user = user;
                 });
             })

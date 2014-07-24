@@ -81,6 +81,7 @@ angular.module('clientApp')
             // LOVE : if the pet has owner and its not me
             $scope.showLoveButton = !!(pet.user && pet.user._id != $scope.user_id);
 
+
             Donations.given({pet_id: pet_id}, function (res) {
                 $timeout(function () {
                     for (var i = 0, donation; donation = res[i]; i++) {
@@ -117,18 +118,6 @@ angular.module('clientApp')
                         });
                     }
 
-                    if ($scope.showBuyButton) {
-                        $scope.gif = new SuperGif({ gif: document.getElementById('treat_button'), max_width: $scope.buttonWidth, auto_play: false });
-                        $scope.gif.load(function () {
-                            $scope.gif.pause();
-                            animationLength = $scope.gif.get_length();
-                            $timeout(function () {
-                                if (!$scope.buttonClicked) //do not show animation if the button was already clicked
-                                    $scope.buttonAnimationReady = true;
-                            });
-                        });
-                    }
-
                     //aprove paypal payments & get pending items from db
                     var q = $location.search();
                     if (q['item_number']) {
@@ -156,23 +145,21 @@ angular.module('clientApp')
 
         $scope.animateButton = function (ready) {
             if (!$scope.showBuyButton) return;
-            if (ready) {
-                $scope.gif.play();
-                var gifInterval = $interval(function () {
-                    if ($scope.gif.get_current_frame() >= animationLength - 1) {
-                        $scope.gif.pause();
-                        $location.path('/shop/' + pet_id);
-                        $interval.cancel(gifInterval);
-                    }
-                }, 20);
-            } else {
-                $timeout(function () {
-                    $scope.buttonClicked = true;
-                });
-                $timeout(function () {
+            var animationDuration = 1700;
+            var numOfFrames = 48;
+            var frame = numOfFrames;
+            var dim = $scope.buttonHeight;
+            var animationBgPosition = 0;
+            var animationInterval = $interval(function(){
+                if (frame == 0){
+                    $interval.cancel(animationInterval);
                     $location.path('/shop/' + pet_id);
-                }, 500);
-            }
+                    return;
+                }
+                angular.element('.pet-buy-button').css('background-position-x', -1*animationBgPosition);
+                frame--;
+                animationBgPosition += dim;
+            }, (animationDuration/numOfFrames))
         }
 
         $scope.flip = function () {
