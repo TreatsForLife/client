@@ -14,6 +14,9 @@ angular.module('clientApp')
         if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id)
             pet_id = $rootScope.user.pet._id;
 
+        if (!$cookies.user_pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id)
+            $cookies.user_pet_id = $rootScope.user.pet._id;
+        
         var animationLength = 0;
 
         $timeout(function () {
