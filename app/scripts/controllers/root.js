@@ -56,5 +56,6 @@ angular.module('clientApp')
             $rootScope.windowHeight = $(window).height();
             $rootScope.containerWidth = $('.container').width();
             $rootScope.picHeight = $('.container').width() * 0.6;
+            window.scrollTo(0,1);
         }, 5)
     }]);
