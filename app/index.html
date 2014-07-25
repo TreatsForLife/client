@@ -7,7 +7,8 @@
 <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
-<head prefix="og: http://ogp.me/ns#">
+<head prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -122,8 +123,9 @@
     window.fbAsyncInit = function () {
         FB.init({
             appId: Consts.fb_app_id,
-            status: true,
-            xfbml: true
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            channelUrl : '//treatsforlife.org/channel.html'
 
         });
     };
