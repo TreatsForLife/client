@@ -16,7 +16,7 @@ angular.module('clientApp')
             $timeout(function(){
                 Users.query({id: $rootScope.user_id}, function (user) {
                     $rootScope.user = user;
-
+                    $scope.$broadcast('userIsFetched');
                     //make sure that user_id cookie is saved
                     if (!$cookies.user_id && $rootScope.user&& $rootScope.user._id)
                         $cookies.user_id = $rootScope.user._id;

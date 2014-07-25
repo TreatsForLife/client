@@ -74,14 +74,6 @@ angular.module('clientApp')
             $scope.donations = [];
             $scope.donations[0] = pet;
 
-            // BUY : if its my pet OR if I have no pet and the this pet has no owner
-            $scope.showBuyButton = !!(pet.user && (pet.user._id == $scope.user_id)) || (!pet.user && !$scope.user.pet);
-            // SHARE : if I have a pet and the pet has no owner
-            $scope.showShareButton = !!(!pet.user && $scope.user.pet);
-            // LOVE : if the pet has owner and its not me
-            $scope.showLoveButton = !!(pet.user && pet.user._id != $scope.user_id);
-
-
             Donations.given({pet_id: pet_id}, function (res) {
                 $timeout(function () {
                     for (var i = 0, donation; donation = res[i]; i++) {
@@ -132,11 +124,27 @@ angular.module('clientApp')
                     } else {
                         $scope.getPendingItems();
                     }
+
+
                 }, 80);
 
 
             });
         });
+
+        var showButtonInterval = $interval(function(){
+            if (!$scope.user || !$scope.pet) return;
+            // BUY : if its my pet OR if I have no pet and the this pet has no owner
+            $scope.showBuyButton = !!($scope.pet.user && ($scope.pet.user._id == $scope.user_id)) || (!$scope.pet.user && !$scope.user.pet);
+            // SHARE : if I have a pet and the pet has no owner
+            $scope.showShareButton = !!(!$scope.pet.user && $scope.user.pet);
+            // LOVE : if the pet has owner and its not me
+            $scope.showLoveButton = !!($scope.pet.user && $scope.pet.user._id != $scope.user_id);
+
+            if ($scope.showBuyButton || $scope.showShareButton || $scope.showLoveButton)
+                $interval.cancel(showButtonInterval);
+
+        }, 250);
 
         $scope.playVideo = function (src) {
             $scope.show_player = true;
@@ -167,7 +175,7 @@ angular.module('clientApp')
         }
 
         //calc next friday at 12:00
-        $scope.nextFriday = moment().hour(0).minute(0).second(0).add('days', 1).weekday(5).add('hours', 12).format();
+        $scope.nextFriday = moment().hour(0).minute(0).second(0).add('days', 2).weekday(5).add('hours', 12).format();
 
         window.debug = $scope;
 
