@@ -3,15 +3,15 @@
 div.container.welcome {
 
   background-color: $scheme-green;
-  padding:0;
+  padding: 0;
+  height: 100%;
 
-
-  .welcome-logo-wrapper{
+  .welcome-logo-wrapper {
     display: block;
     width: 100%;
     height: auto;
-    padding:40px;
-    .welcome-logo{
+    padding: 40px;
+    .welcome-logo {
       width: 100%;
       height: 100%;
       max-width: 220px;
@@ -21,9 +21,9 @@ div.container.welcome {
     }
   }
 
-  .welcome-app-explained{
+  .welcome-app-explained {
     position: absolute;
-    bottom:140px;
+    bottom: 140px;
     display: block;
     font-size: 18px;
     color: #efefef;
@@ -33,25 +33,27 @@ div.container.welcome {
     margin: auto;
   }
 
-  .welcome-login-explained{
+  .welcome-login-explained {
     display: block;
     position: absolute;
-    bottom:20px;
+    bottom: 20px;
     font-size: 13px;
     color: #efefef;
     text-align: center;
     width: 100%;
 
   }
-
-  .fb-login{
+  .bottom-wrapper {
+    position: relative;
+  }
+  .fb-login {
     position: absolute;
-    bottom:60px;
+    bottom: 60px;
     width: 90%;
     height: 50px;
     line-height: 30px;
     box-sizing: border-box;
-    left:5%;
+    left: 5%;
     cursor: pointer;
     padding: 10px;
     color: #ffffff;
@@ -60,33 +62,32 @@ div.container.welcome {
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     display: block;
     text-decoration: none;
     background-color: #2b4170; /* fallback color */
     background: linear-gradient(top, #3b5998, #2b4170);
-    &:active{
+    &:active {
       background: linear-gradient(bottom, #3b5998, #2b4170);
     }
-    i{
-      font-size:30px;
-      float:left;
+    i {
+      font-size: 30px;
+      float: left;
     }
-    p{
+    p {
       margin-left: 35px;
       text-align: center;
-      border-left: 1px solid rgba(255,255,255,0.4);
+      border-left: 1px solid rgba(255, 255, 255, 0.4);
     }
-
 
   }
   #inst-login {
     width: 224px;
     height: 36px;
     position: absolute;
-    top:66%;
-    left:50%;
-    margin-left:-112px;
+    top: 66%;
+    left: 50%;
+    margin-left: -112px;
     cursor: pointer;
     background: rgb(244, 246, 245);
     background: linear-gradient(top, rgba(244, 246, 245, 1) 1%, rgba(237, 231, 220, 1) 100%);
@@ -138,7 +139,5 @@ div.container.welcome {
       background: linear-gradient(bottom, rgba(255, 255, 255, .0) 0%, rgba(15, 15, 15, .3) 100%);
     }
   }
-
-
 
 }

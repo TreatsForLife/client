@@ -7,12 +7,13 @@ angular.module('clientApp')
         $scope.placeLogo = function (iterations) {
             if (typeof iterations == 'undefined') iterations = 5;
             $timeout(function () {
-                if ($('.welcome-app-explained').length > 0)
-                    $scope.logoSpace = $('.welcome-app-explained').offset().top;
-
-                $scope.logoHeight = (($scope.logoSpace - 196) / 2);
-                $scope.logoMargin = (($scope.logoSpace - 196) / 2) + 'px auto';
-                $scope.logoMargin = (($scope.logoSpace - 196) / 2) + 'px auto';
+                if (angular.element('.welcome-app-explained').length > 0) {
+                    debugger;
+                    $rootScope.windowHeight = angular.element(window).height();
+                    $scope.logoSpace = $rootScope.windowHeight - angular.element('.bottom-wrapper').height();
+                    $scope.logoHeight = (($scope.logoSpace - 196) / 2);
+                    $scope.logoMargin = (($scope.logoSpace - 196) / 2) + 'px auto';
+                }
                 if (iterations > 0) {
                     $timeout(function () {
                         $scope.placeLogo(iterations - 1);

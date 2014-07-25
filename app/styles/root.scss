@@ -68,12 +68,22 @@ body, html {
   margin: 0 auto;
 }
 
+//styles start
+
+.container-wrapper{
+  height:100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  max-width: 600px;
+  position: relative;
+  font-family: $font-alef;
+  margin: 0 auto;
+}
 .container {
   min-height: 100%;
   width: 100%;
   max-width: 600px;
   position: relative;
-  font-family: $font-alef;
   margin: 0 auto;
   &.animated {
     &.ng-enter {
