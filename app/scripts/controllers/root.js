@@ -17,6 +17,9 @@ angular.module('clientApp')
                 Users.query({id: $rootScope.user_id}, function (user) {
                     $rootScope.user = user;
 
+                    //make sure that user_id cookie is saved
+                    if (!$cookies.user_id && $rootScope.user&& $rootScope.user._id)
+                        $cookies.user_id = $rootScope.user._id;
                     //make sure that user_pet_id cookie is saved
                     if (!$cookies.user_pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id)
                         $cookies.user_pet_id = $rootScope.user.pet._id;

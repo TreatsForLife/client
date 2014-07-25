@@ -44,6 +44,7 @@ angular.module('clientApp')
             });
         }
 
+/*
         $timeout(function () {
             if (typeof(FB) == 'undefined' || !FB) return;
             FB.getLoginStatus(function (response) {
@@ -72,6 +73,7 @@ angular.module('clientApp')
             });
 
         }, 500);
+*/
 
         function storeUserAndRedirect(user) {
             if (typeof user == 'undefined' || !user) return;
