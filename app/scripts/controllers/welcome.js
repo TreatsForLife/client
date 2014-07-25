@@ -10,6 +10,7 @@ angular.module('clientApp')
                 if (angular.element('.welcome-app-explained').length > 0) {
                     debugger;
                     $rootScope.windowHeight = angular.element(window).height();
+
                     $scope.logoSpace = $rootScope.windowHeight - angular.element('.bottom-wrapper').height();
                     $scope.logoHeight = (($scope.logoSpace - 196) / 2);
                     $scope.logoMargin = (($scope.logoSpace - 196) / 2) + 'px auto';
