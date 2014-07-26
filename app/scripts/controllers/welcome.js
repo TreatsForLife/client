@@ -33,11 +33,11 @@ angular.module('clientApp')
                 if (response.authResponse) {
 //                    console.log('Welcome!  Fetching your information.... ');
 //                    $cookies['fb_at'] = response.authResponse.accessToken;
-                    $cookies['fb_id'] = response.authResponse.userID;
+                    var fb_id = $cookies['fb_id'] = response.authResponse.userID;
                     console.log('saved fb_id cookie', $cookies['fb_id'], response.authResponse.userID);
                     FB.api('/me', function (response) {
                         console.log('fetched /me data from facebook - creating user', response);
-                        Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (user) {
+                        Users.create({fb_id: fb_id, name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (user) {
                             console.log('user created', user);
                             storeUserAndRedirect(user);
                         });
