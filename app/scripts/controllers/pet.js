@@ -11,15 +11,18 @@ angular.module('clientApp')
         $scope.cartIsUp = false;
 
         //search pet in route or in cookie
-        var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
-        //check if the user has a pet
-        if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
-            pet_id = $rootScope.user.pet._id;
-        }
 
         $scope.$on('userIsFetched', function () {
-            if (!$routeParams['id'] && !$rootScope.user.pet._id)
+            var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
+            //check if the user has a pet
+            if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
+                pet_id = $rootScope.user.pet._id;
+            }
+            if (!pet_id){
                 $location.path('/pets');
+            }else{
+                $scope.getPet(pet_id);
+            }
         });
 
         $timeout(function () {
@@ -184,7 +187,6 @@ angular.module('clientApp')
                 });
             });
         }
-        $scope.getPet(pet_id);
 
         var showButtonInterval = $interval(function () {
             if (!$scope.user || !$scope.pet) return;
