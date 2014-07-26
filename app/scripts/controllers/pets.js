@@ -10,9 +10,11 @@ angular.module('clientApp')
         if (filter == 'adopted') {
             $rootScope.navbarTitle = 'כלבים מאומצים';
             $scope.pets = Pets.adopted();
+            $rootScope.bodyClass += ' adopted';
         } else if (filter == 'lonely') {
             $rootScope.navbarTitle = 'כלבים בודדים';
             $scope.pets = Pets.lonely();
+            $rootScope.bodyClass += ' lonely';
         } else {
             if ($scope.user) {
                 $location.path('/pet' + ($scope.user.pet ? '' : '/lonely'));

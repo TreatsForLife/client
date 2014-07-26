@@ -6,7 +6,7 @@ div.container.pet {
   transform: none;
   background-color: $scheme-green;
 
-  &.adopted{
+  &.lonely{
     background-color: $scheme-red;
   }
 

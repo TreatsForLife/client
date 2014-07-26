@@ -6,6 +6,10 @@ div.container.pets, div.container.pet {
   overflow-x: hidden;
   overflow-y: visible;
 
+  &.lonely{
+    background-color: $scheme-red;
+  }
+
   .pets-pic {
     display: block;
     width: 100%;

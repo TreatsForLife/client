@@ -12,8 +12,9 @@ angular.module('clientApp')
 
         //search pet in route or in cookie
 
+        var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
+
         $scope.$on('userIsFetched', function () {
-            var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
             //check if the user has a pet
             if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
                 pet_id = $rootScope.user.pet._id;
@@ -187,6 +188,7 @@ angular.module('clientApp')
                 });
             });
         }
+        $scope.getPet(pet_id);
 
         var showButtonInterval = $interval(function () {
             if (!$scope.user || !$scope.pet) return;
@@ -196,13 +198,14 @@ angular.module('clientApp')
             } else if (!!(!$scope.pet.user && $scope.user.pet)) {
                 // SHARE : if I have a pet and the pet has no owner
                 $scope.showButton = 'share';
-                $rootScope.bodyClass += ' adopted';
+                $rootScope.bodyClass += ' lonely';
             } else if (!!($scope.pet.user && $scope.pet.user._id != $scope.user_id)) {
                 // LOVE : if the pet has owner and its not me
                 $scope.showButton = 'love';
             } else if (!$scope.pet.user && !$scope.user.pet) {
                 //ADOPT : if I have no pet and the this pet has no owner
                 $scope.showButton = 'adopt';
+                $rootScope.bodyClass += ' lonely';
             } else {
                 $scope.showButton = false;
             }
