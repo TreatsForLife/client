@@ -206,7 +206,7 @@ angular.module('clientApp')
                 // SHARE : if I have a pet and the pet has no owner
                 $scope.showButton = 'share';
                 $rootScope.bodyClass += ' lonely';
-            } else if (!!($scope.pet.user && $scope.pet.user._id != $scope.user_id)) {
+            } else if (!!($scope.pet.user && ($scope.pet.user._id != $scope.user_id))) {
                 // LOVE : if the pet has owner and its not me
                 $scope.showButton = 'love';
             } else if (!$scope.pet.user && !$scope.user.pet) {
