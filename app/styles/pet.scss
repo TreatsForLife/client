@@ -4,10 +4,14 @@ div.container.pet {
 
   overflow: hidden;
   transform: none;
-  background-color: $scheme-green;
+  background-color: $scheme-yellow;
 
   &.lonely{
     background-color: $scheme-red;
+  }
+
+  &.mine{
+    background-color: $scheme-green;
   }
 
   #pet-pic {

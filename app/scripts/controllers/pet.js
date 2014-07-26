@@ -120,6 +120,12 @@ angular.module('clientApp')
                 $scope.donations = [];
                 $scope.donations[0] = pet;
 
+                //check if I see my pet
+                if ($scope.user && $scope.user.pet && pet._id == $scope.user.pet._id){
+                    $rootScope.navbarTitle = 'הכלב שלי ' + $rootScope.navbarTitle;
+                    $rootScope.bodyClass += ' mine ';
+                }
+
                 Donations.given({pet_id: pet_id}, function (res) {
                     $timeout(function () {
                         for (var i = 0, donation; donation = res[i]; i++) {
@@ -157,18 +163,9 @@ angular.module('clientApp')
                         }
 
                         //aprove paypal payments & get pending items from db
-
                         var q = $location.search();
                         if (q['item_number']) {
                             Donations.approve({item_number: q['item_number']}, function (res) {
-                                /*
-                                 if (res.approved) {
-                                 if ($scope.user.pet != $scope.pet.id)
-                                 Pets.addOwner({id: $scope.pet.id, user: $scope.user.id});
-                                 if ($scope.pet.user != $scope.user.id)
-                                 Users.addPet({id: $scope.user.id, pet: $scope.pet.id});
-                                 }
-                                 */
                                 $scope.getPendingItems();
                                 $location.search({});
                                 $scope.getPet(pet_id);
