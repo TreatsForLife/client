@@ -115,8 +115,8 @@ angular.module('clientApp')
                     if (q['item_number']) {
                         Donations.approve({item_number: q['item_number']}, function (res) {
                             if (res.approved) {
-                                Pets.addOwner({user: $scope.user.id});
-                                Users.addPet({pet: $scope.pet.id});
+                                Pets.addOwner({id: $scope.pet.id, user: $scope.user.id});
+                                Users.addPet({id: $scope.user.id, pet: $scope.pet.id});
                             }
                             $scope.getPendingItems();
                             $location.search({});
