@@ -52,7 +52,7 @@ angular.module('clientApp', [
             if (!$cookies.fb_id || $location.search()['s'] == 'w') {
                 $location.path('/welcome');
             } else if (!$cookies.user_pet_id) {
-                $location.path('/pets/lonely');
+                $location.path('/pets');
             } else {
                 $location.path('/pet');
             }

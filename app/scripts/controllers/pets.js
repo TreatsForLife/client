@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('PetsCtrl', ['$scope', '$rootScope', '$timeout', '$routeParams', 'Pets', function ($scope, $rootScope, $timeout, $routeParams, Pets) {
+    .controller('PetsCtrl', ['$scope', '$rootScope', '$timeout', '$routeParams', '$location', 'Pets', function ($scope, $rootScope, $timeout, $routeParams, $location, Pets) {
         $rootScope.bodyClass = 'pets';
         $scope.picHeight = $('.container').width() * 0.6;
 
@@ -10,9 +10,17 @@ angular.module('clientApp')
         if (filter == 'adopted') {
             $rootScope.navbarTitle = 'כלבים מאומצים';
             $scope.pets = Pets.adopted();
-        } else {
+        } else if (filter == 'lonely') {
             $rootScope.navbarTitle = 'כלבים בודדים';
             $scope.pets = Pets.lonely();
+        } else {
+            if ($scope.user) {
+                $location.path('/pet' + ($scope.user.pet ? '' : '/lonely'));
+            } else {
+                $scope.$on('userIsFetched', function () {
+                    $location.path('/pet' + ($scope.user.pet ? '' : '/lonely'));
+                });
+            }
         }
 
         $timeout(function () {

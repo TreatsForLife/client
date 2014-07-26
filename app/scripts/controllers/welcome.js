@@ -8,7 +8,6 @@ angular.module('clientApp')
             if (typeof iterations == 'undefined') iterations = 5;
             $timeout(function () {
                 if (angular.element('.welcome-app-explained').length > 0) {
-                    debugger;
                     $rootScope.windowHeight = angular.element(window).height();
 
                     $scope.logoSpace = $rootScope.windowHeight - angular.element('.bottom-wrapper').height();

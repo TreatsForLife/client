@@ -20,6 +20,7 @@ angular.module('clientApp')
                     if (user._id) {
                         console.log('Found user in DB', user);
                         $rootScope.user = user;
+                        $scope.$broadcast('userIsFetched');
                         //make sure that user_id cookie is saved
                         if (!$cookies.user_id && $rootScope.user && $rootScope.user._id) {
                             $cookies.user_id = $rootScope.user._id;
