@@ -255,8 +255,11 @@ angular.module('clientApp')
             var animationInterval = $interval(function () {
                 if (frame == 0) {
                     $interval.cancel(animationInterval);
-                    $scope.share();
-                    animationBgPosition = 0;
+                    $timeout(function(){
+                        $scope.share();
+                        angular.element('.pet-share-button').css('background-position-x', 0);
+                    }, 500);
+                    return;
                 }
                 angular.element('.pet-share-button').css('background-position-x', -1 * animationBgPosition);
                 frame--;
@@ -274,7 +277,10 @@ angular.module('clientApp')
             var animationInterval = $interval(function () {
                 if (frame == 0) {
                     $interval.cancel(animationInterval);
-                    $scope.like();
+                    $timeout(function(){
+                        $scope.like();
+                        angular.element('.pet-like-button').css('background-position-x', 0);
+                    }, 500);
                     return;
                 }
                 angular.element('.pet-like-button').css('background-position-x', -1 * animationBgPosition);
