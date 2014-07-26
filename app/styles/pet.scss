@@ -122,6 +122,13 @@ div.container.pet {
     background-size: auto 100%;
   }
 
+  .pet-like-button {
+    background-image: url('/images/animated-like-button.png');
+    margin: auto;
+    background-position: 0 0;
+    background-size: auto 100%;
+  }
+
   .treat-share-wrapper {
     i {
       color: $scheme-red;

@@ -32,86 +32,6 @@ angular.module('clientApp')
             }
         });
 
-        function calcDims(iterations) {
-            if (typeof iterations == 'undefined') iterations = 5;
-
-            $timeout(function () {
-                var min_button_height = 100;
-                $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
-                $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
-                $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
-                if ($scope.buttonHeight < min_button_height) {
-                    $scope.buttonHeight = $scope.buttonWidth = min_button_height;
-                    $scope.buttonMargin = 20;
-                    $scope.grassHeight = min_button_height + ($scope.buttonMargin * 2);
-                    $scope.picHeight = $scope.windowHeight - ($scope.grassHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
-                }
-
-                if (iterations > 0) {
-                    $timeout(function () {
-                        calcDims(iterations - 1);
-                    }, 1000);
-                }
-            });
-
-        }
-
-        $scope.greetAdoption = function(){
-            $scope.$broadcast('showTipDialog','adopted');
-/*
-            $timeout(function(){
-                $scope.showTipDialog('adopted');
-            }, 1000);
-*/
-        };
-
-        $scope.adopt = function () {
-            $scope.$broadcast('showTipDialog','adopt');
-        }
-
-        $scope.share = function () {
-            var pet_link = Consts.client_root + '/#/pet/' + pet_id;
-            FB.ui({
-                method: 'feed',
-                app_id: Consts.fb_app_id,
-                display: ($scope.isWeb ? 'popup' : 'touch'),
-                link: pet_link,//$scope.pet.media.link,
-                picture: $scope.pet.media.image,
-                name: 'תכירו את ' + $scope.pet.name,
-                caption: 'תמיד רצית לאמץ כלב ולא יכולת? זאת ההזדמנות שלך להציל חיים, או לפחות לעשות אותם קצת יותר טובים. קנו ל' + $scope.pet.name + ' חטיף, צעצוע ושאר מתנות ועשו לו קצת כיף. מבטיחים לשלוח סרטון של הרגע הגדול :)',
-                description: ' ',
-                /* properties: [
-                 {text: 'בואו לראות אותי', href: pet_link},
-                 {text: 'בואו לראות כלבים אחרים', href: Consts.client_root + '/#/pets/lonely'}
-                 ], */
-                actions: [
-                    {name: 'תנו לי חטיף', link: pet_link}
-                ],
-            }, function (response) {
-            });
-        }
-
-        $scope.adopted = function () {
-            var pet_link = Consts.client_root + '/#/pet/' + pet_id;
-            FB.ui({
-                method: 'feed',
-                app_id: Consts.fb_app_id,
-                display: ($scope.isWeb ? 'popup' : 'touch'),
-                link: pet_link,//$scope.pet.media.link,
-                picture: $scope.pet.media.image,
-                name: 'אימצתי את ' + $scope.pet.name,
-                caption: 'תכירו את החבר החדש שלי, הרגע אימצתי אותו :)',
-                description: ' ',
-                /* properties: [
-                 {text: 'בואו לראות אותי', href: pet_link},
-                 {text: 'בואו לראות כלבים אחרים', href: Consts.client_root + '/#/pets/lonely'}
-                 ], */
-                actions: [
-                    {name: 'בואו לראות אותי', link: pet_link}
-                ],
-            }, function (response) {
-            });
-        }
 
         $scope.getPet = function (pet_id) {
             Pets.one({id: pet_id}, function (pet) {
@@ -187,6 +107,96 @@ angular.module('clientApp')
         }
         $scope.getPet(pet_id);
 
+
+
+
+        function calcDims(iterations) {
+            if (typeof iterations == 'undefined') iterations = 5;
+
+            $timeout(function () {
+                var min_button_height = 100;
+                $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
+                $scope.buttonHeight = $scope.buttonWidth = Math.min(($scope.grassHeight - 20) * 0.9, 150);
+                $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
+                if ($scope.buttonHeight < min_button_height) {
+                    $scope.buttonHeight = $scope.buttonWidth = min_button_height;
+                    $scope.buttonMargin = 20;
+                    $scope.grassHeight = min_button_height + ($scope.buttonMargin * 2);
+                    $scope.picHeight = $scope.windowHeight - ($scope.grassHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
+                }
+
+                if (iterations > 0) {
+                    $timeout(function () {
+                        calcDims(iterations - 1);
+                    }, 1000);
+                }
+            });
+
+        }
+
+        $scope.greetAdoption = function(){
+            $scope.$broadcast('showTipDialog','adopted');
+        };
+
+        $scope.adopt = function () {
+            $scope.$broadcast('showTipDialog','adopt');
+        }
+
+        $scope.share = function () {
+            var pet_link = Consts.client_root + '#/pet/' + pet_id;
+            FB.ui({
+                method: 'feed',
+                app_id: Consts.fb_app_id,
+                display: ($scope.isWeb ? 'popup' : 'touch'),
+                link: pet_link,//$scope.pet.media.link,
+                picture: $scope.pet.media.image,
+                name: 'תכירו את ' + $scope.pet.name,
+                caption: 'תמיד רצית לאמץ כלב ולא יכולת? זאת ההזדמנות שלך להציל חיים, או לפחות לעשות אותם קצת יותר טובים. קנו ל' + $scope.pet.name + ' חטיף, צעצוע ושאר מתנות ועשו לו קצת כיף. מבטיחים לשלוח סרטון של הרגע הגדול :)',
+                description: ' ',
+                actions: [
+                    {name: 'תנו לי חטיף', link: pet_link}
+                ],
+            }, function (response) {
+            });
+        }
+
+        $scope.like = function () {
+            var pet_link = Consts.client_root + '#/pet/' + pet_id;
+            FB.ui({
+                method: 'feed',
+                app_id: Consts.fb_app_id,
+                to: $scope.pet.user.fb_id,
+                display: ($scope.isWeb ? 'popup' : 'touch'),
+                link: pet_link,//$scope.pet.media.link,
+                picture: $scope.pet.media.image,
+                name: 'תראו איזה כלב מקסים ' + $scope.pet.name,
+                caption: 'איזה יופי של סרטונים, למות :)',
+                description: ' ',
+                actions: [
+                    {name: 'תנו לי חטיף', link: pet_link}
+                ],
+            }, function (response) {
+            });
+        }
+
+        $scope.adopted = function () {
+            var pet_link = Consts.client_root + '#/pet/' + pet_id;
+            FB.ui({
+                method: 'feed',
+                app_id: Consts.fb_app_id,
+                display: ($scope.isWeb ? 'popup' : 'touch'),
+                link: pet_link,//$scope.pet.media.link,
+                picture: $scope.pet.media.image,
+                name: 'תכירו את ' + $scope.pet.name,
+                caption: 'תמיד רצית לאמץ כלב ולא יכולת? זאת ההזדמנות שלך להציל חיים, או לפחות לעשות אותם קצת יותר טובים. קנו ל' + $scope.pet.name + ' חטיף, צעצוע ושאר מתנות ועשו לו קצת כיף. מבטיחים לשלוח סרטון של הרגע הגדול :)',
+                description: ' ',
+                actions: [
+                    {name: 'בואו לראות אותי', link: pet_link}
+                ],
+            }, function (response) {
+            });
+        }
+
         var showButtonInterval = $interval(function () {
             if (!$scope.user || !$scope.pet) return;
             if (!!($scope.pet.user && ($scope.pet.user._id == $scope.user_id))) {
@@ -216,7 +226,7 @@ angular.module('clientApp')
             $scope.player_src = $sce.trustAsResourceUrl(src);
         }
 
-        $scope.animateButton = function (ready) {
+        $scope.animateButton = function () {
             if (!$scope.showButton) return;
             var animationDuration = 1700;
             var numOfFrames = 48;
@@ -235,7 +245,7 @@ angular.module('clientApp')
             }, (animationDuration / numOfFrames))
         }
 
-        $scope.animateShareButton = function (ready) {
+        $scope.animateShareButton = function () {
             if (!$scope.showButton) return;
             var animationDuration = 1000;
             var numOfFrames = 25;
@@ -249,6 +259,25 @@ angular.module('clientApp')
                     animationBgPosition = 0;
                 }
                 angular.element('.pet-share-button').css('background-position-x', -1 * animationBgPosition);
+                frame--;
+                animationBgPosition += dim;
+            }, (animationDuration / numOfFrames))
+        }
+
+        $scope.animateLikeButton = function () {
+            if (!$scope.showButton) return;
+            var animationDuration = 1000;
+            var numOfFrames = 34;
+            var frame = numOfFrames;
+            var dim = $scope.buttonHeight;
+            var animationBgPosition = 0;
+            var animationInterval = $interval(function () {
+                if (frame == 0) {
+                    $interval.cancel(animationInterval);
+                    $scope.like();
+                    return;
+                }
+                angular.element('.pet-like-button').css('background-position-x', -1 * animationBgPosition);
                 frame--;
                 animationBgPosition += dim;
             }, (animationDuration / numOfFrames))
