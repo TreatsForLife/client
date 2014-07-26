@@ -37,7 +37,7 @@ angular.module('clientApp')
                     console.log('saved fb_id cookie', $cookies['fb_id'], response.authResponse.userID);
                     FB.api('/me', function (response) {
                         console.log('fetched /me data from facebook - creating user', response);
-                        Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (user) {
+                        Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (err, user) {
                             console.log('user created', user);
                             storeUserAndRedirect(user);
                         });
@@ -79,7 +79,7 @@ angular.module('clientApp')
 
         function storeUserAndRedirect(user) {
             console.log('storeUserAndRedirect called', user);
-            if (typeof user == 'undefined' || !user) return;
+            if (typeof user == 'undefined' || !user || !user._id) return;
             $cookies['user_id'] = user._id;
             console.log('saved user_id cookie', $cookies['user_id'], user._id);
             $rootScope.user = user;
@@ -91,7 +91,7 @@ angular.module('clientApp')
             var returnUrl = localStorage.getItem("returnUrl");
             console.log('got return url from local storage', returnUrl);
             $timeout(function () {
-                if (returnUrl) {
+                if (returnUrl && returnUrl != '/welcome') {
                     localStorage.setItem("returnUrl", '');
                     console.log('Redirecting to return url', returnUrl);
                     $location.path(returnUrl);
