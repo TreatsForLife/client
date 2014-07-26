@@ -232,6 +232,25 @@ angular.module('clientApp')
             }, (animationDuration / numOfFrames))
         }
 
+        $scope.animateShareButton = function (ready) {
+            if (!$scope.showButton) return;
+            var animationDuration = 1700;
+            var numOfFrames = 48;
+            var frame = numOfFrames;
+            var dim = $scope.buttonHeight;
+            var animationBgPosition = 0;
+            var animationInterval = $interval(function () {
+                if (frame == 0) {
+                    $interval.cancel(animationInterval);
+                    $location.path('/shop/' + pet_id);
+                    return;
+                }
+                angular.element('.pet-buy-button').css('background-position-x', -1 * animationBgPosition);
+                frame--;
+                animationBgPosition += dim;
+            }, (animationDuration / numOfFrames))
+        }
+
         $scope.flip = function () {
             angular.element('.flipper').toggleClass('flip');
         }
