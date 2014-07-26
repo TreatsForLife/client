@@ -37,7 +37,7 @@ angular.module('clientApp')
                     console.log('saved fb_id cookie', $cookies['fb_id'], response.authResponse.userID);
                     FB.api('/me', function (response) {
                         console.log('fetched /me data from facebook - creating user', response);
-                        Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (err, user) {
+                        Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (user) {
                             console.log('user created', user);
                             storeUserAndRedirect(user);
                         });
