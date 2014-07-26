@@ -129,6 +129,19 @@ div.container.pet {
     background-size: auto 100%;
   }
 
+  .pet-adopt-button-gif {
+    background-image: url('/images/animated-adopt-button.gif');
+    margin: auto;
+    background-position: 0 0;
+    background-size: auto 100%;
+  }
+  .pet-adopt-button {
+    background-image: url('/images/animated-adopt-button.png');
+    margin: auto;
+    background-position: 0 0;
+    background-size: auto 100%;
+  }
+
   .treat-share-wrapper {
     i {
       color: $scheme-red;

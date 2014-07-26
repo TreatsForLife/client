@@ -32,23 +32,25 @@
     <!--<div id='slider-treats' class='swipe'>-->
     <div class='treat-wrapper' ng-style="{height: grassHeight, padding: buttonMargin}">
         <div ng-if="showButton == 'buy'">
-            <div class="pet-buy-button" ng-show="!buttonAnimationReady" ng-click="animateButton();"
+            <div class="pet-buy-button" ng-click="animateButton();"
                  ng-style="{width:buttonHeight, height:buttonHeight}">
             </div>
         </div>
         <div ng-if="showButton == 'share'">
-            <div class="pet-share-button" ng-show="!buttonAnimationReady" ng-click="animateShareButton();"
+            <div class="pet-share-button" ng-click="animateShareButton();"
                  ng-style="{width:buttonHeight, height:buttonHeight}">
             </div>
         </div>
-        <div ng-if="showButton == 'adopt'" class="treat-share-wrapper" ng-click="adopt()">
-            <span class="fa-stack fa-lg" ng-style="{fontSize: (buttonHeight/2)}">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-chain fa-stack-1x fa-inverse"></i>
-            </span>
+        <div ng-if="showButton == 'adopt'" class="treat-share-wrapper">
+            <div class="pet-adopt-button-gif" ng-click="animateAdoptButton();"
+                 ng-style="{width:buttonHeight, height:buttonHeight}">
+            </div>
+            <div class="pet-adopt-button" style="display:none;"
+                 ng-style="{width:buttonHeight, height:buttonHeight}">
+            </div>
         </div>
         <div ng-if="showButton == 'love'">
-            <div class="pet-like-button" ng-show="!buttonAnimationReady" ng-click="animateLikeButton();"
+            <div class="pet-like-button" ng-click="animateLikeButton();"
                  ng-style="{width:buttonHeight, height:buttonHeight}">
             </div>
         </div>

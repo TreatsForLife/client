@@ -289,6 +289,35 @@ angular.module('clientApp')
             }, (animationDuration / numOfFrames))
         }
 
+        $scope.animateAdoptButton = function () {
+            if (!$scope.showButton) return;
+            $scope.animatingAdopt = false;
+            var animationDuration = 1700;
+            var numOfFrames = 34;
+            var frame = numOfFrames;
+            var dim = $scope.buttonHeight;
+            var animationBgPosition = 0;
+            angular.element('.pet-adopt-button-gif').hide();
+            angular.element('.pet-adopt-button').show();
+            var animationInterval = $interval(function () {
+                if (frame == 0) {
+                    $interval.cancel(animationInterval);
+                    $timeout(function(){
+                        $scope.adopt();
+                    }, 100);
+                    $timeout(function(){
+                        angular.element('.pet-adopt-button-gif').show();
+                        angular.element('.pet-adopt-button').hide();
+                        angular.element('.pet-adopt-button').css('background-position-x', 0);
+                    }, 1000);
+                    return;
+                }
+                angular.element('.pet-adopt-button').css('background-position-x', -1 * animationBgPosition);
+                frame--;
+                animationBgPosition += dim;
+            }, (animationDuration / numOfFrames))
+        }
+
         $scope.flip = function () {
             angular.element('.flipper').toggleClass('flip');
         }
