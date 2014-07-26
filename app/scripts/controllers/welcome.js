@@ -44,48 +44,54 @@ angular.module('clientApp')
             });
         }
 
-/*
         $timeout(function () {
             if (typeof(FB) == 'undefined' || !FB) return;
             FB.getLoginStatus(function (response) {
+                console.log('Response arrived from facebook', response);
                 if (response.status === 'connected') {
-                    // the user is logged in and has authenticated your
-                    // app, and response.authResponse supplies
-                    // the user's ID, a valid access token, a signed
-                    // request, and the time the access token
-                    // and signed request each expire
+                    console.log('the user is logged in and has authenticated your app', response.authResponse);
                     $cookies['fb_id'] = response.authResponse.userID;
                     var user = $rootScope.user;
                     if (user) {
+                        console.log('User found in scope', $rootScope.user);
                         storeUserAndRedirect(user)
                     } else {
+                        console.log('User not found in scope - fetching from db - by fb_id', response.authResponse.userID);
                         Users.all({fb_id: response.authResponse.userID}, function (users) {
                             user = users[0];
+                            console.log('User found in db', user);
                             storeUserAndRedirect(user);
                         });
                     }
                 } else if (response.status === 'not_authorized') {
-                    // the user is logged in to Facebook,
-                    // but has not authenticated your app
+                    console.log('the user is logged in to Facebook, but has not authenticated your app');
                 } else {
-                    // the user isn't logged in to Facebook.
+                    console.log('the user isnt logged in to Facebook');
                 }
             });
 
         }, 500);
-*/
 
         function storeUserAndRedirect(user) {
+            console.log('storeUserAndRedirect called', user);
             if (typeof user == 'undefined' || !user) return;
             $cookies['user_id'] = user._id;
+            console.log('saved user_id cookie', $cookies['user_id'], user._id);
             $rootScope.user = user;
-            if (user.pet) $cookies['user_pet_id'] = user.pet ? user.pet._id : '';
+            console.log('saved user to scope', $rootScope.user, user);
+            if (user.pet) {
+                $cookies['user_pet_id'] = user.pet ? user.pet._id : '';
+                console.log('saved user_pet_id cookie', $cookies['user_pet_id'], user.pet._id);
+            }
             var returnUrl = localStorage.getItem("returnUrl");
+            console.log('got return url from local storage', returnUrl);
             $timeout(function () {
                 if (returnUrl) {
-                    $location.path(returnUrl);
                     localStorage.setItem("returnUrl", '');
+                    console.log('Redirecting to return url', returnUrl);
+                    $location.path(returnUrl);
                 } else {
+                    console.log('Redirecting to /');
                     $location.path('/');
                 }
             }, 500);
