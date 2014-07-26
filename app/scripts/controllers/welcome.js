@@ -65,8 +65,8 @@ angular.module('clientApp')
                             console.log('Users found in db', users);
                             user = users[0];
                             if (user){
-                            console.log('User found in db', user);
-                            storeUserAndRedirect(user);
+                                console.log('User found in db', user);
+                                storeUserAndRedirect(user);
                             }else{
                                 FB.api('/me', function (response) {
                                     console.log('fetched /me data from facebook - creating user', response);

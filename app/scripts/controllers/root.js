@@ -17,7 +17,7 @@ angular.module('clientApp')
             console.log('No user but user_id cookie is found - fetching from DB');
             $timeout(function () {
                 Users.query({id: $rootScope.user_id}, function (user) {
-                    if (user) {
+                    if (user._id) {
                         console.log('Found user in DB', user);
                         $rootScope.user = user;
                         //make sure that user_id cookie is saved
