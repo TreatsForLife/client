@@ -36,16 +36,15 @@
                  ng-style="{width:buttonHeight, height:buttonHeight}">
             </div>
         </div>
+        <div ng-if="showButton == 'share'">
+            <div class="pet-share-button" ng-show="!buttonAnimationReady" ng-click="animateShareButton(false);"
+                 ng-style="{width:buttonHeight, height:buttonHeight}">
+            </div>
+        </div>
         <div ng-if="showButton == 'adopt'" class="treat-share-wrapper" ng-click="adopt()">
             <span class="fa-stack fa-lg" ng-style="{fontSize: (buttonHeight/2)}">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-chain fa-stack-1x fa-inverse"></i>
-            </span>
-        </div>
-        <div ng-if="showButton == 'share'" class="treat-share-wrapper" ng-click="share()">
-            <span class="fa-stack fa-lg" ng-style="{fontSize: (buttonHeight/2)}">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-share fa-stack-1x fa-inverse"></i>
             </span>
         </div>
         <div ng-if="showButton == 'love'" class="treat-love-wrapper" ng-click="loved = !loved">

@@ -1,10 +1,14 @@
-@import 'consts';
+@import '_consts';
 
 div.container.pet {
 
   overflow: hidden;
   transform: none;
   background-color: $scheme-green;
+
+  &.adopted{
+    background-color: $scheme-red;
+  }
 
   #pet-pic {
     margin-bottom: -10px;
@@ -102,6 +106,13 @@ div.container.pet {
 
   .pet-buy-button {
     background-image: url('/images/buy_button_row.png');
+    margin: auto;
+    background-position: 0 0;
+    background-size: auto 100%;
+  }
+
+  .pet-share-button {
+    background-image: url('/images/animated-share-button.png');
     margin: auto;
     background-position: 0 0;
     background-size: auto 100%;

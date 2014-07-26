@@ -194,6 +194,7 @@ angular.module('clientApp')
             } else if (!!(!$scope.pet.user && $scope.user.pet)) {
                 // SHARE : if I have a pet and the pet has no owner
                 $scope.showButton = 'share';
+                $rootScope.bodyClass += ' adopted';
             } else if (!!($scope.pet.user && $scope.pet.user._id != $scope.user_id)) {
                 // LOVE : if the pet has owner and its not me
                 $scope.showButton = 'love';
@@ -235,17 +236,17 @@ angular.module('clientApp')
         $scope.animateShareButton = function (ready) {
             if (!$scope.showButton) return;
             var animationDuration = 1700;
-            var numOfFrames = 48;
+            var numOfFrames = 25;
             var frame = numOfFrames;
             var dim = $scope.buttonHeight;
             var animationBgPosition = 0;
             var animationInterval = $interval(function () {
                 if (frame == 0) {
                     $interval.cancel(animationInterval);
-                    $location.path('/shop/' + pet_id);
-                    return;
+                    $scope.share();
+                    animationBgPosition = 0;
                 }
-                angular.element('.pet-buy-button').css('background-position-x', -1 * animationBgPosition);
+                angular.element('.pet-share-button').css('background-position-x', -1 * animationBgPosition);
                 frame--;
                 animationBgPosition += dim;
             }, (animationDuration / numOfFrames))
