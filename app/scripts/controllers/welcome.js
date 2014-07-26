@@ -29,12 +29,16 @@ angular.module('clientApp')
 //            console.log(localStorage);
 //            $location.path('/');
             FB.login(function (response) {
+                console.log('FB login responded', response);
                 if (response.authResponse) {
 //                    console.log('Welcome!  Fetching your information.... ');
 //                    $cookies['fb_at'] = response.authResponse.accessToken;
                     $cookies['fb_id'] = response.authResponse.userID;
+                    console.log('saved fb_id cookie', $cookies['fb_id'], response.authResponse.userID);
                     FB.api('/me', function (response) {
+                        console.log('fetched /me data from facebook - creating user', response);
                         Users.create({name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (user) {
+                            console.log('user created', user);
                             storeUserAndRedirect(user);
                         });
                     });
@@ -58,6 +62,7 @@ angular.module('clientApp')
                     } else {
                         console.log('User not found in scope - fetching from db - by fb_id', response.authResponse.userID);
                         Users.all({fb_id: response.authResponse.userID}, function (users) {
+                            console.log('Users found in db', users);
                             user = users[0];
                             console.log('User found in db', user);
                             storeUserAndRedirect(user);
