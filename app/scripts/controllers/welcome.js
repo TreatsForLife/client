@@ -54,7 +54,7 @@ angular.module('clientApp')
                 console.log('Response arrived from facebook', response);
                 if (response.status === 'connected') {
                     console.log('the user is logged in and has authenticated your app', response.authResponse);
-                    $cookies['fb_id'] = response.authResponse.userID;
+                    var fb_id = $cookies['fb_id'] = response.authResponse.userID;
                     var user = $rootScope.user;
                     if (user) {
                         console.log('User found in scope', $rootScope.user);
@@ -64,8 +64,18 @@ angular.module('clientApp')
                         Users.all({fb_id: response.authResponse.userID}, function (users) {
                             console.log('Users found in db', users);
                             user = users[0];
+                            if (user){
                             console.log('User found in db', user);
                             storeUserAndRedirect(user);
+                            }else{
+                                FB.api('/me', function (response) {
+                                    console.log('fetched /me data from facebook - creating user', response);
+                                    Users.create({fb_id: fb_id, name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (user) {
+                                        console.log('user created', user);
+                                        storeUserAndRedirect(user);
+                                    });
+                                });
+                            }
                         });
                     }
                 } else if (response.status === 'not_authorized') {
