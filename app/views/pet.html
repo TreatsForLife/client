@@ -9,8 +9,10 @@
                             <div class="pet-pic" ng-click="playVideo(item.media.video)"
                                  ng-style="{'background-image': 'url('+item.media.image+')', height: picHeight}">
                                 <span class="pet-pic-play fa-stack fa-lg">
-                                  <i class="fa fa-circle fa-stack-2x pet-pic-play-circle" ng-style="{lineHeight: (picHeight +'px')}"></i>
-                                  <i class="fa fa-play fa-stack-1x fa-inverse" ng-style="{lineHeight: (picHeight +'px')}"></i>
+                                  <i class="fa fa-circle fa-stack-2x pet-pic-play-circle"
+                                     ng-style="{lineHeight: (picHeight +'px')}"></i>
+                                  <i class="fa fa-play fa-stack-1x fa-inverse"
+                                     ng-style="{lineHeight: (picHeight +'px')}"></i>
                                 </span>
                             </div>
                             <div class="pet-bar">
@@ -29,18 +31,24 @@
 
     <!--<div id='slider-treats' class='swipe'>-->
     <div class='treat-wrapper' ng-style="{height: grassHeight, padding: buttonMargin}">
-        <div ng-if="showBuyButton">
+        <div ng-if="showButton == 'buy'">
             <div class="pet-buy-button" ng-show="!buttonAnimationReady" ng-click="animateButton(false);"
                  ng-style="{width:buttonHeight, height:buttonHeight}">
             </div>
         </div>
-        <div ng-if="showShareButton" class="treat-share-wrapper" ng-click="share()">
+        <div ng-if="showButton == 'adopt'" class="treat-share-wrapper" ng-click="adopt()">
+            <span class="fa-stack fa-lg" ng-style="{fontSize: (buttonHeight/2)}">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-chain fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+        <div ng-if="showButton == 'share'" class="treat-share-wrapper" ng-click="share()">
             <span class="fa-stack fa-lg" ng-style="{fontSize: (buttonHeight/2)}">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-share fa-stack-1x fa-inverse"></i>
             </span>
         </div>
-        <div ng-if="showLoveButton" class="treat-love-wrapper" ng-click="loved = !loved">
+        <div ng-if="showButton == 'love'" class="treat-love-wrapper" ng-click="loved = !loved">
             <span class="" ng-style="{fontSize: (buttonHeight)}">
                 <span class="fa-stack fa-lg" ng-style="{fontSize: (buttonHeight/2)}" ng-show="!loved">
                   <i class="fa fa-circle fa-stack-2x"></i>
@@ -56,6 +64,10 @@
 
 
     <div class="cart-wrapper" ng-class="{up: cartIsUp}" ng-click="cartIsUp=!cartIsUp" ng-if="showCart">
+        <div class="cart-center">
+            <div></div>
+        </div>
+
         <div class="cart-items">
             <i class="pet-info fa fa-times" ng-show="cartIsUp"></i>
 

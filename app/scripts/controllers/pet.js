@@ -10,11 +10,16 @@ angular.module('clientApp')
         $scope.picHeight = $('.container').width() * 0.6;
         $scope.cartIsUp = false;
 
+        //search pet in route or in cookie
         var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
-        if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id)
+        //check if the user has a pet
+        if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id){
             pet_id = $rootScope.user.pet._id;
-
-        var animationLength = 0;
+        }
+        $scope.$on('userIsFetched', function(){
+            if (!$routeParams['id'] && !$rootScope.user.pet._id)
+                $location.path('/pets');
+        });
 
         $timeout(function () {
             if (!window.localStorage['pet-dialog-shown']) {
@@ -44,6 +49,10 @@ angular.module('clientApp')
                 }
             });
 
+        }
+
+        $scope.adopt = function (){
+            $scope.showTipDialog('adopt');
         }
 
         $scope.share = function () {
@@ -114,14 +123,14 @@ angular.module('clientApp')
                     var q = $location.search();
                     if (q['item_number']) {
                         Donations.approve({item_number: q['item_number']}, function (res) {
-/*
-                            if (res.approved) {
-                                if ($scope.user.pet != $scope.pet.id)
-                                    Pets.addOwner({id: $scope.pet.id, user: $scope.user.id});
-                                if ($scope.pet.user != $scope.user.id)
-                                    Users.addPet({id: $scope.user.id, pet: $scope.pet.id});
-                            }
-*/
+                            /*
+                             if (res.approved) {
+                             if ($scope.user.pet != $scope.pet.id)
+                             Pets.addOwner({id: $scope.pet.id, user: $scope.user.id});
+                             if ($scope.pet.user != $scope.user.id)
+                             Users.addPet({id: $scope.user.id, pet: $scope.pet.id});
+                             }
+                             */
                             $scope.getPendingItems();
                             $location.search({});
                         });
@@ -138,14 +147,22 @@ angular.module('clientApp')
 
         var showButtonInterval = $interval(function () {
             if (!$scope.user || !$scope.pet) return;
-            // BUY : if its my pet OR if I have no pet and the this pet has no owner
-            $scope.showBuyButton = !!($scope.pet.user && ($scope.pet.user._id == $scope.user_id)) || (!$scope.pet.user && !$scope.user.pet);
-            // SHARE : if I have a pet and the pet has no owner
-            $scope.showShareButton = !!(!$scope.pet.user && $scope.user.pet);
-            // LOVE : if the pet has owner and its not me
-            $scope.showLoveButton = !!($scope.pet.user && $scope.pet.user._id != $scope.user_id);
-
-            if ($scope.showBuyButton || $scope.showShareButton || $scope.showLoveButton)
+            if (!!($scope.pet.user && ($scope.pet.user._id == $scope.user_id))) {
+                // BUY : if its my pet
+                $scope.showButton = 'buy';
+            } else if (!!(!$scope.pet.user && $scope.user.pet)) {
+                // SHARE : if I have a pet and the pet has no owner
+                $scope.showButton = 'share';
+            } else if (!!($scope.pet.user && $scope.pet.user._id != $scope.user_id)) {
+                // LOVE : if the pet has owner and its not me
+                $scope.showButton = 'love';
+            } else if (!$scope.pet.user && !$scope.user.pet){
+                //ADOPT : if I have no pet and the this pet has no owner
+                $scope.showButton = 'adopt';
+            }else{
+                $scope.showButton = false;
+            }
+            if ($scope.showButton)
                 $interval.cancel(showButtonInterval);
 
         }, 250);

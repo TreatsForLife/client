@@ -6,7 +6,7 @@ div.container.pet {
   transform: none;
   background-color: $scheme-green;
 
-  #pet-pic{
+  #pet-pic {
     margin-bottom: -10px;
   }
 
@@ -48,6 +48,21 @@ div.container.pet {
       }
     }
 
+    .cart-center {
+      width: 100%;
+      text-align: center;
+      line-height: 50px;
+      height: 0;
+      div {
+        display: inline-block;
+        width: 20px;
+        height: 6px;
+        border: 1px solid #111;
+        border-width: 1px 0;
+        margin: 22px;
+      }
+    }
+
     .cart-timer {
       float: left;
       line-height: 50px;
@@ -67,9 +82,9 @@ div.container.pet {
       }
     }
 
-    .cart-shop-title{
-      font-size:16px;
-      color:#fefefe;
+    .cart-shop-title {
+      font-size: 16px;
+      color: #fefefe;
       text-align: center;
       padding: 15px;
     }
@@ -85,26 +100,26 @@ div.container.pet {
   text-align: center;
   margin-top: 0px;
 
-  .pet-buy-button{
+  .pet-buy-button {
     background-image: url('/images/buy_button_row.png');
     margin: auto;
     background-position: 0 0;
     background-size: auto 100%;
   }
 
-  .treat-share-wrapper{
-    i{
+  .treat-share-wrapper {
+    i {
       color: $scheme-red;
-      &.fa-inverse{
+      &.fa-inverse {
         color: white;
       }
     }
   }
-  .treat-love-wrapper{
-    i.fa-circle{
+  .treat-love-wrapper {
+    i.fa-circle {
       color: $scheme-yellow;
     }
-    i.fa-heart, i.fa-heart-o{
+    i.fa-heart, i.fa-heart-o {
       margin-top: 4px;
       color: $scheme-red;
     }
@@ -113,7 +128,7 @@ div.container.pet {
 
 .swipe {
   overflow: hidden;
-//  visibility: hidden;
+  //  visibility: hidden;
   position: relative;
 }
 
