@@ -22,7 +22,7 @@ angular.module('clientApp')
                     $timeout(function () {
                         scope.contentUrl = 'views/partials/' + filename + '-dialog.html';
                         scope.shown = true;
-                        scope.$apply();
+                        scope.$digest();
                     }, 100);
                 });
                 scope.closeTipDialog = function () {

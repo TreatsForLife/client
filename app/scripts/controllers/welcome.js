@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('WelcomeCtrl', ['$scope', '$rootScope', '$cookies', '$timeout', '$location', 'Users', function ($scope, $rootScope, $cookies, $timeout, $location, Users) {
+    .controller('WelcomeCtrl', ['$scope', '$rootScope', '$cookies', '$timeout', '$interval', '$location', 'Users', function ($scope, $rootScope, $cookies, $timeout, $interval, $location, Users) {
         $rootScope.bodyClass = 'welcome';
 
         $scope.placeLogo = function (iterations) {
@@ -9,10 +9,12 @@ angular.module('clientApp')
             $timeout(function () {
                 if (angular.element('.welcome-app-explained').length > 0) {
                     $rootScope.windowHeight = angular.element(window).height();
+                    $rootScope.windowWidth = angular.element(window).width();
 
-                    $scope.logoSpace = $rootScope.windowHeight - angular.element('.bottom-wrapper').height();
-                    $scope.logoHeight = (($scope.logoSpace - 196) / 2);
-                    $scope.logoMargin = (($scope.logoSpace - 196) / 2) + 'px auto';
+                    $scope.logoSpace = $rootScope.windowHeight - angular.element('.bottom-wrapper').height() - 40;
+                    $scope.logoHeight = ($scope.logoSpace > 370) ? 370 : ($scope.logoSpace - 80);
+                    $scope.logoMargin = parseInt(($scope.logoSpace - 370) / 2) + 'px auto';
+                    $scope.logoWidth = $scope.logoHeight / 370 * 266;
                 }
                 if (iterations > 0) {
                     $timeout(function () {
@@ -21,6 +23,31 @@ angular.module('clientApp')
                 }
             });
         }
+
+        $scope.logoAnimationComplete = false;
+        $scope.animateLogo = function () {
+            var animationDuration = 1700;
+            var numOfFrames = 48;
+            var frame = numOfFrames;
+            var dim = $scope.logoWidth
+            var animationBgPosition = 0;
+            var animationInterval = $interval(function () {
+                debugger;
+                if (frame == 0) {
+                    $interval.cancel(animationInterval);
+                    $timeout(function(){
+                        $scope.logoAnimationComplete = true;
+                    });
+                    return;
+                }
+                angular.element('.welcome-logo-animation').css('background-position-x', -1 * animationBgPosition);
+                frame--;
+                animationBgPosition += dim;
+            }, (animationDuration / numOfFrames))
+        }
+        $timeout(function(){
+            $scope.animateLogo();
+        }, 500);
 
         $scope.fbLogin = function () {
             if (typeof(FB) == 'undefined' || !FB) return;
