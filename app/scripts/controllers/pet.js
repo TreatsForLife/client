@@ -235,7 +235,7 @@ angular.module('clientApp')
 
         $scope.animateShareButton = function (ready) {
             if (!$scope.showButton) return;
-            var animationDuration = 1700;
+            var animationDuration = 1000;
             var numOfFrames = 25;
             var frame = numOfFrames;
             var dim = $scope.buttonHeight;
