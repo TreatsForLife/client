@@ -90,7 +90,7 @@ angular.module('clientApp')
                 Donations.create({
                     paypalItem: $scope.ItemNumber,
                     treat: treat._id,
-                    user: $rootScope.user_id,
+                    user: $scope.user._id,
                     pet: $scope.pet._id,
                     payed: false
                 }, function(res){
