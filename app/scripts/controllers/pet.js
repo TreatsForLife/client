@@ -114,10 +114,14 @@ angular.module('clientApp')
                     var q = $location.search();
                     if (q['item_number']) {
                         Donations.approve({item_number: q['item_number']}, function (res) {
+/*
                             if (res.approved) {
-                                Pets.addOwner({id: $scope.pet.id, user: $scope.user.id});
-                                Users.addPet({id: $scope.user.id, pet: $scope.pet.id});
+                                if ($scope.user.pet != $scope.pet.id)
+                                    Pets.addOwner({id: $scope.pet.id, user: $scope.user.id});
+                                if ($scope.pet.user != $scope.user.id)
+                                    Users.addPet({id: $scope.user.id, pet: $scope.pet.id});
                             }
+*/
                             $scope.getPendingItems();
                             $location.search({});
                         });
@@ -132,7 +136,7 @@ angular.module('clientApp')
             });
         });
 
-        var showButtonInterval = $interval(function(){
+        var showButtonInterval = $interval(function () {
             if (!$scope.user || !$scope.pet) return;
             // BUY : if its my pet OR if I have no pet and the this pet has no owner
             $scope.showBuyButton = !!($scope.pet.user && ($scope.pet.user._id == $scope.user_id)) || (!$scope.pet.user && !$scope.user.pet);
@@ -158,16 +162,16 @@ angular.module('clientApp')
             var frame = numOfFrames;
             var dim = $scope.buttonHeight;
             var animationBgPosition = 0;
-            var animationInterval = $interval(function(){
-                if (frame == 0){
+            var animationInterval = $interval(function () {
+                if (frame == 0) {
                     $interval.cancel(animationInterval);
                     $location.path('/shop/' + pet_id);
                     return;
                 }
-                angular.element('.pet-buy-button').css('background-position-x', -1*animationBgPosition);
+                angular.element('.pet-buy-button').css('background-position-x', -1 * animationBgPosition);
                 frame--;
                 animationBgPosition += dim;
-            }, (animationDuration/numOfFrames))
+            }, (animationDuration / numOfFrames))
         }
 
         $scope.flip = function () {
