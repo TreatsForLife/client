@@ -12,31 +12,35 @@ angular.module('clientApp')
         $rootScope.user_id = $cookies['user_id'];
         $rootScope.user_pet_id = $cookies.user_pet_id;
 
+        $rootScope.getUser = function(){
+            Users.query({id: $rootScope.user_id}, function (user) {
+                if (user._id) {
+                    console.log('Found user in DB', user);
+                    $rootScope.user = user;
+                    $scope.$broadcast('userIsFetched');
+                    //make sure that user_id cookie is saved
+                    if (!$cookies.user_id && $rootScope.user && $rootScope.user._id) {
+                        $cookies.user_id = $rootScope.user._id;
+                        console.log('Saving user_id cookie', $rootScope.user._id, $cookies.user_id);
+                    }
+                    //make sure that user_pet_id cookie is saved
+                    if (!$cookies.user_pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
+                        $cookies.user_pet_id = $rootScope.user.pet._id;
+                        console.log('Saving user_pet_id cookie', $rootScope.user.pet._id, $cookies.user_pet_id);
+                    }
+                } else {
+                    console.log('No user in DB - redirecting to welcome screen', $cookies);
+                    localStorage.setItem("returnUrl", $location.path())
+                    $location.path('/welcome');
+                }
+            });
+        }
+
         //make sure that the user is fetched
         if (!$rootScope.user && $rootScope.user_id) {
             console.log('No user but user_id cookie is found - fetching from DB');
             $timeout(function () {
-                Users.query({id: $rootScope.user_id}, function (user) {
-                    if (user._id) {
-                        console.log('Found user in DB', user);
-                        $rootScope.user = user;
-                        $scope.$broadcast('userIsFetched');
-                        //make sure that user_id cookie is saved
-                        if (!$cookies.user_id && $rootScope.user && $rootScope.user._id) {
-                            $cookies.user_id = $rootScope.user._id;
-                            console.log('Saving user_id cookie', $rootScope.user._id, $cookies.user_id);
-                        }
-                        //make sure that user_pet_id cookie is saved
-                        if (!$cookies.user_pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
-                            $cookies.user_pet_id = $rootScope.user.pet._id;
-                            console.log('Saving user_pet_id cookie', $rootScope.user.pet._id, $cookies.user_pet_id);
-                        }
-                    } else {
-                        console.log('No user in DB - redirecting to welcome screen', $cookies);
-                        localStorage.setItem("returnUrl", $location.path())
-                        $location.path('/welcome');
-                    }
-                });
+                $rootScope.getUser();
             })
         } else if (!$rootScope.user_id) {
             console.log('No user_id cookies found - redirecting to welcome screen', $cookies);

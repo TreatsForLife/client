@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('clientApp')
-    .directive('tipDialog', function ($timeout) {
+    .directive('tipDialog', ['$timeout', function ($timeout) {
         return {
+            scope: true,
             template: '<div class="tip-dialog-container" ng-show="shown">' +
                 '<div class="tip-dialog-wrapper">' +
                 '<div class="tip-dialog animated bounce{{!leaving ? \'InDown\' : \'OutUp\'}}"><div class="rtl" ng-include="contentUrl"></div></div>' +
@@ -14,13 +15,16 @@ angular.module('clientApp')
                 '</div>',
             restrict: 'E',
             link: function (scope, element, attrs) {
+                scope.shown = false;
+                scope.leaving = false;
 
-                scope.showTipDialog = function (filename) {
+                scope.$on('showTipDialog', function (e, filename) {
                     $timeout(function () {
                         scope.contentUrl = 'views/partials/' + filename + '-dialog.html';
                         scope.shown = true;
-                    });
-                }
+                        scope.$apply();
+                    }, 100);
+                });
                 scope.closeTipDialog = function () {
                     scope.leaving = true;
                     $timeout(function () {
@@ -30,4 +34,4 @@ angular.module('clientApp')
                 }
             }
         };
-    });
+    }]);

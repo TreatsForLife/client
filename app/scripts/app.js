@@ -19,11 +19,13 @@ angular.module('clientApp', [
             })
             .when('/pet', {
                 templateUrl: 'views/pet.html',
-                controller: 'PetCtrl'
+                controller: 'PetCtrl',
+                reloadOnSerach: false
             })
             .when('/pet/:id', {
                 templateUrl: 'views/pet.html',
-                controller: 'PetCtrl'
+                controller: 'PetCtrl',
+                reloadOnSerach: false
             })
             .when('/shop/:id', {
                 templateUrl: 'views/shop.html',

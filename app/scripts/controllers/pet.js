@@ -13,10 +13,11 @@ angular.module('clientApp')
         //search pet in route or in cookie
         var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
         //check if the user has a pet
-        if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id){
+        if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
             pet_id = $rootScope.user.pet._id;
         }
-        $scope.$on('userIsFetched', function(){
+
+        $scope.$on('userIsFetched', function () {
             if (!$routeParams['id'] && !$rootScope.user.pet._id)
                 $location.path('/pets');
         });
@@ -51,8 +52,17 @@ angular.module('clientApp')
 
         }
 
-        $scope.adopt = function (){
-            $scope.showTipDialog('adopt');
+        $scope.greetAdoption = function(){
+            $scope.$broadcast('showTipDialog','adopted');
+/*
+            $timeout(function(){
+                $scope.showTipDialog('adopted');
+            }, 1000);
+*/
+        };
+
+        $scope.adopt = function () {
+            $scope.$broadcast('showTipDialog','adopt');
         }
 
         $scope.share = function () {
@@ -77,73 +87,104 @@ angular.module('clientApp')
             });
         }
 
-        Pets.one({id: pet_id}, function (pet) {
-            $scope.pet = pet;
-            $rootScope.navbarTitle = pet.name;
-            $scope.donations = [];
-            $scope.donations[0] = pet;
+        $scope.adopted = function () {
+            var pet_link = Consts.client_root + '/#/pet/' + pet_id;
+            FB.ui({
+                method: 'feed',
+                app_id: Consts.fb_app_id,
+                display: ($scope.isWeb ? 'popup' : 'touch'),
+                link: pet_link,//$scope.pet.media.link,
+                picture: $scope.pet.media.image,
+                name: 'אימצתי את ' + $scope.pet.name,
+                caption: 'תכירו את החבר החדש שלי, הרגע אימצתי אותו :)',
+                description: ' ',
+                /* properties: [
+                 {text: 'בואו לראות אותי', href: pet_link},
+                 {text: 'בואו לראות כלבים אחרים', href: Consts.client_root + '/#/pets/lonely'}
+                 ], */
+                actions: [
+                    {name: 'בואו לראות אותי', link: pet_link}
+                ],
+            }, function (response) {
+            });
+        }
 
-            Donations.given({pet_id: pet_id}, function (res) {
-                $timeout(function () {
-                    for (var i = 0, donation; donation = res[i]; i++) {
-                        $scope.donations.push(donation);
-                    }
-                });
-                $timeout(function () {
-                    window.videosSwipe = new Swipe(document.getElementById('slider'), {
-                        startSlide: 0,
-                        continuous: true,
-                        disableScroll: true,
-                        stopPropagation: false,
-                        callback: function (index, elem) {
-                        },
-                        transitionEnd: function (index, elem) {
+        $scope.getPet = function (pet_id) {
+            Pets.one({id: pet_id}, function (pet) {
+                $scope.pet = pet;
+                $rootScope.navbarTitle = pet.name;
+                $scope.donations = [];
+                $scope.donations[0] = pet;
+
+                Donations.given({pet_id: pet_id}, function (res) {
+                    $timeout(function () {
+                        for (var i = 0, donation; donation = res[i]; i++) {
+                            $scope.donations.push(donation);
                         }
                     });
+                    $timeout(function () {
+                        window.videosSwipe = new Swipe(document.getElementById('slider'), {
+                            startSlide: 0,
+                            continuous: true,
+                            disableScroll: true,
+                            stopPropagation: false,
+                            callback: function (index, elem) {
+                            },
+                            transitionEnd: function (index, elem) {
+                            }
+                        });
 
 
-                }, 50);
-                $timeout(function () {
-                    //approve payments
-                    $scope.getPendingItems = function () {
-                        Donations.pending({pet_id: pet_id}, function (res) {
-                            $timeout(function () {
-                                $scope.pending = res;
-                                $scope.showCart = (res.length > 0);
-                                $scope.cartTitle = res.length + ' ' + ((res.length > 0) ? 'פריטים' : 'פריט');
+                    }, 50);
+                    $timeout(function () {
+                        //approve payments
+                        $scope.getPendingItems = function () {
+                            Donations.pending({pet_id: pet_id}, function (res) {
+                                $timeout(function () {
+                                    $scope.pending = res;
+                                    $scope.showCart = (res.length > 0);
+                                    $scope.cartTitle = res.length + ' ' + ((res.length > 0) ? 'פריטים' : 'פריט');
 
 //                                $scope.htmlReady(); //flags phantom js that the page is ready
 
-                                calcDims();
+                                    calcDims();
+                                });
                             });
-                        });
-                    }
+                        }
 
-                    //aprove paypal payments & get pending items from db
-                    var q = $location.search();
-                    if (q['item_number']) {
-                        Donations.approve({item_number: q['item_number']}, function (res) {
-                            /*
-                             if (res.approved) {
-                             if ($scope.user.pet != $scope.pet.id)
-                             Pets.addOwner({id: $scope.pet.id, user: $scope.user.id});
-                             if ($scope.pet.user != $scope.user.id)
-                             Users.addPet({id: $scope.user.id, pet: $scope.pet.id});
-                             }
-                             */
+                        //aprove paypal payments & get pending items from db
+
+                        var q = $location.search();
+                        if (q['item_number']) {
+                            Donations.approve({item_number: q['item_number']}, function (res) {
+                                /*
+                                 if (res.approved) {
+                                 if ($scope.user.pet != $scope.pet.id)
+                                 Pets.addOwner({id: $scope.pet.id, user: $scope.user.id});
+                                 if ($scope.pet.user != $scope.user.id)
+                                 Users.addPet({id: $scope.user.id, pet: $scope.pet.id});
+                                 }
+                                 */
+                                $scope.getPendingItems();
+                                $location.search({});
+                                $scope.getPet(pet_id);
+                                $scope.getUser();
+                                if (res.newAdoption){
+                                    $scope.greetAdoption();
+                                }
+                            });
+                        } else {
                             $scope.getPendingItems();
-                            $location.search({});
-                        });
-                    } else {
-                        $scope.getPendingItems();
-                    }
+                        }
 
 
-                }, 80);
+                    }, 80);
 
 
+                });
             });
-        });
+        }
+        $scope.getPet(pet_id);
 
         var showButtonInterval = $interval(function () {
             if (!$scope.user || !$scope.pet) return;
@@ -156,10 +197,10 @@ angular.module('clientApp')
             } else if (!!($scope.pet.user && $scope.pet.user._id != $scope.user_id)) {
                 // LOVE : if the pet has owner and its not me
                 $scope.showButton = 'love';
-            } else if (!$scope.pet.user && !$scope.user.pet){
+            } else if (!$scope.pet.user && !$scope.user.pet) {
                 //ADOPT : if I have no pet and the this pet has no owner
                 $scope.showButton = 'adopt';
-            }else{
+            } else {
                 $scope.showButton = false;
             }
             if ($scope.showButton)
@@ -173,7 +214,7 @@ angular.module('clientApp')
         }
 
         $scope.animateButton = function (ready) {
-            if (!$scope.showBuyButton) return;
+            if (!$scope.showButton) return;
             var animationDuration = 1700;
             var numOfFrames = 48;
             var frame = numOfFrames;
