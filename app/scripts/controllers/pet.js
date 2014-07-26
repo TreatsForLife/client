@@ -19,9 +19,9 @@ angular.module('clientApp')
             if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
                 pet_id = $rootScope.user.pet._id;
             }
-            if (!pet_id){
+            if (!pet_id) {
                 $location.path('/pets');
-            }else{
+            } else {
                 $scope.getPet(pet_id);
             }
         });
@@ -41,9 +41,11 @@ angular.module('clientApp')
                 $scope.donations[0] = pet;
 
                 //check if I see my pet
-                if ($scope.user && $scope.user.pet && pet._id == $scope.user.pet._id){
-                    $rootScope.navbarTitle = 'הכלב שלי ' + $rootScope.navbarTitle;
-                    $rootScope.bodyClass += ' mine ';
+                if ($scope.user && $scope.user.pet && pet._id == $scope.user.pet._id) {
+                    $timeout(function () {
+                        $rootScope.navbarTitle = 'הכלב שלי ' + $rootScope.navbarTitle;
+                        $rootScope.bodyClass += ' mine ';
+                    });
                 }
 
                 Donations.given({pet_id: pet_id}, function (res) {
@@ -90,7 +92,7 @@ angular.module('clientApp')
                                 $location.search({});
                                 $scope.getPet(pet_id);
                                 $scope.getUser();
-                                if (res.newAdoption){
+                                if (res.newAdoption) {
                                     $scope.greetAdoption();
                                 }
                             });
@@ -106,8 +108,6 @@ angular.module('clientApp')
             });
         }
         $scope.getPet(pet_id);
-
-
 
 
         function calcDims(iterations) {
@@ -134,12 +134,12 @@ angular.module('clientApp')
 
         }
 
-        $scope.greetAdoption = function(){
-            $scope.$broadcast('showTipDialog','adopted');
+        $scope.greetAdoption = function () {
+            $scope.$broadcast('showTipDialog', 'adopted');
         };
 
         $scope.adopt = function () {
-            $scope.$broadcast('showTipDialog','adopt');
+            $scope.$broadcast('showTipDialog', 'adopt');
         }
 
         $scope.share = function () {
@@ -255,7 +255,7 @@ angular.module('clientApp')
             var animationInterval = $interval(function () {
                 if (frame == 0) {
                     $interval.cancel(animationInterval);
-                    $timeout(function(){
+                    $timeout(function () {
                         $scope.share();
                         angular.element('.pet-share-button').css('background-position-x', 0);
                     }, 500);
@@ -277,7 +277,7 @@ angular.module('clientApp')
             var animationInterval = $interval(function () {
                 if (frame == 0) {
                     $interval.cancel(animationInterval);
-                    $timeout(function(){
+                    $timeout(function () {
                         $scope.like();
                         angular.element('.pet-like-button').css('background-position-x', 0);
                     }, 500);
@@ -302,10 +302,10 @@ angular.module('clientApp')
             var animationInterval = $interval(function () {
                 if (frame == 0) {
                     $interval.cancel(animationInterval);
-                    $timeout(function(){
+                    $timeout(function () {
                         $scope.adopt();
                     }, 100);
-                    $timeout(function(){
+                    $timeout(function () {
                         angular.element('.pet-adopt-button-gif').show();
                         angular.element('.pet-adopt-button').hide();
                         angular.element('.pet-adopt-button').css('background-position-x', 0);
