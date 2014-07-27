@@ -30,7 +30,7 @@ angular.module('clientApp')
         });
 
         $scope.getPetId = function () {
-            $scope.pet_id = $routeParams['id'] || $rootScope.user_$scope.pet_id;
+            $scope.pet_id = $routeParams['id'] || $rootScope.user_pet_id;
             if (!$scope.pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
                 $scope.pet_id = $rootScope.user.pet._id;
             }
