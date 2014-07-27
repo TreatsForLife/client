@@ -12,13 +12,15 @@ angular.module('clientApp')
 
         //search pet in route or in cookie
 
-        if ($rootScope.user) {
-            $scope.getPetId();
-        } else {
-            $scope.$on('userIsFetched', function () {
-                //check if the user has a pet
+        function init() {
+            if ($rootScope.user) {
                 $scope.getPetId();
-            });
+            } else {
+                $scope.$on('userIsFetched', function () {
+                    //check if the user has a pet
+                    $scope.getPetId();
+                });
+            }
         }
 
         $timeout(function () {
@@ -27,7 +29,7 @@ angular.module('clientApp')
             }
         });
 
-        $scope.getPetId = function(){
+        $scope.getPetId = function () {
             $scope.pet_id = $routeParams['id'] || $rootScope.user_$scope.pet_id;
             if (!$scope.pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
                 $scope.pet_id = $rootScope.user.pet._id;
@@ -328,6 +330,8 @@ angular.module('clientApp')
 
         //calc next friday at 12:00
         $scope.nextFriday = moment().hour(0).minute(0).second(0).add('days', 2).weekday(5).add('hours', 12).format();
+
+        init();
 
         window.debug = $scope;
 
