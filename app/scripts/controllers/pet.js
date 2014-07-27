@@ -12,19 +12,14 @@ angular.module('clientApp')
 
         //search pet in route or in cookie
 
-        var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
-
-        $scope.$on('userIsFetched', function () {
-            //check if the user has a pet
-            if (!pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
-                pet_id = $rootScope.user.pet._id;
-            }
-            if (!pet_id) {
-                $location.path('/pets');
-            } else {
-                $scope.getPet(pet_id);
-            }
-        });
+        if ($rootScope.user) {
+            $scope.getPetId();
+        } else {
+            $scope.$on('userIsFetched', function () {
+                //check if the user has a pet
+                $scope.getPetId();
+            });
+        }
 
         $timeout(function () {
             if (!window.localStorage['pet-dialog-shown']) {
@@ -32,9 +27,20 @@ angular.module('clientApp')
             }
         });
 
+        $scope.getPetId = function(){
+            $scope.pet_id = $routeParams['id'] || $rootScope.user_$scope.pet_id;
+            if (!$scope.pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
+                $scope.pet_id = $rootScope.user.pet._id;
+            }
+            if (!$scope.pet_id) {
+                $location.path('/pets');
+            } else {
+                $scope.getPet();
+            }
+        }
 
-        $scope.getPet = function (pet_id) {
-            Pets.one({id: pet_id}, function (pet) {
+        $scope.getPet = function () {
+            Pets.one({id: $scope.pet_id}, function (pet) {
                 $scope.pet = pet;
                 $rootScope.navbarTitle = pet.name;
                 $scope.donations = [];
@@ -48,7 +54,7 @@ angular.module('clientApp')
                     });
                 }
 
-                Donations.given({pet_id: pet_id}, function (res) {
+                Donations.given({pet_id: $scope.pet_id}, function (res) {
                     $timeout(function () {
                         for (var i = 0, donation; donation = res[i]; i++) {
                             $scope.donations.push(donation);
@@ -71,7 +77,7 @@ angular.module('clientApp')
                     $timeout(function () {
                         //approve payments
                         $scope.getPendingItems = function () {
-                            Donations.pending({pet_id: pet_id}, function (res) {
+                            Donations.pending({pet_id: $scope.pet_id}, function (res) {
                                 $timeout(function () {
                                     $scope.pending = res;
                                     $scope.showCart = (res.length > 0);
@@ -90,7 +96,7 @@ angular.module('clientApp')
                             Donations.approve({item_number: q['item_number']}, function (res) {
                                 $scope.getPendingItems();
                                 $location.search({});
-                                $scope.getPet(pet_id);
+                                $scope.getPet();
                                 $scope.getUser();
                                 if (res.newAdoption) {
                                     $scope.greetAdoption();
@@ -107,8 +113,6 @@ angular.module('clientApp')
                 });
             });
         }
-        $scope.getPet(pet_id);
-
 
         function calcDims(iterations) {
             if (typeof iterations == 'undefined') iterations = 5;
@@ -143,7 +147,7 @@ angular.module('clientApp')
         }
 
         $scope.share = function () {
-            var pet_link = Consts.client_root + '#/pet/' + pet_id;
+            var pet_link = Consts.client_root + '#/pet/' + $scope.pet_id;
             FB.ui({
                 method: 'feed',
                 app_id: Consts.fb_app_id,
@@ -161,7 +165,7 @@ angular.module('clientApp')
         }
 
         $scope.like = function () {
-            var pet_link = Consts.client_root + '#/pet/' + pet_id;
+            var pet_link = Consts.client_root + '#/pet/' + $scope.pet_id;
             FB.ui({
                 method: 'feed',
                 app_id: Consts.fb_app_id,
@@ -180,7 +184,7 @@ angular.module('clientApp')
         }
 
         $scope.adopted = function () {
-            var pet_link = Consts.client_root + '#/pet/' + pet_id;
+            var pet_link = Consts.client_root + '#/pet/' + $scope.pet_id;
             FB.ui({
                 method: 'feed',
                 app_id: Consts.fb_app_id,
@@ -236,7 +240,7 @@ angular.module('clientApp')
             var animationInterval = $interval(function () {
                 if (frame == 0) {
                     $interval.cancel(animationInterval);
-                    $location.path('/shop/' + pet_id);
+                    $location.path('/shop/' + $scope.pet_id);
                     return;
                 }
                 angular.element('.pet-buy-button').css('background-position-x', -1 * animationBgPosition);
