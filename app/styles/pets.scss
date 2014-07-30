@@ -2,9 +2,12 @@
 
 div.container.pets, div.container.pet {
 
-  background-color: $scheme-yellow;
   overflow-x: hidden;
   overflow-y: visible;
+
+  &.adopted{
+    background-color: $scheme-yellow;
+  }
 
   &.lonely{
     background-color: $scheme-red;

@@ -4,7 +4,10 @@ div.container.pet {
 
   overflow: hidden;
   transform: none;
-  background-color: $scheme-yellow;
+
+  &.adopted{
+    background-color: $scheme-yellow;
+  }
 
   &.lonely{
     background-color: $scheme-red;

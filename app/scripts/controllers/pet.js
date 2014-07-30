@@ -48,14 +48,6 @@ angular.module('clientApp')
                 $scope.donations = [];
                 $scope.donations[0] = pet;
 
-                //check if I see my pet
-                if ($scope.user && $scope.user.pet && pet._id == $scope.user.pet._id) {
-                    $timeout(function () {
-                        $rootScope.navbarTitle = 'הכלב שלי ' + $rootScope.navbarTitle;
-                        $rootScope.bodyClass += ' mine ';
-                    });
-                }
-
                 Donations.given({pet_id: $scope.pet_id}, function (res) {
                     $timeout(function () {
                         for (var i = 0, donation; donation = res[i]; i++) {
@@ -77,7 +69,7 @@ angular.module('clientApp')
 
                     }, 50);
                     $timeout(function () {
-                        //approve payments
+                        //get pending items
                         $scope.getPendingItems = function () {
                             Donations.pending({pet_id: $scope.pet_id}, function (res) {
                                 $timeout(function () {
@@ -208,6 +200,7 @@ angular.module('clientApp')
             if (!!($scope.pet.user && ($scope.pet.user._id == $scope.user_id))) {
                 // BUY : if its my pet
                 $scope.showButton = 'buy';
+                $rootScope.bodyClass += ' mine';
             } else if (!!(!$scope.pet.user && $scope.user.pet)) {
                 // SHARE : if I have a pet and the pet has no owner
                 $scope.showButton = 'share';
@@ -215,6 +208,7 @@ angular.module('clientApp')
             } else if (!!($scope.pet.user && ($scope.pet.user._id != $scope.user_id))) {
                 // LOVE : if the pet has owner and its not me
                 $scope.showButton = 'love';
+                $rootScope.bodyClass += ' adopted';
             } else if (!$scope.pet.user && !$scope.user.pet) {
                 //ADOPT : if I have no pet and the this pet has no owner
                 $scope.showButton = 'adopt';
