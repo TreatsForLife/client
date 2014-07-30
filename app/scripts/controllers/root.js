@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .controller('RootCtrl', ['$scope', '$rootScope', '$timeout', '$cookies', '$location', 'Donations', 'Users', function ($scope, $rootScope, $timeout, $cookies, $location, Donations, Users) {
+    .controller('RootCtrl', ['$scope', '$rootScope', '$timeout', '$cookies', '$location', '$sce', 'Donations', 'Users', function ($scope, $rootScope, $timeout, $cookies, $location, $sce, Donations, Users) {
 
         console.log('APP VERSION: 1.0');
 
@@ -12,7 +12,7 @@ angular.module('clientApp')
         $rootScope.user_id = $cookies['user_id'];
         $rootScope.user_pet_id = $cookies.user_pet_id;
 
-        $rootScope.getUser = function(){
+        $rootScope.getUser = function () {
             Users.query({id: $rootScope.user_id}, function (user) {
                 if (user._id) {
                     console.log('Found user in DB', user);
@@ -60,6 +60,12 @@ angular.module('clientApp')
                 $scope.goingBack = false;
             }, 1000);
             window.history.back();
+        }
+
+        $scope.playVideo = function (src) {
+            $timeout(function () {
+                $scope.$broadcast('setVideoSrc', ($sce.trustAsResourceUrl(src)));
+            }, 0);
         }
 
         $rootScope.openPushMenu = function () {

@@ -40,10 +40,16 @@ angular.module('clientApp')
                 var video, progressbar, playing, progressBarWidth, progressBarOffset, scrollDisabled = false;
 
                 //init
+
                 scope.$watch('show', function (newVal, oldVal) {
                     if (newVal === true && (angular.isUndefined(oldVal) || oldVal === false)) {
                         initVideo();
                     }
+                });
+
+                scope.$on('setVideoSrc', function(e, src){
+                    scope.videoSrc = src;
+                    scope.show = true;
                 });
 
                 var alreadyInit = false;

@@ -17,10 +17,10 @@ angular.module('clientApp')
             $rootScope.bodyClass += ' lonely';
         } else {
             if ($scope.user) {
-                $location.path('/pet' + ($scope.user.pet ? '' : '/lonely'));
+                $location.path('/pets' + ($scope.user.pet ? '' : '/lonely'));
             } else {
                 $scope.$on('userIsFetched', function () {
-                    $location.path('/pet' + ($scope.user.pet ? '' : '/lonely'));
+                    $location.path('/pets' + ($scope.user.pet ? '' : '/lonely'));
                 });
             }
         }

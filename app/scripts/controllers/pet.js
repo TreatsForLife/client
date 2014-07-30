@@ -227,11 +227,6 @@ angular.module('clientApp')
 
         }, 250);
 
-        $scope.playVideo = function (src) {
-            $scope.show_player = true;
-            $scope.player_src = $sce.trustAsResourceUrl(src);
-        }
-
         $scope.animateButton = function () {
             if (!$scope.showButton) return;
             var animationDuration = 1700;
