@@ -13,10 +13,17 @@ div.container.pets, div.container.pet {
     background-color: $scheme-red;
   }
 
+  .pets-text{
+    display: block;
+    width: 100%;
+    padding: 24px 20px 0;
+    direction: rtl;
+    color:white;
+    text-align: center;
+  }
   .pets-pic {
     display: block;
     width: 100%;
-    max-height: 100%;
     overflow: visible;
     .pet {
       padding: 25px 15px 25px;
