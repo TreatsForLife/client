@@ -20,28 +20,32 @@ angular.module('clientApp', [
             .when('/pet', {
                 templateUrl: 'views/pet.html',
                 controller: 'PetCtrl',
-                reloadOnSerach: false
+                reloadOnSearch: false
             })
             .when('/pet/:id', {
                 templateUrl: 'views/pet.html',
                 controller: 'PetCtrl',
-                reloadOnSerach: false
+                reloadOnSearch: false
             })
             .when('/shop/:id', {
                 templateUrl: 'views/shop.html',
-                controller: 'ShopCtrl'
+                controller: 'ShopCtrl',
+                reloadOnSearch: false
             })
             .when('/pets', {
                 templateUrl: 'views/pets.html',
-                controller: 'PetsCtrl'
+                controller: 'PetsCtrl',
+                reloadOnSearch: false
             })
             .when('/pets/:filter', {
                 templateUrl: 'views/pets.html',
-                controller: 'PetsCtrl'
+                controller: 'PetsCtrl',
+                reloadOnSearch: false
             })
             .when('/', {
                 templateUrl: 'views/pets.html',
-                controller: 'PetsCtrl'
+                controller: 'PetsCtrl',
+                reloadOnSearch: false
             })
             .otherwise({
                 redirectTo: '/'

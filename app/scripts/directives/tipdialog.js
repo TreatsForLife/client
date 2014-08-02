@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clientApp')
-    .directive('tipDialog', ['$timeout', function ($timeout) {
+    .directive('tipDialog', ['$timeout', '$location', function ($timeout, $location) {
         return {
             template: '<div class="tip-dialog-container" ng-show="shown">' +
                 '<div class="tip-dialog-wrapper">' +
@@ -16,12 +16,16 @@ angular.module('clientApp')
             link: function (scope, element, attrs) {
                 scope.shown = false;
                 scope.leaving = false;
+                scope.watched = {};
 
-                scope.$on('showTipDialog', function (e, filename) {
+                scope.$on('showTipDialog', function (e, filename, force) {
+                    if (!force && scope.watched[filename]) return;
                     $timeout(function () {
                         scope.contentUrl = 'views/partials/' + filename + '-dialog.html';
                         scope.shown = true;
                     }, 100);
+                    $location.search({'dialog':'1'});
+                    scope.watched[filename] = true;
                 });
                 scope.closeTipDialog = function () {
                     scope.leaving = true;
@@ -29,6 +33,7 @@ angular.module('clientApp')
                         scope.shown = false;
                         scope.leaving = false;
                     }, 1000);
+                    $location.search({'dialog':null});
                 }
 
                 scope.$on('closeTipDialog', function () {

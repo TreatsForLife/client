@@ -71,11 +71,22 @@ angular.module('clientApp')
         $rootScope.openPushMenu = function () {
             angular.element('body').addClass('pushed');
             angular.element('#menuRight').addClass('cbp-spmenu-open');
+            $location.search({'push':'1'});
         };
         $rootScope.closePushMenu = function () {
             angular.element('body').removeClass('pushed');
             angular.element('#menuRight').removeClass('cbp-spmenu-open');
+            $location.search({'push':null});
         };
+
+        $rootScope.$on('$routeUpdate', function(){
+            if (!$location.search()['dialog']){
+                $rootScope.closeDialog();
+            }
+            if (!$location.search()['push']){
+                $rootScope.closePushMenu();
+            }
+        });
 
         $rootScope.showDialog = function(dialog){
             $timeout(function () {
