@@ -142,8 +142,8 @@ angular.module('clientApp')
                 display: ($scope.isWeb ? 'popup' : 'touch'),
                 link: pet_link,//$scope.pet.media.link,
                 picture: $scope.pet.media.image,
-                name: 'תכירו את ' + $scope.pet.name,
-                caption: 'תמיד רצית לאמץ כלב ולא יכולת? זאת ההזדמנות שלך להציל חיים, או לפחות לעשות אותם קצת יותר טובים. קנו ל' + $scope.pet.name + ' חטיף, צעצוע ושאר מתנות ועשו לו קצת כיף. מבטיחים לשלוח סרטון של הרגע הגדול :)',
+                name: 'נעים מאוד להכיר, אני ' + $scope.pet.name,
+                caption: 'תמיד רצית לאמץ כלב ולא יכולת בגלל 1042 סיבות? מצאנו דרך שתוכלו לעזור, להציל חיים או לפחות לעשות אותם קצת יותר קלים עבורם. בואו תראו.',
                 description: ' ',
                 actions: [
                     {name: 'תנו לי חטיף', link: pet_link}
@@ -161,7 +161,7 @@ angular.module('clientApp')
                 display: ($scope.isWeb ? 'popup' : 'touch'),
                 link: pet_link,//$scope.pet.media.link,
                 picture: $scope.pet.media.image,
-                name: 'תראו איזה כלב מקסים ' + $scope.pet.name,
+                name: $scope.pet.name + ' הזה הרס אותי עכשיו ',
                 caption: 'איזה יופי של סרטונים, למות :)',
                 description: ' ',
                 actions: [
@@ -179,8 +179,8 @@ angular.module('clientApp')
                 display: ($scope.isWeb ? 'popup' : 'touch'),
                 link: pet_link,//$scope.pet.media.link,
                 picture: $scope.pet.media.image,
-                name: 'תכירו את ' + $scope.pet.name,
-                caption: 'תמיד רצית לאמץ כלב ולא יכולת? זאת ההזדמנות שלך להציל חיים, או לפחות לעשות אותם קצת יותר טובים. קנו ל' + $scope.pet.name + ' חטיף, צעצוע ושאר מתנות ועשו לו קצת כיף. מבטיחים לשלוח סרטון של הרגע הגדול :)',
+                name: 'אתם לא מבינים מה עשיתי הרגע',
+                caption: 'אימצתי כלב! קוראים לו ' + $scope.pet.name + ' ולא הוא לא יבוא אליי הביתה. לא כרגע לפחות.. אבל הולך לקבל ים פינוקים ממני. מומלץ בחום לראות את הפרוייקט הזה',
                 description: ' ',
                 actions: [
                     {name: 'בואו לראות אותי', link: pet_link}
