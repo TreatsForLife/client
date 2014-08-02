@@ -71,7 +71,19 @@ angular.module('clientApp')
         }
 
         $scope.totalToPay = 0;
-        $scope.cartChanged = function () {
+        var checkboxClicked = false;
+        $scope.cartChanged = function (i) {
+            if (checkboxClicked){
+                checkboxClicked = false;
+                return;
+            }
+            if (i) {
+                $timeout(function(){
+                    $scope.treats[i].cart = !$scope.treats[i].cart;
+                });
+            }else{
+                checkboxClicked = true;
+            }
             $scope.totalToPay = $scope.calcTotalToPay();
             $scope.formattedItemName = $scope.formatItemName();
             $scope.ItemNumber = (new Date()).getTime();
