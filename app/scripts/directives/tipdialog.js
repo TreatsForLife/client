@@ -5,7 +5,7 @@ angular.module('clientApp')
         return {
             template: '<div class="tip-dialog-container" ng-show="shown">' +
                 '<div class="tip-dialog-wrapper">' +
-                '<div class="tip-dialog animated bounce{{!leaving ? \'InDown\' : \'OutUp\'}}"><div class="rtl" ng-include="contentUrl"></div></div>' +
+                '<div class="tip-dialog animated bounce{{!leaving ? \'InDown\' : \'OutUp\'}}"><div class="tip-dialog-content rtl" ng-include="contentUrl"></div></div>' +
                 '<div class="tip-dialog-point animated bounce{{!leaving ? \'InDown\' : \'OutUp\'}}"></div>' +
                 '<div class="tip-dialog-dog animated bounce{{!leaving ? \'InUp\' : \'OutDown\'}}" ng-style="{backgroundImage: \'url(images/logo.png)\'}"></div>' +
                 '<div class="tip-dialog-x animated fade{{!leaving ? \'In\' : \'Out\'}}" ng-click="closeTipDialog()"> סגור <i class="fa fa-times"></i>' +
