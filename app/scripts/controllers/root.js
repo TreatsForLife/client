@@ -68,14 +68,19 @@ angular.module('clientApp')
             }, 0);
         }
 
+        $scope.pushMenuOpen = false;
         $rootScope.openPushMenu = function () {
+            if ($scope.pushMenuOpen) return;
             angular.element('body').addClass('pushed');
             angular.element('#menuRight').addClass('cbp-spmenu-open');
+            $scope.pushMenuOpen = true;
             $location.search({'push':'1'});
         };
         $rootScope.closePushMenu = function () {
+            if (!$scope.pushMenuOpen) return;
             angular.element('body').removeClass('pushed');
             angular.element('#menuRight').removeClass('cbp-spmenu-open');
+            $scope.pushMenuOpen = false;
             $location.search({'push':null});
         };
 

@@ -19,6 +19,7 @@ angular.module('clientApp')
                 scope.watched = {};
 
                 scope.$on('showTipDialog', function (e, filename, force) {
+                    if (scope.shown) return;
                     if (!force && scope.watched[filename]) return;
                     $timeout(function () {
                         scope.contentUrl = 'views/partials/' + filename + '-dialog.html';
@@ -28,11 +29,13 @@ angular.module('clientApp')
                     scope.watched[filename] = true;
                 });
                 scope.closeTipDialog = function () {
+                    if (!scope.shown) return;
                     scope.leaving = true;
                     $timeout(function () {
                         scope.shown = false;
                         scope.leaving = false;
                     }, 1000);
+                    debugger;
                     $location.search({'dialog':null});
                 }
 

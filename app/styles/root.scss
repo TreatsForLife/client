@@ -180,16 +180,19 @@ i {
 //general classes
 
 .color-white{
-  color: $scheme-white;
+  color: $scheme-white !important;
 }
 .color-blue{
-  color: $scheme-blue;
+  color: $scheme-blue !important;
 }
 .color-green{
-  color: $scheme-green;
+  color: $scheme-green !important;
 }
 .color-red{
-  color: $scheme-red;
+  color: $scheme-red !important;
+}
+.color-facebook{
+  color: #3b5998 !important;
 }
 .stretch{
   width: 100%;
