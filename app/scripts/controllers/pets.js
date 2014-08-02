@@ -17,18 +17,20 @@ angular.module('clientApp')
             $rootScope.bodyClass += ' lonely';
         } else {
             if ($scope.user) {
-                $location.path('/pets' + ($scope.user.pet ? '' : '/lonely'));
+                $location.path('/' + ($scope.user.pet ? 'pet' : 'pets/lonely'));
             } else {
                 $scope.$on('userIsFetched', function () {
-                    $location.path('/pets' + ($scope.user.pet ? '' : '/lonely'));
+                    $location.path('/' + ($scope.user.pet ? 'pet' : 'pets/lonely'));
                 });
             }
         }
 
-        $timeout(function () {
-            if (!window.localStorage['pets-dialog-shown']) {
-                $scope.showDialog('pets');
-            }
+        $scope.$on('userIsFetched', function () {
+            $timeout(function () {
+                if (filter == 'lonely' && !$scope.user.pet) {
+                    $scope.showDialog('pets');
+                }
+            });
         });
 
         window.debug = $scope;
