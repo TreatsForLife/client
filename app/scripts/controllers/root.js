@@ -77,6 +77,13 @@ angular.module('clientApp')
             angular.element('#menuRight').removeClass('cbp-spmenu-open');
         };
 
+        $rootScope.showDialog = function(dialog){
+            $timeout(function () {
+                $scope.$broadcast('showTipDialog', dialog);
+                $scope.$emit('showTipDialog', dialog);
+            }, 0);
+        }
+
         $timeout(function () {
             $scope.canAnimate = true;
             $rootScope.windowHeight = $(window).height();

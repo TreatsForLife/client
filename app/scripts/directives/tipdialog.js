@@ -3,7 +3,6 @@
 angular.module('clientApp')
     .directive('tipDialog', ['$timeout', function ($timeout) {
         return {
-            scope: true,
             template: '<div class="tip-dialog-container" ng-show="shown">' +
                 '<div class="tip-dialog-wrapper">' +
                 '<div class="tip-dialog animated bounce{{!leaving ? \'InDown\' : \'OutUp\'}}"><div class="rtl" ng-include="contentUrl"></div></div>' +
@@ -22,7 +21,6 @@ angular.module('clientApp')
                     $timeout(function () {
                         scope.contentUrl = 'views/partials/' + filename + '-dialog.html';
                         scope.shown = true;
-                        scope.$digest();
                     }, 100);
                 });
                 scope.closeTipDialog = function () {
