@@ -39,11 +39,12 @@ div.container.welcome {
       margin: 10px auto;
       display: block;
       position: relative;
-      font-size: 18px;
-      color: #efefef;
+      font-size: 26px;
       text-align: center;
       width: 100%;
       padding: 0 15px;
+      font-weight: bold;
+      color: $scheme-red;
     }
 
     .welcome-login-explained {
