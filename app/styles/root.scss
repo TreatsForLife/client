@@ -191,6 +191,10 @@ i {
 .color-red{
   color: $scheme-red;
 }
+.stretch{
+  width: 100%;
+  display: block;
+}
 button, a.button, input[type="submit"] {
   font-size: 14px;
   background: none;

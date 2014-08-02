@@ -23,12 +23,6 @@ angular.module('clientApp')
             }
         }
 
-        $timeout(function () {
-            if (!window.localStorage['pet-dialog-shown']) {
-                $scope.showTipDialog('pet');
-            }
-        });
-
         $scope.getPetId = function () {
             $scope.pet_id = $routeParams['id'] || $rootScope.user_pet_id;
             if (!$scope.pet_id && $rootScope.user && $rootScope.user.pet && $rootScope.user.pet._id) {
@@ -43,7 +37,7 @@ angular.module('clientApp')
 
         $scope.getPet = function () {
             Pets.one({id: $scope.pet_id}, function (pet) {
-                $scope.pet = pet;
+                $rootScope.pet = pet;
                 $rootScope.navbarTitle = pet.name;
                 $scope.donations = [];
                 $scope.donations[0] = pet;
@@ -133,11 +127,11 @@ angular.module('clientApp')
         }
 
         $scope.greetAdoption = function () {
-            $scope.$broadcast('showTipDialog', 'adopted');
+            $scope.showDialog('adopted');
         };
 
         $scope.adopt = function () {
-            $scope.$broadcast('showTipDialog', 'adopt');
+            $scope.showDialog('adopt');
         }
 
         $scope.share = function () {

@@ -84,6 +84,14 @@ angular.module('clientApp')
             }, 0);
         }
 
+        $rootScope.closeDialog = function(dialog){
+            $timeout(function () {
+                $scope.$broadcast('closeTipDialog', dialog);
+                $scope.$emit('closeTipDialog', dialog);
+            }, 0);
+        }
+
+
         $timeout(function () {
             $scope.canAnimate = true;
             $rootScope.windowHeight = $(window).height();

@@ -17,7 +17,7 @@ angular.module('clientApp')
 
         $timeout(function () {
             if (!window.localStorage['shop-dialog-shown']) {
-//                $scope.showTipDialog('shop');
+//                $scope.showDialog('shop');
             }
         });
 

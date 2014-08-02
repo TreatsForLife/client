@@ -30,6 +30,11 @@ angular.module('clientApp')
                         scope.leaving = false;
                     }, 1000);
                 }
+
+                scope.$on('closeTipDialog', function () {
+                    scope.closeTipDialog();
+                });
             }
+
         };
     }]);
