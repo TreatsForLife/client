@@ -27,7 +27,8 @@ angular.module('clientApp')
 
         $scope.$on('userIsFetched', function () {
             $timeout(function () {
-                if (filter == 'lonely' && !$scope.user.pet) {
+                if (filter == 'lonely' && !$scope.user.pet && !$scope.petsDialogShown) {
+                    $scope.petsDialogShown = true;
                     $scope.showDialog('pets');
                 }
             });

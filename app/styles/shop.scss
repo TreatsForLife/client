@@ -68,17 +68,17 @@ ul.shop-wrapper {
         font-size: 26px;
         font-family: $font-alef;
       }
-      input {
+      i {
         width: 0px;
         height: 30px;
-        font-family: FontAwesome;
         font-size: 40px;
         margin-top: 1px;
+        margin-left: 3px;
         &::after {
           content: "\f1db";
           color: $button-green;
         }
-        &:checked, &.fixed {
+        &.checked, &.fixed {
           &::after {
             content: "\f058";
             color: $button-green;

@@ -6,7 +6,7 @@
         <div class="shop-item-name" ng-bind="treat.name"></div>
         <div class="shop-item-desc" ng-bind="treat.desc">אחלה חטיף תענוג גדול!</div>
         <div class="shop-item-checkbox">
-            <input type="checkbox" ng-model="treat.cart" ng-class="{fixed: treat.fixed}" ng-change="cartChanged()"/>
+            <i class="fa" ng-class="{checked: treat.cart, fixed: treat.fixed}" ></i>
         </div>
         <div class="clear"></div>
     </li>

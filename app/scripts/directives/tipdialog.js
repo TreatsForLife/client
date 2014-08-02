@@ -16,17 +16,14 @@ angular.module('clientApp')
             link: function (scope, element, attrs) {
                 scope.shown = false;
                 scope.leaving = false;
-                scope.watched = {};
 
-                scope.$on('showTipDialog', function (e, filename, force) {
+                scope.$on('showTipDialog', function (e, filename) {
                     if (scope.shown) return;
-                    if (!force && scope.watched[filename]) return;
                     $timeout(function () {
                         scope.contentUrl = 'views/partials/' + filename + '-dialog.html';
                         scope.shown = true;
                     }, 100);
                     $location.search({'dialog':'1'});
-                    scope.watched[filename] = true;
                 });
                 scope.closeTipDialog = function () {
                     if (!scope.shown) return;
@@ -35,7 +32,6 @@ angular.module('clientApp')
                         scope.shown = false;
                         scope.leaving = false;
                     }, 1000);
-                    debugger;
                     $location.search({'dialog':null});
                 }
 
