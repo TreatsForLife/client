@@ -16,14 +16,14 @@ div.container.welcome {
       max-width: 266px;
       max-height: 370px;
       margin: auto;
-      background: image-url('animated-logo.png') no-repeat 0 center;
+      background: url('../images/animated-logo.png') no-repeat 0 center;
       background-size: auto 100%;
     }
     .welcome-logo {
-      background-image: image-url('animated-logo-end.png');
+      background-image: url('../images/animated-logo-end.png');
     }
     .welcome-logo-animation {
-      background-image: image-url('animated-logo.png');
+      background-image: url('../images/animated-logo.png');
     }
   }
 
