@@ -53,6 +53,10 @@ angular.module('clientApp', [
     })
     .run(function ($location, $cookies) {
 
+        if (location.protocol == 'file:'){
+            location.href = 'http://treatsforlife.org';
+        }
+
         if ($location.path().length <= 1) {
             console.log('$cookies', $cookies.fb_user);
             if (!$cookies.fb_id || $location.search()['s'] == 'w') {
