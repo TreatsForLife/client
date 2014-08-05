@@ -13,13 +13,13 @@
     },
     "installed_plugins": {
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.treatsforlife484935"
+            "PACKAGE_NAME": "com.ionicframework.treatsforlife183765"
         },
         "org.apache.cordova.console": {
-            "PACKAGE_NAME": "com.ionicframework.treatsforlife484935"
+            "PACKAGE_NAME": "com.ionicframework.treatsforlife183765"
         },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.ionicframework.treatsforlife484935"
+            "PACKAGE_NAME": "com.ionicframework.treatsforlife183765"
         }
     },
     "dependent_plugins": {}
