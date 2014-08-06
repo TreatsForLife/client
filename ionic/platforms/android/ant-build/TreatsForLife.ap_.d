@@ -60,7 +60,6 @@
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/animated-share-button.png \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/pet_male.png \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/animated-logo-end.png \
-/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/logo (copy).png \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/scripts/controllers \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/scripts/services \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/scripts/directives \
