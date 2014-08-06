@@ -17,8 +17,4 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
-  <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
-    <param name="APP_ID" value="601219569953172" />
-    <param name="APP_NAME" value="treatsforlife" />
-  </gap:plugin>
 </widget>
