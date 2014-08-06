@@ -58,8 +58,9 @@ angular.module('clientApp')
                 if (response.authResponse) {
 //                    console.log('Welcome!  Fetching your information.... ');
 //                    $cookies['fb_at'] = response.authResponse.accessToken;
-                    var fb_id = $cookies['fb_id'] = response.authResponse.userID;
-                    console.log('saved fb_id cookie', $cookies['fb_id'], response.authResponse.userID);
+                    var fb_id = response.authResponse.userID;
+                    localStorage.setItem('fb_id', fb_id);
+                    console.log('saved fb_id cookie', localStorage['fb_id'], response.authResponse.userID);
                     FB.api('/me', function (response) {
                         console.log('fetched /me data from facebook - creating user', response);
                         Users.create({fb_id: fb_id, name: response.name, email: response.email, image: 'https://graph.facebook.com/' + response.username + '/picture'}, function (user) {
@@ -79,7 +80,8 @@ angular.module('clientApp')
                 console.log('Response arrived from facebook', response);
                 if (response.status === 'connected') {
                     console.log('the user is logged in and has authenticated your app', response.authResponse);
-                    var fb_id = $cookies['fb_id'] = response.authResponse.userID;
+                    var fb_id = response.authResponse.userID;
+                    localStorage.setItem('fb_id', fb_id);
                     var user = $rootScope.user;
                     if (user) {
                         console.log('User found in scope', $rootScope.user);
@@ -115,15 +117,15 @@ angular.module('clientApp')
         function storeUserAndRedirect(user) {
             console.log('storeUserAndRedirect called', user);
             if (typeof user == 'undefined' || !user || !user._id) return;
-            $cookies['user_id'] = user._id;
-            console.log('saved user_id cookie', $cookies['user_id'], user._id);
+            localStorage.setItem('user_id', user._id);
+            console.log('saved user_id cookie', localStorage['user_id'], user._id);
             $rootScope.user = user;
             console.log('saved user to scope', $rootScope.user, user);
             if (user.pet) {
-                $cookies['user_pet_id'] = user.pet ? user.pet._id : '';
-                console.log('saved user_pet_id cookie', $cookies['user_pet_id'], user.pet._id);
+                localStorage.setItem('user_pet_id', (user.pet ? user.pet._id : ''));
+                console.log('saved user_pet_id cookie', localStorage['user_pet_id'], user.pet._id);
             }
-            var returnUrl = localStorage.getItem("returnUrl");
+            var returnUrl = localStorage.returnUrl;
             console.log('got return url from local storage', returnUrl);
             $timeout(function () {
                 if (returnUrl && returnUrl != '/welcome') {

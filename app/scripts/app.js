@@ -58,10 +58,11 @@ angular.module('clientApp', [
         }
 
         if ($location.path().length <= 1) {
-            console.log('$cookies', $cookies.fb_user);
-            if (!$cookies.fb_id || $location.search()['s'] == 'w') {
+            console.log('$cookies', $cookies);
+            console.log('localStorage', localStorage);
+            if (!localStorage.fb_id || $location.search()['s'] == 'w') {
                 $location.path('/welcome');
-            } else if (!$cookies.user_pet_id) {
+            } else if (!localStorage.user_pet_id) {
                 $location.path('/pets');
             } else {
                 $location.path('/pet');
