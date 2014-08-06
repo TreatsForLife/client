@@ -44,6 +44,7 @@
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/fonts/Alef-regular.svg \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/logo96.png \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/buy_first.jpg \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/animated-logo-loop.gif \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/logo.png \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/animated-like-button.png \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/buy_last.jpg \
@@ -59,10 +60,10 @@
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/animated-share-button.png \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/pet_male.png \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/images/animated-logo-end.png \
-/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/scripts/8b0d4af7.scripts.js \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/scripts/319f9949.vendor.js \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/scripts/e3cb1f9e.scripts.js \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/79f6090a.main.css \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/09eb5eae.vendor.css \
-/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/981f5bd9.main.css \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/bower_components/angular-seo \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/bower_components/momentjs \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/bower_components/angular-sanitize \
