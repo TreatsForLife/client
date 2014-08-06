@@ -42,6 +42,8 @@ angular.module('clientApp')
                 $scope.donations = [];
                 $scope.donations[0] = pet;
 
+                $scope.initButtonInterval();
+
                 Donations.given({pet_id: $scope.pet_id}, function (res) {
                     $timeout(function () {
                         for (var i = 0, donation; donation = res[i]; i++) {
@@ -79,6 +81,7 @@ angular.module('clientApp')
                         }
 
                         //aprove paypal payments & get pending items from db
+                        debugger;
                         var q = $location.search();
                         if (q['item_number']) {
                             Donations.approve({item_number: q['item_number']}, function (res) {
@@ -189,24 +192,25 @@ angular.module('clientApp')
             });
         }
 
+        $scope.initButtonInterval = function(){
         var showButtonInterval = $interval(function () {
             if (!$scope.user || !$scope.pet) return;
-            if (!!($scope.pet.user && ($scope.pet.user._id == $scope.user_id))) {
+            if (!!($scope.pet.user && ($scope.pet.user._id == $scope.user._id))) {
                 // BUY : if its my pet
                 $scope.showButton = 'buy';
-                $rootScope.bodyClass += ' mine';
+                $rootScope.bodyBg = ' mine';
             } else if (!!(!$scope.pet.user && $scope.user.pet)) {
                 // SHARE : if I have a pet and the pet has no owner
                 $scope.showButton = 'share';
-                $rootScope.bodyClass += ' lonely';
-            } else if (!!($scope.pet.user && ($scope.pet.user._id != $scope.user_id))) {
+                $rootScope.bodyBg = ' lonely';
+            } else if (!!($scope.pet.user && ($scope.pet.user._id != $scope.user._id))) {
                 // LOVE : if the pet has owner and its not me
                 $scope.showButton = 'love';
-                $rootScope.bodyClass += ' adopted';
+                $rootScope.bodyBg = ' adopted';
             } else if (!$scope.pet.user && !$scope.user.pet) {
                 //ADOPT : if I have no pet and the this pet has no owner
                 $scope.showButton = 'adopt';
-                $rootScope.bodyClass += ' lonely';
+                $rootScope.bodyBg = ' lonely';
             } else {
                 $scope.showButton = false;
             }
@@ -214,6 +218,7 @@ angular.module('clientApp')
                 $interval.cancel(showButtonInterval);
 
         }, 250);
+        }
 
         $scope.animateButton = function () {
             if (!$scope.showButton) return;
