@@ -110,14 +110,14 @@ angular.module('clientApp')
 
             $timeout(function () {
                 var min_button_height = 100;
-                $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
+                $scope.grassHeight = $scope.windowHeight - ($scope.picHeight + 62) - 40 - ($scope.showCart ? 50 : 0);
                 $scope.buttonHeight = $scope.buttonWidth = Math.min(parseInt(($scope.grassHeight - 20) * 0.9), 150);
                 $scope.buttonMargin = ($scope.grassHeight - $scope.buttonHeight) / 2;
                 if ($scope.buttonHeight < min_button_height) {
                     $scope.buttonHeight = $scope.buttonWidth = min_button_height;
                     $scope.buttonMargin = 20;
                     $scope.grassHeight = min_button_height + ($scope.buttonMargin * 2);
-                    $scope.picHeight = $scope.windowHeight - ($scope.grassHeight + 62) - 30 - ($scope.showCart ? 50 : 0);
+                    $scope.picHeight = $scope.windowHeight - ($scope.grassHeight + 62) - 40 - ($scope.showCart ? 50 : 0);
                 }
 
                 if (iterations > 0) {

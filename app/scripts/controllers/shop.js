@@ -72,7 +72,7 @@ angular.module('clientApp')
 
         $scope.totalToPay = 0;
         $scope.cartChanged = function (i) {
-            if (i) {
+            if (angular.isDefined(i)) {
                 $timeout(function(){
                     $scope.treats[i].cart = !$scope.treats[i].cart;
                 });
