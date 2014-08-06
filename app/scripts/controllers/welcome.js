@@ -49,7 +49,13 @@ angular.module('clientApp')
         }, 500);
 
         $scope.fbLogin = function () {
-            if (typeof(FB) == 'undefined' || !FB) return;
+            if (typeof(FB) == 'undefined' || !FB) {
+                if (typeof(facebookConnectPlugin) == 'undefined' || !facebookConnectPlugin) {
+                    return;
+                }else{
+                    FB = facebookConnectPlugin;
+                }
+            }
 //            localStorage.setItem('fb', true);
 //            console.log(localStorage);
 //            $location.path('/');
@@ -75,7 +81,13 @@ angular.module('clientApp')
         }
 
         $timeout(function () {
-            if (typeof(FB) == 'undefined' || !FB) return;
+            if (typeof(FB) == 'undefined' || !FB) {
+                if (typeof(facebookConnectPlugin) == 'undefined' || !facebookConnectPlugin) {
+                    return;
+                }else{
+                    FB = facebookConnectPlugin;
+                }
+            }
             FB.getLoginStatus(function (response) {
                 console.log('Response arrived from facebook', response);
                 if (response.status === 'connected') {
