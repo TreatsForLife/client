@@ -1,8 +1,8 @@
-<div class="pets-text rtl" ng-if="user && !user.pet">
+<div class="pets-text rtl" ng-if="filter=='lonely' && (user && !user.pet)">
     {{pets.length}} מאיתנו עוד כאן, מחכים לאימוץ.
     אז את מי מאיתנו בא לך לקחת?
 </div>
-<div class="pets-text rtl" ng-if="user.pet">
+<div class="pets-text rtl" ng-if="filter=='lonely' && user.pet">
     {{pets.length}} מאיתנו עוד כאן, מחכים לאימוץ.
     מה דעתך לעזור לאחד מאיתנו למצוא בעלים?
 </div>
@@ -10,15 +10,12 @@
     <div ng-repeat="pet in pets">
         <a class="pet" ng-href="#/pet/{{pet._id}}">
             <div class="pet-inner">
-                <div class="pet-pic"
-                     ng-style="{'background-image': 'url('+pet.media.image+')', height: picHeight}"></div>
-                <!--<div class="pets-zoom"><i class="fa fa-search-plus"></i></div>-->
+                <div class="pet-pic" ng-style="{'background-image': 'url('+pet.media.image+')', height: picHeight}"></div>
                 <div class="pet-bar">
                     <img class="owner-pic" ng-src="{{pet.user.image || 'images/default_owner.png'}}"/>
                     <img class="pet-gender" ng-src="images/pet_male.png"/>
 
                     <div class="pet-name" ng-bind="pet.name"></div>
-                    <!--<i class="fa fa-search-plus"></i>-->
                 </div>
             </div>
         </a>

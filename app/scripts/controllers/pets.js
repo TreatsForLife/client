@@ -5,7 +5,7 @@ angular.module('clientApp')
         $rootScope.bodyClass = 'pets';
         $scope.picHeight = $('.container').width() * 0.6;
 
-        var filter = $routeParams['filter'];
+        var filter = $scope.filter = $routeParams['filter'];
 
         if (filter == 'adopted') {
             $rootScope.navbarTitle = 'כלבים מאומצים';
