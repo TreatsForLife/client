@@ -3,10 +3,4 @@ node_modules
 .sass-cache
 app/bower_components
 
-
-platforms/**/
-www
-!www/config.xml
-!www/res
-
 .idea/

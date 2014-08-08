@@ -1,0 +1,13 @@
+{
+  "name": "libgif",
+  "_cacheHeaders": {
+    "ETag": "\"0137e2793b56da5cd401c158f6565cd22d30a357\"",
+    "Content-Length": "22296",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:0137e2793",
+  "main": "index.js",
+  "_source": "https://raw.github.com/buzzfeed/libgif-js/master/libgif.js",
+  "_target": "*",
+  "_originalSource": "https://raw.github.com/buzzfeed/libgif-js/master/libgif.js"
+}
