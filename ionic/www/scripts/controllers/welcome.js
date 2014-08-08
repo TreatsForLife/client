@@ -7,11 +7,11 @@ angular.module('clientApp')
         $scope.placeLogo = function (iterations) {
             if (typeof iterations == 'undefined') iterations = 5;
             $timeout(function () {
-                if (angular.element('.welcome-app-explained').length > 0) {
-                    $rootScope.windowHeight = angular.element(window).height();
-                    $rootScope.windowWidth = angular.element(window).width();
+                if ($('.welcome-app-explained').length > 0) {
+                    $rootScope.windowHeight = $(window).height();
+                    $rootScope.windowWidth = $(window).width();
 
-                    $scope.logoSpace = $rootScope.windowHeight - angular.element('.bottom-wrapper').height();
+                    $scope.logoSpace = $rootScope.windowHeight - $('.bottom-wrapper').height();
                     $scope.logoHeight = ($scope.logoSpace > 370) ? 370 : ($scope.logoSpace - 80);
                     $scope.logoMargin = parseInt(($scope.logoSpace - $scope.logoHeight) / 2) + 'px auto';
                     $scope.logoWidth = parseInt($scope.logoHeight / 370 * 266);
@@ -39,7 +39,7 @@ angular.module('clientApp')
                     });
                     return;
                 }
-                angular.element('.welcome-logo-animation').css('background-position-x', -1 * animationBgPosition);
+                $('.welcome-logo-animation').css('background-position-x', -1 * animationBgPosition);
                 frame--;
                 animationBgPosition += dim;
             }, (animationDuration / numOfFrames))
