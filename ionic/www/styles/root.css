@@ -1,0 +1,403 @@
+/* line 11, ../../app/styles/root.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* remember to define focus styles! */
+/* line 25, ../../app/styles/root.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 29, ../../app/styles/root.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 35, ../../app/styles/root.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 40, ../../app/styles/root.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 45, ../../app/styles/root.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+/* line 51, ../../app/styles/root.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+/* line 55, ../../app/styles/root.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 61, ../../app/styles/root.scss */
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: transparent;
+  font-family: verdana, arial, helvetica, sans-serif;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* line 73, ../../app/styles/root.scss */
+.container-wrapper {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  max-width: 600px;
+  position: relative;
+  font-family: "Alef", Verdana, Arial, Helvetica;
+  margin: 0 auto;
+}
+
+/* line 82, ../../app/styles/root.scss */
+.container {
+  min-height: 100%;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  margin: 0 auto;
+}
+/* line 89, ../../app/styles/root.scss */
+.container.animated.ng-enter {
+  position: absolute;
+  top: 0;
+  z-index: 888;
+}
+/* line 94, ../../app/styles/root.scss */
+.container.animated.ng-leave {
+  animation: bounceOutLeft;
+  animation-duration: 1s;
+  z-index: 999;
+}
+/* line 100, ../../app/styles/root.scss */
+.container.animated.goingBack.ng-enter-active {
+  position: absolute;
+  top: 0;
+  animation: bounceInLeft;
+  animation-duration: 1s;
+  z-index: 999;
+}
+/* line 107, ../../app/styles/root.scss */
+.container.animated.goingBack.ng-leave-active {
+  position: absolute;
+  top: 0;
+  animation: none;
+  animation-duration: 1s;
+  z-index: 888;
+}
+/* line 116, ../../app/styles/root.scss */
+.container.animated.zoom.ng-enter {
+  animation: zoomIn 0.5s both ease-in;
+  z-index: 9999;
+}
+/* line 120, ../../app/styles/root.scss */
+.container.animated.zoom.ng-leave {
+  animation: fadeOut 0.5s both ease-in;
+  z-index: 8888;
+}
+
+/* line 128, ../../app/styles/root.scss */
+html {
+  background: #ccc;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* line 134, ../../app/styles/root.scss */
+.page {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+/* line 144, ../../app/styles/root.scss */
+.rtl {
+  direction: rtl;
+}
+
+/* line 149, ../../app/styles/root.scss */
+.right {
+  direction: rtl;
+}
+
+/* line 153, ../../app/styles/root.scss */
+.clear {
+  clear: both;
+}
+
+/* line 157, ../../app/styles/root.scss */
+i {
+  text-rendering: auto !important;
+}
+
+@font-face {
+  font-family: 'Alef';
+  src: url("/fonts/Alef-bold.eot");
+  src: url("/fonts/Alef-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Alef-bold.woff") format("woff"), url("/fonts/Alef-bold.ttf") format("truetype"), url("/fonts/Alef-bold.svg#alefbold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alef';
+  src: url("/fonts/Alef-regular.eot");
+  src: url("/fonts/Alef-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Alef-regular.woff") format("woff"), url("/fonts/Alef-regular.ttf") format("truetype"), url("/fonts/Alef-regular.svg#alefregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 182, ../../app/styles/root.scss */
+.color-white {
+  color: #fefefe !important;
+}
+
+/* line 185, ../../app/styles/root.scss */
+.color-blue {
+  color: #5eb4c1 !important;
+}
+
+/* line 188, ../../app/styles/root.scss */
+.color-green {
+  color: #9aca13 !important;
+}
+
+/* line 191, ../../app/styles/root.scss */
+.color-red {
+  color: #df2b46 !important;
+}
+
+/* line 194, ../../app/styles/root.scss */
+.color-facebook {
+  color: #3b5998 !important;
+}
+
+/* line 197, ../../app/styles/root.scss */
+.blacknwhite {
+  filter: grayscale(100%);
+}
+
+/* line 200, ../../app/styles/root.scss */
+.stretch {
+  width: 100%;
+  display: block;
+}
+
+/* line 204, ../../app/styles/root.scss */
+button, a.button, input[type="submit"] {
+  font-size: 14px;
+  background: none;
+  cursor: pointer;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+  outline: none;
+  position: relative;
+  border-radius: 5px;
+  user-select: none;
+  background: white;
+  background: linear-gradient(#ffffff, #f1f1f1);
+  /* Standard syntax (must be last) */
+  border: none;
+  font-family: "Alef", Verdana, Arial, Helvetica;
+}
+/* line 222, ../../app/styles/root.scss */
+button:active, button.button-active, button.button-active:hover, button.button-active:active, a.button:active, a.button.button-active, a.button.button-active:hover, a.button.button-active:active, input[type="submit"]:active, input[type="submit"].button-active, input[type="submit"].button-active:hover, input[type="submit"].button-active:active {
+  background: white;
+  background: linear-gradient(#f1f1f1, #ffffff);
+  /* Standard syntax (must be last) */
+  box-shadow: none;
+  text-decoration: none;
+}
+/* line 229, ../../app/styles/root.scss */
+button.button-disabled, button.button-disabled:hover, button.button-disabled:active, a.button.button-disabled, a.button.button-disabled:hover, a.button.button-disabled:active, input[type="submit"].button-disabled, input[type="submit"].button-disabled:hover, input[type="submit"].button-disabled:active {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+  text-decoration: none;
+  border-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+}
+/* line 237, ../../app/styles/root.scss */
+button.button-facebook, a.button.button-facebook, input[type="submit"].button-facebook {
+  background: #184196;
+  background: linear-gradient(#385eae, #184196);
+  /* Standard syntax (must be last) */
+  border-color: transparent;
+  color: white;
+}
+/* line 242, ../../app/styles/root.scss */
+button.button-facebook:active, button.button-facebook.button-active, button.button-facebook.button-active:hover, button.button-facebook.button-active:active, a.button.button-facebook:active, a.button.button-facebook.button-active, a.button.button-facebook.button-active:hover, a.button.button-facebook.button-active:active, input[type="submit"].button-facebook:active, input[type="submit"].button-facebook.button-active, input[type="submit"].button-facebook.button-active:hover, input[type="submit"].button-facebook.button-active:active {
+  background: #184196;
+  background: linear-gradient(#184196, #385eae);
+  /* Standard syntax (must be last) */
+  box-shadow: none;
+  text-decoration: none;
+}
+/* line 249, ../../app/styles/root.scss */
+button.button-blue, a.button.button-blue, input[type="submit"].button-blue {
+  background: #3772bc;
+  background: linear-gradient(#4187df, #3772bc);
+  /* Standard syntax (must be last) */
+  border-color: transparent;
+  color: white;
+}
+/* line 254, ../../app/styles/root.scss */
+button.button-blue:active, button.button-blue.button-active, button.button-blue.button-active:hover, button.button-blue.button-active:active, a.button.button-blue:active, a.button.button-blue.button-active, a.button.button-blue.button-active:hover, a.button.button-blue.button-active:active, input[type="submit"].button-blue:active, input[type="submit"].button-blue.button-active, input[type="submit"].button-blue.button-active:hover, input[type="submit"].button-blue.button-active:active {
+  background: #3772bc;
+  background: linear-gradient(#3772bc, #4187df);
+  /* Standard syntax (must be last) */
+  box-shadow: none;
+  text-decoration: none;
+}
+/* line 261, ../../app/styles/root.scss */
+button.button-green, a.button.button-green, input[type="submit"].button-green {
+  background: #30a440;
+  background: linear-gradient(#35b848, #30a440);
+  /* Standard syntax (must be last) */
+  border-color: transparent;
+  color: white;
+}
+/* line 267, ../../app/styles/root.scss */
+button.button-green:active, button.button-green.button-active, button.button-green.button-active:hover, button.button-green.button-active:active, a.button.button-green:active, a.button.button-green.button-active, a.button.button-green.button-active:hover, a.button.button-green.button-active:active, input[type="submit"].button-green:active, input[type="submit"].button-green.button-active, input[type="submit"].button-green.button-active:hover, input[type="submit"].button-green.button-active:active {
+  background: #30a440;
+  background: linear-gradient(#30a440, #35b848);
+  /* Standard syntax (must be last) */
+  box-shadow: none;
+  text-decoration: none;
+}
+/* line 274, ../../app/styles/root.scss */
+button.button-red, a.button.button-red, input[type="submit"].button-red {
+  background: #be3636;
+  background: linear-gradient(#d84040, #be3636);
+  /* Standard syntax (must be last) */
+  border-color: transparent;
+  color: white;
+}
+/* line 280, ../../app/styles/root.scss */
+button.button-red:active, button.button-red.button-active, button.button-red.button-active:hover, button.button-red.button-active:active, a.button.button-red:active, a.button.button-red.button-active, a.button.button-red.button-active:hover, a.button.button-red.button-active:active, input[type="submit"].button-red:active, input[type="submit"].button-red.button-active, input[type="submit"].button-red.button-active:hover, input[type="submit"].button-red.button-active:active {
+  background: #be3636;
+  background: linear-gradient(#be3636, #d84040);
+  /* Standard syntax (must be last) */
+  box-shadow: none;
+  text-decoration: none;
+}
+
+/* line 293, ../../app/styles/root.scss */
+.delayed-animation {
+  animation-delay: 0.5s;
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+  /* line 299, ../../app/styles/root.scss */
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+  /* line 306, ../../app/styles/root.scss */
+  from {
+    transform: translateX(100%);
+  }
+
+  /* line 309, ../../app/styles/root.scss */
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  /* line 315, ../../app/styles/root.scss */
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideInLeft {
+  /* line 321, ../../app/styles/root.scss */
+  from {
+    transform: translateX(-100%);
+  }
+
+  /* line 324, ../../app/styles/root.scss */
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  /* line 330, ../../app/styles/root.scss */
+  from {
+    transform: scale(0);
+  }
+
+  /* line 333, ../../app/styles/root.scss */
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  /* line 339, ../../app/styles/root.scss */
+  from {
+    transform: scale(1);
+  }
+
+  /* line 342, ../../app/styles/root.scss */
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes fadeOut {
+  /* line 348, ../../app/styles/root.scss */
+  from {
+    opacity: 1;
+  }
+
+  /* line 351, ../../app/styles/root.scss */
+  to {
+    opacity: 0;
+  }
+}

@@ -342,8 +342,12 @@
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/scripts/directives/player.js \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/scripts/directives/draggable.js \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/pet.scss \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/pushmenu.css \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/welcome.css \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/navbar.scss \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/main.css \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/pets.scss \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/pet.css \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/welcome.scss \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/_consts.scss \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/shop.scss \
@@ -351,7 +355,13 @@
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/main.scss \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/tipDialog.scss \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/pushmenu.scss \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/navbar.css \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/pets.css \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/ui.css \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/root.css \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/shop.css \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/ui.scss \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/styles/tipDialog.css \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/bower_components/angular-seo \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/bower_components/momentjs \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/assets/www/bower_components/angular-sanitize \
