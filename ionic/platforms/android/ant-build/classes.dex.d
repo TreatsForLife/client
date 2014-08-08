@@ -10,6 +10,16 @@
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/org/apache/cordova/facebook/ConnectPlugin$5.class \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/org/apache/cordova/facebook/ConnectPlugin.class \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/facebook/android/R.class \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/facebook/android/R$style.class \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/facebook/android/R$styleable.class \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/facebook/android/R$dimen.class \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/facebook/android/R$drawable.class \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/facebook/android/R$layout.class \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/facebook/android/R$id.class \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/facebook/android/R$attr.class \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/facebook/android/R$color.class \
+/home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/facebook/android/R$string.class \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard.class \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard$2.class \
 /home/guy/Projects/TreatsForLife/client/ionic/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard$1.class \

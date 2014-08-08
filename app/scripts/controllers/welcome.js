@@ -49,8 +49,8 @@ angular.module('clientApp')
         }, 500);
 
         $scope.fbLogin = function () {
-            if (typeof(FB) == 'undefined' || !FB) {
-                if (typeof(facebookConnectPlugin) == 'undefined' || !facebookConnectPlugin) {
+            if (facebookConnectPlugin) {
+                if (typeof(FB) == 'undefined' || !FB) {
                     return;
                 }else{
                     FB = facebookConnectPlugin;
@@ -59,7 +59,7 @@ angular.module('clientApp')
 //            localStorage.setItem('fb', true);
 //            console.log(localStorage);
 //            $location.path('/');
-            FB.login(function (response) {
+            facebookConnectPlugin.login(function (response) {
                 console.log('FB login responded', response);
                 if (response.authResponse) {
 //                    console.log('Welcome!  Fetching your information.... ');
@@ -81,8 +81,8 @@ angular.module('clientApp')
         }
 
         $timeout(function () {
-            if (typeof(FB) == 'undefined' || !FB) {
-                if (typeof(facebookConnectPlugin) == 'undefined' || !facebookConnectPlugin) {
+            if (facebookConnectPlugin) {
+                if (typeof(FB) == 'undefined' || !FB) {
                     return;
                 }else{
                     FB = facebookConnectPlugin;
