@@ -1,0 +1,300 @@
+/* line 3, ../../app/styles/pet.scss */
+div.container.pet {
+  overflow: hidden;
+  transform: none;
+}
+/* line 8, ../../app/styles/pet.scss */
+div.container.pet.adopted {
+  background-color: #ffc408;
+}
+/* line 12, ../../app/styles/pet.scss */
+div.container.pet.lonely {
+  background-color: #df2b46;
+}
+/* line 16, ../../app/styles/pet.scss */
+div.container.pet.mine {
+  background-color: #9aca13;
+}
+/* line 20, ../../app/styles/pet.scss */
+div.container.pet #pet-pic {
+  margin-bottom: -10px;
+}
+/* line 24, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper {
+  background-color: #5eb4c1;
+  border-top: 1px solid #111;
+  transition: all 0.5s ease;
+  height: 100%;
+  position: fixed;
+  top: 100%;
+  margin-top: -50px;
+  width: 100%;
+  max-width: 600px;
+  z-index: 99;
+}
+/* line 35, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper.up {
+  margin-top: 0;
+  padding-top: 40px;
+  top: 0;
+  overflow: auto;
+}
+/* line 42, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper .cart-items {
+  float: right;
+  line-height: 50px;
+}
+/* line 45, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper .cart-items .cart-items-title {
+  font-size: 20px;
+  color: #fefefe;
+  float: right;
+  line-height: 50px;
+  text-align: right;
+  direction: rtl;
+}
+/* line 53, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper .cart-items .pet-info {
+  font-size: 32px;
+  color: #fefefe;
+  float: right;
+  margin: 0 12px;
+  line-height: 50px;
+}
+/* line 62, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper .cart-center {
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  height: 0;
+}
+/* line 67, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper .cart-center div {
+  display: inline-block;
+  width: 20px;
+  height: 6px;
+  border: 1px solid #111;
+  border-width: 1px 0;
+  margin: 22px;
+}
+/* line 77, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper .cart-timer {
+  float: left;
+  line-height: 50px;
+}
+/* line 80, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper .cart-timer .pet-clock {
+  font-size: 32px;
+  color: #fefefe;
+  float: left;
+  line-height: 50px;
+  margin: 0 12px;
+}
+/* line 88, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper .cart-timer .pet-timer {
+  font-size: 20px;
+  color: #fefefe;
+  float: left;
+  height: 50px;
+}
+/* line 96, ../../app/styles/pet.scss */
+div.container.pet .cart-wrapper .cart-shop-title {
+  font-size: 16px;
+  color: #fefefe;
+  text-align: center;
+  padding: 15px;
+}
+/* line 104, ../../app/styles/pet.scss */
+div.container.pet .pet-treat {
+  width: 100px;
+}
+
+/* line 110, ../../app/styles/pet.scss */
+.treat-wrapper {
+  text-align: center;
+  margin-top: 0px;
+}
+/* line 114, ../../app/styles/pet.scss */
+.treat-wrapper .pet-buy-button {
+  background-image: url("/images/buy_button_row.png");
+  margin: auto;
+  background-position: 0 0;
+  background-size: auto 100%;
+}
+/* line 121, ../../app/styles/pet.scss */
+.treat-wrapper .pet-share-button {
+  background-image: url("/images/animated-share-button.png");
+  margin: auto;
+  background-position: 0 0;
+  background-size: auto 100%;
+}
+/* line 128, ../../app/styles/pet.scss */
+.treat-wrapper .pet-like-button {
+  background-image: url("/images/animated-like-button.png");
+  margin: auto;
+  background-position: 0 0;
+  background-size: auto 100%;
+}
+/* line 135, ../../app/styles/pet.scss */
+.treat-wrapper .pet-adopt-button-gif {
+  background-image: url("/images/animated-adopt-button.gif");
+  margin: auto;
+  background-position: 0 0;
+  background-size: auto 100%;
+}
+/* line 141, ../../app/styles/pet.scss */
+.treat-wrapper .pet-adopt-button {
+  background-image: url("/images/animated-adopt-button.png");
+  margin: auto;
+  background-position: 0 0;
+  background-size: auto 100%;
+}
+/* line 149, ../../app/styles/pet.scss */
+.treat-wrapper .treat-share-wrapper i {
+  color: #df2b46;
+}
+/* line 151, ../../app/styles/pet.scss */
+.treat-wrapper .treat-share-wrapper i.fa-inverse {
+  color: white;
+}
+/* line 157, ../../app/styles/pet.scss */
+.treat-wrapper .treat-love-wrapper i.fa-circle {
+  color: #ffc408;
+}
+/* line 160, ../../app/styles/pet.scss */
+.treat-wrapper .treat-love-wrapper i.fa-heart, .treat-wrapper .treat-love-wrapper i.fa-heart-o {
+  margin-top: 4px;
+  color: #df2b46;
+}
+
+/* line 167, ../../app/styles/pet.scss */
+.swipe {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 173, ../../app/styles/pet.scss */
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 178, ../../app/styles/pet.scss */
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+/* line 185, ../../app/styles/pet.scss */
+.swipe-wrap.treat {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 85%;
+}
+
+/* line 192, ../../app/styles/pet.scss */
+.dialog-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 100000;
+}
+/* line 200, ../../app/styles/pet.scss */
+.dialog-video video {
+  width: 100%;
+  height: 100%;
+}
+/* line 204, ../../app/styles/pet.scss */
+.dialog-video #video-loading-indicator {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -31px;
+  margin-left: -65px;
+  border-radius: 5px;
+  color: white;
+}
+/* line 215, ../../app/styles/pet.scss */
+.dialog-video #video-loading-indicator i {
+  margin-left: 10px;
+}
+/* line 219, ../../app/styles/pet.scss */
+.dialog-video #video-controls-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 223, ../../app/styles/pet.scss */
+.dialog-video #video-controls-wrapper.ng-enter, .dialog-video #video-controls-wrapper.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+/* line 226, ../../app/styles/pet.scss */
+.dialog-video #video-controls-wrapper.ng-leave, .dialog-video #video-controls-wrapper.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+/* line 230, ../../app/styles/pet.scss */
+.dialog-video #video-controls-wrapper .video-controls {
+  font-size: 26px;
+  padding: 6px 12px;
+  color: white;
+}
+/* line 234, ../../app/styles/pet.scss */
+.dialog-video #video-controls-wrapper .video-controls .video-controls-section {
+  display: inline-block;
+  margin: -3px;
+}
+/* line 237, ../../app/styles/pet.scss */
+.dialog-video #video-controls-wrapper .video-controls .video-controls-section.progress-wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 33px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 85px 0 42px;
+}
+/* line 244, ../../app/styles/pet.scss */
+.dialog-video #video-controls-wrapper .video-controls .video-controls-section.progress-wrapper .video-progress-total {
+  position: relative;
+  top: 25px;
+  left: 10px;
+  margin: 10px 0;
+  height: 10px;
+  background: #333;
+  border-radius: 10px;
+}
+/* line 252, ../../app/styles/pet.scss */
+.dialog-video #video-controls-wrapper .video-controls .video-controls-section.progress-wrapper .video-progress-total .video-progress-current {
+  height: 100%;
+  background: #fff;
+  border-radius: 10px;
+  transition-property: width;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+/* line 263, ../../app/styles/pet.scss */
+.dialog-video #video-controls-wrapper .video-controls .video-position-indicator {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 15px;
+  font-family: Verdana, Arial, Helvetica;
+}
+/* line 272, ../../app/styles/pet.scss */
+.dialog-video .dialog-video-close {
+  background: transparent;
+  color: white;
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  font-size: 23px;
+  border: none;
+  padding: 0;
+}

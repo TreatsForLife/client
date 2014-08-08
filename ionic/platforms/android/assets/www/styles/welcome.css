@@ -1,0 +1,169 @@
+/* line 3, ../../app/styles/welcome.scss */
+div.container.welcome {
+  background-color: #9aca13;
+  padding: 0;
+  height: 100%;
+}
+/* line 9, ../../app/styles/welcome.scss */
+div.container.welcome .welcome-logo-wrapper {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* line 13, ../../app/styles/welcome.scss */
+div.container.welcome .welcome-logo-wrapper .welcome-logo, div.container.welcome .welcome-logo-wrapper .welcome-logo-animation {
+  width: 100%;
+  height: 100%;
+  max-width: 266px;
+  max-height: 370px;
+  margin: auto;
+  background: url("../images/animated-logo.png") no-repeat 0 center;
+  background-size: auto 100%;
+}
+/* line 22, ../../app/styles/welcome.scss */
+div.container.welcome .welcome-logo-wrapper .welcome-logo {
+  background-image: url("../images/animated-logo-loop.gif");
+}
+/* line 25, ../../app/styles/welcome.scss */
+div.container.welcome .welcome-logo-wrapper .welcome-logo-animation {
+  background-image: url("../images/animated-logo.png");
+}
+/* line 30, ../../app/styles/welcome.scss */
+div.container.welcome .welcome-app-what {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  color: white;
+  font-size: 30px;
+}
+/* line 37, ../../app/styles/welcome.scss */
+div.container.welcome .bottom-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  margin: 0;
+  display: block;
+  text-align: center;
+}
+/* line 45, ../../app/styles/welcome.scss */
+div.container.welcome .bottom-wrapper .welcome-app-explained {
+  margin: 10px auto;
+  display: block;
+  position: relative;
+  font-size: 26px;
+  text-align: center;
+  width: 100%;
+  padding: 0 15px;
+  font-weight: bold;
+  color: #df2b46;
+}
+/* line 57, ../../app/styles/welcome.scss */
+div.container.welcome .bottom-wrapper .welcome-login-explained {
+  margin: 10px auto;
+  display: block;
+  position: relative;
+  font-size: 13px;
+  color: #efefef;
+  text-align: center;
+  width: 100%;
+}
+/* line 67, ../../app/styles/welcome.scss */
+div.container.welcome .bottom-wrapper .fb-login {
+  margin: 20px auto;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  line-height: 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  background-color: #2b4170;
+  /* fallback color */
+  background: linear-gradient(top, #3b5998, #2b4170);
+}
+/* line 87, ../../app/styles/welcome.scss */
+div.container.welcome .bottom-wrapper .fb-login:active {
+  background: linear-gradient(bottom, #3b5998, #2b4170);
+}
+/* line 90, ../../app/styles/welcome.scss */
+div.container.welcome .bottom-wrapper .fb-login i {
+  font-size: 30px;
+  float: left;
+}
+/* line 94, ../../app/styles/welcome.scss */
+div.container.welcome .bottom-wrapper .fb-login p {
+  margin-left: 35px;
+  text-align: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+/* line 102, ../../app/styles/welcome.scss */
+div.container.welcome #inst-login {
+  width: 224px;
+  height: 36px;
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  margin-left: -112px;
+  cursor: pointer;
+  background: #f4f6f5;
+  background: linear-gradient(top, #f4f6f5 1%, #ede7dc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f6f5', endColorstr='#ede7dc', GradientType=0);
+  padding: 10px 0px 10px 30px;
+  color: #433527;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #fff;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+  border: 1px solid #fff;
+  line-height: 16px;
+  display: block;
+  text-decoration: none;
+}
+/* line 125, ../../app/styles/welcome.scss */
+div.container.welcome #inst-login:before {
+  width: 30px;
+  height: 34px;
+  margin-left: -30px;
+  display: block;
+  content: '';
+  position: absolute;
+  margin-top: -10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: linear-gradient(left, #ff2b2b 0%, #ff2b2b 25%, #f3ff0f 26%, #ffff1e 50%, #43e86c 51%, #30d165 75%, #36a3c1 76%, #55abc3 100%, #ededed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2b2b', endColorstr='#ededed', GradientType=1);
+}
+/* line 139, ../../app/styles/welcome.scss */
+div.container.welcome #inst-login:after {
+  content: '';
+  position: absolute;
+  margin-left: -30px;
+  width: 223px;
+  height: 34px;
+  display: block;
+  cursor: pointer;
+  margin-top: -36px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(15, 15, 15, 0.3) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#0f0f0f', GradientType=0);
+}
+/* line 153, ../../app/styles/welcome.scss */
+div.container.welcome #inst-login:hover {
+  box-shadow: 0 0 1px black;
+}
+/* line 156, ../../app/styles/welcome.scss */
+div.container.welcome #inst-login:active::after {
+  background: linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(15, 15, 15, 0.3) 100%);
+}
