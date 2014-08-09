@@ -38,11 +38,9 @@ div.container.welcome .welcome-app-what {
 }
 /* line 37, ../../app/styles/welcome.scss */
 div.container.welcome .bottom-wrapper {
-  position: absolute;
   bottom: 0;
-  left: 5%;
+    margin: 0 5%;
   width: 90%;
-  margin: 0;
   display: block;
   text-align: center;
 }

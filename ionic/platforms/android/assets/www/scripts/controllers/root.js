@@ -5,7 +5,7 @@ angular.module('clientApp')
 
         console.log('APP VERSION: 1.0');
 
-        $scope.isWeb = angular.element(window).width() > 700;
+        $scope.isWeb = $(window).width() > 700;
 
         console.log('Getting data from cookies', $cookies);
         console.log('Getting data from cookies', localStorage);
@@ -32,7 +32,7 @@ angular.module('clientApp')
                 } else {
                     console.log('No user in DB - redirecting to welcome screen', localStorage);
                     localStorage.setItem("returnUrl", $location.path())
-                    $location.path('/welcome');
+//                    $location.path('/welcome');
                 }
             });
         }
@@ -46,7 +46,7 @@ angular.module('clientApp')
         } else if (!$rootScope.user_id) {
             console.log('No user_id cookies found - redirecting to welcome screen', localStorage);
             localStorage.setItem("returnUrl", $location.path())
-            $location.path('/welcome');
+//            $location.path('/welcome');
         }
 
         $rootScope.trustSrc = function (src) {
@@ -72,15 +72,15 @@ angular.module('clientApp')
         $scope.pushMenuOpen = false;
         $rootScope.openPushMenu = function () {
             if ($scope.pushMenuOpen) return;
-            angular.element('body').addClass('pushed');
-            angular.element('#menuRight').addClass('cbp-spmenu-open');
+            $('body').addClass('pushed');
+            $('#menuRight').addClass('cbp-spmenu-open');
             $scope.pushMenuOpen = true;
             $location.search({'push':'1'});
         };
         $rootScope.closePushMenu = function () {
             if (!$scope.pushMenuOpen) return;
-            angular.element('body').removeClass('pushed');
-            angular.element('#menuRight').removeClass('cbp-spmenu-open');
+            $('body').removeClass('pushed');
+            $('#menuRight').removeClass('cbp-spmenu-open');
             $scope.pushMenuOpen = false;
             $location.search({'push':null});
         };

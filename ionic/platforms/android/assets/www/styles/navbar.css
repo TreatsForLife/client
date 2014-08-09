@@ -48,7 +48,7 @@ body.welcome .navbar {
 /* line 39, ../../app/styles/navbar.scss */
 .navbar .navbar-inner .navbar-back .navbar-logo {
   float: left;
-  background: url('/images/logo.png') no-repeat center center;
+  background: url('../images/logo.png') no-repeat center center;
   background-size: 50px 50px;
   width: 50px;
   height: 50px;

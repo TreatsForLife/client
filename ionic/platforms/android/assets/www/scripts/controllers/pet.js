@@ -233,7 +233,7 @@ angular.module('clientApp')
                     $location.path('/shop/' + $scope.pet_id);
                     return;
                 }
-                angular.element('.pet-buy-button').css('background-position-x', -1 * animationBgPosition);
+                $('.pet-buy-button').css('background-position-x', -1 * animationBgPosition);
                 frame--;
                 animationBgPosition += dim;
             }, (animationDuration / numOfFrames))
@@ -251,11 +251,11 @@ angular.module('clientApp')
                     $interval.cancel(animationInterval);
                     $timeout(function () {
                         $scope.share();
-                        angular.element('.pet-share-button').css('background-position-x', 0);
+                        $('.pet-share-button').css('background-position-x', 0);
                     }, 500);
                     return;
                 }
-                angular.element('.pet-share-button').css('background-position-x', -1 * animationBgPosition);
+                $('.pet-share-button').css('background-position-x', -1 * animationBgPosition);
                 frame--;
                 animationBgPosition += dim;
             }, (animationDuration / numOfFrames))
@@ -273,11 +273,11 @@ angular.module('clientApp')
                     $interval.cancel(animationInterval);
                     $timeout(function () {
                         $scope.like();
-                        angular.element('.pet-like-button').css('background-position-x', 0);
+                        $('.pet-like-button').css('background-position-x', 0);
                     }, 500);
                     return;
                 }
-                angular.element('.pet-like-button').css('background-position-x', -1 * animationBgPosition);
+                $('.pet-like-button').css('background-position-x', -1 * animationBgPosition);
                 frame--;
                 animationBgPosition += dim;
             }, (animationDuration / numOfFrames))
@@ -291,8 +291,8 @@ angular.module('clientApp')
             var frame = numOfFrames;
             var dim = $scope.buttonHeight;
             var animationBgPosition = 0;
-            angular.element('.pet-adopt-button-gif').hide();
-            angular.element('.pet-adopt-button').show();
+            $('.pet-adopt-button-gif').hide();
+            $('.pet-adopt-button').show();
             var animationInterval = $interval(function () {
                 if (frame == 0) {
                     $interval.cancel(animationInterval);
@@ -300,20 +300,20 @@ angular.module('clientApp')
                         $scope.adopt();
                     }, 100);
                     $timeout(function () {
-                        angular.element('.pet-adopt-button-gif').show();
-                        angular.element('.pet-adopt-button').hide();
-                        angular.element('.pet-adopt-button').css('background-position-x', 0);
+                        $('.pet-adopt-button-gif').show();
+                        $('.pet-adopt-button').hide();
+                        $('.pet-adopt-button').css('background-position-x', 0);
                     }, 1000);
                     return;
                 }
-                angular.element('.pet-adopt-button').css('background-position-x', -1 * animationBgPosition);
+                $('.pet-adopt-button').css('background-position-x', -1 * animationBgPosition);
                 frame--;
                 animationBgPosition += dim;
             }, (animationDuration / numOfFrames))
         }
 
         $scope.flip = function () {
-            angular.element('.flipper').toggleClass('flip');
+            $('.flipper').toggleClass('flip');
         }
 
         //calc next friday at 12:00

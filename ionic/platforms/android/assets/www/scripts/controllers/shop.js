@@ -32,7 +32,7 @@ angular.module('clientApp')
         $scope.initCheckout = function () {
             $timeout(function () {
                 //animate the checkout - do not remove there are problems with fixed position otherwise
-                angular.element('.shop-checkout')
+                $('.shop-checkout')
                     .addClass('animated fadeInUp')
 
                 //calc the cart (to include defaults)
@@ -106,7 +106,7 @@ angular.module('clientApp')
                         if (fakeIt){
                             document.location.href = ($scope.returnUrl + '?fake=1&item_number=' + $scope.ItemNumber);
                         }else{
-                            angular.element('#payment-form').submit();
+                            $('#payment-form').submit();
                         }
                     }
                 });
