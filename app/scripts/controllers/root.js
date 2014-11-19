@@ -38,6 +38,8 @@ angular.module('clientApp')
         }
 
         //make sure that the user is fetched
+        //REMOVED - no user in web
+/*
         if (!$rootScope.user && $rootScope.user_id) {
             console.log('No user but user_id cookie is found - fetching from DB');
             $timeout(function () {
@@ -48,6 +50,7 @@ angular.module('clientApp')
             localStorage.setItem("returnUrl", $location.path())
             $location.path('/welcome');
         }
+*/
 
         $rootScope.trustSrc = function (src) {
             return $sce.trustAsResourceUrl(src);

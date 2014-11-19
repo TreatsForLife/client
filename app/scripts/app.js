@@ -7,8 +7,6 @@ angular.module('clientApp', [
         'ngTouch',
         'ngRoute',
         'ngAnimate',
-        'timer',
-        'seo'
     ])
     .config(function ($routeProvider, $compileProvider) {
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|http?|ftp|mailto|file|tel):/);
@@ -27,11 +25,16 @@ angular.module('clientApp', [
                 controller: 'PetCtrl',
                 reloadOnSearch: false
             })
-            .when('/shop/:id', {
-                templateUrl: 'views/shop.html',
-                controller: 'ShopCtrl',
-                reloadOnSearch: false
-            })
+          .when('/shop/:id', {
+            templateUrl: 'views/shop.html',
+            controller: 'ShopCtrl',
+            reloadOnSearch: false
+          })
+          .when('/pay/:id', {
+            templateUrl: 'views/pay.html',
+            controller: 'ShopCtrl',
+            reloadOnSearch: false
+          })
             .when('/pets', {
                 templateUrl: 'views/pets.html',
                 controller: 'PetsCtrl',
@@ -52,10 +55,6 @@ angular.module('clientApp', [
             });
     })
     .run(function ($location, $cookies) {
-
-        if (location.protocol == 'file:'){
-            location.href = 'http://treatsforlife.org';
-        }
 
         if ($location.path().length <= 1) {
             console.log('$cookies', $cookies);
