@@ -108,6 +108,7 @@ angular.module('clientApp')
             if (fakeIt) {
               document.location.href = ($scope.returnUrl + '?fake=1&item_number=' + $scope.ItemNumber);
             } else {
+              console.log("Submitting Form");
               angular.element('#payment-form').submit();
             }
           }
