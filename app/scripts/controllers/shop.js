@@ -88,8 +88,11 @@ angular.module('clientApp')
 
       $scope.cartChanged();
       if (!$scope.paymentActive) return;
-      $scope.paymentActive = false;
-      $scope.paymentWorking = true;
+
+      $timeout(function(){
+        $scope.paymentActive = false;
+        $scope.paymentWorking = true;
+      });
 
       clearDonations();
 
