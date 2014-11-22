@@ -22,7 +22,7 @@ angular.module('clientApp')
           approved--;
           if (approved == 0) {
             localStorage['donationsCreated'] = [];
-            window.open("treatsforlife://pet/" + pet_id + "/adopt");
+            document.location.href = ("treatsforlife://pet/" + pet_id + "/adopt");
           }
         });
       }
