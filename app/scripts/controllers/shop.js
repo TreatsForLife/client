@@ -3,12 +3,14 @@
 angular.module('clientApp')
   .controller('ShopCtrl', ['$scope', '$rootScope', '$routeParams', '$timeout', '$location', 'Treats', 'Pets', 'Donations', function ($scope, $rootScope, $routeParams, $timeout, $location, Treats, Pets, Donations) {
 
-    var pet_id = $routeParams['id'] || $rootScope.user_pet_id;
+    var pet_id = $routeParams['pet_id'];
+    var user_id = $routeParams['user_id'];
 
     $rootScope.bodyClass = 'shop';
     $rootScope.navbarTitle = 'החנות';
 
-    $scope.returnUrl = Consts.client_root + '#/pet/' + pet_id + '/adopt';
+    $scope.cancelUrl = Consts.client_root + '#/shop/' + user_id + '/' + pet_id;
+    $scope.returnUrl = Consts.client_root + '#/payed/' + pet_id;
     $scope.notifyUrl = Consts.api_root + 'donation';
 
     $scope.treats = Treats.all();
@@ -87,16 +89,19 @@ angular.module('clientApp')
       if (!$scope.paymentActive) return;
       $scope.paymentActive = false;
 
+      clearDonations();
 
+      var ItemNumber = $scope.ItemNumber;
       var created = 0;
       for (var t = 0, treat; treat = chosenTreats[t]; t++) {
         Donations.create({
-          paypalItem: $scope.ItemNumber,
+          paypalItem: ItemNumber,
           treat: treat._id,
-          user: $scope.user._id,
-          pet: $scope.pet._id,
+          pet: pet_id,
+          user: user_id,
           payed: false
         }, function (res) {
+          storeDonation(res._id);
           created++;
           if (created >= (chosenTreats.length)) {
             if (fakeIt) {
@@ -108,6 +113,15 @@ angular.module('clientApp')
         });
       }
 
+    }
+
+    function storeDonation(id){
+      var donations = JSON.parse(localStorage['donationsCreated'] || "[]");
+      donations.unshift(id);
+      localStorage['donationsCreated'] = JSON.stringify(donations);
+    }
+    function clearDonations(){
+      localStorage['donationsCreated'] = [];
     }
 
   }]);

@@ -81,7 +81,6 @@ angular.module('clientApp')
                         }
 
                         //aprove paypal payments & get pending items from db
-                        debugger;
                         var q = $location.search();
                         if (q['item_number']) {
                             Donations.approve({item_number: q['item_number']}, function (res) {

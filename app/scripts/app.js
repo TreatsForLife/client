@@ -11,27 +11,18 @@ angular.module('clientApp', [
     .config(function ($routeProvider, $compileProvider) {
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|http?|ftp|mailto|file|tel):/);
         $routeProvider
-            .when('/welcome', {
-                templateUrl: 'views/welcome.html',
-                controller: 'WelcomeCtrl'
-            })
             .when('/pet', {
                 templateUrl: 'views/pet.html',
                 controller: 'PetCtrl',
                 reloadOnSearch: false
             })
-            .when('/pet/:id', {
+            .when('/pet/:pet_id', {
                 templateUrl: 'views/pet.html',
                 controller: 'PetCtrl',
                 reloadOnSearch: false
             })
-          .when('/shop/:id', {
+          .when('/shop/:user_id/:pet_id', {
             templateUrl: 'views/shop.html',
-            controller: 'ShopCtrl',
-            reloadOnSearch: false
-          })
-          .when('/pay/:id', {
-            templateUrl: 'views/pay.html',
             controller: 'ShopCtrl',
             reloadOnSearch: false
           })
@@ -50,21 +41,14 @@ angular.module('clientApp', [
                 controller: 'PetsCtrl',
                 reloadOnSearch: false
             })
+            .when('/payed/:pet_id', {
+              templateUrl: 'views/payed.html',
+              controller: 'PayedCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
     })
     .run(function ($location, $cookies) {
 
-        if ($location.path().length <= 1) {
-            console.log('$cookies', $cookies);
-            console.log('localStorage', localStorage);
-            if (!localStorage.fb_id || $location.search()['s'] == 'w') {
-                $location.path('/welcome');
-            } else if (!localStorage.user_pet_id) {
-                $location.path('/pets');
-            } else {
-                $location.path('/pet');
-            }
-        }
     });
