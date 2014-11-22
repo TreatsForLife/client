@@ -101,6 +101,7 @@ angular.module('clientApp')
           user: user_id,
           payed: false
         }, function (res) {
+          console.log("Created donation", res);
           storeDonation(res._id);
           created++;
           if (created >= (chosenTreats.length)) {
@@ -116,12 +117,16 @@ angular.module('clientApp')
     }
 
     function storeDonation(id){
+      console.log("Storing donation", id);
+      console.log("Current donations", localStorage['donationsCreated']);
       var donations = JSON.parse(localStorage['donationsCreated'] || "[]");
       donations.unshift(id);
       localStorage['donationsCreated'] = JSON.stringify(donations);
+      console.log("New donations", localStorage['donationsCreated']);
     }
     function clearDonations(){
-      localStorage['donationsCreated'] = [];
+      console.log("Clearing donations");
+      localStorage['donationsCreated'] = "[]";
     }
 
   }]);
