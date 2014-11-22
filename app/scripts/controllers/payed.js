@@ -8,7 +8,9 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('PayedCtrl', ['$scope', '$routeParams', 'Donations', function ($scope, $routeParams, Donations) {
+  .controller('PayedCtrl', ['$scope', '$rootScope', '$routeParams', 'Donations', function ($scope, $rootScope, $routeParams, Donations) {
+
+    $rootScope.bodyClass = 'shop';
 
     var pet_id = $routeParams['pet_id'];
 
