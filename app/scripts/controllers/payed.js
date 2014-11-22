@@ -16,15 +16,22 @@ angular.module('clientApp')
 
     $scope.donationsCreated = JSON.parse(localStorage['donationsCreated'] || "[]");
 
+    console.log('Donationis found: ', $scope.donationsCreated);
     if (pet_id && $scope.donationsCreated.length > 0) {
 
       var approved = $scope.donationsCreated.length;
       for (var i = 0, donation; donation = $scope.donationsCreated[i]; i++) {
+        console.log('Approving donation: ', donation);
         Donations.approve({_id: donation}, function (res) {
           approved--;
+          console.log('Approved donation: ', res);
           if (approved == 0) {
+            console.log('Done. Clearing donations: ', localStorage['donationsCreated']);
             localStorage['donationsCreated'] = [];
-            document.location.href = ("treatsforlife://pet/" + pet_id + "/adopt");
+
+            var path = "treatsforlife://pet/" + pet_id + "/adopt";
+            console.log('Redirecting to: ', path);
+            document.location.href = (path);
           }
         });
       }
