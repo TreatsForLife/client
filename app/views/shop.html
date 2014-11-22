@@ -39,9 +39,10 @@
                    value="http://www.treatsforlife.org/images/logo150x50.png">
             <input type="hidden" name="cpp_cart_border_color" value="9aca13">
             <input type="hidden" name="cbt" value="Thank You! Back to Your Pet!">
-            <input type="button" class="shop-checkout-button button-{{paymentActive ? 'blue' : 'disabled'}}"
-                   ng-click="pay(false)" value="לתשלום"/>
+            <!--<input type="button" class="shop-checkout-button button-{{paymentActive ? 'blue' : 'disabled'}}"-->
+                   <!--ng-click="pay(false)" value="לתשלום"/>-->
         </form>
-        <!--<a class="button shop-checkout-button button-{{paymentActive ? 'green' : 'disabled'}}" ng-click="pay(true)">כאילו תשלום</a>-->
+      <a class="button shop-checkout-button button-green " ng-show="paymentActive" ng-click="pay(false)">לתשלום</a>
+      <a class="button shop-checkout-button button-disabled" ng-hide="paymentActive" ng-click="pay(false)">לתשלום</a>
     </div>
 </div>
