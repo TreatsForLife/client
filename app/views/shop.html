@@ -42,7 +42,8 @@
             <!--<input type="button" class="shop-checkout-button button-{{paymentActive ? 'blue' : 'disabled'}}"-->
                    <!--ng-click="pay(false)" value="לתשלום"/>-->
         </form>
-      <a class="button shop-checkout-button button-green " ng-show="paymentActive" ng-click="pay(false)">לתשלום</a>
+      <a class="button shop-checkout-button button-green " ng-show="paymentActive && !paymentWorking" ng-click="pay(false)">לתשלום</a>
+      <a class="button shop-checkout-button button-disabled " ng-show="paymentActive && paymentWorking" ng-click="pay(false)"><i class="fa fa-refresh fa-spin color-white"></i></a>
       <a class="button shop-checkout-button button-disabled" ng-hide="paymentActive" ng-click="pay(false)">לתשלום</a>
     </div>
 </div>

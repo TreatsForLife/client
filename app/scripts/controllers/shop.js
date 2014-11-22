@@ -83,11 +83,13 @@ angular.module('clientApp')
     }
 
 
+    $scope.paymentWorking = false;
     $scope.pay = function (fakeIt) {
 
       $scope.cartChanged();
       if (!$scope.paymentActive) return;
       $scope.paymentActive = false;
+      $scope.paymentWorking = true;
 
       clearDonations();
 
@@ -110,6 +112,9 @@ angular.module('clientApp')
             } else {
               console.log("Submitting Form");
               angular.element('#payment-form').submit();
+              $timeout(function(){
+                $scope.paymentWorking = false;
+              }, 5000);
             }
           }
         });
